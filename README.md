@@ -21,7 +21,7 @@ For Linux/macOS:
 
 ```
 $ python3 -m venv env
-$ env/bin/activate
+$ . env/bin/activate
 $ python -m pip install --upgrade pip setuptools
 $ pip install -r /requirements/dev.txt
 $ pip install -e .
