@@ -53,6 +53,12 @@ translate in following format:
 - [ ] example.rst @your_username Your Name
 ```
 
+You can link the username to your GitHbu profile:
+
+```
+- [ ] example.rst [@your_username](https://github.com/your_username) Your Name
+```
+
 - Leave a commit message (e.g., "Assign docs/example.rst to @your_username"), then select
 "Create a new branch for this commit and start a pull request" and click the
 "Commit changes" button to create a PR.
