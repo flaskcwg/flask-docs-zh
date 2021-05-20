@@ -53,7 +53,7 @@ translate in following format:
 - [ ] example.rst @your_username Your Name
 ```
 
-- Leave a commit message (e.g., "Mark cli.rst @your_username"), then select
+- Leave a commit message (e.g., "Assign docs/example.rst to @your_username"), then select
 "Create a new branch for this commit and start a pull request" and click the
 "Commit changes" button to create a PR.
 
@@ -152,7 +152,23 @@ if you doesn't finish the translation in ten days.
 - [ ] views.rst
 
 
-### deploying/
+### docs/tutorial/
+
+- [ ] blog.rst
+- [ ] database.rst
+- [ ] deploy.rst
+- [ ] factory.rst
+- [ ] index.rst
+- [ ] install.rst
+- [ ] layout.rst
+- [ ] next.rst
+- [ ] static.rst
+- [ ] templates.rst
+- [ ] tests.rst
+- [ ] views.rst
+
+
+### docs/deploying/
 
 - [ ] asgi.rst
 - [ ] cgi.rst
@@ -163,7 +179,7 @@ if you doesn't finish the translation in ten days.
 - [ ] wsgi-standalone.rst
 
 
-### patterns/
+### docs/patterns/
 
 - [ ] appdispatch.rst
 - [ ] appfactories.rst
