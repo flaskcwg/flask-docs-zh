@@ -3,35 +3,31 @@
 Welcome to Flask
 ================
 
-.. image:: _static/flask-logo.png
-    :alt: Flask: web development, one drop at a time
+.. image:: _static/flask-logo-zh.png
+    :alt: Flask: Web 开发，一次一滴
     :align: center
     :target: https://palletsprojects.com/p/flask/
 
-Welcome to Flask's documentation. Get started with :doc:`installation`
-and then get an overview with the :doc:`quickstart`. There is also a
-more detailed :doc:`tutorial/index` that shows how to create a small but
-complete application with Flask. Common patterns are described in the
-:doc:`patterns/index` section. The rest of the docs describe each
-component of Flask in detail, with a full reference in the :doc:`api`
-section.
+欢迎来到 Flask 的文档。你可以从 :doc:`installation` 入手，然后阅读
+:doc:`quickstart` 来了解基本概念。还有一个包含更多细节的 :doc:`tutorial/index`
+介绍如何用 Flask 创建一个很小但是完整的程序。一般的开发模式可以在
+:doc:`patterns/index` 章节找到。剩下的文档详细的介绍了 Flask 的每一个组成部件，
+其中 :doc:`api` 章节包括完整的 API 参考信息。
 
-Flask depends on the `Jinja`_ template engine and the `Werkzeug`_ WSGI
-toolkit. The documentation for these libraries can be found at:
+Flask 依赖 `Jinja`_ 模板引擎和 `Werkzeug`_ WSGI 工具集。这些库的文档如下：
 
-- `Jinja documentation <https://jinja.palletsprojects.com/>`_
-- `Werkzeug documentation <https://werkzeug.palletsprojects.com/>`_
+- `Jinja 文档 <https://jinja.palletsprojects.com/>`_
+- `Werkzeug 文档 <https://werkzeug.palletsprojects.com/>`_
 
 .. _Jinja: https://www.palletsprojects.com/p/jinja/
 .. _Werkzeug: https://www.palletsprojects.com/p/werkzeug/
 
 
-User's Guide
-------------
+用户指南
+--------
 
-This part of the documentation, which is mostly prose, begins with some
-background information about Flask, then focuses on step-by-step
-instructions for web development with Flask.
+这部分的文档大部分是独立章节，以一些关于 Flask 的背景信息开始，然后重点介绍如何使用
+Flask 一步步进行 Web 开发。
 
 .. toctree::
    :maxdepth: 2
@@ -62,11 +58,10 @@ instructions for web development with Flask.
    async-await
 
 
-API Reference
--------------
+API 参考
+--------
 
-If you are looking for information on a specific function, class or
-method, this part of the documentation is for you.
+如果你想找关于某个特定函数、类或方法的信息，那么这部分文档是就为你准备的。
 
 .. toctree::
    :maxdepth: 2
@@ -74,10 +69,10 @@ method, this part of the documentation is for you.
    api
 
 
-Additional Notes
-----------------
+附加笔记
+--------
 
-Design notes, legal information and changelog are here for the interested.
+如果你感兴趣的话，这里有一些设计笔记、法律信息和变更日志（changelog）。
 
 .. toctree::
    :maxdepth: 2
