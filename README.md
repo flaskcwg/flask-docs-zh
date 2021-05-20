@@ -10,9 +10,9 @@
 - Clone your fork repository locally (replace `{username}` with your username):
 
 ```
-$ git clone https://github.com/{username}/flask-docs-<UPDATE THIS>
-$ cd flask-docs-<UPDATE-THIS>
-$ git remote add upstream https://github.com/flaskcwg/flask-docs-<UPDATE THIS>
+$ git clone https://github.com/{username}/flask-docs-zh
+$ cd flask-docs-zh
+$ git remote add upstream https://github.com/greyli/flask-docs-zh
 ```
 
 - Create a virtual environment and install requirements:
@@ -21,9 +21,9 @@ For Linux/macOS:
 
 ```
 $ python3 -m venv env
-$ env/bin/activate
+$ source env/bin/activate
 $ python -m pip install --upgrade pip setuptools
-$ pip install -r /requirements/dev.txt
+$ pip install -r requirements/dev.txt
 $ pip install -e .
 $ pre-commit install
 ```
@@ -105,7 +105,7 @@ $ tox
   congratulations :)
 ```
 
-Open `/tox/docs/tmp/html/index.html` in your browser to view the docs.
+Open `{project_location}/.tox/docs/tmp/html/index.html` in your browser to view the docs.
 
 - If everything is working as expected, push the changes to GitHub:
 
