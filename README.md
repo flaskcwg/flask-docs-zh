@@ -125,7 +125,7 @@ Be sure only mark one chapter at a time, make another one when the former
 PR is created. Unless it's a long chapter, we may reset the assignment
 if you doesn't finish the translation in ten days.
 
- 
+
 ### docs/
 
 - [ ] advanced_foreword.rst
@@ -144,7 +144,7 @@ if you doesn't finish the translation in ten days.
 - [ ] extensions.rst
 - [ ] foreword.rst
 - [ ] htmlfaq.rst
-- [ ] index.rst @greyli Grey Li
+- [x] index.rst @greyli Grey Li
 - [ ] installation.rst
 - [ ] logging.rst
 - [ ] quickstart.rst
