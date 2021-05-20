@@ -1,0 +1,20 @@
+name: Tests
+on:
+  push:
+    branches:
+      - main
+      - '*.x'
+  pull_request:
+    branches:
+      - main
+      - '*.x'
+jobs:
+  docs:
+    name: docs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+      - run: python -m pip install --upgrade pip wheel
+      - run: pip install tox
+      - run: tox -e docs
