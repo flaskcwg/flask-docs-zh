@@ -53,7 +53,7 @@ translate in following format:
 - [ ] example.rst @your_username Your Name
 ```
 
-You can link the username to your GitHbu profile:
+You can link the username to your GitHub profile:
 
 ```
 - [ ] example.rst [@your_username](https://github.com/your_username) Your Name
