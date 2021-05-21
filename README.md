@@ -66,26 +66,25 @@ You can link the username to your GitHub profile:
 
 ### Translation
 
-- When the self-assignment PR is merged, create a new branch base on "2.0.x" branch
-locally (be sure to update the example branch name, for example, `translate-cli`):
-
-```
-$ git fetch upstream
-$ git checkout -b your-branch-name upstream/2.0.x
-```
-
-If you're adding new contents for a new feature docs merged in the main branch
-of Flask, branch off of the "main" branch:
+- When the self-assignment PR is merged, create a new branch locally
+(be sure to update the example branch name, for example, `translate-cli`):
 
 ```
 $ git fetch upstream
 $ git checkout -b your-branch-name upstream/main
 ```
 
-- Translate the file, then commit the changes:
+- Translate the file, then mark the chpater as finished (fill the checkbox
+with "x"):
 
 ```
-$ git add docs/foo.rst
+- [x] example.rst @your_username Your Name
+```
+
+Commit the changes:
+
+```
+$ git add docs/foo.rst README.md
 $ git commit -m "Translate docs/foo.rst"
 ```
 
@@ -114,16 +113,8 @@ $ git push origin your-branch-name
 ```
 
 - Open the home page of your forked repository, you will see a notice about
-the new branch. Click the "Compare & pull request" button to create a PR, choose
-"2.0.x" as the base branch.
+the new branch. Click the "Compare & pull request" button to create a PR.
 - The translation coordinator will review your PR very soon. Thank you!
-- When the PR is merged, you can work on the next chapter. When you mark the next
-chapter, don't forget to mark the previous chpater as finished (fill the checkbox
-with "x"):
-
-```
-- [x] example.rst @your_username Your Name
-```
 
 
 ## Translation To-do List
