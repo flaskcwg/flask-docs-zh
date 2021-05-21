@@ -172,7 +172,7 @@ if you doesn't finish the translation in ten days.
 - [ ] database.rst
 - [ ] deploy.rst
 - [ ] factory.rst
-- [ ] index.rst
+- [x] index.rst [@greyli](https://github.com/greyli) Grey Li
 - [ ] install.rst
 - [ ] layout.rst
 - [ ] next.rst
