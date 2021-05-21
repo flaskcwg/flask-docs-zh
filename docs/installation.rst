@@ -1,29 +1,23 @@
-Installation
-============
+安装
+====
 
 
-Python Version
---------------
+Python 版本
+-----------
 
-We recommend using the latest version of Python. Flask supports Python
-3.6 and newer.
+我们建议使用最新版本的 Python。Flask 支持 Python 3.6 及其以上版本。
 
 
-Dependencies
-------------
+依赖
+----
 
-These distributions will be installed automatically when installing Flask.
+这些包会在安装 Flask 的时候自动安装：
 
-* `Werkzeug`_ implements WSGI, the standard Python interface between
-  applications and servers.
-* `Jinja`_ is a template language that renders the pages your application
-  serves.
-* `MarkupSafe`_ comes with Jinja. It escapes untrusted input when rendering
-  templates to avoid injection attacks.
-* `ItsDangerous`_ securely signs data to ensure its integrity. This is used
-  to protect Flask's session cookie.
-* `Click`_ is a framework for writing command line applications. It provides
-  the ``flask`` command and allows adding custom management commands.
+* `Werkzeug`_ 实现了 WSGI——程序和服务器之间交互的 Python 标准。
+* `Jinja`_ 是一个模板语言，它可以渲染你的程序提供的页面。
+* `MarkupSafe`_ 随 Jinja 附带。当渲染模板时，它会转义不受信任的输入以避免注入攻击。
+* `ItsDangerous`_ 可以安全地签名数据以确保数据的完整性。这被用来保护 Flask 的 ``session`` cookie。
+* `Click`_ 是一个用来写命令行程序的框架。它提供了 ``flask`` 命令并允许添加自定义管理命令。
 
 .. _Werkzeug: https://palletsprojects.com/p/werkzeug/
 .. _Jinja: https://palletsprojects.com/p/jinja/
@@ -32,48 +26,40 @@ These distributions will be installed automatically when installing Flask.
 .. _Click: https://palletsprojects.com/p/click/
 
 
-Optional dependencies
-~~~~~~~~~~~~~~~~~~~~~
+可选依赖
+~~~~~~~~
 
-These distributions will not be installed automatically. Flask will detect and
-use them if you install them.
+这些包不会被自动安装。如果你安装了的话，Flask 会检测到并使用它们。
 
-* `Blinker`_ provides support for :doc:`signals`.
-* `python-dotenv`_ enables support for :ref:`dotenv` when running ``flask``
-  commands.
-* `Watchdog`_ provides a faster, more efficient reloader for the development
-  server.
+* `Blinker`_ 提供 :doc:`signals` 支持。
+* `python-dotenv`_ 在执行 ``flask`` 命令时开启对 :ref:`dotenv` 的支持。
+* `Watchdog`_ 为开发服务器提供更快和更高效的重载器（reloader）。
 
 .. _Blinker: https://pythonhosted.org/blinker/
 .. _python-dotenv: https://github.com/theskumar/python-dotenv#readme
 .. _watchdog: https://pythonhosted.org/watchdog/
 
 
-Virtual environments
---------------------
+虚拟环境
+--------
 
-Use a virtual environment to manage the dependencies for your project, both in
-development and in production.
+使用虚拟环境可以在开发和生产环境下管理项目依赖。
 
-What problem does a virtual environment solve? The more Python projects you
-have, the more likely it is that you need to work with different versions of
-Python libraries, or even Python itself. Newer versions of libraries for one
-project can break compatibility in another project.
+虚拟环境解决了什么问题？你的 Python 项目越多，就越有可能需要使用不同版本的 Python 包
+，甚至 Python 本身。某个项目使用的新版本的库可能会破坏其他项目的兼容性。
 
-Virtual environments are independent groups of Python libraries, one for each
-project. Packages installed for one project will not affect other projects or
-the operating system's packages.
+虚拟环境是 Python 库的独立集合，每一个项目对应一个虚拟环境。安装到某个项目的包不会
+影响其他项目或是操作系统层级的包。
 
-Python comes bundled with the :mod:`venv` module to create virtual
-environments.
+Python 自带的 :mod:`venv` 模块可以用来创建虚拟环境。
 
 
 .. _install-create-env:
 
-Create an environment
-~~~~~~~~~~~~~~~~~~~~~
+创建虚拟环境
+~~~~~~~~~~~~
 
-Create a project folder and a :file:`venv` folder within:
+创建一个项目文件夹，并在其中创建虚拟环境文件夹 :file:`venv`：
 
 .. tabs::
 
@@ -96,10 +82,10 @@ Create a project folder and a :file:`venv` folder within:
 
 .. _install-activate-env:
 
-Activate the environment
-~~~~~~~~~~~~~~~~~~~~~~~~
+激活虚拟环境
+~~~~~~~~~~~~
 
-Before you work on your project, activate the corresponding environment:
+在开始动手做你的项目之前，先激活对应的虚拟环境：
 
 .. tabs::
 
@@ -115,19 +101,17 @@ Before you work on your project, activate the corresponding environment:
 
          > venv\Scripts\activate
 
-Your shell prompt will change to show the name of the activated
-environment.
+你的 shell 提示符现在会显示激活的虚拟环境名称。
 
 
-Install Flask
--------------
+安装 Flask
+----------
 
-Within the activated environment, use the following command to install
-Flask:
+在激活的虚拟环境内，使用下面的命令安装 Flask：
 
 .. code-block:: sh
 
     $ pip install Flask
 
-Flask is now installed. Check out the :doc:`/quickstart` or go to the
-:doc:`Documentation Overview </index>`.
+Flask 现在已经安装好了。阅读 :doc:`/quickstart` 或是前往 :doc:`文档概览 </index>`
+进一步了解 Flask。
