@@ -155,7 +155,7 @@ if you doesn't finish the translation in ten days.
 - [x] index.rst [@greyli](https://github.com/greyli) Grey Li
 - [x] installation.rst [@greyli](https://github.com/greyli) Grey Li
 - [ ] logging.rst
-- [ ] quickstart.rst
+- [ ] quickstart.rst (reserved)
 - [ ] reqcontext.rst
 - [ ] security.rst
 - [ ] server.rst
@@ -166,7 +166,7 @@ if you doesn't finish the translation in ten days.
 - [ ] views.rst
 
 
-### docs/tutorial/
+### docs/tutorial/ (reserved)
 
 - [ ] blog.rst
 - [ ] database.rst
