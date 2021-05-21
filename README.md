@@ -153,7 +153,7 @@ if you doesn't finish the translation in ten days.
 - [ ] foreword.rst
 - [ ] htmlfaq.rst
 - [x] index.rst @greyli Grey Li
-- [ ] installation.rst
+- [x] installation.rst @greyli Grey Li
 - [ ] logging.rst
 - [ ] quickstart.rst
 - [ ] reqcontext.rst
