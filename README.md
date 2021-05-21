@@ -82,30 +82,30 @@ $ git fetch upstream
 $ git checkout -b your-branch-name upstream/main
 ```
 
-- Translate the file, then fill the checkbox in the README to indicate you
-have finished it:
+- Translate the file, then commit the changes:
 
 ```
-- [x] example.rst @your_username Your Name
-```
-
-Commit the changes:
-
-```
-$ git add docs/foo.rst README.md
+$ git add docs/foo.rst
 $ git commit -m "Translate docs/foo.rst"
 ```
 
-- Build and test the docs with `tox` command:
+- Build the docs and preview the changes:
+
+For Linux/macOS:
 
 ```
-$ tox
-  ...
-  docs: commands succeeded
-  congratulations :)
+$ cd docs
+$ make html
 ```
 
-Open `{project_location}/.tox/docs/tmp/html/index.html` in your browser to view the docs.
+For Windows:
+
+```
+> cd docs
+> .\make.bat html
+```
+
+Open `{project_location}/docs/_build/html/index.html` in your browser to view the docs.
 
 - If everything is working as expected, push the changes to GitHub:
 
@@ -114,9 +114,16 @@ $ git push origin your-branch-name
 ```
 
 - Open the home page of your forked repository, you will see a notice about
-the new branch. Click the "Create pull request" button to create a PR, choose
-2.0.x as the base branch.
+the new branch. Click the "Compare & pull request" button to create a PR, choose
+"2.0.x" as the base branch.
 - The translation coordinator will review your PR very soon. Thank you!
+- When the PR is merged, you can work on the next chapter. When you mark the next
+chapter, don't forget to mark the previous chpater as finished (fill the checkbox
+with "x"):
+
+```
+- [x] example.rst @your_username Your Name
+```
 
 
 ## Translation To-do List
@@ -131,6 +138,7 @@ if you doesn't finish the translation in ten days.
 - [ ] advanced_foreword.rst
 - [ ] appcontext.rst
 - [ ] async-await.rst
+- [ ] api.rst
 - [ ] becomingbig.rst
 - [ ] blueprints.rst
 - [ ] changes.rst
