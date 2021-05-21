@@ -152,8 +152,8 @@ if you doesn't finish the translation in ten days.
 - [ ] extensions.rst
 - [ ] foreword.rst
 - [ ] htmlfaq.rst
-- [x] index.rst @greyli Grey Li
-- [x] installation.rst @greyli Grey Li
+- [x] index.rst [@greyli](https://github.com/greyli) Grey Li
+- [x] installation.rst [@greyli](https://github.com/greyli) Grey Li
 - [ ] logging.rst
 - [ ] quickstart.rst
 - [ ] reqcontext.rst
