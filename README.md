@@ -1,4 +1,10 @@
-# Flask Docs Translation
+# Flask 文档中文翻译
+
+这里是 Flask 文档中文翻译项目，欢迎参与！在开始翻译之前，请务必阅读下面的 Contributing Guide 了解贡献流程，然后阅读[这个 Issue](https://github.com/greyli/flask-docs-zh/issues/11) 了解翻译基本要求和建议，并在[这个 Dicussion](https://github.com/greyli/flask-docs-zh/discussions/12) 投票选出你认为合适的翻译词汇。
+
+如果有其他问题和相关想法，请[创建 Discussion](https://github.com/greyli/flask-docs-zh/discussions/new) 发起讨论；如果对翻译流程和项目设置有改进建议，或是发现了翻译错误和笔误，请[创建 Issue](https://github.com/greyli/flask-docs-zh/issues/new) 反馈。
+
+这个项目在后期会转移到 [Flask Community Work Group](https://github.com/flaskcwg) 或单独的 Pallets 文档翻译组织，并链接到 Flask 官方文档作为官方中文翻译。
 
 
 ## Contributing Guide
