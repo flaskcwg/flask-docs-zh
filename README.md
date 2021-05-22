@@ -181,7 +181,7 @@ if you doesn't finish the translation in ten days.
 - [ ] index.rst
 - [ ] mod_wsgi.rst
 - [ ] uwsgi.rst
-- [ ] wsgi-standalone.rst
+- [x] wsgi-standalone.rst [@180909](https://github.com/180909) 180909
 
 
 ### docs/patterns/
