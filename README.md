@@ -132,7 +132,7 @@ if you doesn't finish the translation in ten days.
 
 ### docs/
 
-- [ ] advanced_foreword.rst
+- [x] advanced_foreword.rst [@rosekc](https://github.com/rosekc) rosekc
 - [ ] appcontext.rst
 - [ ] async-await.rst
 - [ ] api.rst
