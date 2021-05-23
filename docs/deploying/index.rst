@@ -1,7 +1,7 @@
 部署方式
 ========
 
-虽然 Flask 轻便且易于使用，但是 Flask 的内建服务器不适用于生产,它也不能很好的扩展。
+虽然 Flask 轻便且易于使用，但是 Flask 的内建服务器不适用于生产，它也不能很好的扩展。
 本文主要说明在生产环境下正确使用 Flask 的一些方法。
 
 如果想要把 Flask 应用部署到这里没有列出的 WSGI 服务器，请查询其文档中关于 如何使用
@@ -11,12 +11,12 @@ WSGI 的部分，只要记住： Flask 应用对象实质上是一个 WSGI 应�
 托管选项
 --------
 
-- `将 Flask 托管于 Heroku <https://devcenter.heroku.com/articles/getting-started-with-python>`_
-- `将 Flask 托管于 Google App Engine <https://cloud.google.com/appengine/docs/standard/python3/runtime>`_
-- `将 Flask 托管于 Google Cloud Run <https://cloud.google.com/run/docs/quickstarts/build-and-deploy/python>`_
-- `将 Flask 托管于 AWS Elastic Beanstalk <https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-flask.html>`_
-- `托管于 Azure (IIS) <https://docs.microsoft.com/en-us/azure/app-service/containers/how-to-configure-python>`_
-- `托管于 PythonAnywhere <https://help.pythonanywhere.com/pages/Flask/>`_
+- `将 Flask 部署在 Heroku 上 <https://devcenter.heroku.com/articles/getting-started-with-python>`_
+- `将 Flask 部署在 Google App Engine 上 <https://cloud.google.com/appengine/docs/standard/python3/runtime>`_
+- `将 Flask 部署在 Google Cloud Run 上 <https://cloud.google.com/run/docs/quickstarts/build-and-deploy/python>`_
+- `将 Flask 部署在 AWS Elastic Beanstalk 上 <https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-flask.html>`_
+- `将 Flask 部署在 Azure (IIS) 上 <https://docs.microsoft.com/en-us/azure/app-service/containers/how-to-configure-python>`_
+- `将 Flask 部署在 PythonAnywhere 上 <https://help.pythonanywhere.com/pages/Flask/>`_
 
 自主部署选项
 ------------
