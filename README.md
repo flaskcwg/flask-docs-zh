@@ -147,7 +147,7 @@ if you doesn't finish the translation in ten days.
 - [ ] errorhandling.rst
 - [ ] extensiondev.rst
 - [ ] extensions.rst
-- [ ] foreword.rst
+- [ ] foreword.rst [@greyli](https://github.com/greyli) Grey Li
 - [ ] htmlfaq.rst
 - [x] index.rst [@greyli](https://github.com/greyli) Grey Li
 - [x] installation.rst [@greyli](https://github.com/greyli) Grey Li
