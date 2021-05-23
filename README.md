@@ -80,7 +80,7 @@ $ git fetch upstream
 $ git checkout -b your-branch-name upstream/main
 ```
 
-- Translate the file, then mark the chpater as finished (fill the checkbox
+- Translate the file, then mark the chapter as finished (fill the checkbox
 with "x"):
 
 ```
