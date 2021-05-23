@@ -184,7 +184,7 @@ if you doesn't finish the translation in ten days.
 - [ ] asgi.rst
 - [ ] cgi.rst
 - [ ] fastcgi.rst
-- [ ] index.rst [@180909](https://github.com/180909) 180909
+- [x] index.rst [@180909](https://github.com/180909) 180909
 - [ ] mod_wsgi.rst
 - [ ] uwsgi.rst
 - [ ] wsgi-standalone.rst [@180909](https://github.com/180909) 180909

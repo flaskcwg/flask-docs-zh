@@ -1,28 +1,25 @@
-Deployment Options
-==================
+部署方式
+========
 
-While lightweight and easy to use, **Flask's built-in server is not suitable
-for production** as it doesn't scale well.  Some of the options available for
-properly running Flask in production are documented here.
+虽然 Flask 轻便且易于使用，但是 Flask 的内建服务器不适用于生产,它也不能很好的扩展。
+本文主要说明在生产环境下正确使用 Flask 的一些方法。
 
-If you want to deploy your Flask application to a WSGI server not listed here,
-look up the server documentation about how to use a WSGI app with it.  Just
-remember that your :class:`Flask` application object is the actual WSGI
-application.
+如果想要把 Flask 应用部署到这里没有列出的 WSGI 服务器，请查询其文档中关于 如何使用
+WSGI 的部分，只要记住： Flask 应用对象实质上是一个 WSGI 应用。
 
 
-Hosted options
---------------
+托管选项
+--------
 
-- `Deploying Flask on Heroku <https://devcenter.heroku.com/articles/getting-started-with-python>`_
-- `Deploying Flask on Google App Engine <https://cloud.google.com/appengine/docs/standard/python3/runtime>`_
-- `Deploying Flask on Google Cloud Run <https://cloud.google.com/run/docs/quickstarts/build-and-deploy/python>`_
-- `Deploying Flask on AWS Elastic Beanstalk <https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-flask.html>`_
-- `Deploying on Azure (IIS) <https://docs.microsoft.com/en-us/azure/app-service/containers/how-to-configure-python>`_
-- `Deploying on PythonAnywhere <https://help.pythonanywhere.com/pages/Flask/>`_
+- `将 Flask 托管于 Heroku <https://devcenter.heroku.com/articles/getting-started-with-python>`_
+- `将 Flask 托管于 Google App Engine <https://cloud.google.com/appengine/docs/standard/python3/runtime>`_
+- `将 Flask 托管于 Google Cloud Run <https://cloud.google.com/run/docs/quickstarts/build-and-deploy/python>`_
+- `将 Flask 托管于 AWS Elastic Beanstalk <https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-flask.html>`_
+- `托管于 Azure (IIS) <https://docs.microsoft.com/en-us/azure/app-service/containers/how-to-configure-python>`_
+- `托管于 PythonAnywhere <https://help.pythonanywhere.com/pages/Flask/>`_
 
-Self-hosted options
--------------------
+自主部署选项
+------------
 
 .. toctree::
    :maxdepth: 2
