@@ -1,0 +1,192 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-25 19:31+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../tutorial/factory.rst:4
+msgid "Application Setup"
+msgstr ""
+
+#: ../../tutorial/factory.rst:6
+msgid ""
+"A Flask application is an instance of the :class:`Flask` class. "
+"Everything about the application, such as configuration and URLs, will be"
+" registered with this class."
+msgstr ""
+
+#: ../../tutorial/factory.rst:10
+msgid ""
+"The most straightforward way to create a Flask application is to create a"
+" global :class:`Flask` instance directly at the top of your code, like "
+"how the \"Hello, World!\" example did on the previous page. While this is"
+" simple and useful in some cases, it can cause some tricky issues as the "
+"project grows."
+msgstr ""
+
+#: ../../tutorial/factory.rst:16
+msgid ""
+"Instead of creating a :class:`Flask` instance globally, you will create "
+"it inside a function. This function is known as the *application "
+"factory*. Any configuration, registration, and other setup the "
+"application needs will happen inside the function, then the application "
+"will be returned."
+msgstr ""
+
+#: ../../tutorial/factory.rst:24
+msgid "The Application Factory"
+msgstr ""
+
+#: ../../tutorial/factory.rst:26
+msgid ""
+"It's time to start coding! Create the ``flaskr`` directory and add the "
+"``__init__.py`` file. The ``__init__.py`` serves double duty: it will "
+"contain the application factory, and it tells Python that the ``flaskr`` "
+"directory should be treated as a package."
+msgstr ""
+
+#: ../../tutorial/factory.rst:35
+msgid "``flaskr/__init__.py``"
+msgstr ""
+
+#: ../../tutorial/factory.rst:71
+msgid ""
+"``create_app`` is the application factory function. You'll add to it "
+"later in the tutorial, but it already does a lot."
+msgstr ""
+
+#: ../../tutorial/factory.rst:74
+msgid ""
+"``app = Flask(__name__, instance_relative_config=True)`` creates the "
+":class:`Flask` instance."
+msgstr ""
+
+#: ../../tutorial/factory.rst:77
+msgid ""
+"``__name__`` is the name of the current Python module. The app needs to "
+"know where it's located to set up some paths, and ``__name__`` is a "
+"convenient way to tell it that."
+msgstr ""
+
+#: ../../tutorial/factory.rst:81
+msgid ""
+"``instance_relative_config=True`` tells the app that configuration files "
+"are relative to the :ref:`instance folder <instance-folders>`. The "
+"instance folder is located outside the ``flaskr`` package and can hold "
+"local data that shouldn't be committed to version control, such as "
+"configuration secrets and the database file."
+msgstr ""
+
+#: ../../tutorial/factory.rst:88
+msgid ""
+":meth:`app.config.from_mapping() <Config.from_mapping>` sets some default"
+" configuration that the app will use:"
+msgstr ""
+
+#: ../../tutorial/factory.rst:91
+msgid ""
+":data:`SECRET_KEY` is used by Flask and extensions to keep data safe. "
+"It's set to ``'dev'`` to provide a convenient value during development, "
+"but it should be overridden with a random value when deploying."
+msgstr ""
+
+#: ../../tutorial/factory.rst:96
+msgid ""
+"``DATABASE`` is the path where the SQLite database file will be saved. "
+"It's under :attr:`app.instance_path <Flask.instance_path>`, which is the "
+"path that Flask has chosen for the instance folder. You'll learn more "
+"about the database in the next section."
+msgstr ""
+
+#: ../../tutorial/factory.rst:102
+msgid ""
+":meth:`app.config.from_pyfile() <Config.from_pyfile>` overrides the "
+"default configuration with values taken from the ``config.py`` file in "
+"the instance folder if it exists. For example, when deploying, this can "
+"be used to set a real ``SECRET_KEY``."
+msgstr ""
+
+#: ../../tutorial/factory.rst:107
+msgid ""
+"``test_config`` can also be passed to the factory, and will be used "
+"instead of the instance configuration. This is so the tests you'll write "
+"later in the tutorial can be configured independently of any development "
+"values you have configured."
+msgstr ""
+
+#: ../../tutorial/factory.rst:112
+msgid ""
+":func:`os.makedirs` ensures that :attr:`app.instance_path "
+"<Flask.instance_path>` exists. Flask doesn't create the instance folder "
+"automatically, but it needs to be created because your project will "
+"create the SQLite database file there."
+msgstr ""
+
+#: ../../tutorial/factory.rst:118
+msgid ""
+":meth:`@app.route() <Flask.route>` creates a simple route so you can see "
+"the application working before getting into the rest of the tutorial. It "
+"creates a connection between the URL ``/hello`` and a function that "
+"returns a response, the string ``'Hello, World!'`` in this case."
+msgstr ""
+
+#: ../../tutorial/factory.rst:126
+msgid "Run The Application"
+msgstr ""
+
+#: ../../tutorial/factory.rst:128
+msgid ""
+"Now you can run your application using the ``flask`` command. From the "
+"terminal, tell Flask where to find your application, then run it in "
+"development mode. Remember, you should still be in the top-level ``flask-"
+"tutorial`` directory, not the ``flaskr`` package."
+msgstr ""
+
+#: ../../tutorial/factory.rst:133
+msgid ""
+"Development mode shows an interactive debugger whenever a page raises an "
+"exception, and restarts the server whenever you make changes to the code."
+" You can leave it running and just reload the browser page as you follow "
+"the tutorial."
+msgstr ""
+
+#: ../../tutorial/factory.rst:140
+msgid "Bash"
+msgstr ""
+
+#: ../../tutorial/factory.rst:148
+msgid "CMD"
+msgstr ""
+
+#: ../../tutorial/factory.rst:156
+msgid "Powershell"
+msgstr ""
+
+#: ../../tutorial/factory.rst:164
+msgid "You'll see output similar to this:"
+msgstr ""
+
+#: ../../tutorial/factory.rst:176
+msgid ""
+"Visit http://127.0.0.1:5000/hello in a browser and you should see the "
+"\"Hello, World!\" message. Congratulations, you're now running your Flask"
+" web application!"
+msgstr ""
+
+#: ../../tutorial/factory.rst:180
+msgid "Continue to :doc:`database`."
+msgstr ""
+

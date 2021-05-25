@@ -1,0 +1,45 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-25 19:31+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../patterns/methodoverrides.rst:2
+msgid "Adding HTTP Method Overrides"
+msgstr ""
+
+#: ../../patterns/methodoverrides.rst:4
+msgid ""
+"Some HTTP proxies do not support arbitrary HTTP methods or newer HTTP "
+"methods (such as PATCH). In that case it's possible to \"proxy\" HTTP "
+"methods through another HTTP method in total violation of the protocol."
+msgstr ""
+
+#: ../../patterns/methodoverrides.rst:8
+msgid ""
+"The way this works is by letting the client do an HTTP POST request and "
+"set the ``X-HTTP-Method-Override`` header. Then the method is replaced "
+"with the header value before being passed to Flask."
+msgstr ""
+
+#: ../../patterns/methodoverrides.rst:12
+msgid "This can be accomplished with an HTTP middleware::"
+msgstr ""
+
+#: ../../patterns/methodoverrides.rst:37
+msgid "To use this with Flask, wrap the app object with the middleware::"
+msgstr ""
+

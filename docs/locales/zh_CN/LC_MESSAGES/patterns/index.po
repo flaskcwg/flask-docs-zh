@@ -1,0 +1,40 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-25 19:31+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../patterns/index.rst:2
+msgid "Patterns for Flask"
+msgstr ""
+
+#: ../../patterns/index.rst:4
+msgid ""
+"Certain features and interactions are common enough that you will find "
+"them in most web applications. For example, many applications use a "
+"relational database and user authentication. They will open a database "
+"connection at the beginning of the request and get the information for "
+"the logged in user. At the end of the request, the database connection is"
+" closed."
+msgstr ""
+
+#: ../../patterns/index.rst:11
+msgid ""
+"These types of patterns may be a bit outside the scope of Flask itself, "
+"but Flask makes it easy to implement them. Some common patterns are "
+"collected in the following pages."
+msgstr ""
+

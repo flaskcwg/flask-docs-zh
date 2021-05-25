@@ -1,0 +1,106 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-25 19:31+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../patterns/mongoengine.rst:2
+msgid "MongoDB with MongoEngine"
+msgstr ""
+
+#: ../../patterns/mongoengine.rst:4
+msgid ""
+"Using a document database like MongoDB is a common alternative to "
+"relational SQL databases. This pattern shows how to use `MongoEngine`_, a"
+" document mapper library, to integrate with MongoDB."
+msgstr ""
+
+#: ../../patterns/mongoengine.rst:8
+msgid "A running MongoDB server and `Flask-MongoEngine`_ are required. ::"
+msgstr ""
+
+#: ../../patterns/mongoengine.rst:17
+msgid "Configuration"
+msgstr ""
+
+#: ../../patterns/mongoengine.rst:19
+msgid ""
+"Basic setup can be done by defining ``MONGODB_SETTINGS`` on "
+"``app.config`` and creating a ``MongoEngine`` instance. ::"
+msgstr ""
+
+#: ../../patterns/mongoengine.rst:33
+msgid "Mapping Documents"
+msgstr ""
+
+#: ../../patterns/mongoengine.rst:35
+msgid ""
+"To declare a model that represents a Mongo document, create a class that "
+"inherits from ``Document`` and declare each of the fields. ::"
+msgstr ""
+
+#: ../../patterns/mongoengine.rst:47
+msgid ""
+"If the document has nested fields, use ``EmbeddedDocument`` to defined "
+"the fields of the embedded document and ``EmbeddedDocumentField`` to "
+"declare it on the parent document. ::"
+msgstr ""
+
+#: ../../patterns/mongoengine.rst:62
+msgid "Creating Data"
+msgstr ""
+
+#: ../../patterns/mongoengine.rst:64
+msgid ""
+"Instantiate your document class with keyword arguments for the fields. "
+"You can also assign values to the field attributes after instantiation. "
+"Then call ``doc.save()``. ::"
+msgstr ""
+
+#: ../../patterns/mongoengine.rst:78
+msgid "Queries"
+msgstr ""
+
+#: ../../patterns/mongoengine.rst:80
+msgid ""
+"Use the class ``objects`` attribute to make queries. A keyword argument "
+"looks for an equal value on the field. ::"
+msgstr ""
+
+#: ../../patterns/mongoengine.rst:85
+msgid ""
+"Query operators may be used by concatenating them with the field name "
+"using a double-underscore. ``objects``, and queries returned by calling "
+"it, are iterable. ::"
+msgstr ""
+
+#: ../../patterns/mongoengine.rst:96
+msgid "Documentation"
+msgstr ""
+
+#: ../../patterns/mongoengine.rst:98
+msgid ""
+"There are many more ways to define and query documents with MongoEngine. "
+"For more information, check out the `official documentation "
+"<MongoEngine_>`_."
+msgstr ""
+
+#: ../../patterns/mongoengine.rst:102
+msgid ""
+"Flask-MongoEngine adds helpful utilities on top of MongoEngine. Check out"
+" their `documentation <Flask-MongoEngine_>`_ as well."
+msgstr ""
+

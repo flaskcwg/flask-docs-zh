@@ -1,0 +1,268 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-25 19:31+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../../CONTRIBUTING.rst:2
+msgid "How to contribute to Flask"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:4
+msgid "Thank you for considering contributing to Flask!"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:8
+msgid "Support questions"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:10
+msgid ""
+"Please don't use the issue tracker for this. The issue tracker is a tool "
+"to address bugs and feature requests in Flask itself. Use one of the "
+"following resources for questions about using Flask or issues with your "
+"own code:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:15
+msgid "The ``#get-help`` channel on our Discord chat: https://discord.gg/pallets"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:17
+msgid ""
+"The mailing list flask@python.org for long term discussion or larger "
+"issues."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:19
+msgid ""
+"Ask on `Stack Overflow`_. Search with Google first using: "
+"``site:stackoverflow.com flask {search term, exception message, etc.}``"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:26
+msgid "Reporting issues"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:28
+msgid "Include the following information in your post:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:30
+msgid "Describe what you expected to happen."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:31
+msgid ""
+"If possible, include a `minimal reproducible example`_ to help us "
+"identify the issue. This also helps check that the issue is not with your"
+" own code."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:34
+msgid ""
+"Describe what actually happened. Include the full traceback if there was "
+"an exception."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:36
+msgid ""
+"List your Python and Flask versions. If possible, check if this issue is "
+"already fixed in the latest releases or the latest code in the "
+"repository."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:44
+msgid "Submitting patches"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:46
+msgid ""
+"If there is not an open issue for what you want to submit, prefer opening"
+" one for discussion before working on a PR. You can work on any issue "
+"that doesn't have an open PR linked to it or a maintainer assigned to it."
+" These show up in the sidebar. No need to ask if you can work on an issue"
+" that interests you."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:52
+msgid "Include the following in your patch:"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:54
+msgid ""
+"Use `Black`_ to format your code. This and other tools will run "
+"automatically if you install `pre-commit`_ using the instructions below."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:57
+msgid ""
+"Include tests if your patch adds or changes code. Make sure the test "
+"fails without your patch."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:59
+msgid ""
+"Update any relevant docs pages and docstrings. Docs pages and docstrings "
+"should be wrapped at 72 characters."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:61
+msgid ""
+"Add an entry in ``CHANGES.rst``. Use the same style as other entries. "
+"Also include ``.. versionchanged::`` inline changelogs in relevant "
+"docstrings."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:70
+msgid "First time setup"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:72
+msgid "Download and install the `latest version of git`_."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:73
+msgid "Configure git with your `username`_ and `email`_."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:80
+msgid "Make sure you have a `GitHub account`_."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:81
+msgid "Fork Flask to your GitHub account by clicking the `Fork`_ button."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:82
+msgid "`Clone`_ the main repository locally."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:89
+msgid ""
+"Add your fork as a remote to push your work to. Replace ``{username}`` "
+"with your username. This names the remote \"fork\", the default Pallets "
+"remote is \"origin\"."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:97
+msgid "Create a virtualenv."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:101
+msgid "Linux/macOS"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:108
+msgid "Windows"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:115
+msgid "Upgrade pip and setuptools."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:121
+msgid "Install the development dependencies, then install Flask in editable mode."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:128
+msgid "Install the pre-commit hooks."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:143
+msgid "Start coding"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:145
+msgid ""
+"Create a branch to identify the issue you would like to work on. If "
+"you're submitting a bug or documentation fix, branch off of the latest "
+"\".x\" branch."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:154
+msgid ""
+"If you're submitting a feature addition or change, branch off of the "
+"\"main\" branch."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:162
+msgid "Using your favorite editor, make your changes, `committing as you go`_."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:164
+msgid ""
+"Include tests that cover any code changes you make. Make sure the test "
+"fails without your patch. Run the tests as described below."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:166
+msgid ""
+"Push your commits to your fork on GitHub and `create a pull request`_. "
+"Link to the issue being addressed with ``fixes #123`` in the pull "
+"request."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:179
+msgid "Running the tests"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:181
+msgid "Run the basic test suite with pytest."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:187
+msgid ""
+"This runs the tests for the current environment, which is usually "
+"sufficient. CI will run the full suite when you submit your pull request."
+" You can run the full test suite with tox if you don't want to wait."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:198
+msgid "Running test coverage"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:200
+msgid ""
+"Generating a report of lines that do not have test coverage can indicate "
+"where to start contributing. Run ``pytest`` using ``coverage`` and "
+"generate a report."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:210
+msgid "Open ``htmlcov/index.html`` in your browser to explore the report."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:212
+msgid "Read more about `coverage <https://coverage.readthedocs.io>`__."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:216
+msgid "Building the docs"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:218
+msgid "Build the docs in the ``docs`` directory using Sphinx."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:225
+msgid "Open ``_build/html/index.html`` in your browser to view the docs."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:227
+msgid "Read more about `Sphinx <https://www.sphinx-doc.org/en/stable/>`__."
+msgstr ""
+

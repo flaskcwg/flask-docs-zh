@@ -1,0 +1,136 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-25 19:31+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../server.rst:4
+msgid "Development Server"
+msgstr ""
+
+#: ../../server.rst:6
+msgid ""
+"Flask provides a ``run`` command to run the application with a "
+"development server. In development mode, this server provides an "
+"interactive debugger and will reload when code is changed."
+msgstr ""
+
+#: ../../server.rst:12
+msgid ""
+"Do not use the development server when deploying to production. It is "
+"intended for use only during local development. It is not designed to be "
+"particularly efficient, stable, or secure."
+msgstr ""
+
+#: ../../server.rst:16
+msgid "See :doc:`/deploying/index` for deployment options."
+msgstr ""
+
+#: ../../server.rst:19
+msgid "Command Line"
+msgstr ""
+
+#: ../../server.rst:21
+msgid ""
+"The ``flask run`` command line script is the recommended way to run the "
+"development server. It requires setting the ``FLASK_APP`` environment "
+"variable to point to your application, and ``FLASK_ENV=development`` to "
+"fully enable development mode."
+msgstr ""
+
+#: ../../server.rst:28
+msgid "Bash"
+msgstr ""
+
+#: ../../server.rst:36
+msgid "CMD"
+msgstr ""
+
+#: ../../server.rst:44
+msgid "Powershell"
+msgstr ""
+
+#: ../../server.rst:52
+msgid ""
+"This enables the development environment, including the interactive "
+"debugger and reloader, and then starts the server on "
+"http://localhost:5000/. Use ``flask run --help`` to see the available "
+"options, and  :doc:`/cli` for detailed instructions about configuring and"
+" using the CLI."
+msgstr ""
+
+#: ../../server.rst:60
+msgid ""
+"Prior to Flask 1.0 the ``FLASK_ENV`` environment variable was not "
+"supported and you needed to enable debug mode by exporting "
+"``FLASK_DEBUG=1``. This can still be used to control debug mode, but you "
+"should prefer setting the development environment as shown above."
+msgstr ""
+
+#: ../../server.rst:68
+msgid "Lazy or Eager Loading"
+msgstr ""
+
+#: ../../server.rst:70
+msgid ""
+"When using the ``flask run`` command with the reloader, the server will "
+"continue to run even if you introduce syntax errors or other "
+"initialization errors into the code. Accessing the site will show the "
+"interactive debugger for the error, rather than crashing the server. This"
+" feature is called \"lazy loading\"."
+msgstr ""
+
+#: ../../server.rst:76
+msgid ""
+"If a syntax error is already present when calling ``flask run``, it will "
+"fail immediately and show the traceback rather than waiting until the "
+"site is accessed. This is intended to make errors more visible initially "
+"while still allowing the server to handle errors on reload."
+msgstr ""
+
+#: ../../server.rst:81
+msgid ""
+"To override this behavior and always fail immediately, even on reload, "
+"pass the ``--eager-loading`` option. To always keep the server running, "
+"even on the initial call, pass ``--lazy-loading``."
+msgstr ""
+
+#: ../../server.rst:87
+msgid "In Code"
+msgstr ""
+
+#: ../../server.rst:89
+msgid ""
+"As an alternative to the ``flask run`` command, the development server "
+"can also be started from Python with the :meth:`Flask.run` method. This "
+"method takes arguments similar to the CLI options to control the server. "
+"The main difference from the CLI command is that the server will crash if"
+" there are errors when reloading."
+msgstr ""
+
+#: ../../server.rst:95
+msgid ""
+"``debug=True`` can be passed to enable the debugger and reloader, but the"
+" ``FLASK_ENV=development`` environment variable is still required to "
+"fully enable development mode."
+msgstr ""
+
+#: ../../server.rst:99
+msgid ""
+"Place the call in a main block, otherwise it will interfere when trying "
+"to import and run the application with a production server later."
+msgstr ""
+

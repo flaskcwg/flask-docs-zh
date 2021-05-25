@@ -1,0 +1,176 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-25 19:31+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../patterns/jquery.rst:2
+msgid "AJAX with jQuery"
+msgstr ""
+
+#: ../../patterns/jquery.rst:4
+msgid ""
+"`jQuery`_ is a small JavaScript library commonly used to simplify working"
+" with the DOM and JavaScript in general.  It is the perfect tool to make "
+"web applications more dynamic by exchanging JSON between server and "
+"client."
+msgstr ""
+
+#: ../../patterns/jquery.rst:9
+msgid ""
+"JSON itself is a very lightweight transport format, very similar to how "
+"Python primitives (numbers, strings, dicts and lists) look like which is "
+"widely supported and very easy to parse.  It became popular a few years "
+"ago and quickly replaced XML as transport format in web applications."
+msgstr ""
+
+#: ../../patterns/jquery.rst:17
+msgid "Loading jQuery"
+msgstr ""
+
+#: ../../patterns/jquery.rst:19
+msgid ""
+"In order to use jQuery, you have to download it first and place it in the"
+" static folder of your application and then ensure it's loaded.  Ideally "
+"you have a layout template that is used for all pages where you just have"
+" to add a script statement to the bottom of your ``<body>`` to load "
+"jQuery:"
+msgstr ""
+
+#: ../../patterns/jquery.rst:29
+msgid ""
+"Another method is using Google's `AJAX Libraries API "
+"<https://developers.google.com/speed/libraries/>`_ to load jQuery:"
+msgstr ""
+
+#: ../../patterns/jquery.rst:38
+msgid ""
+"In this case you have to put jQuery into your static folder as a "
+"fallback, but it will first try to load it directly from Google. This has"
+" the advantage that your website will probably load faster for users if "
+"they went to at least one other website before using the same jQuery "
+"version from Google because it will already be in the browser cache."
+msgstr ""
+
+#: ../../patterns/jquery.rst:45
+msgid "Where is My Site?"
+msgstr ""
+
+#: ../../patterns/jquery.rst:47
+msgid ""
+"Do you know where your application is?  If you are developing the answer "
+"is quite simple: it's on localhost port something and directly on the "
+"root of that server.  But what if you later decide to move your "
+"application to a different location?  For example to "
+"``http://example.com/myapp``?  On the server side this never was a "
+"problem because we were using the handy :func:`~flask.url_for` function "
+"that could answer that question for us, but if we are using jQuery we "
+"should not hardcode the path to the application but make that dynamic, so"
+" how can we do that?"
+msgstr ""
+
+#: ../../patterns/jquery.rst:56
+msgid ""
+"A simple method would be to add a script tag to our page that sets a "
+"global variable to the prefix to the root of the application.  Something "
+"like this:"
+msgstr ""
+
+#: ../../patterns/jquery.rst:68
+msgid "JSON View Functions"
+msgstr ""
+
+#: ../../patterns/jquery.rst:70
+msgid ""
+"Now let's create a server side function that accepts two URL arguments of"
+" numbers which should be added together and then sent back to the "
+"application in a JSON object.  This is a really ridiculous example and is"
+" something you usually would do on the client side alone, but a simple "
+"example that shows how you would use jQuery and Flask nonetheless::"
+msgstr ""
+
+#: ../../patterns/jquery.rst:89
+msgid ""
+"As you can see I also added an `index` method here that renders a "
+"template.  This template will load jQuery as above and have a little form"
+" where we can add two numbers and a link to trigger the function on the "
+"server side."
+msgstr ""
+
+#: ../../patterns/jquery.rst:94
+msgid ""
+"Note that we are using the :meth:`~werkzeug.datastructures.MultiDict.get`"
+" method here which will never fail.  If the key is missing a default "
+"value (here ``0``) is returned.  Furthermore it can convert values to a "
+"specific type (like in our case `int`).  This is especially handy for "
+"code that is triggered by a script (APIs, JavaScript etc.) because you "
+"don't need special error reporting in that case."
+msgstr ""
+
+#: ../../patterns/jquery.rst:102
+msgid "The HTML"
+msgstr ""
+
+#: ../../patterns/jquery.rst:104
+msgid ""
+"Your index.html template either has to extend a :file:`layout.html` "
+"template with jQuery loaded and the `$SCRIPT_ROOT` variable set, or do "
+"that on the top. Here's the HTML code needed for our little application "
+"(:file:`index.html`). Notice that we also drop the script directly into "
+"the HTML here.  It is usually a better idea to have that in a separate "
+"script file:"
+msgstr ""
+
+#: ../../patterns/jquery.rst:131
+msgid ""
+"I won't go into detail here about how jQuery works, just a very quick "
+"explanation of the little bit of code above:"
+msgstr ""
+
+#: ../../patterns/jquery.rst:134
+msgid ""
+"``$(function() { ... })`` specifies code that should run once the browser"
+" is done loading the basic parts of the page."
+msgstr ""
+
+#: ../../patterns/jquery.rst:136
+msgid "``$('selector')`` selects an element and lets you operate on it."
+msgstr ""
+
+#: ../../patterns/jquery.rst:137
+msgid ""
+"``element.bind('event', func)`` specifies a function that should run when"
+" the user clicked on the element.  If that function returns `false`, the "
+"default behavior will not kick in (in this case, navigate to the `#` "
+"URL)."
+msgstr ""
+
+#: ../../patterns/jquery.rst:141
+msgid ""
+"``$.getJSON(url, data, func)`` sends a ``GET`` request to `url` and will "
+"send the contents of the `data` object as query parameters.  Once the "
+"data arrived, it will call the given function with the return value as "
+"argument.  Note that we can use the `$SCRIPT_ROOT` variable here that we "
+"set earlier."
+msgstr ""
+
+#: ../../patterns/jquery.rst:147
+msgid ""
+"Check out the :gh:`example source <examples/javascript>` for a full "
+"application demonstrating the code on this page, as well as the same "
+"thing using ``XMLHttpRequest`` and ``fetch``."
+msgstr ""
+

@@ -1,0 +1,38 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-25 19:31+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../deploying/asgi.rst:4
+msgid "ASGI"
+msgstr ""
+
+#: ../../deploying/asgi.rst:6
+msgid ""
+"If you'd like to use an ASGI server you will need to utilise WSGI to ASGI"
+" middleware. The asgiref [WsgiToAsgi](https://github.com/django/asgiref"
+"#wsgi-to-asgi-adapter) adapter is recommended as it integrates with the "
+"event loop used for Flask's :ref:`async_await` support. You can use the "
+"adapter by wrapping the Flask app,"
+msgstr ""
+
+#: ../../deploying/asgi.rst:24
+msgid ""
+"and then serving the ``asgi_app`` with the asgi server, e.g. using "
+"`Hypercorn <https://gitlab.com/pgjones/hypercorn>`_,"
+msgstr ""
+

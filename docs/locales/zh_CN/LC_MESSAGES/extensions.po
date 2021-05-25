@@ -1,0 +1,66 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-25 19:31+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../extensions.rst:2
+msgid "Extensions"
+msgstr ""
+
+#: ../../extensions.rst:4
+msgid ""
+"Extensions are extra packages that add functionality to a Flask "
+"application. For example, an extension might add support for sending "
+"email or connecting to a database. Some extensions add entire new "
+"frameworks to help build certain types of applications, like a REST API."
+msgstr ""
+
+#: ../../extensions.rst:11
+msgid "Finding Extensions"
+msgstr ""
+
+#: ../../extensions.rst:13
+msgid ""
+"Flask extensions are usually named \"Flask-Foo\" or \"Foo-Flask\". You "
+"can search PyPI for packages tagged with `Framework :: Flask <pypi_>`_."
+msgstr ""
+
+#: ../../extensions.rst:18
+msgid "Using Extensions"
+msgstr ""
+
+#: ../../extensions.rst:20
+msgid ""
+"Consult each extension's documentation for installation, configuration, "
+"and usage instructions. Generally, extensions pull their own "
+"configuration from :attr:`app.config <flask.Flask.config>` and are passed"
+" an application instance during initialization. For example, an extension"
+" called \"Flask-Foo\" might be used like this::"
+msgstr ""
+
+#: ../../extensions.rst:40
+msgid "Building Extensions"
+msgstr ""
+
+#: ../../extensions.rst:42
+msgid ""
+"While the `PyPI <pypi_>`_ contains many Flask extensions, you may not "
+"find an extension that fits your need. If this is the case, you can "
+"create your own. Read :doc:`/extensiondev` to develop your own Flask "
+"extension."
+msgstr ""
+

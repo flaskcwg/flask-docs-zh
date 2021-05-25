@@ -1,0 +1,570 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-25 19:31+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../cli.rst:4
+msgid "Command Line Interface"
+msgstr ""
+
+#: ../../cli.rst:6
+msgid ""
+"Installing Flask installs the ``flask`` script, a `Click`_ command line "
+"interface, in your virtualenv. Executed from the terminal, this script "
+"gives access to built-in, extension, and application-defined commands. "
+"The ``--help`` option will give more information about any commands and "
+"options."
+msgstr ""
+
+#: ../../cli.rst:15
+msgid "Application Discovery"
+msgstr ""
+
+#: ../../cli.rst:17
+msgid ""
+"The ``flask`` command is installed by Flask, not your application; it "
+"must be told where to find your application in order to use it. The "
+"``FLASK_APP`` environment variable is used to specify how to load the "
+"application."
+msgstr ""
+
+#: ../../cli.rst:23 ../../cli.rst:141 ../../cli.rst:195 ../../cli.rst:278
+#: ../../cli.rst:326 ../../cli.rst:357
+msgid "Bash"
+msgstr ""
+
+#: ../../cli.rst:30 ../../cli.rst:155 ../../cli.rst:206 ../../cli.rst:286
+#: ../../cli.rst:333 ../../cli.rst:363
+msgid "CMD"
+msgstr ""
+
+#: ../../cli.rst:37 ../../cli.rst:169 ../../cli.rst:217 ../../cli.rst:294
+#: ../../cli.rst:340 ../../cli.rst:369
+msgid "Powershell"
+msgstr ""
+
+#: ../../cli.rst:44
+msgid ""
+"While ``FLASK_APP`` supports a variety of options for specifying your "
+"application, most use cases should be simple. Here are the typical "
+"values:"
+msgstr ""
+
+#: ../../cli.rst:50
+msgid "(nothing)"
+msgstr ""
+
+#: ../../cli.rst:48
+msgid ""
+"The name \"app\" or \"wsgi\" is imported (as a \".py\" file, or package),"
+" automatically detecting an app (``app`` or ``application``) or factory "
+"(``create_app`` or ``make_app``)."
+msgstr ""
+
+#: ../../cli.rst:54
+msgid "``FLASK_APP=hello``"
+msgstr ""
+
+#: ../../cli.rst:53
+msgid ""
+"The given name is imported, automatically detecting an app (``app`` or "
+"``application``) or factory (``create_app`` or ``make_app``)."
+msgstr ""
+
+#: ../../cli.rst:58
+msgid ""
+"``FLASK_APP`` has three parts: an optional path that sets the current "
+"working directory, a Python file or dotted import path, and an optional "
+"variable name of the instance or factory. If the name is a factory, it "
+"can optionally be followed by arguments in parentheses. The following "
+"values demonstrate these parts:"
+msgstr ""
+
+#: ../../cli.rst:65
+msgid "``FLASK_APP=src/hello``"
+msgstr ""
+
+#: ../../cli.rst:65
+msgid "Sets the current working directory to ``src`` then imports ``hello``."
+msgstr ""
+
+#: ../../cli.rst:68
+msgid "``FLASK_APP=hello.web``"
+msgstr ""
+
+#: ../../cli.rst:68
+msgid "Imports the path ``hello.web``."
+msgstr ""
+
+#: ../../cli.rst:71
+msgid "``FLASK_APP=hello:app2``"
+msgstr ""
+
+#: ../../cli.rst:71
+msgid "Uses the ``app2`` Flask instance in ``hello``."
+msgstr ""
+
+#: ../../cli.rst:75
+msgid "``FLASK_APP=\"hello:create_app('dev')\"``"
+msgstr ""
+
+#: ../../cli.rst:74
+msgid ""
+"The ``create_app`` factory in ``hello`` is called with the string "
+"``'dev'`` as the argument."
+msgstr ""
+
+#: ../../cli.rst:77
+msgid ""
+"If ``FLASK_APP`` is not set, the command will try to import \"app\" or "
+"\"wsgi\" (as a \".py\" file, or package) and try to detect an application"
+" instance or factory."
+msgstr ""
+
+#: ../../cli.rst:81
+msgid ""
+"Within the given import, the command looks for an application instance "
+"named ``app`` or ``application``, then any application instance. If no "
+"instance is found, the command looks for a factory function named "
+"``create_app`` or ``make_app`` that returns an instance."
+msgstr ""
+
+#: ../../cli.rst:86
+msgid ""
+"If parentheses follow the factory name, their contents are parsed as "
+"Python literals and passed as arguments and keyword arguments to the "
+"function. This means that strings must still be in quotes."
+msgstr ""
+
+#: ../../cli.rst:92
+msgid "Run the Development Server"
+msgstr ""
+
+#: ../../cli.rst:94
+msgid ""
+"The :func:`run <cli.run_command>` command will start the development "
+"server. It replaces the :meth:`Flask.run` method in most cases. ::"
+msgstr ""
+
+#: ../../cli.rst:101
+msgid ""
+"Do not use this command to run your application in production. Only use "
+"the development server during development. The development server is "
+"provided for convenience, but is not designed to be particularly secure, "
+"stable, or efficient. See :doc:`/deploying/index` for how to run in "
+"production."
+msgstr ""
+
+#: ../../cli.rst:108
+msgid "Open a Shell"
+msgstr ""
+
+#: ../../cli.rst:110
+msgid ""
+"To explore the data in your application, you can start an interactive "
+"Python shell with the :func:`shell <cli.shell_command>` command. An "
+"application context will be active, and the app instance will be "
+"imported. ::"
+msgstr ""
+
+#: ../../cli.rst:121
+msgid "Use :meth:`~Flask.shell_context_processor` to add other automatic imports."
+msgstr ""
+
+#: ../../cli.rst:125
+msgid "Environments"
+msgstr ""
+
+#: ../../cli.rst:129
+msgid ""
+"The environment in which the Flask app runs is set by the "
+":envvar:`FLASK_ENV` environment variable. If not set it defaults to "
+"``production``. The other recognized environment is ``development``. "
+"Flask and extensions may choose to enable behaviors based on the "
+"environment."
+msgstr ""
+
+#: ../../cli.rst:135
+msgid ""
+"If the env is set to ``development``, the ``flask`` command will enable "
+"debug mode and ``flask run`` will enable the interactive debugger and "
+"reloader."
+msgstr ""
+
+#: ../../cli.rst:185
+msgid "Watch Extra Files with the Reloader"
+msgstr ""
+
+#: ../../cli.rst:187
+msgid ""
+"When using development mode, the reloader will trigger whenever your "
+"Python code or imported modules change. The reloader can watch additional"
+" files with the ``--extra-files`` option, or the "
+"``FLASK_RUN_EXTRA_FILES`` environment variable. Multiple paths are "
+"separated with ``:``, or ``;`` on Windows."
+msgstr ""
+
+#: ../../cli.rst:230
+msgid "Debug Mode"
+msgstr ""
+
+#: ../../cli.rst:232
+msgid ""
+"Debug mode will be enabled when :envvar:`FLASK_ENV` is ``development``, "
+"as described above. If you want to control debug mode separately, use "
+":envvar:`FLASK_DEBUG`. The value ``1`` enables it, ``0`` disables it."
+msgstr ""
+
+#: ../../cli.rst:240
+msgid "Environment Variables From dotenv"
+msgstr ""
+
+#: ../../cli.rst:242
+msgid ""
+"Rather than setting ``FLASK_APP`` each time you open a new terminal, you "
+"can use Flask's dotenv support to set environment variables "
+"automatically."
+msgstr ""
+
+#: ../../cli.rst:245
+msgid ""
+"If `python-dotenv`_ is installed, running the ``flask`` command will set "
+"environment variables defined in the files :file:`.env` and "
+":file:`.flaskenv`. This can be used to avoid having to set ``FLASK_APP`` "
+"manually every time you open a new terminal, and to set configuration "
+"using environment variables similar to how some deployment services work."
+msgstr ""
+
+#: ../../cli.rst:251
+msgid ""
+"Variables set on the command line are used over those set in "
+":file:`.env`, which are used over those set in :file:`.flaskenv`. "
+":file:`.flaskenv` should be used for public variables, such as "
+"``FLASK_APP``, while :file:`.env` should not be committed to your "
+"repository so that it can set private variables."
+msgstr ""
+
+#: ../../cli.rst:256
+msgid ""
+"Directories are scanned upwards from the directory you call ``flask`` "
+"from to locate the files. The current working directory will be set to "
+"the location of the file, with the assumption that that is the top level "
+"project directory."
+msgstr ""
+
+#: ../../cli.rst:261
+msgid ""
+"The files are only loaded by the ``flask`` command or calling "
+":meth:`~Flask.run`. If you would like to load these files when running in"
+" production, you should call :func:`~cli.load_dotenv` manually."
+msgstr ""
+
+#: ../../cli.rst:269
+msgid "Setting Command Options"
+msgstr ""
+
+#: ../../cli.rst:271
+msgid ""
+"Click is configured to load default values for command options from "
+"environment variables. The variables use the pattern "
+"``FLASK_COMMAND_OPTION``. For example, to set the port for the run "
+"command, instead of ``flask run --port 8000``:"
+msgstr ""
+
+#: ../../cli.rst:302
+msgid ""
+"These can be added to the ``.flaskenv`` file just like ``FLASK_APP`` to "
+"control default command options."
+msgstr ""
+
+#: ../../cli.rst:307
+msgid "Disable dotenv"
+msgstr ""
+
+#: ../../cli.rst:309
+msgid ""
+"The ``flask`` command will show a message if it detects dotenv files but "
+"python-dotenv is not installed."
+msgstr ""
+
+#: ../../cli.rst:317
+msgid ""
+"You can tell Flask not to load dotenv files even when python-dotenv is "
+"installed by setting the ``FLASK_SKIP_DOTENV`` environment variable. This"
+" can be useful if you want to load them manually, or if you're using a "
+"project runner that loads them already. Keep in mind that the environment"
+" variables must be set before the app loads or it won't configure as "
+"expected."
+msgstr ""
+
+#: ../../cli.rst:349
+msgid "Environment Variables From virtualenv"
+msgstr ""
+
+#: ../../cli.rst:351
+msgid ""
+"If you do not want to install dotenv support, you can still set "
+"environment variables by adding them to the end of the virtualenv's "
+":file:`activate` script. Activating the virtualenv will set the "
+"variables."
+msgstr ""
+
+#: ../../cli.rst:359
+msgid "Unix Bash, :file:`venv/bin/activate`::"
+msgstr ""
+
+#: ../../cli.rst:365
+msgid "Windows CMD, :file:`venv\\\\Scripts\\\\activate.bat`::"
+msgstr ""
+
+#: ../../cli.rst:371
+msgid "Windows Powershell, :file:`venv\\\\Scripts\\\\activate.ps1`::"
+msgstr ""
+
+#: ../../cli.rst:375
+msgid ""
+"It is preferred to use dotenv support over this, since :file:`.flaskenv` "
+"can be committed to the repository so that it works automatically "
+"wherever the project is checked out."
+msgstr ""
+
+#: ../../cli.rst:381
+msgid "Custom Commands"
+msgstr ""
+
+#: ../../cli.rst:383
+msgid ""
+"The ``flask`` command is implemented using `Click`_. See that project's "
+"documentation for full information about writing commands."
+msgstr ""
+
+#: ../../cli.rst:386
+msgid ""
+"This example adds the command ``create-user`` that takes the argument "
+"``name``. ::"
+msgstr ""
+
+#: ../../cli.rst:403
+msgid ""
+"This example adds the same command, but as ``user create``, a command in "
+"a group. This is useful if you want to organize multiple related "
+"commands. ::"
+msgstr ""
+
+#: ../../cli.rst:424
+msgid ""
+"See :ref:`testing-cli` for an overview of how to test your custom "
+"commands."
+msgstr ""
+
+#: ../../cli.rst:429
+msgid "Registering Commands with Blueprints"
+msgstr ""
+
+#: ../../cli.rst:431
+msgid ""
+"If your application uses blueprints, you can optionally register CLI "
+"commands directly onto them. When your blueprint is registered onto your "
+"application, the associated commands will be available to the ``flask`` "
+"command. By default, those commands will be nested in a group matching "
+"the name of the blueprint."
+msgstr ""
+
+#: ../../cli.rst:454
+msgid ""
+"You can alter the group name by specifying the ``cli_group`` parameter "
+"when creating the :class:`Blueprint` object, or later with "
+":meth:`app.register_blueprint(bp, cli_group='...') "
+"<Flask.register_blueprint>`. The following are equivalent:"
+msgstr ""
+
+#: ../../cli.rst:469
+msgid ""
+"Specifying ``cli_group=None`` will remove the nesting and merge the "
+"commands directly to the application's level:"
+msgstr ""
+
+#: ../../cli.rst:484
+msgid "Application Context"
+msgstr ""
+
+#: ../../cli.rst:486
+msgid ""
+"Commands added using the Flask app's :attr:`~Flask.cli` "
+":meth:`~cli.AppGroup.command` decorator will be executed with an "
+"application context pushed, so your command and extensions have access to"
+" the app and its configuration. If you create a command using the Click "
+":func:`~click.command` decorator instead of the Flask decorator, you can "
+"use :func:`~cli.with_appcontext` to get the same behavior. ::"
+msgstr ""
+
+#: ../../cli.rst:503
+msgid "If you're sure a command doesn't need the context, you can disable it::"
+msgstr ""
+
+#: ../../cli.rst:511
+msgid "Plugins"
+msgstr ""
+
+#: ../../cli.rst:513
+msgid ""
+"Flask will automatically load commands specified in the "
+"``flask.commands`` `entry point`_. This is useful for extensions that "
+"want to add commands when they are installed. Entry points are specified "
+"in :file:`setup.py` ::"
+msgstr ""
+
+#: ../../cli.rst:532
+msgid ""
+"Inside :file:`flask_my_extension/commands.py` you can then export a Click"
+" object::"
+msgstr ""
+
+#: ../../cli.rst:541
+msgid ""
+"Once that package is installed in the same virtualenv as your Flask "
+"project, you can run ``flask my-command`` to invoke the command."
+msgstr ""
+
+#: ../../cli.rst:548
+msgid "Custom Scripts"
+msgstr ""
+
+#: ../../cli.rst:550
+msgid ""
+"When you are using the app factory pattern, it may be more convenient to "
+"define your own Click script. Instead of using ``FLASK_APP`` and letting "
+"Flask load your application, you can create your own Click object and "
+"export it as a `console script`_ entry point."
+msgstr ""
+
+#: ../../cli.rst:555
+msgid "Create an instance of :class:`~cli.FlaskGroup` and pass it the factory::"
+msgstr ""
+
+#: ../../cli.rst:570
+msgid "Define the entry point in :file:`setup.py`::"
+msgstr ""
+
+#: ../../cli.rst:584
+msgid ""
+"Install the application in the virtualenv in editable mode and the custom"
+" script is available. Note that you don't need to set ``FLASK_APP``. ::"
+msgstr ""
+
+#: ../../cli.rst:590
+msgid "Errors in Custom Scripts"
+msgstr ""
+
+#: ../../cli.rst:592
+msgid ""
+"When using a custom script, if you introduce an error in your module-"
+"level code, the reloader will fail because it can no longer load the "
+"entry point."
+msgstr ""
+
+#: ../../cli.rst:596
+msgid ""
+"The ``flask`` command, being separate from your code, does not have this "
+"issue and is recommended in most cases."
+msgstr ""
+
+#: ../../cli.rst:603
+msgid "PyCharm Integration"
+msgstr ""
+
+#: ../../cli.rst:605
+msgid ""
+"PyCharm Professional provides a special Flask run configuration. For the "
+"Community Edition, we need to configure it to call the ``flask run`` CLI "
+"command with the correct environment variables. These instructions should"
+" be similar for any other IDE you might want to use."
+msgstr ""
+
+#: ../../cli.rst:610
+msgid ""
+"In PyCharm, with your project open, click on *Run* from the menu bar and "
+"go to *Edit Configurations*. You'll be greeted by a screen similar to "
+"this:"
+msgstr ""
+
+msgid "Screenshot of PyCharms's run configuration settings."
+msgstr ""
+
+#: ../../cli.rst:619
+msgid ""
+"There's quite a few options to change, but once we've done it for one "
+"command, we can easily copy the entire configuration and make a single "
+"tweak to give us access to other commands, including any custom ones you "
+"may implement yourself."
+msgstr ""
+
+#: ../../cli.rst:624
+msgid ""
+"Click the + (*Add New Configuration*) button and select *Python*. Give "
+"the configuration a name such as \"flask run\". For the ``flask run`` "
+"command, check \"Single instance only\" since you can't run the server "
+"more than once at the same time."
+msgstr ""
+
+#: ../../cli.rst:629
+msgid "Select *Module name* from the dropdown (**A**) then input ``flask``."
+msgstr ""
+
+#: ../../cli.rst:631
+msgid ""
+"The *Parameters* field (**B**) is set to the CLI command to execute (with"
+" any arguments). In this example we use ``run``, which will run the "
+"development server."
+msgstr ""
+
+#: ../../cli.rst:635
+msgid ""
+"You can skip this next step if you're using :ref:`dotenv`. We need to add"
+" an environment variable (**C**) to identify our application. Click on "
+"the browse button and add an entry with ``FLASK_APP`` on the left and the"
+" Python import or file on the right (``hello`` for example). Add an entry"
+" with ``FLASK_ENV`` and set it to ``development``."
+msgstr ""
+
+#: ../../cli.rst:641
+msgid ""
+"Next we need to set the working directory (**D**) to be the folder where "
+"our application resides."
+msgstr ""
+
+#: ../../cli.rst:644
+msgid ""
+"If you have installed your project as a package in your virtualenv, you "
+"may untick the *PYTHONPATH* options (**E**). This will more accurately "
+"match how you deploy the app later."
+msgstr ""
+
+#: ../../cli.rst:648
+msgid ""
+"Click *Apply* to save the configuration, or *OK* to save and close the "
+"window. Select the configuration in the main PyCharm window and click the"
+" play button next to it to run the server."
+msgstr ""
+
+#: ../../cli.rst:652
+msgid ""
+"Now that we have a configuration which runs ``flask run`` from within "
+"PyCharm, we can copy that configuration and alter the *Script* argument "
+"to run a different CLI command, e.g. ``flask shell``."
+msgstr ""
+

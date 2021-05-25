@@ -1,0 +1,92 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-25 19:31+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../tutorial/next.rst:2
+msgid "Keep Developing!"
+msgstr ""
+
+#: ../../tutorial/next.rst:4
+msgid ""
+"You've learned about quite a few Flask and Python concepts throughout the"
+" tutorial. Go back and review the tutorial and compare your code with the"
+" steps you took to get there. Compare your project to the :gh:`example "
+"project <examples/tutorial>`, which might look a bit different due to the"
+" step-by-step nature of the tutorial."
+msgstr ""
+
+#: ../../tutorial/next.rst:10
+msgid ""
+"There's a lot more to Flask than what you've seen so far. Even so, you're"
+" now equipped to start developing your own web applications. Check out "
+"the :doc:`/quickstart` for an overview of what Flask can do, then dive "
+"into the docs to keep learning. Flask uses `Jinja`_, `Click`_, "
+"`Werkzeug`_, and `ItsDangerous`_ behind the scenes, and they all have "
+"their own documentation too. You'll also be interested in "
+":doc:`/extensions` which make tasks like working with the database or "
+"validating form data easier and more powerful."
+msgstr ""
+
+#: ../../tutorial/next.rst:19
+msgid ""
+"If you want to keep developing your Flaskr project, here are some ideas "
+"for what to try next:"
+msgstr ""
+
+#: ../../tutorial/next.rst:22
+msgid ""
+"A detail view to show a single post. Click a post's title to go to its "
+"page."
+msgstr ""
+
+#: ../../tutorial/next.rst:24
+msgid "Like / unlike a post."
+msgstr ""
+
+#: ../../tutorial/next.rst:25
+msgid "Comments."
+msgstr ""
+
+#: ../../tutorial/next.rst:26
+msgid "Tags. Clicking a tag shows all the posts with that tag."
+msgstr ""
+
+#: ../../tutorial/next.rst:27
+msgid "A search box that filters the index page by name."
+msgstr ""
+
+#: ../../tutorial/next.rst:28
+msgid "Paged display. Only show 5 posts per page."
+msgstr ""
+
+#: ../../tutorial/next.rst:29
+msgid "Upload an image to go along with a post."
+msgstr ""
+
+#: ../../tutorial/next.rst:30
+msgid "Format posts using Markdown."
+msgstr ""
+
+#: ../../tutorial/next.rst:31
+msgid "An RSS feed of new posts."
+msgstr ""
+
+#: ../../tutorial/next.rst:33
+msgid "Have fun and make awesome applications!"
+msgstr ""
+

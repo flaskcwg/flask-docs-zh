@@ -1,0 +1,64 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-25 19:31+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../patterns/deferredcallbacks.rst:2
+msgid "Deferred Request Callbacks"
+msgstr ""
+
+#: ../../patterns/deferredcallbacks.rst:4
+msgid ""
+"One of the design principles of Flask is that response objects are "
+"created and passed down a chain of potential callbacks that can modify "
+"them or replace them. When the request handling starts, there is no "
+"response object yet. It is created as necessary either by a view function"
+" or by some other component in the system."
+msgstr ""
+
+#: ../../patterns/deferredcallbacks.rst:10
+msgid ""
+"What happens if you want to modify the response at a point where the "
+"response does not exist yet?  A common example for that would be a "
+":meth:`~flask.Flask.before_request` callback that wants to set a cookie "
+"on the response object."
+msgstr ""
+
+#: ../../patterns/deferredcallbacks.rst:15
+msgid ""
+"One way is to avoid the situation. Very often that is possible. For "
+"instance you can try to move that logic into a "
+":meth:`~flask.Flask.after_request` callback instead. However, sometimes "
+"moving code there makes it more complicated or awkward to reason about."
+msgstr ""
+
+#: ../../patterns/deferredcallbacks.rst:20
+msgid ""
+"As an alternative, you can use :func:`~flask.after_this_request` to "
+"register callbacks that will execute after only the current request. This"
+" way you can defer code execution from anywhere in the application, based"
+" on the current request."
+msgstr ""
+
+#: ../../patterns/deferredcallbacks.rst:25
+msgid ""
+"At any time during a request, we can register a function to be called at "
+"the end of the request. For example you can remember the current language"
+" of the user in a cookie in a :meth:`~flask.Flask.before_request` "
+"callback::"
+msgstr ""
+

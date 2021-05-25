@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-25 19:31+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../deploying/cgi.rst:2
+msgid "CGI"
+msgstr ""
+
+#: ../../deploying/cgi.rst:4
+msgid ""
+"If all other deployment methods do not work, CGI will work for sure. CGI "
+"is supported by all major servers but usually has a sub-optimal "
+"performance."
+msgstr ""
+
+#: ../../deploying/cgi.rst:8
+msgid ""
+"This is also the way you can use a Flask application on Google's `App "
+"Engine`_, where execution happens in a CGI-like environment."
+msgstr ""
+
+#: ../../deploying/cgi.rst:11
+msgid "Watch Out"
+msgstr ""
+
+#: ../../deploying/cgi.rst:13
+msgid ""
+"Please make sure in advance that any ``app.run()`` calls you might have "
+"in your application file are inside an ``if __name__ == '__main__':`` "
+"block or moved to a separate file.  Just make sure it's not called "
+"because this will always start a local WSGI server which we do not want "
+"if we deploy that application to CGI / app engine."
+msgstr ""
+
+#: ../../deploying/cgi.rst:19
+msgid ""
+"With CGI, you will also have to make sure that your code does not contain"
+" any ``print`` statements, or that ``sys.stdout`` is overridden by "
+"something that doesn't write into the HTTP response."
+msgstr ""
+
+#: ../../deploying/cgi.rst:24
+msgid "Creating a `.cgi` file"
+msgstr ""
+
+#: ../../deploying/cgi.rst:26
+msgid ""
+"First you need to create the CGI application file.  Let's call it "
+":file:`yourapplication.cgi`::"
+msgstr ""
+
+#: ../../deploying/cgi.rst:36
+msgid "Server Setup"
+msgstr ""
+
+#: ../../deploying/cgi.rst:38
+msgid ""
+"Usually there are two ways to configure the server.  Either just copy the"
+" ``.cgi`` into a :file:`cgi-bin` (and use `mod_rewrite` or something "
+"similar to rewrite the URL) or let the server point to the file directly."
+msgstr ""
+
+#: ../../deploying/cgi.rst:42
+msgid "In Apache for example you can put something like this into the config:"
+msgstr ""
+
+#: ../../deploying/cgi.rst:48
+msgid ""
+"On shared webhosting, though, you might not have access to your Apache "
+"config. In this case, a file called ``.htaccess``, sitting in the public "
+"directory you want your app to be available, works too but the "
+"``ScriptAlias`` directive won't work in that case:"
+msgstr ""
+
+#: ../../deploying/cgi.rst:59
+msgid "For more information consult the documentation of your webserver."
+msgstr ""
+

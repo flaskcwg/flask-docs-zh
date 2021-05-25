@@ -1,0 +1,156 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-25 19:31+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../patterns/packages.rst:2
+msgid "Large Applications as Packages"
+msgstr ""
+
+#: ../../patterns/packages.rst:4
+msgid "Imagine a simple flask application structure that looks like this::"
+msgstr ""
+
+#: ../../patterns/packages.rst:16
+msgid ""
+"While this is fine for small applications, for larger applications it's a"
+" good idea to use a package instead of a module. The "
+":doc:`/tutorial/index` is structured to use the package pattern, see the "
+":gh:`example code <examples/tutorial>`."
+msgstr ""
+
+#: ../../patterns/packages.rst:22
+msgid "Simple Packages"
+msgstr ""
+
+#: ../../patterns/packages.rst:24
+msgid ""
+"To convert that into a larger one, just create a new folder "
+":file:`yourapplication` inside the existing one and move everything below"
+" it. Then rename :file:`yourapplication.py` to :file:`__init__.py`.  "
+"(Make sure to delete all ``.pyc`` files first, otherwise things would "
+"most likely break)"
+msgstr ""
+
+#: ../../patterns/packages.rst:29 ../../patterns/packages.rst:139
+msgid "You should then end up with something like that::"
+msgstr ""
+
+#: ../../patterns/packages.rst:42
+msgid ""
+"But how do you run your application now?  The naive ``python "
+"yourapplication/__init__.py`` will not work.  Let's just say that Python "
+"does not want modules in packages to be the startup file.  But that is "
+"not a big problem, just add a new file called :file:`setup.py` next to "
+"the inner :file:`yourapplication` folder with the following contents::"
+msgstr ""
+
+#: ../../patterns/packages.rst:59
+msgid ""
+"In order to run the application you need to export an environment "
+"variable that tells Flask where to find the application instance:"
+msgstr ""
+
+#: ../../patterns/packages.rst:64 ../../patterns/packages.rst:88
+msgid "Bash"
+msgstr ""
+
+#: ../../patterns/packages.rst:70 ../../patterns/packages.rst:94
+msgid "CMD"
+msgstr ""
+
+#: ../../patterns/packages.rst:76 ../../patterns/packages.rst:100
+msgid "Powershell"
+msgstr ""
+
+#: ../../patterns/packages.rst:82
+msgid ""
+"If you are outside of the project directory make sure to provide the "
+"exact path to your application directory. Similarly you can turn on the "
+"development features like this:"
+msgstr ""
+
+#: ../../patterns/packages.rst:106
+msgid ""
+"In order to install and run the application you need to issue the "
+"following commands::"
+msgstr ""
+
+#: ../../patterns/packages.rst:112
+msgid ""
+"What did we gain from this?  Now we can restructure the application a bit"
+" into multiple modules.  The only thing you have to remember is the "
+"following quick checklist:"
+msgstr ""
+
+#: ../../patterns/packages.rst:116
+msgid ""
+"the `Flask` application object creation has to be in the "
+":file:`__init__.py` file.  That way each module can import it safely and "
+"the `__name__` variable will resolve to the correct package."
+msgstr ""
+
+#: ../../patterns/packages.rst:119
+msgid ""
+"all the view functions (the ones with a :meth:`~flask.Flask.route` "
+"decorator on top) have to be imported in the :file:`__init__.py` file. "
+"Not the object itself, but the module it is in. Import the view module "
+"**after the application object is created**."
+msgstr ""
+
+#: ../../patterns/packages.rst:124
+msgid "Here's an example :file:`__init__.py`::"
+msgstr ""
+
+#: ../../patterns/packages.rst:131
+msgid "And this is what :file:`views.py` would look like::"
+msgstr ""
+
+#: ../../patterns/packages.rst:154
+msgid "Circular Imports"
+msgstr ""
+
+#: ../../patterns/packages.rst:156
+msgid ""
+"Every Python programmer hates them, and yet we just added some: circular "
+"imports (That's when two modules depend on each other.  In this case "
+":file:`views.py` depends on :file:`__init__.py`).  Be advised that this "
+"is a bad idea in general but here it is actually fine.  The reason for "
+"this is that we are not actually using the views in :file:`__init__.py` "
+"and just ensuring the module is imported and we are doing that at the "
+"bottom of the file."
+msgstr ""
+
+#: ../../patterns/packages.rst:164
+msgid ""
+"There are still some problems with that approach but if you want to use "
+"decorators there is no way around that.  Check out the "
+":doc:`/becomingbig` section for some inspiration how to deal with that."
+msgstr ""
+
+#: ../../patterns/packages.rst:170
+msgid "Working with Blueprints"
+msgstr ""
+
+#: ../../patterns/packages.rst:172
+msgid ""
+"If you have larger applications it's recommended to divide them into "
+"smaller groups where each group is implemented with the help of a "
+"blueprint.  For a gentle introduction into this topic refer to the "
+":doc:`/blueprints` chapter of the documentation."
+msgstr ""
+

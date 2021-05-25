@@ -1,0 +1,57 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-25 19:31+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../patterns/requestchecksum.rst:2
+msgid "Request Content Checksums"
+msgstr ""
+
+#: ../../patterns/requestchecksum.rst:4
+msgid ""
+"Various pieces of code can consume the request data and preprocess it. "
+"For instance JSON data ends up on the request object already read and "
+"processed, form data ends up there as well but goes through a different "
+"code path.  This seems inconvenient when you want to calculate the "
+"checksum of the incoming request data.  This is necessary sometimes for "
+"some APIs."
+msgstr ""
+
+#: ../../patterns/requestchecksum.rst:11
+msgid ""
+"Fortunately this is however very simple to change by wrapping the input "
+"stream."
+msgstr ""
+
+#: ../../patterns/requestchecksum.rst:14
+msgid ""
+"The following example calculates the SHA1 checksum of the incoming data "
+"as it gets read and stores it in the WSGI environment::"
+msgstr ""
+
+#: ../../patterns/requestchecksum.rst:41
+msgid ""
+"To use this, all you need to do is to hook the calculating stream in "
+"before the request starts consuming data.  (Eg: be careful accessing "
+"``request.form`` or anything of that nature.  ``before_request_handlers``"
+" for instance should be careful not to access it)."
+msgstr ""
+
+#: ../../patterns/requestchecksum.rst:46
+msgid "Example usage::"
+msgstr ""
+

@@ -1,0 +1,230 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-25 19:31+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../views.rst:2
+msgid "Pluggable Views"
+msgstr ""
+
+#: ../../views.rst:6
+msgid ""
+"Flask 0.7 introduces pluggable views inspired by the generic views from "
+"Django which are based on classes instead of functions.  The main "
+"intention is that you can replace parts of the implementations and this "
+"way have customizable pluggable views."
+msgstr ""
+
+#: ../../views.rst:12
+msgid "Basic Principle"
+msgstr ""
+
+#: ../../views.rst:14
+msgid ""
+"Consider you have a function that loads a list of objects from the "
+"database and renders into a template::"
+msgstr ""
+
+#: ../../views.rst:22
+msgid ""
+"This is simple and flexible, but if you want to provide this view in a "
+"generic fashion that can be adapted to other models and templates as well"
+" you might want more flexibility.  This is where pluggable class-based "
+"views come into place.  As the first step to convert this into a class "
+"based view you would do this::"
+msgstr ""
+
+#: ../../views.rst:39
+msgid ""
+"As you can see what you have to do is to create a subclass of "
+":class:`flask.views.View` and implement "
+":meth:`~flask.views.View.dispatch_request`.  Then we have to convert that"
+" class into an actual view function by using the "
+":meth:`~flask.views.View.as_view` class method.  The string you pass to "
+"that function is the name of the endpoint that view will then have.  But "
+"this by itself is not helpful, so let's refactor the code a bit::"
+msgstr ""
+
+#: ../../views.rst:70
+msgid ""
+"This of course is not that helpful for such a small example, but it's "
+"good enough to explain the basic principle.  When you have a class-based "
+"view the question comes up what ``self`` points to.  The way this works "
+"is that whenever the request is dispatched a new instance of the class is"
+" created and the :meth:`~flask.views.View.dispatch_request` method is "
+"called with the parameters from the URL rule.  The class itself is "
+"instantiated with the parameters passed to the "
+":meth:`~flask.views.View.as_view` function. For instance you can write a "
+"class like this::"
+msgstr ""
+
+#: ../../views.rst:85
+msgid "And then you can register it like this::"
+msgstr ""
+
+#: ../../views.rst:91
+msgid "Method Hints"
+msgstr ""
+
+#: ../../views.rst:93
+msgid ""
+"Pluggable views are attached to the application like a regular function "
+"by either using :func:`~flask.Flask.route` or better "
+":meth:`~flask.Flask.add_url_rule`.  That however also means that you "
+"would have to provide the names of the HTTP methods the view supports "
+"when you attach this.  In order to move that information to the class you"
+" can provide a :attr:`~flask.views.View.methods` attribute that has this "
+"information::"
+msgstr ""
+
+#: ../../views.rst:112
+msgid "Method Based Dispatching"
+msgstr ""
+
+#: ../../views.rst:114
+msgid ""
+"For RESTful APIs it's especially helpful to execute a different function "
+"for each HTTP method.  With the :class:`flask.views.MethodView` you can "
+"easily do that.  Each HTTP method maps to a function with the same name "
+"(just in lowercase)::"
+msgstr ""
+
+#: ../../views.rst:133
+msgid ""
+"That way you also don't have to provide the "
+":attr:`~flask.views.View.methods` attribute.  It's automatically set "
+"based on the methods defined in the class."
+msgstr ""
+
+#: ../../views.rst:138
+msgid "Decorating Views"
+msgstr ""
+
+#: ../../views.rst:140
+msgid ""
+"Since the view class itself is not the view function that is added to the"
+" routing system it does not make much sense to decorate the class itself."
+" Instead you either have to decorate the return value of "
+":meth:`~flask.views.View.as_view` by hand::"
+msgstr ""
+
+#: ../../views.rst:156
+msgid ""
+"Starting with Flask 0.8 there is also an alternative way where you can "
+"specify a list of decorators to apply in the class declaration::"
+msgstr ""
+
+#: ../../views.rst:162
+msgid ""
+"Due to the implicit self from the caller's perspective you cannot use "
+"regular view decorators on the individual methods of the view however, "
+"keep this in mind."
+msgstr ""
+
+#: ../../views.rst:167
+msgid "Method Views for APIs"
+msgstr ""
+
+#: ../../views.rst:169
+msgid ""
+"Web APIs are often working very closely with HTTP verbs so it makes a lot"
+" of sense to implement such an API based on the "
+":class:`~flask.views.MethodView`.  That said, you will notice that the "
+"API will require different URL rules that go to the same method view most"
+" of the time.  For instance consider that you are exposing a user object "
+"on the web:"
+msgstr ""
+
+#: ../../views.rst:177
+msgid "URL"
+msgstr ""
+
+#: ../../views.rst:177
+msgid "Method"
+msgstr ""
+
+#: ../../views.rst:177
+msgid "Description"
+msgstr ""
+
+#: ../../views.rst:179 ../../views.rst:180
+msgid "``/users/``"
+msgstr ""
+
+#: ../../views.rst:179 ../../views.rst:181
+msgid "``GET``"
+msgstr ""
+
+#: ../../views.rst:179
+msgid "Gives a list of all users"
+msgstr ""
+
+#: ../../views.rst:180
+msgid "``POST``"
+msgstr ""
+
+#: ../../views.rst:180
+msgid "Creates a new user"
+msgstr ""
+
+#: ../../views.rst:181 ../../views.rst:182 ../../views.rst:183
+msgid "``/users/<id>``"
+msgstr ""
+
+#: ../../views.rst:181
+msgid "Shows a single user"
+msgstr ""
+
+#: ../../views.rst:182
+msgid "``PUT``"
+msgstr ""
+
+#: ../../views.rst:182
+msgid "Updates a single user"
+msgstr ""
+
+#: ../../views.rst:183
+msgid "``DELETE``"
+msgstr ""
+
+#: ../../views.rst:183
+msgid "Deletes a single user"
+msgstr ""
+
+#: ../../views.rst:186
+msgid ""
+"So how would you go about doing that with the "
+":class:`~flask.views.MethodView`?  The trick is to take advantage of the "
+"fact that you can provide multiple rules to the same view."
+msgstr ""
+
+#: ../../views.rst:190
+msgid "Let's assume for the moment the view would look like this::"
+msgstr ""
+
+#: ../../views.rst:214
+msgid ""
+"So how do we hook this up with the routing system?  By adding two rules "
+"and explicitly mentioning the methods for each::"
+msgstr ""
+
+#: ../../views.rst:224
+msgid ""
+"If you have a lot of APIs that look similar you can refactor that "
+"registration code::"
+msgstr ""
+

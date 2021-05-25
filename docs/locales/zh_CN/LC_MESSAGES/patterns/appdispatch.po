@@ -1,0 +1,142 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-25 19:31+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../patterns/appdispatch.rst:2
+msgid "Application Dispatching"
+msgstr ""
+
+#: ../../patterns/appdispatch.rst:4
+msgid ""
+"Application dispatching is the process of combining multiple Flask "
+"applications on the WSGI level.  You can combine not only Flask "
+"applications but any WSGI application.  This would allow you to run a "
+"Django and a Flask application in the same interpreter side by side if "
+"you want.  The usefulness of this depends on how the applications work "
+"internally."
+msgstr ""
+
+#: ../../patterns/appdispatch.rst:11
+msgid ""
+"The fundamental difference from :doc:`packages` is that in this case you "
+"are running the same or different Flask applications that are entirely "
+"isolated from each other. They run different configurations and are "
+"dispatched on the WSGI level."
+msgstr ""
+
+#: ../../patterns/appdispatch.rst:18
+msgid "Working with this Document"
+msgstr ""
+
+#: ../../patterns/appdispatch.rst:20
+msgid ""
+"Each of the techniques and examples below results in an ``application`` "
+"object that can be run with any WSGI server. For production, see "
+":doc:`/deploying/index`. For development, Werkzeug provides a server "
+"through :func:`werkzeug.serving.run_simple`::"
+msgstr ""
+
+#: ../../patterns/appdispatch.rst:28
+msgid ""
+"Note that :func:`run_simple <werkzeug.serving.run_simple>` is not "
+"intended for use in production.  Use a production WSGI server. See "
+":doc:`/deploying/index`."
+msgstr ""
+
+#: ../../patterns/appdispatch.rst:31
+msgid ""
+"In order to use the interactive debugger, debugging must be enabled both "
+"on the application and the simple server. Here is the \"hello world\" "
+"example with debugging and :func:`run_simple "
+"<werkzeug.serving.run_simple>`::"
+msgstr ""
+
+#: ../../patterns/appdispatch.rst:51
+msgid "Combining Applications"
+msgstr ""
+
+#: ../../patterns/appdispatch.rst:53
+msgid ""
+"If you have entirely separated applications and you want them to work "
+"next to each other in the same Python interpreter process you can take "
+"advantage of the :class:`werkzeug.wsgi.DispatcherMiddleware`.  The idea "
+"here is that each Flask application is a valid WSGI application and they "
+"are combined by the dispatcher middleware into a larger one that is "
+"dispatched based on prefix."
+msgstr ""
+
+#: ../../patterns/appdispatch.rst:60
+msgid ""
+"For example you could have your main application run on ``/`` and your "
+"backend interface on ``/backend``::"
+msgstr ""
+
+#: ../../patterns/appdispatch.rst:73
+msgid "Dispatch by Subdomain"
+msgstr ""
+
+#: ../../patterns/appdispatch.rst:75
+msgid ""
+"Sometimes you might want to use multiple instances of the same "
+"application with different configurations.  Assuming the application is "
+"created inside a function and you can call that function to instantiate "
+"it, that is really easy to implement.  In order to develop your "
+"application to support creating new instances in functions have a look at"
+" the :doc:`appfactories` pattern."
+msgstr ""
+
+#: ../../patterns/appdispatch.rst:82
+msgid ""
+"A very common example would be creating applications per subdomain.  For "
+"instance you configure your webserver to dispatch all requests for all "
+"subdomains to your application and you then use the subdomain information"
+" to create user-specific instances.  Once you have your server set up to "
+"listen on all subdomains you can use a very simple WSGI application to do"
+" the dynamic application creation."
+msgstr ""
+
+#: ../../patterns/appdispatch.rst:89
+msgid ""
+"The perfect level for abstraction in that regard is the WSGI layer.  You "
+"write your own WSGI application that looks at the request that comes and "
+"delegates it to your Flask application.  If that application does not "
+"exist yet, it is dynamically created and remembered::"
+msgstr ""
+
+#: ../../patterns/appdispatch.rst:120
+msgid "This dispatcher can then be used like this::"
+msgstr ""
+
+#: ../../patterns/appdispatch.rst:142
+msgid "Dispatch by Path"
+msgstr ""
+
+#: ../../patterns/appdispatch.rst:144
+msgid ""
+"Dispatching by a path on the URL is very similar.  Instead of looking at "
+"the ``Host`` header to figure out the subdomain one simply looks at the "
+"request path up to the first slash::"
+msgstr ""
+
+#: ../../patterns/appdispatch.rst:176
+msgid ""
+"The big difference between this and the subdomain one is that this one "
+"falls back to another application if the creator function returns "
+"``None``::"
+msgstr ""
+

@@ -1,0 +1,134 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-25 19:31+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../patterns/wtforms.rst:2
+msgid "Form Validation with WTForms"
+msgstr ""
+
+#: ../../patterns/wtforms.rst:4
+msgid ""
+"When you have to work with form data submitted by a browser view, code "
+"quickly becomes very hard to read.  There are libraries out there "
+"designed to make this process easier to manage.  One of them is "
+"`WTForms`_ which we will handle here.  If you find yourself in the "
+"situation of having many forms, you might want to give it a try."
+msgstr ""
+
+#: ../../patterns/wtforms.rst:10
+msgid ""
+"When you are working with WTForms you have to define your forms as "
+"classes first.  I recommend breaking up the application into multiple "
+"modules (:doc:`packages`) for that and adding a separate module for the "
+"forms."
+msgstr ""
+
+#: ../../patterns/wtforms.rst:15
+msgid "Getting the most out of WTForms with an Extension"
+msgstr ""
+
+#: ../../patterns/wtforms.rst:17
+msgid ""
+"The `Flask-WTF`_ extension expands on this pattern and adds a few little "
+"helpers that make working with forms and Flask more fun.  You can get it "
+"from `PyPI <https://pypi.org/project/Flask-WTF/>`_."
+msgstr ""
+
+#: ../../patterns/wtforms.rst:25
+msgid "The Forms"
+msgstr ""
+
+#: ../../patterns/wtforms.rst:27
+msgid "This is an example form for a typical registration page::"
+msgstr ""
+
+#: ../../patterns/wtforms.rst:42
+msgid "In the View"
+msgstr ""
+
+#: ../../patterns/wtforms.rst:44
+msgid "In the view function, the usage of this form looks like this::"
+msgstr ""
+
+#: ../../patterns/wtforms.rst:57
+msgid ""
+"Notice we're implying that the view is using SQLAlchemy here "
+"(:doc:`sqlalchemy`), but that's not a requirement, of course.  Adapt the "
+"code as necessary."
+msgstr ""
+
+#: ../../patterns/wtforms.rst:61
+msgid "Things to remember:"
+msgstr ""
+
+#: ../../patterns/wtforms.rst:63
+msgid ""
+"create the form from the request :attr:`~flask.request.form` value if the"
+" data is submitted via the HTTP ``POST`` method and "
+":attr:`~flask.request.args` if the data is submitted as ``GET``."
+msgstr ""
+
+#: ../../patterns/wtforms.rst:66
+msgid ""
+"to validate the data, call the :func:`~wtforms.form.Form.validate` "
+"method, which will return ``True`` if the data validates, ``False`` "
+"otherwise."
+msgstr ""
+
+#: ../../patterns/wtforms.rst:69
+msgid "to access individual values from the form, access `form.<NAME>.data`."
+msgstr ""
+
+#: ../../patterns/wtforms.rst:72
+msgid "Forms in Templates"
+msgstr ""
+
+#: ../../patterns/wtforms.rst:74
+msgid ""
+"Now to the template side.  When you pass the form to the templates, you "
+"can easily render them there.  Look at the following example template to "
+"see how easy this is.  WTForms does half the form generation for us "
+"already. To make it even nicer, we can write a macro that renders a field"
+" with label and a list of errors if there are any."
+msgstr ""
+
+#: ../../patterns/wtforms.rst:80
+msgid "Here's an example :file:`_formhelpers.html` template with such a macro:"
+msgstr ""
+
+#: ../../patterns/wtforms.rst:97
+msgid ""
+"This macro accepts a couple of keyword arguments that are forwarded to "
+"WTForm's field function, which renders the field for us.  The keyword "
+"arguments will be inserted as HTML attributes.  So, for example, you can "
+"call ``render_field(form.username, class='username')`` to add a class to "
+"the input element.  Note that WTForms returns standard Python strings, so"
+" we have to tell Jinja2 that this data is already HTML-escaped with the "
+"``|safe`` filter."
+msgstr ""
+
+#: ../../patterns/wtforms.rst:105
+msgid ""
+"Here is the :file:`register.html` template for the function we used "
+"above, which takes advantage of the :file:`_formhelpers.html` template:"
+msgstr ""
+
+#: ../../patterns/wtforms.rst:122
+msgid "For more information about WTForms, head over to the `WTForms website`_."
+msgstr ""
+

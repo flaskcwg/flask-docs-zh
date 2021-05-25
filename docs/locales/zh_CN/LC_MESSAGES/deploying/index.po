@@ -1,0 +1,83 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-25 19:31+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../deploying/index.rst:2
+msgid "Deployment Options"
+msgstr ""
+
+#: ../../deploying/index.rst:4
+msgid ""
+"While lightweight and easy to use, **Flask's built-in server is not "
+"suitable for production** as it doesn't scale well.  Some of the options "
+"available for properly running Flask in production are documented here."
+msgstr ""
+
+#: ../../deploying/index.rst:8
+msgid ""
+"If you want to deploy your Flask application to a WSGI server not listed "
+"here, look up the server documentation about how to use a WSGI app with "
+"it.  Just remember that your :class:`Flask` application object is the "
+"actual WSGI application."
+msgstr ""
+
+#: ../../deploying/index.rst:15
+msgid "Hosted options"
+msgstr ""
+
+#: ../../deploying/index.rst:17
+msgid ""
+"`Deploying Flask on Heroku <https://devcenter.heroku.com/articles"
+"/getting-started-with-python>`_"
+msgstr ""
+
+#: ../../deploying/index.rst:18
+msgid ""
+"`Deploying Flask on Google App Engine "
+"<https://cloud.google.com/appengine/docs/standard/python3/runtime>`_"
+msgstr ""
+
+#: ../../deploying/index.rst:19
+msgid ""
+"`Deploying Flask on Google Cloud Run "
+"<https://cloud.google.com/run/docs/quickstarts/build-and-deploy/python>`_"
+msgstr ""
+
+#: ../../deploying/index.rst:20
+msgid ""
+"`Deploying Flask on AWS Elastic Beanstalk "
+"<https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-"
+"python-flask.html>`_"
+msgstr ""
+
+#: ../../deploying/index.rst:21
+msgid ""
+"`Deploying on Azure (IIS) <https://docs.microsoft.com/en-us/azure/app-"
+"service/containers/how-to-configure-python>`_"
+msgstr ""
+
+#: ../../deploying/index.rst:22
+msgid ""
+"`Deploying on PythonAnywhere "
+"<https://help.pythonanywhere.com/pages/Flask/>`_"
+msgstr ""
+
+#: ../../deploying/index.rst:25
+msgid "Self-hosted options"
+msgstr ""
+

@@ -1,0 +1,123 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-25 19:31+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../patterns/celery.rst:2
+msgid "Celery Background Tasks"
+msgstr ""
+
+#: ../../patterns/celery.rst:4
+msgid ""
+"If your application has a long running task, such as processing some "
+"uploaded data or sending email, you don't want to wait for it to finish "
+"during a request. Instead, use a task queue to send the necessary data to"
+" another process that will run the task in the background while the "
+"request returns immediately."
+msgstr ""
+
+#: ../../patterns/celery.rst:10
+msgid ""
+"Celery is a powerful task queue that can be used for simple background "
+"tasks as well as complex multi-stage programs and schedules. This guide "
+"will show you how to configure Celery using Flask, but assumes you've "
+"already read the `First Steps with Celery "
+"<https://celery.readthedocs.io/en/latest/getting-started/first-steps-"
+"with-celery.html>`_ guide in the Celery documentation."
+msgstr ""
+
+#: ../../patterns/celery.rst:17
+msgid "Install"
+msgstr ""
+
+#: ../../patterns/celery.rst:19
+msgid "Celery is a separate Python package. Install it from PyPI using pip::"
+msgstr ""
+
+#: ../../patterns/celery.rst:24
+msgid "Configure"
+msgstr ""
+
+#: ../../patterns/celery.rst:26
+msgid ""
+"The first thing you need is a Celery instance, this is called the celery "
+"application.  It serves the same purpose as the :class:`~flask.Flask` "
+"object in Flask, just for Celery.  Since this instance is used as the "
+"entry-point for everything you want to do in Celery, like creating tasks "
+"and managing workers, it must be possible for other modules to import it."
+msgstr ""
+
+#: ../../patterns/celery.rst:32
+msgid ""
+"For instance you can place this in a ``tasks`` module.  While you can use"
+" Celery without any reconfiguration with Flask, it becomes a bit nicer by"
+" subclassing tasks and adding support for Flask's application contexts "
+"and hooking it up with the Flask configuration."
+msgstr ""
+
+#: ../../patterns/celery.rst:37
+msgid "This is all that is necessary to properly integrate Celery with Flask::"
+msgstr ""
+
+#: ../../patterns/celery.rst:57
+msgid ""
+"The function creates a new Celery object, configures it with the broker "
+"from the application config, updates the rest of the Celery config from "
+"the Flask config and then creates a subclass of the task that wraps the "
+"task execution in an application context."
+msgstr ""
+
+#: ../../patterns/celery.rst:63
+msgid "An example task"
+msgstr ""
+
+#: ../../patterns/celery.rst:65
+msgid ""
+"Let's write a task that adds two numbers together and returns the result."
+" We configure Celery's broker and backend to use Redis, create a "
+"``celery`` application using the factor from above, and then use it to "
+"define the task. ::"
+msgstr ""
+
+#: ../../patterns/celery.rst:82
+msgid "This task can now be called in the background::"
+msgstr ""
+
+#: ../../patterns/celery.rst:88
+msgid "Run a worker"
+msgstr ""
+
+#: ../../patterns/celery.rst:90
+msgid ""
+"If you jumped in and already executed the above code you will be "
+"disappointed to learn that ``.wait()`` will never actually return. That's"
+" because you also need to run a Celery worker to receive and execute the "
+"task. ::"
+msgstr ""
+
+#: ../../patterns/celery.rst:97
+msgid ""
+"The ``your_application`` string has to point to your application's "
+"package or module that creates the ``celery`` object."
+msgstr ""
+
+#: ../../patterns/celery.rst:100
+msgid ""
+"Now that the worker is running, ``wait`` will return the result once the "
+"task is finished."
+msgstr ""
+

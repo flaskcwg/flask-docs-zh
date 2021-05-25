@@ -1,0 +1,215 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-25 19:31+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../tutorial/database.rst:4
+msgid "Define and Access the Database"
+msgstr ""
+
+#: ../../tutorial/database.rst:6
+msgid ""
+"The application will use a `SQLite`_ database to store users and posts. "
+"Python comes with built-in support for SQLite in the :mod:`sqlite3` "
+"module."
+msgstr ""
+
+#: ../../tutorial/database.rst:10
+msgid ""
+"SQLite is convenient because it doesn't require setting up a separate "
+"database server and is built-in to Python. However, if concurrent "
+"requests try to write to the database at the same time, they will slow "
+"down as each write happens sequentially. Small applications won't notice "
+"this. Once you become big, you may want to switch to a different "
+"database."
+msgstr ""
+
+#: ../../tutorial/database.rst:17
+msgid ""
+"The tutorial doesn't go into detail about SQL. If you are not familiar "
+"with it, the SQLite docs describe the `language`_."
+msgstr ""
+
+#: ../../tutorial/database.rst:25
+msgid "Connect to the Database"
+msgstr ""
+
+#: ../../tutorial/database.rst:27
+msgid ""
+"The first thing to do when working with a SQLite database (and most other"
+" Python database libraries) is to create a connection to it. Any queries "
+"and operations are performed using the connection, which is closed after "
+"the work is finished."
+msgstr ""
+
+#: ../../tutorial/database.rst:32
+msgid ""
+"In web applications this connection is typically tied to the request. It "
+"is created at some point when handling a request, and closed before the "
+"response is sent."
+msgstr ""
+
+#: ../../tutorial/database.rst:36 ../../tutorial/database.rst:120
+#: ../../tutorial/database.rst:157
+msgid "``flaskr/db.py``"
+msgstr ""
+
+#: ../../tutorial/database.rst:63
+msgid ""
+":data:`g` is a special object that is unique for each request. It is used"
+" to store data that might be accessed by multiple functions during the "
+"request. The connection is stored and reused instead of creating a new "
+"connection if ``get_db`` is called a second time in the same request."
+msgstr ""
+
+#: ../../tutorial/database.rst:69
+msgid ""
+":data:`current_app` is another special object that points to the Flask "
+"application handling the request. Since you used an application factory, "
+"there is no application object when writing the rest of your code. "
+"``get_db`` will be called when the application has been created and is "
+"handling a request, so :data:`current_app` can be used."
+msgstr ""
+
+#: ../../tutorial/database.rst:75
+msgid ""
+":func:`sqlite3.connect` establishes a connection to the file pointed at "
+"by the ``DATABASE`` configuration key. This file doesn't have to exist "
+"yet, and won't until you initialize the database later."
+msgstr ""
+
+#: ../../tutorial/database.rst:79
+msgid ""
+":class:`sqlite3.Row` tells the connection to return rows that behave like"
+" dicts. This allows accessing the columns by name."
+msgstr ""
+
+#: ../../tutorial/database.rst:82
+msgid ""
+"``close_db`` checks if a connection was created by checking if ``g.db`` "
+"was set. If the connection exists, it is closed. Further down you will "
+"tell your application about the ``close_db`` function in the application "
+"factory so that it is called after each request."
+msgstr ""
+
+#: ../../tutorial/database.rst:89
+msgid "Create the Tables"
+msgstr ""
+
+#: ../../tutorial/database.rst:91
+msgid ""
+"In SQLite, data is stored in *tables* and *columns*. These need to be "
+"created before you can store and retrieve data. Flaskr will store users "
+"in the ``user`` table, and posts in the ``post`` table. Create a file "
+"with the SQL commands needed to create empty tables:"
+msgstr ""
+
+#: ../../tutorial/database.rst:96
+msgid "``flaskr/schema.sql``"
+msgstr ""
+
+#: ../../tutorial/database.rst:117
+msgid ""
+"Add the Python functions that will run these SQL commands to the "
+"``db.py`` file:"
+msgstr ""
+
+#: ../../tutorial/database.rst:137
+msgid ""
+":meth:`open_resource() <Flask.open_resource>` opens a file relative to "
+"the ``flaskr`` package, which is useful since you won't necessarily know "
+"where that location is when deploying the application later. ``get_db`` "
+"returns a database connection, which is used to execute the commands read"
+" from the file."
+msgstr ""
+
+#: ../../tutorial/database.rst:143
+msgid ""
+":func:`click.command` defines a command line command called ``init-db`` "
+"that calls the ``init_db`` function and shows a success message to the "
+"user. You can read :doc:`/cli` to learn more about writing commands."
+msgstr ""
+
+#: ../../tutorial/database.rst:149
+msgid "Register with the Application"
+msgstr ""
+
+#: ../../tutorial/database.rst:151
+msgid ""
+"The ``close_db`` and ``init_db_command`` functions need to be registered "
+"with the application instance; otherwise, they won't be used by the "
+"application. However, since you're using a factory function, that "
+"instance isn't available when writing the functions. Instead, write a "
+"function that takes an application and does the registration."
+msgstr ""
+
+#: ../../tutorial/database.rst:164
+msgid ""
+":meth:`app.teardown_appcontext() <Flask.teardown_appcontext>` tells Flask"
+" to call that function when cleaning up after returning the response."
+msgstr ""
+
+#: ../../tutorial/database.rst:168
+msgid ""
+":meth:`app.cli.add_command() <click.Group.add_command>` adds a new "
+"command that can be called with the ``flask`` command."
+msgstr ""
+
+#: ../../tutorial/database.rst:171
+msgid ""
+"Import and call this function from the factory. Place the new code at the"
+" end of the factory function before returning the app."
+msgstr ""
+
+#: ../../tutorial/database.rst:174
+msgid "``flaskr/__init__.py``"
+msgstr ""
+
+#: ../../tutorial/database.rst:188
+msgid "Initialize the Database File"
+msgstr ""
+
+#: ../../tutorial/database.rst:190
+msgid ""
+"Now that ``init-db`` has been registered with the app, it can be called "
+"using the ``flask`` command, similar to the ``run`` command from the "
+"previous page."
+msgstr ""
+
+#: ../../tutorial/database.rst:196
+msgid ""
+"If you're still running the server from the previous page, you can either"
+" stop the server, or run this command in a new terminal. If you use a new"
+" terminal, remember to change to your project directory and activate the "
+"env as described in :doc:`/installation`. You'll also need to set "
+"``FLASK_APP`` and ``FLASK_ENV`` as shown on the previous page."
+msgstr ""
+
+#: ../../tutorial/database.rst:203
+msgid "Run the ``init-db`` command:"
+msgstr ""
+
+#: ../../tutorial/database.rst:210
+msgid ""
+"There will now be a ``flaskr.sqlite`` file in the ``instance`` folder in "
+"your project."
+msgstr ""
+
+#: ../../tutorial/database.rst:213
+msgid "Continue to :doc:`views`."
+msgstr ""
+

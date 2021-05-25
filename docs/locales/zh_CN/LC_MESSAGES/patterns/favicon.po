@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-25 19:31+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../patterns/favicon.rst:2
+msgid "Adding a favicon"
+msgstr ""
+
+#: ../../patterns/favicon.rst:4
+msgid ""
+"A \"favicon\" is an icon used by browsers for tabs and bookmarks. This "
+"helps to distinguish your website and to give it a unique brand."
+msgstr ""
+
+#: ../../patterns/favicon.rst:7
+msgid ""
+"A common question is how to add a favicon to a Flask application. First, "
+"of course, you need an icon. It should be 16 × 16 pixels and in the ICO "
+"file format. This is not a requirement but a de-facto standard supported "
+"by all relevant browsers. Put the icon in your static directory as "
+":file:`favicon.ico`."
+msgstr ""
+
+#: ../../patterns/favicon.rst:13
+msgid ""
+"Now, to get browsers to find your icon, the correct way is to add a link "
+"tag in your HTML. So, for example:"
+msgstr ""
+
+#: ../../patterns/favicon.rst:20
+msgid ""
+"That's all you need for most browsers, however some really old ones do "
+"not support this standard. The old de-facto standard is to serve this "
+"file, with this name, at the website root. If your application is not "
+"mounted at the root path of the domain you either need to configure the "
+"web server to serve the icon at the root or if you can't do that you're "
+"out of luck. If however your application is the root you can simply route"
+" a redirect::"
+msgstr ""
+
+#: ../../patterns/favicon.rst:30
+msgid ""
+"If you want to save the extra redirect request you can also write a view "
+"using :func:`~flask.send_from_directory`::"
+msgstr ""
+
+#: ../../patterns/favicon.rst:41
+msgid ""
+"We can leave out the explicit mimetype and it will be guessed, but we may"
+" as well specify it to avoid the extra guessing, as it will always be the"
+" same."
+msgstr ""
+
+#: ../../patterns/favicon.rst:45
+msgid ""
+"The above will serve the icon via your application and if possible it's "
+"better to configure your dedicated web server to serve it; refer to the "
+"web server's documentation."
+msgstr ""
+
+#: ../../patterns/favicon.rst:50
+msgid "See also"
+msgstr ""
+
+#: ../../patterns/favicon.rst:52
+msgid ""
+"The `Favicon <https://en.wikipedia.org/wiki/Favicon>`_ article on "
+"Wikipedia"
+msgstr ""
+

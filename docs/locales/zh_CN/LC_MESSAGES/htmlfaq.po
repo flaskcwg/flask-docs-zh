@@ -1,0 +1,367 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-25 19:31+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../htmlfaq.rst:2
+msgid "HTML/XHTML FAQ"
+msgstr ""
+
+#: ../../htmlfaq.rst:4
+msgid ""
+"The Flask documentation and example applications are using HTML5.  You "
+"may notice that in many situations, when end tags are optional they are "
+"not used, so that the HTML is cleaner and faster to load.  Because there "
+"is much confusion about HTML and XHTML among developers, this document "
+"tries to answer some of the major questions."
+msgstr ""
+
+#: ../../htmlfaq.rst:12
+msgid "History of XHTML"
+msgstr ""
+
+#: ../../htmlfaq.rst:14
+msgid ""
+"For a while, it appeared that HTML was about to be replaced by XHTML. "
+"However, barely any websites on the Internet are actual XHTML (which is "
+"HTML processed using XML rules).  There are a couple of major reasons why"
+" this is the case.  One of them is Internet Explorer's lack of proper "
+"XHTML support. The XHTML spec states that XHTML must be served with the "
+"MIME type :mimetype:`application/xhtml+xml`, but Internet Explorer "
+"refuses to read files with that MIME type. While it is relatively easy to"
+" configure Web servers to serve XHTML properly, few people do.  This is "
+"likely because properly using XHTML can be quite painful."
+msgstr ""
+
+#: ../../htmlfaq.rst:25
+msgid ""
+"One of the most important causes of pain is XML's draconian (strict and "
+"ruthless) error handling.  When an XML parsing error is encountered, the "
+"browser is supposed to show the user an ugly error message, instead of "
+"attempting to recover from the error and display what it can.  Most of "
+"the (X)HTML generation on the web is based on non-XML template engines "
+"(such as Jinja, the one used in Flask) which do not protect you from "
+"accidentally creating invalid XHTML.  There are XML based template "
+"engines, such as Kid and the popular Genshi, but they often come with a "
+"larger runtime overhead and are not as straightforward to use because "
+"they have to obey XML rules."
+msgstr ""
+
+#: ../../htmlfaq.rst:36
+msgid ""
+"The majority of users, however, assumed they were properly using XHTML. "
+"They wrote an XHTML doctype at the top of the document and self-closed "
+"all the necessary tags (``<br>`` becomes ``<br/>`` or ``<br></br>`` in "
+"XHTML). However, even if the document properly validates as XHTML, what "
+"really determines XHTML/HTML processing in browsers is the MIME type, "
+"which as said before is often not set properly. So the valid XHTML was "
+"being treated as invalid HTML."
+msgstr ""
+
+#: ../../htmlfaq.rst:44
+msgid ""
+"XHTML also changed the way JavaScript is used. To properly work with "
+"XHTML, programmers have to use the namespaced DOM interface with the "
+"XHTML namespace to query for HTML elements."
+msgstr ""
+
+#: ../../htmlfaq.rst:49
+msgid "History of HTML5"
+msgstr ""
+
+#: ../../htmlfaq.rst:51
+msgid ""
+"Development of the HTML5 specification was started in 2004 under the name"
+" \"Web Applications 1.0\" by the Web Hypertext Application Technology "
+"Working Group, or WHATWG (which was formed by the major browser vendors "
+"Apple, Mozilla, and Opera) with the goal of writing a new and improved "
+"HTML specification, based on existing browser behavior instead of "
+"unrealistic and backwards-incompatible specifications."
+msgstr ""
+
+#: ../../htmlfaq.rst:58
+msgid ""
+"For example, in HTML4 ``<title/Hello/`` theoretically parses exactly the "
+"same as ``<title>Hello</title>``.  However, since people were using "
+"XHTML-like tags along the lines of ``<link />``, browser vendors "
+"implemented the XHTML syntax over the syntax defined by the "
+"specification."
+msgstr ""
+
+#: ../../htmlfaq.rst:63
+msgid ""
+"In 2007, the specification was adopted as the basis of a new HTML "
+"specification under the umbrella of the W3C, known as HTML5.  Currently, "
+"it appears that XHTML is losing traction, as the XHTML 2 working group "
+"has been disbanded and HTML5 is being implemented by all major browser "
+"vendors."
+msgstr ""
+
+#: ../../htmlfaq.rst:69
+msgid "HTML versus XHTML"
+msgstr ""
+
+#: ../../htmlfaq.rst:71
+msgid ""
+"The following table gives you a quick overview of features available in "
+"HTML 4.01, XHTML 1.1 and HTML5. (XHTML 1.0 is not included, as it was "
+"superseded by XHTML 1.1 and the barely-used XHTML5.)"
+msgstr ""
+
+#: ../../htmlfaq.rst:78
+msgid "HTML4.01"
+msgstr ""
+
+#: ../../htmlfaq.rst:78
+msgid "XHTML1.1"
+msgstr ""
+
+#: ../../htmlfaq.rst:78
+msgid "HTML5"
+msgstr ""
+
+#: ../../htmlfaq.rst:80
+msgid "``<tag/value/`` == ``<tag>value</tag>``"
+msgstr ""
+
+#: ../../htmlfaq.rst:80
+msgid "|Y| [1]_"
+msgstr ""
+
+#: ../../htmlfaq.rst:111
+msgid "Yes"
+msgstr ""
+
+#: ../../htmlfaq.rst:80 ../../htmlfaq.rst:82 ../../htmlfaq.rst:84
+#: ../../htmlfaq.rst:88 ../../htmlfaq.rst:91 ../../htmlfaq.rst:93
+#: ../../htmlfaq.rst:95 ../../htmlfaq.rst:97 ../../htmlfaq.rst:99
+#: ../../htmlfaq.rst:101
+msgid "|N|"
+msgstr ""
+
+#: ../../htmlfaq.rst:113
+msgid "No"
+msgstr ""
+
+#: ../../htmlfaq.rst:82
+msgid "``<br/>`` supported"
+msgstr ""
+
+#: ../../htmlfaq.rst:82 ../../htmlfaq.rst:84 ../../htmlfaq.rst:86
+#: ../../htmlfaq.rst:88 ../../htmlfaq.rst:91 ../../htmlfaq.rst:93
+#: ../../htmlfaq.rst:95 ../../htmlfaq.rst:97 ../../htmlfaq.rst:99
+#: ../../htmlfaq.rst:101
+msgid "|Y|"
+msgstr ""
+
+#: ../../htmlfaq.rst:82
+msgid "|Y| [2]_"
+msgstr ""
+
+#: ../../htmlfaq.rst:84
+msgid "``<script/>`` supported"
+msgstr ""
+
+#: ../../htmlfaq.rst:86
+msgid "should be served as `text/html`"
+msgstr ""
+
+#: ../../htmlfaq.rst:86
+msgid "|N| [3]_"
+msgstr ""
+
+#: ../../htmlfaq.rst:88
+msgid "should be served as `application/xhtml+xml`"
+msgstr ""
+
+#: ../../htmlfaq.rst:91
+msgid "strict error handling"
+msgstr ""
+
+#: ../../htmlfaq.rst:93
+msgid "inline SVG"
+msgstr ""
+
+#: ../../htmlfaq.rst:95
+msgid "inline MathML"
+msgstr ""
+
+#: ../../htmlfaq.rst:97
+msgid "``<video>`` tag"
+msgstr ""
+
+#: ../../htmlfaq.rst:99
+msgid "``<audio>`` tag"
+msgstr ""
+
+#: ../../htmlfaq.rst:101
+msgid "New semantic tags like ``<article>``"
+msgstr ""
+
+#: ../../htmlfaq.rst:104
+msgid ""
+"This is an obscure feature inherited from SGML. It is usually not "
+"supported by browsers, for reasons detailed above."
+msgstr ""
+
+#: ../../htmlfaq.rst:106
+msgid ""
+"This is for compatibility with server code that generates XHTML for tags "
+"such as ``<br>``.  It should not be used in new code."
+msgstr ""
+
+#: ../../htmlfaq.rst:108
+msgid ""
+"XHTML 1.0 is the last XHTML standard that allows to be served as "
+"`text/html` for backwards compatibility reasons."
+msgstr ""
+
+#: ../../htmlfaq.rst:117
+msgid "What does \"strict\" mean?"
+msgstr ""
+
+#: ../../htmlfaq.rst:119
+msgid ""
+"HTML5 has strictly defined parsing rules, but it also specifies exactly "
+"how a browser should react to parsing errors - unlike XHTML, which simply"
+" states parsing should abort. Some people are confused by apparently "
+"invalid syntax that still generates the expected results (for example, "
+"missing end tags or unquoted attribute values)."
+msgstr ""
+
+#: ../../htmlfaq.rst:125
+msgid ""
+"Some of these work because of the lenient error handling most browsers "
+"use when they encounter a markup error, others are actually specified.  "
+"The following constructs are optional in HTML5 by standard, but have to "
+"be supported by browsers:"
+msgstr ""
+
+#: ../../htmlfaq.rst:130
+msgid "Wrapping the document in an ``<html>`` tag"
+msgstr ""
+
+#: ../../htmlfaq.rst:131
+msgid "Wrapping header elements in ``<head>`` or the body elements in ``<body>``"
+msgstr ""
+
+#: ../../htmlfaq.rst:133
+msgid ""
+"Closing the ``<p>``, ``<li>``, ``<dt>``, ``<dd>``, ``<tr>``, ``<td>``, "
+"``<th>``, ``<tbody>``, ``<thead>``, or ``<tfoot>`` tags."
+msgstr ""
+
+#: ../../htmlfaq.rst:135
+msgid ""
+"Quoting attributes, so long as they contain no whitespace or special "
+"characters (like ``<``, ``>``, ``'``, or ``\"``)."
+msgstr ""
+
+#: ../../htmlfaq.rst:137
+msgid "Requiring boolean attributes to have a value."
+msgstr ""
+
+#: ../../htmlfaq.rst:139
+msgid "This means the following page in HTML5 is perfectly valid:"
+msgstr ""
+
+#: ../../htmlfaq.rst:169
+msgid "New technologies in HTML5"
+msgstr ""
+
+#: ../../htmlfaq.rst:171
+msgid ""
+"HTML5 adds many new features that make Web applications easier to write "
+"and to use."
+msgstr ""
+
+#: ../../htmlfaq.rst:174
+msgid ""
+"The ``<audio>`` and ``<video>`` tags provide a way to embed audio and "
+"video without complicated add-ons like QuickTime or Flash."
+msgstr ""
+
+#: ../../htmlfaq.rst:176
+msgid ""
+"Semantic elements like ``<article>``, ``<header>``, ``<nav>``, and "
+"``<time>`` that make content easier to understand."
+msgstr ""
+
+#: ../../htmlfaq.rst:178
+msgid ""
+"The ``<canvas>`` tag, which supports a powerful drawing API, reducing the"
+" need for server-generated images to present data graphically."
+msgstr ""
+
+#: ../../htmlfaq.rst:180
+msgid ""
+"New form control types like ``<input type=\"date\">`` that allow user "
+"agents to make entering and validating values easier."
+msgstr ""
+
+#: ../../htmlfaq.rst:182
+msgid ""
+"Advanced JavaScript APIs like Web Storage, Web Workers, Web Sockets, "
+"geolocation, and offline applications."
+msgstr ""
+
+#: ../../htmlfaq.rst:185
+msgid ""
+"Many other features have been added, as well. A good guide to new "
+"features in HTML5 is Mark Pilgrim's book, `Dive Into HTML5`_. Not all of "
+"them are supported in browsers yet, however, so use caution."
+msgstr ""
+
+#: ../../htmlfaq.rst:192
+msgid "What should be used?"
+msgstr ""
+
+#: ../../htmlfaq.rst:194
+msgid ""
+"Currently, the answer is HTML5.  There are very few reasons to use XHTML "
+"considering the latest developments in Web browsers.  To summarize the "
+"reasons given above:"
+msgstr ""
+
+#: ../../htmlfaq.rst:198
+msgid "Internet Explorer has poor support for XHTML."
+msgstr ""
+
+#: ../../htmlfaq.rst:199
+msgid ""
+"Many JavaScript libraries also do not support XHTML, due to the more "
+"complicated namespacing API it requires."
+msgstr ""
+
+#: ../../htmlfaq.rst:201
+msgid ""
+"HTML5 adds several new features, including semantic tags and the long-"
+"awaited ``<audio>`` and ``<video>`` tags."
+msgstr ""
+
+#: ../../htmlfaq.rst:203
+msgid "It has the support of most browser vendors behind it."
+msgstr ""
+
+#: ../../htmlfaq.rst:204
+msgid "It is much easier to write, and more compact."
+msgstr ""
+
+#: ../../htmlfaq.rst:206
+msgid "For most applications, it is undoubtedly better to use HTML5 than XHTML."
+msgstr ""
+

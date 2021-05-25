@@ -1,0 +1,165 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-25 19:31+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../tutorial/deploy.rst:2
+msgid "Deploy to Production"
+msgstr ""
+
+#: ../../tutorial/deploy.rst:4
+msgid ""
+"This part of the tutorial assumes you have a server that you want to "
+"deploy your application to. It gives an overview of how to create the "
+"distribution file and install it, but won't go into specifics about what "
+"server or software to use. You can set up a new environment on your "
+"development computer to try out the instructions below, but probably "
+"shouldn't use it for hosting a real public application. See "
+":doc:`/deploying/index` for a list of many different ways to host your "
+"application."
+msgstr ""
+
+#: ../../tutorial/deploy.rst:15
+msgid "Build and Install"
+msgstr ""
+
+#: ../../tutorial/deploy.rst:17
+msgid ""
+"When you want to deploy your application elsewhere, you build a "
+"distribution file. The current standard for Python distribution is the "
+"*wheel* format, with the ``.whl`` extension. Make sure the wheel library "
+"is installed first:"
+msgstr ""
+
+#: ../../tutorial/deploy.rst:26
+msgid ""
+"Running ``setup.py`` with Python gives you a command line tool to issue "
+"build-related commands. The ``bdist_wheel`` command will build a wheel "
+"distribution file."
+msgstr ""
+
+#: ../../tutorial/deploy.rst:34
+msgid ""
+"You can find the file in ``dist/flaskr-1.0.0-py3-none-any.whl``. The file"
+" name is in the format of {project name}-{version}-{python tag} -{abi "
+"tag}-{platform tag}."
+msgstr ""
+
+#: ../../tutorial/deploy.rst:38
+msgid ""
+"Copy this file to another machine, :ref:`set up a new virtualenv "
+"<install-create-env>`, then install the file with ``pip``."
+msgstr ""
+
+#: ../../tutorial/deploy.rst:46
+msgid "Pip will install your project along with its dependencies."
+msgstr ""
+
+#: ../../tutorial/deploy.rst:48
+msgid ""
+"Since this is a different machine, you need to run ``init-db`` again to "
+"create the database in the instance folder."
+msgstr ""
+
+#: ../../tutorial/deploy.rst:53
+msgid "Bash"
+msgstr ""
+
+#: ../../tutorial/deploy.rst:60
+msgid "CMD"
+msgstr ""
+
+#: ../../tutorial/deploy.rst:67
+msgid "Powershell"
+msgstr ""
+
+#: ../../tutorial/deploy.rst:74
+msgid ""
+"When Flask detects that it's installed (not in editable mode), it uses a "
+"different directory for the instance folder. You can find it at "
+"``venv/var/flaskr-instance`` instead."
+msgstr ""
+
+#: ../../tutorial/deploy.rst:80
+msgid "Configure the Secret Key"
+msgstr ""
+
+#: ../../tutorial/deploy.rst:82
+msgid ""
+"In the beginning of the tutorial that you gave a default value for "
+":data:`SECRET_KEY`. This should be changed to some random bytes in "
+"production. Otherwise, attackers could use the public ``'dev'`` key to "
+"modify the session cookie, or anything else that uses the secret key."
+msgstr ""
+
+#: ../../tutorial/deploy.rst:87
+msgid "You can use the following command to output a random secret key:"
+msgstr ""
+
+#: ../../tutorial/deploy.rst:95
+msgid ""
+"Create the ``config.py`` file in the instance folder, which the factory "
+"will read from if it exists. Copy the generated value into it."
+msgstr ""
+
+#: ../../tutorial/deploy.rst:98
+msgid "``venv/var/flaskr-instance/config.py``"
+msgstr ""
+
+#: ../../tutorial/deploy.rst:103
+msgid ""
+"You can also set any other necessary configuration here, although "
+"``SECRET_KEY`` is the only one needed for Flaskr."
+msgstr ""
+
+#: ../../tutorial/deploy.rst:108
+msgid "Run with a Production Server"
+msgstr ""
+
+#: ../../tutorial/deploy.rst:110
+msgid ""
+"When running publicly rather than in development, you should not use the "
+"built-in development server (``flask run``). The development server is "
+"provided by Werkzeug for convenience, but is not designed to be "
+"particularly efficient, stable, or secure."
+msgstr ""
+
+#: ../../tutorial/deploy.rst:115
+msgid ""
+"Instead, use a production WSGI server. For example, to use `Waitress`_, "
+"first install it in the virtual environment:"
+msgstr ""
+
+#: ../../tutorial/deploy.rst:122
+msgid ""
+"You need to tell Waitress about your application, but it doesn't use "
+"``FLASK_APP`` like ``flask run`` does. You need to tell it to import and "
+"call the application factory to get an application object."
+msgstr ""
+
+#: ../../tutorial/deploy.rst:132
+msgid ""
+"See :doc:`/deploying/index` for a list of many different ways to host "
+"your application. Waitress is just an example, chosen for the tutorial "
+"because it supports both Windows and Linux. There are many more WSGI "
+"servers and deployment options that you may choose for your project."
+msgstr ""
+
+#: ../../tutorial/deploy.rst:139
+msgid "Continue to :doc:`next`."
+msgstr ""
+

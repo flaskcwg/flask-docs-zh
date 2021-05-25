@@ -1,0 +1,183 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-25 19:31+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../patterns/sqlalchemy.rst:2
+msgid "SQLAlchemy in Flask"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:4
+msgid ""
+"Many people prefer `SQLAlchemy`_ for database access.  In this case it's "
+"encouraged to use a package instead of a module for your flask "
+"application and drop the models into a separate module (:doc:`packages`)."
+" While that is not necessary, it makes a lot of sense."
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:9
+msgid ""
+"There are four very common ways to use SQLAlchemy.  I will outline each "
+"of them here:"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:13
+msgid "Flask-SQLAlchemy Extension"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:15
+msgid ""
+"Because SQLAlchemy is a common database abstraction layer and object "
+"relational mapper that requires a little bit of configuration effort, "
+"there is a Flask extension that handles that for you.  This is "
+"recommended if you want to get started quickly."
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:20
+msgid ""
+"You can download `Flask-SQLAlchemy`_ from `PyPI <https://pypi.org/project"
+"/Flask-SQLAlchemy/>`_."
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:27
+msgid "Declarative"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:29
+msgid ""
+"The declarative extension in SQLAlchemy is the most recent method of "
+"using SQLAlchemy.  It allows you to define tables and models in one go, "
+"similar to how Django works.  In addition to the following text I "
+"recommend the official documentation on the `declarative`_ extension."
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:34
+msgid "Here's the example :file:`database.py` module for your application::"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:54
+msgid ""
+"To define your models, just subclass the `Base` class that was created by"
+" the code above.  If you are wondering why we don't have to care about "
+"threads here (like we did in the SQLite3 example above with the "
+":data:`~flask.g` object): that's because SQLAlchemy does that for us "
+"already with the :class:`~sqlalchemy.orm.scoped_session`."
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:60
+msgid ""
+"To use SQLAlchemy in a declarative way with your application, you just "
+"have to put the following code into your application module.  Flask will "
+"automatically remove database sessions at the end of the request or when "
+"the application shuts down::"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:71
+msgid "Here is an example model (put this into :file:`models.py`, e.g.)::"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:89
+msgid "To create the database you can use the `init_db` function:"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:94
+msgid "You can insert entries into the database like this:"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:102
+msgid "Querying is simple as well:"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:113
+msgid "Manual Object Relational Mapping"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:115
+msgid ""
+"Manual object relational mapping has a few upsides and a few downsides "
+"versus the declarative approach from above.  The main difference is that "
+"you define tables and classes separately and map them together.  It's "
+"more flexible but a little more to type.  In general it works like the "
+"declarative approach, so make sure to also split up your application into"
+" multiple modules in a package."
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:122
+msgid "Here is an example :file:`database.py` module for your application::"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:135
+msgid ""
+"As in the declarative approach, you need to close the session after each "
+"request or application context shutdown.  Put this into your application "
+"module::"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:145
+msgid "Here is an example table and model (put this into :file:`models.py`)::"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:168
+msgid "Querying and inserting works exactly the same as in the example above."
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:172
+msgid "SQL Abstraction Layer"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:174
+msgid ""
+"If you just want to use the database system (and SQL) abstraction layer "
+"you basically only need the engine::"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:182
+msgid ""
+"Then you can either declare the tables in your code like in the examples "
+"above, or automatically load them::"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:189
+msgid ""
+"To insert data you can use the `insert` method.  We have to get a "
+"connection first so that we can use a transaction:"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:195
+msgid "SQLAlchemy will automatically commit for us."
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:197
+msgid "To query your database, you use the engine directly or use a connection:"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:202
+msgid "These results are also dict-like tuples:"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:208
+msgid ""
+"You can also pass strings of SQL statements to the "
+":meth:`~sqlalchemy.engine.base.Connection.execute` method:"
+msgstr ""
+
+#: ../../patterns/sqlalchemy.rst:214
+msgid ""
+"For more information about SQLAlchemy, head over to the `website "
+"<https://www.sqlalchemy.org/>`_."
+msgstr ""
+

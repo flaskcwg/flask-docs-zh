@@ -1,0 +1,378 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-25 19:31+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../blueprints.rst:2
+msgid "Modular Applications with Blueprints"
+msgstr ""
+
+#: ../../blueprints.rst:8
+msgid ""
+"Flask uses a concept of *blueprints* for making application components "
+"and supporting common patterns within an application or across "
+"applications. Blueprints can greatly simplify how large applications work"
+" and provide a central means for Flask extensions to register operations "
+"on applications. A :class:`Blueprint` object works similarly to a "
+":class:`Flask` application object, but it is not actually an application."
+"  Rather it is a *blueprint* of how to construct or extend an "
+"application."
+msgstr ""
+
+#: ../../blueprints.rst:17
+msgid "Why Blueprints?"
+msgstr ""
+
+#: ../../blueprints.rst:19
+msgid "Blueprints in Flask are intended for these cases:"
+msgstr ""
+
+#: ../../blueprints.rst:21
+msgid ""
+"Factor an application into a set of blueprints.  This is ideal for larger"
+" applications; a project could instantiate an application object, "
+"initialize several extensions, and register a collection of blueprints."
+msgstr ""
+
+#: ../../blueprints.rst:24
+msgid ""
+"Register a blueprint on an application at a URL prefix and/or subdomain. "
+"Parameters in the URL prefix/subdomain become common view arguments (with"
+" defaults) across all view functions in the blueprint."
+msgstr ""
+
+#: ../../blueprints.rst:27
+msgid ""
+"Register a blueprint multiple times on an application with different URL "
+"rules."
+msgstr ""
+
+#: ../../blueprints.rst:29
+msgid ""
+"Provide template filters, static files, templates, and other utilities "
+"through blueprints.  A blueprint does not have to implement applications "
+"or view functions."
+msgstr ""
+
+#: ../../blueprints.rst:32
+msgid ""
+"Register a blueprint on an application for any of these cases when "
+"initializing a Flask extension."
+msgstr ""
+
+#: ../../blueprints.rst:35
+msgid ""
+"A blueprint in Flask is not a pluggable app because it is not actually an"
+" application -- it's a set of operations which can be registered on an "
+"application, even multiple times.  Why not have multiple application "
+"objects?  You can do that (see :doc:`/patterns/appdispatch`), but your "
+"applications will have separate configs and will be managed at the WSGI "
+"layer."
+msgstr ""
+
+#: ../../blueprints.rst:42
+msgid ""
+"Blueprints instead provide separation at the Flask level, share "
+"application config, and can change an application object as necessary "
+"with being registered. The downside is that you cannot unregister a "
+"blueprint once an application was created without having to destroy the "
+"whole application object."
+msgstr ""
+
+#: ../../blueprints.rst:49
+msgid "The Concept of Blueprints"
+msgstr ""
+
+#: ../../blueprints.rst:51
+msgid ""
+"The basic concept of blueprints is that they record operations to execute"
+" when registered on an application.  Flask associates view functions with"
+" blueprints when dispatching requests and generating URLs from one "
+"endpoint to another."
+msgstr ""
+
+#: ../../blueprints.rst:57
+msgid "My First Blueprint"
+msgstr ""
+
+#: ../../blueprints.rst:59
+msgid ""
+"This is what a very basic blueprint looks like.  In this case we want to "
+"implement a blueprint that does simple rendering of static templates::"
+msgstr ""
+
+#: ../../blueprints.rst:76
+msgid ""
+"When you bind a function with the help of the ``@simple_page.route`` "
+"decorator, the blueprint will record the intention of registering the "
+"function ``show`` on the application when it's later registered. "
+"Additionally it will prefix the endpoint of the function with the name of"
+" the blueprint which was given to the :class:`Blueprint` constructor (in "
+"this case also ``simple_page``). The blueprint's name does not modify the"
+" URL, only the endpoint."
+msgstr ""
+
+#: ../../blueprints.rst:85
+msgid "Registering Blueprints"
+msgstr ""
+
+#: ../../blueprints.rst:87
+msgid "So how do you register that blueprint?  Like this::"
+msgstr ""
+
+#: ../../blueprints.rst:95
+msgid ""
+"If you check the rules registered on the application, you will find "
+"these::"
+msgstr ""
+
+#: ../../blueprints.rst:103
+msgid ""
+"The first one is obviously from the application itself for the static "
+"files.  The other two are for the `show` function of the ``simple_page`` "
+"blueprint.  As you can see, they are also prefixed with the name of the "
+"blueprint and separated by a dot (``.``)."
+msgstr ""
+
+#: ../../blueprints.rst:108
+msgid "Blueprints however can also be mounted at different locations::"
+msgstr ""
+
+#: ../../blueprints.rst:112
+msgid "And sure enough, these are the generated rules::"
+msgstr ""
+
+#: ../../blueprints.rst:119
+msgid ""
+"On top of that you can register blueprints multiple times though not "
+"every blueprint might respond properly to that.  In fact it depends on "
+"how the blueprint is implemented if it can be mounted more than once."
+msgstr ""
+
+#: ../../blueprints.rst:124
+msgid "Nesting Blueprints"
+msgstr ""
+
+#: ../../blueprints.rst:126
+msgid "It is possible to register a blueprint on another blueprint."
+msgstr ""
+
+#: ../../blueprints.rst:135
+msgid ""
+"The child blueprint will gain the parent's name as a prefix to its name, "
+"and child URLs will be prefixed with the parent's URL prefix."
+msgstr ""
+
+#: ../../blueprints.rst:143
+msgid ""
+"Blueprint-specific before request functions, etc. registered with the "
+"parent will trigger for the child. If a child does not have an error "
+"handler that can handle a given exception, the parent's will be tried."
+msgstr ""
+
+#: ../../blueprints.rst:149
+msgid "Blueprint Resources"
+msgstr ""
+
+#: ../../blueprints.rst:151
+msgid ""
+"Blueprints can provide resources as well.  Sometimes you might want to "
+"introduce a blueprint only for the resources it provides."
+msgstr ""
+
+#: ../../blueprints.rst:155
+msgid "Blueprint Resource Folder"
+msgstr ""
+
+#: ../../blueprints.rst:157
+msgid ""
+"Like for regular applications, blueprints are considered to be contained "
+"in a folder.  While multiple blueprints can originate from the same "
+"folder, it does not have to be the case and it's usually not recommended."
+msgstr ""
+
+#: ../../blueprints.rst:161
+msgid ""
+"The folder is inferred from the second argument to :class:`Blueprint` "
+"which is usually `__name__`.  This argument specifies what logical Python"
+" module or package corresponds to the blueprint.  If it points to an "
+"actual Python package that package (which is a folder on the filesystem) "
+"is the resource folder.  If it's a module, the package the module is "
+"contained in will be the resource folder.  You can access the "
+":attr:`Blueprint.root_path` property to see what the resource folder is::"
+msgstr ""
+
+#: ../../blueprints.rst:172
+msgid ""
+"To quickly open sources from this folder you can use the "
+":meth:`~Blueprint.open_resource` function::"
+msgstr ""
+
+#: ../../blueprints.rst:179
+msgid "Static Files"
+msgstr ""
+
+#: ../../blueprints.rst:181
+msgid ""
+"A blueprint can expose a folder with static files by providing the path "
+"to the folder on the filesystem with the ``static_folder`` argument. It "
+"is either an absolute path or relative to the blueprint's location::"
+msgstr ""
+
+#: ../../blueprints.rst:187
+msgid ""
+"By default the rightmost part of the path is where it is exposed on the "
+"web. This can be changed with the ``static_url_path`` argument. Because "
+"the folder is called ``static`` here it will be available at the "
+"``url_prefix`` of the blueprint + ``/static``. If the blueprint has the "
+"prefix ``/admin``, the static URL will be ``/admin/static``."
+msgstr ""
+
+#: ../../blueprints.rst:193
+msgid ""
+"The endpoint is named ``blueprint_name.static``. You can generate URLs to"
+" it with :func:`url_for` like you would with the static folder of the "
+"application::"
+msgstr ""
+
+#: ../../blueprints.rst:199
+msgid ""
+"However, if the blueprint does not have a ``url_prefix``, it is not "
+"possible to access the blueprint's static folder. This is because the URL"
+" would be ``/static`` in this case, and the application's ``/static`` "
+"route takes precedence. Unlike template folders, blueprint static folders"
+" are not searched if the file does not exist in the application static "
+"folder."
+msgstr ""
+
+#: ../../blueprints.rst:207
+msgid "Templates"
+msgstr ""
+
+#: ../../blueprints.rst:209
+msgid ""
+"If you want the blueprint to expose templates you can do that by "
+"providing the `template_folder` parameter to the :class:`Blueprint` "
+"constructor::"
+msgstr ""
+
+#: ../../blueprints.rst:214
+msgid ""
+"For static files, the path can be absolute or relative to the blueprint "
+"resource folder."
+msgstr ""
+
+#: ../../blueprints.rst:217
+msgid ""
+"The template folder is added to the search path of templates but with a "
+"lower priority than the actual application's template folder. That way "
+"you can easily override templates that a blueprint provides in the actual"
+" application. This also means that if you don't want a blueprint template"
+" to be accidentally overridden, make sure that no other blueprint or "
+"actual application template has the same relative path. When multiple "
+"blueprints provide the same relative template path the first blueprint "
+"registered takes precedence over the others."
+msgstr ""
+
+#: ../../blueprints.rst:226
+msgid ""
+"So if you have a blueprint in the folder ``yourapplication/admin`` and "
+"you want to render the template ``'admin/index.html'`` and you have "
+"provided ``templates`` as a `template_folder` you will have to create a "
+"file like this: :file:`yourapplication/admin/templates/admin/index.html`."
+" The reason for the extra ``admin`` folder is to avoid getting our "
+"template overridden by a template named ``index.html`` in the actual "
+"application template folder."
+msgstr ""
+
+#: ../../blueprints.rst:234
+msgid ""
+"To further reiterate this: if you have a blueprint named ``admin`` and "
+"you want to render a template called :file:`index.html` which is specific"
+" to this blueprint, the best idea is to lay out your templates like "
+"this::"
+msgstr ""
+
+#: ../../blueprints.rst:246
+msgid ""
+"And then when you want to render the template, use "
+":file:`admin/index.html` as the name to look up the template by.  If you "
+"encounter problems loading the correct templates enable the "
+"``EXPLAIN_TEMPLATE_LOADING`` config variable which will instruct Flask to"
+" print out the steps it goes through to locate templates on every "
+"``render_template`` call."
+msgstr ""
+
+#: ../../blueprints.rst:253
+msgid "Building URLs"
+msgstr ""
+
+#: ../../blueprints.rst:255
+msgid ""
+"If you want to link from one page to another you can use the "
+":func:`url_for` function just like you normally would do just that you "
+"prefix the URL endpoint with the name of the blueprint and a dot "
+"(``.``)::"
+msgstr ""
+
+#: ../../blueprints.rst:261
+msgid ""
+"Additionally if you are in a view function of a blueprint or a rendered "
+"template and you want to link to another endpoint of the same blueprint, "
+"you can use relative redirects by prefixing the endpoint with a dot "
+"only::"
+msgstr ""
+
+#: ../../blueprints.rst:267
+msgid ""
+"This will link to ``admin.index`` for instance in case the current "
+"request was dispatched to any other admin blueprint endpoint."
+msgstr ""
+
+#: ../../blueprints.rst:272
+msgid "Blueprint Error Handlers"
+msgstr ""
+
+#: ../../blueprints.rst:274
+msgid ""
+"Blueprints support the ``errorhandler`` decorator just like the "
+":class:`Flask` application object, so it is easy to make Blueprint-"
+"specific custom error pages."
+msgstr ""
+
+#: ../../blueprints.rst:278
+msgid "Here is an example for a \"404 Page Not Found\" exception::"
+msgstr ""
+
+#: ../../blueprints.rst:284
+msgid ""
+"Most errorhandlers will simply work as expected; however, there is a "
+"caveat concerning handlers for 404 and 405 exceptions.  These "
+"errorhandlers are only invoked from an appropriate ``raise`` statement or"
+" a call to ``abort`` in another of the blueprint's view functions; they "
+"are not invoked by, e.g., an invalid URL access.  This is because the "
+"blueprint does not \"own\" a certain URL space, so the application "
+"instance has no way of knowing which blueprint error handler it should "
+"run if given an invalid URL.  If you would like to execute different "
+"handling strategies for these errors based on URL prefixes, they may be "
+"defined at the application level using the ``request`` proxy object::"
+msgstr ""
+
+#: ../../blueprints.rst:302
+msgid "See :doc:`/errorhandling`."
+msgstr ""
+

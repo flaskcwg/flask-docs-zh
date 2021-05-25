@@ -1,0 +1,216 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-25 19:31+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../patterns/distribute.rst:2
+msgid "Deploying with Setuptools"
+msgstr ""
+
+#: ../../patterns/distribute.rst:4
+msgid ""
+"`Setuptools`_, is an extension library that is commonly used to "
+"distribute Python libraries and extensions. It extends distutils, a basic"
+" module installation system shipped with Python to also support various "
+"more complex constructs that make larger applications easier to "
+"distribute:"
+msgstr ""
+
+#: ../../patterns/distribute.rst:9
+msgid ""
+"**support for dependencies**: a library or application can declare a list"
+" of other libraries it depends on which will be installed automatically "
+"for you."
+msgstr ""
+
+#: ../../patterns/distribute.rst:12
+msgid ""
+"**package registry**: setuptools registers your package with your Python "
+"installation.  This makes it possible to query information provided by "
+"one package from another package.  The best known feature of this system "
+"is the entry point support which allows one package to declare an \"entry"
+" point\" that another package can hook into to extend the other package."
+msgstr ""
+
+#: ../../patterns/distribute.rst:18
+msgid ""
+"**installation manager**: :command:`pip` can install other libraries for "
+"you."
+msgstr ""
+
+#: ../../patterns/distribute.rst:20
+msgid ""
+"Flask itself, and all the libraries you can find on PyPI are distributed "
+"with either setuptools or distutils."
+msgstr ""
+
+#: ../../patterns/distribute.rst:23
+msgid ""
+"In this case we assume your application is called "
+":file:`yourapplication.py` and you are not using a module, but a package."
+" If you have not yet converted your application into a package, head over"
+" to :doc:`packages` to see how this can be done."
+msgstr ""
+
+#: ../../patterns/distribute.rst:28
+msgid ""
+"A working deployment with setuptools is the first step into more complex "
+"and more automated deployment scenarios.  If you want to fully automate "
+"the process, also read the :doc:`fabric` chapter."
+msgstr ""
+
+#: ../../patterns/distribute.rst:33
+msgid "Basic Setup Script"
+msgstr ""
+
+#: ../../patterns/distribute.rst:35
+msgid ""
+"Because you have Flask installed, you have setuptools available on your "
+"system. Flask already depends upon setuptools."
+msgstr ""
+
+#: ../../patterns/distribute.rst:38
+msgid "Standard disclaimer applies: :ref:`use a virtualenv <install-create-env>`."
+msgstr ""
+
+#: ../../patterns/distribute.rst:41
+msgid ""
+"Your setup code always goes into a file named :file:`setup.py` next to "
+"your application.  The name of the file is only convention, but because "
+"everybody will look for a file with that name, you better not change it."
+msgstr ""
+
+#: ../../patterns/distribute.rst:45
+msgid "A basic :file:`setup.py` file for a Flask application looks like this::"
+msgstr ""
+
+#: ../../patterns/distribute.rst:59
+msgid ""
+"Please keep in mind that you have to list subpackages explicitly.  If you"
+" want setuptools to lookup the packages for you automatically, you can "
+"use the ``find_packages`` function::"
+msgstr ""
+
+#: ../../patterns/distribute.rst:70
+msgid ""
+"Most parameters to the ``setup`` function should be self explanatory, "
+"``include_package_data`` and ``zip_safe`` might not be. "
+"``include_package_data`` tells setuptools to look for a "
+":file:`MANIFEST.in` file and install all the entries that match as "
+"package data.  We will use this to distribute the static files and "
+"templates along with the Python module (see :ref:`distributing-"
+"resources`).  The ``zip_safe`` flag can be used to force or prevent zip "
+"Archive creation.  In general you probably don't want your packages to be"
+" installed as zip files because some tools do not support them and they "
+"make debugging a lot harder."
+msgstr ""
+
+#: ../../patterns/distribute.rst:82
+msgid "Tagging Builds"
+msgstr ""
+
+#: ../../patterns/distribute.rst:84
+msgid ""
+"It is useful to distinguish between release and development builds. Add a"
+" :file:`setup.cfg` file to configure these options. ::"
+msgstr ""
+
+#: ../../patterns/distribute.rst:94
+msgid ""
+"Running ``python setup.py sdist`` will create a development package with "
+"\".dev\" and the current date appended: "
+"``flaskr-1.0.dev20160314.tar.gz``. Running ``python setup.py release "
+"sdist`` will create a release package with only the version: "
+"``flaskr-1.0.tar.gz``."
+msgstr ""
+
+#: ../../patterns/distribute.rst:103
+msgid "Distributing Resources"
+msgstr ""
+
+#: ../../patterns/distribute.rst:105
+msgid ""
+"If you try to install the package you just created, you will notice that "
+"folders like :file:`static` or :file:`templates` are not installed for "
+"you.  The reason for this is that setuptools does not know which files to"
+" add for you.  What you should do, is to create a :file:`MANIFEST.in` "
+"file next to your :file:`setup.py` file.  This file lists all the files "
+"that should be added to your tarball::"
+msgstr ""
+
+#: ../../patterns/distribute.rst:115
+msgid ""
+"Don't forget that even if you enlist them in your :file:`MANIFEST.in` "
+"file, they won't be installed for you unless you set the "
+"`include_package_data` parameter of the ``setup`` function to ``True``!"
+msgstr ""
+
+#: ../../patterns/distribute.rst:121
+msgid "Declaring Dependencies"
+msgstr ""
+
+#: ../../patterns/distribute.rst:123
+msgid ""
+"Dependencies are declared in the ``install_requires`` parameter as a "
+"list. Each item in that list is the name of a package that should be "
+"pulled from PyPI on installation.  By default it will always use the most"
+" recent version, but you can also provide minimum and maximum version "
+"requirements.  Here some examples::"
+msgstr ""
+
+#: ../../patterns/distribute.rst:135
+msgid ""
+"As mentioned earlier, dependencies are pulled from PyPI.  What if you "
+"want to depend on a package that cannot be found on PyPI and won't be "
+"because it is an internal package you don't want to share with anyone? "
+"Just do it as if there was a PyPI entry and provide a list of alternative"
+" locations where setuptools should look for tarballs::"
+msgstr ""
+
+#: ../../patterns/distribute.rst:143
+msgid ""
+"Make sure that page has a directory listing and the links on the page are"
+" pointing to the actual tarballs with their correct filenames as this is "
+"how setuptools will find the files.  If you have an internal company "
+"server that contains the packages, provide the URL to that server."
+msgstr ""
+
+#: ../../patterns/distribute.rst:150
+msgid "Installing / Developing"
+msgstr ""
+
+#: ../../patterns/distribute.rst:152
+msgid ""
+"To install your application (ideally into a virtualenv) just run the "
+":file:`setup.py` script with the ``install`` parameter.  It will install "
+"your application into the virtualenv's site-packages folder and also "
+"download and install all dependencies::"
+msgstr ""
+
+#: ../../patterns/distribute.rst:159
+msgid ""
+"If you are developing on the package and also want the requirements to be"
+" installed, you can use the ``develop`` command instead::"
+msgstr ""
+
+#: ../../patterns/distribute.rst:164
+msgid ""
+"This has the advantage of just installing a link to the site-packages "
+"folder instead of copying the data over.  You can then continue to work "
+"on the code without having to run ``install`` again after each change."
+msgstr ""
+

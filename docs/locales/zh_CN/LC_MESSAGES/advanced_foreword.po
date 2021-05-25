@@ -1,0 +1,88 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-25 19:31+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../advanced_foreword.rst:2
+msgid "Foreword for Experienced Programmers"
+msgstr ""
+
+#: ../../advanced_foreword.rst:5
+msgid "Thread-Locals in Flask"
+msgstr ""
+
+#: ../../advanced_foreword.rst:7
+msgid ""
+"One of the design decisions in Flask was that simple tasks should be "
+"simple; they should not take a lot of code and yet they should not limit "
+"you. Because of that, Flask has a few design choices that some people "
+"might find surprising or unorthodox. For example, Flask uses thread-local"
+" objects internally so that you don’t have to pass objects around from "
+"function to function within a request in order to stay threadsafe. This "
+"approach is convenient, but requires a valid request context for "
+"dependency injection or when attempting to reuse code which uses a value "
+"pegged to the request.  The Flask project is honest about thread-locals, "
+"does not hide them, and calls out in the code and documentation where "
+"they are used."
+msgstr ""
+
+#: ../../advanced_foreword.rst:20
+msgid "Develop for the Web with Caution"
+msgstr ""
+
+#: ../../advanced_foreword.rst:22
+msgid "Always keep security in mind when building web applications."
+msgstr ""
+
+#: ../../advanced_foreword.rst:24
+msgid ""
+"If you write a web application, you are probably allowing users to "
+"register and leave their data on your server.  The users are entrusting "
+"you with data. And even if you are the only user that might leave data in"
+" your application, you still want that data to be stored securely."
+msgstr ""
+
+#: ../../advanced_foreword.rst:29
+msgid ""
+"Unfortunately, there are many ways the security of a web application can "
+"be compromised.  Flask protects you against one of the most common "
+"security problems of modern web applications: cross-site scripting (XSS)."
+"  Unless you deliberately mark insecure HTML as secure, Flask and the "
+"underlying Jinja2 template engine have you covered.  But there are many "
+"more ways to cause security problems."
+msgstr ""
+
+#: ../../advanced_foreword.rst:36
+msgid ""
+"The documentation will warn you about aspects of web development that "
+"require attention to security.  Some of these security concerns are far "
+"more complex than one might think, and we all sometimes underestimate the"
+" likelihood that a vulnerability will be exploited - until a clever "
+"attacker figures out a way to exploit our applications.  And don't think "
+"that your application is not important enough to attract an attacker.  "
+"Depending on the kind of attack, chances are that automated bots are "
+"probing for ways to fill your database with spam, links to malicious "
+"software, and the like."
+msgstr ""
+
+#: ../../advanced_foreword.rst:45
+msgid ""
+"Flask is no different from any other framework in that you the developer "
+"must build with caution, watching for exploits when building to your "
+"requirements."
+msgstr ""
+
