@@ -172,7 +172,7 @@ if you doesn't finish the translation in ten days.
 
 - [ ] advanced_foreword (reserved)
 - [ ] appcontext
-- [ ] async-await
+- [ ] async-await [@rosekc](https://github.com/your_username) rosekc
 - [ ] becomingbig
 - [ ] blueprints
 - [ ] changes
