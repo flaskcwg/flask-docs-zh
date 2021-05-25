@@ -96,3 +96,11 @@ def github_link(name, rawtext, text, lineno, inliner, options=None, content=None
 
 def setup(app):
     app.add_role("gh", github_link)
+
+
+# Translation ----------------------------------------------------------
+
+locale_dirs = ['locales']   # path is example but recommended.
+gettext_compact = False     # optional.
+# see https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-language
+language = ''  # update this
