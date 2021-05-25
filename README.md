@@ -1,6 +1,10 @@
 # Flask Docs Translation
 
-这里是 Flask 文档中文翻译项目，欢迎参与！在开始翻译之前，请务必阅读下面的 Contributing Guide 了解贡献流程，然后阅读[这个 Issue](https://github.com/greyli/flask-docs-zh/issues/11) 了解翻译基本要求和建议，并在[这个 Dicussion](https://github.com/greyli/flask-docs-zh/discussions/12) 投票选出你认为合适的翻译词汇。
+这里是 Flask 文档中文翻译项目，欢迎参与！
+
+1. 在开始翻译之前，请务必阅读下面的 Contributing Guide 了解贡献流程，然后阅读[这个 Issue](https://github.com/greyli/flask-docs-zh/issues/11) 了解翻译基本要求和建议，并在[这个 Dicussion](https://github.com/greyli/flask-docs-zh/discussions/12) 投票选出你认为合适的翻译词汇。
+2. 需要强调的是，完成一章的翻译要提交两个 PR：第一个 PR 在对应的章节条目后添加自己的用户名以认领章节；第二个 PR 翻译对应的 `.po` 文件并勾选完成的章节条目。先认领，再翻译，一次只认领一章。
+3. 不要改动任何 ReStructuredText 标记、变量/类/函数/方法名称、URL 等。
 
 如果有其他问题和相关想法，请[创建 Discussion](https://github.com/greyli/flask-docs-zh/discussions/new) 发起讨论；如果对翻译流程和项目设置有改进建议，或是发现了翻译错误和笔误，请[创建 Issue](https://github.com/greyli/flask-docs-zh/issues/new) 反馈。
 
@@ -87,7 +91,7 @@ An example of one such file, from docs/.../index.po, is given below.
 ```po
 #: ../../index.rst:4
 msgid "Welcome to Flask"
-msgstr "<FILL HERE BY TARGET LANGUAGE>"
+msgstr "欢迎来到 Flask"
 ```
 
 Another case, msgid is multi-line text and contains reStructuredText syntax:
@@ -98,8 +102,8 @@ msgid ""
 "Welcome to Flask's documentation. Get started with :doc:`installation` "
 "and then get an overview with the :doc:`quickstart`."
 msgstr ""
-"FILL HERE BY TARGET LANGUAGE FILL HERE BY TARGET LANGUAGE :doc:`installation` "
-"FILL HERE BY TARGET LANGUAGE :doc:`quickstart`."
+"欢迎来到 Flask 的文档。你可以从 :doc:`installation` 入手"
+"然后阅读 :doc:`quickstart` 来了解基本概念。"
 ```
 
 Please be careful not to break reST notation. Most
@@ -146,20 +150,6 @@ $ git push origin your-branch-name
 - Open the home page of your forked repository, you will see a notice about
 the new branch. Click the "Compare & pull request" button to create a PR.
 - The translation coordinator will review your PR very soon. Thank you!
-
-
-### Tips
-
-**If you use translator.** Do not put the whole content of a file into the
-translator, this can cause problems with code snippets, reserved words of the
-programming language, special ReStructuredText tags and so on, the best way is to
-translate paragraph by paragraph, header by header.
-
-**Maintaining the essence.** Although the translator does a large part of the work,
-sometimes the resulting translation does not match the meaning of the original
-resource. It is important to correct this so that the original meaning is not lost.
-Do not change names of functions, classes, variables methods etc in the codes, it
-is possible that they will stop working.
 
 
 ## Translation To-do List

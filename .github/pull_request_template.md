@@ -11,8 +11,10 @@ automatically close an issue.
 - fixes #<issue number>
 
 <!--
-Ensure each step in the "Contrubuting Guide" of the README is complete by
-adding an "x" to each box below.
+For translation PR, ensure each step in the "Contrubuting Guide" of the
+README is complete by adding an "x" to each box below.
+
+For assignment PR, you can delete the checklist below.
 -->
 
 Checklist:
