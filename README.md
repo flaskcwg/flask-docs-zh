@@ -74,7 +74,30 @@ $ git fetch upstream
 $ git checkout -b your-branch-name upstream/main
 ```
 
-- Translate the `.po` file under the `docs/locales/<LANG>/LC_MESSAGES` path.
+- Translate the `.po` file in the `docs/locales/<LANG>/LC_MESSAGES` directory.
+
+An example of one such file, from docs/.../index.po, is given below.
+
+```po
+#: ../../index.rst:4
+msgid "Welcome to Flask"
+msgstr "<FILL HERE BY TARGET LANGUAGE>"
+```
+
+Another case, msgid is multi-line text and contains reStructuredText syntax:
+
+```po
+#: ../../index.rst:11
+msgid ""
+"Welcome to Flask's documentation. Get started with :doc:`installation` "
+"and then get an overview with the :doc:`quickstart`."
+msgstr ""
+"FILL HERE BY TARGET LANGUAGE FILL HERE BY TARGET LANGUAGE :doc:`installation` "
+"FILL HERE BY TARGET LANGUAGE :doc:`quickstart`."
+```
+
+Please be careful not to break reST notation. Most po-editors will help you with that.
+
 - Mark the chapter as finished (fill the checkbox with "x"):
 
 ```
