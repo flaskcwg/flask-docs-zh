@@ -102,7 +102,8 @@ msgstr ""
 "FILL HERE BY TARGET LANGUAGE :doc:`quickstart`."
 ```
 
-Please be careful not to break reST notation. Most po-editors will help you with that.
+Please be careful not to break reST notation. Most
+[po-editors](https://www.gnu.org/software/trans-coord/manual/web-trans/html_node/PO-Editors.html) will help you with that.
 
 - Mark the chapter as finished (fill the checkbox with "x"):
 
