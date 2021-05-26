@@ -1,4 +1,4 @@
-# Flask Docs Translation
+# Flask 中文文档
 
 这里是 Flask 文档中文翻译项目，欢迎参与！
 
