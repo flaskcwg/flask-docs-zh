@@ -177,7 +177,7 @@ if you doesn't finish the translation in ten days.
 - [ ] extensions
 - [ ] foreword (reserved)
 - [ ] htmlfaq
-- [ ] index (reserved)
+- [x] index [@greyli](https://github.com/greyli) Grey Li
 - [ ] installation (reserved)
 - [ ] logging
 - [ ] quickstart (reserved)
