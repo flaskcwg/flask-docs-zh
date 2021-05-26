@@ -9,6 +9,7 @@ jobs:
   sync:
     name: Sync with upstream docs
     runs-on: ubuntu-latest
+    continue-on-error: true
     steps:
       - uses: actions/checkout@v2
         with:
