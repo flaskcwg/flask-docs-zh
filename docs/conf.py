@@ -104,3 +104,4 @@ def setup(app):
 locale_dirs = ['locales']
 gettext_compact = False
 language = 'zh_CN'
+html_search_language = 'zh'
