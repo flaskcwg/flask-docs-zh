@@ -52,7 +52,7 @@ jobs:
           from github import Github
           current_date = datetime.today().strftime(' %Y-%m-%d')
           g = Github(os.getenv('GITHUB_TOKEN'))
-          changed = subprocess.check_output("git diff --name-only origin/main HEAD | grep -e '^docs/locales/'", shell=True, text=True)
+          changed = subprocess.check_output("git diff --name-only HEAD~1 HEAD | grep -e '^docs/locales/'", shell=True, text=True)
           body = "## Changed po files\n\n" + "\n".join(f"- [ ] {line}" for line in changed.splitlines() if line.strip())
           repo = g.get_repo(os.getenv('REPO'))
           label = repo.get_label('sync')
