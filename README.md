@@ -178,7 +178,7 @@ if you doesn't finish the translation in ten days.
 - [ ] foreword (reserved)
 - [ ] htmlfaq
 - [x] index [@greyli](https://github.com/greyli) Grey Li
-- [ ] installation (reserved)
+- [x] installation [@greyli](https://github.com/greyli) Grey Li
 - [ ] logging
 - [ ] quickstart (reserved)
 - [ ] reqcontext
@@ -197,7 +197,7 @@ if you doesn't finish the translation in ten days.
 - [ ] database
 - [ ] deploy
 - [ ] factory
-- [ ] index
+- [x] index [@greyli](https://github.com/greyli) Grey Li
 - [ ] install
 - [ ] layout
 - [ ] next
