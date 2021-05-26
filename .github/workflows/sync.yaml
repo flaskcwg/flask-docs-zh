@@ -23,7 +23,7 @@ jobs:
           git config --local user.name "GitHub Action"
           git remote add upstream https://github.com/pallets/flask.git
           git fetch upstream
-          git merge upstream/2.0.x -m "Merge upstream changes into 'main' by GitHub Actions"
+          git merge --allow-unrelated-histories upstream/2.0.x -m "Merge upstream changes into 'main' by GitHub Actions"
           # If docs/ has changes, continue below steps otherwise abort
           git diff --name-only origin/main HEAD | grep -q -e '^docs/'
 
