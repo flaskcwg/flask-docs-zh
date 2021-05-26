@@ -48,14 +48,16 @@ jobs:
         shell: python
         run: |
           import subprocess, os
+          from datetime import datetime
           from github import Github
+          current_date = datetime.today().strftime(' %Y-%m-%d')
           g = Github(os.getenv('GITHUB_TOKEN'))
           changed = subprocess.check_output("git diff --name-only origin/main HEAD | grep -e '^docs/locales/'", shell=True, text=True)
           body = "## Changed po files\n\n" + "\n".join(f"- [ ] {line}" for line in changed.splitlines() if line.strip())
           repo = g.get_repo(os.getenv('REPO'))
-          issue = repo.create_issue(title=os.getenv('ISSUE_TITLE'), body=body)
-          print(issue)
+          label = repo.get_label('sync')
+          issue = repo.create_issue(title=os.getenv('ISSUE_TITLE') + current_date, body=body, labels=[label])
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO: ${{ github.repository }}
-          ISSUE_TITLE: New updates of .po files
+          ISSUE_TITLE: Sync translation for upstream updates
