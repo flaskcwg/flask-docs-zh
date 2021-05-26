@@ -30,9 +30,10 @@ jobs:
       - name: Generate Translation
         run: |
           pip install -r requirements/docs.txt
+          pip install -e .
           cd docs
           make gettext
-          sphinx-intl update -p _build/gettext -l zh_CN
+          sphinx-intl update -p _build/gettext
           cd ..
           git add docs/
           git commit -m "Update po files by GitHub Actions"
