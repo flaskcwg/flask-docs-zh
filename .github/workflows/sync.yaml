@@ -1,0 +1,43 @@
+name: Sync
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 * * * *" # Run every hour
+
+jobs:
+  sync:
+    name: Sync with upstream docs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+
+      - name: Fetch upstream changes
+        id: fetch-changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git remote add upstream https://github.com/pallets/flask.git
+          git fetch upstream
+          git merge upstream/main -m "Merge upstream changes into 'main' by GitHub Actions"
+          # If docs/ has changes, continue below steps otherwise abort
+          git diff --name-only origin/main HEAD | grep -q -e '^docs/'
+
+      - name: Generate Translation
+        run: |
+          pip install -r requirements/docs.txt
+          cd docs
+          make gettext
+          sphinx-intl update -p _build/gettext -l zh_CN
+          cd ..
+          git add docs/
+          git commit -m "Update po files by GitHub Actions"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
