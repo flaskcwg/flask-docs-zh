@@ -2,7 +2,7 @@
 
 这里是 Flask 文档中文翻译项目，欢迎参与！
 
-1. 在开始翻译之前，请务必阅读下面的 Contributing Guide 了解贡献流程，然后阅读[这个 Issue](https://github.com/greyli/flask-docs-zh/issues/11) 了解翻译基本要求和建议，并在[这个 Dicussion](https://github.com/greyli/flask-docs-zh/discussions/12) 投票选出你认为合适的翻译词汇。
+1. 在开始翻译之前，请务必阅读下面的 Contributing Guide 了解贡献流程，然后阅读[这个 Issue](https://github.com/greyli/flask-docs-zh/issues/11) 了解翻译要求，在[这个 Discussion](https://github.com/greyli/flask-docs-zh/discussions/12) 投票选出你认为合适的翻译词汇，在[这个 Discussion](https://github.com/greyli/flask-docs-zh/discussions/32) 投票选出你喜欢的 Logo。
 2. 需要强调的是，完成一章的翻译要提交两个 PR：第一个 PR 在对应的章节条目后添加自己的用户名以认领章节；第二个 PR 翻译对应的 `.po` 文件并勾选完成的章节条目。先认领，再翻译，一次只认领一章。
 3. 不要改动任何 ReStructuredText 标记、变量/类/函数/方法名称、URL 等。
 
