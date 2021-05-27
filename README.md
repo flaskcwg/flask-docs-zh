@@ -212,7 +212,7 @@ if you doesn't finish the translation in ten days.
 - [ ] asgi
 - [ ] cgi
 - [ ] fastcgi
-- [ ] index [@180909](https://github.com/180909) 180909
+- [x] index [@180909](https://github.com/180909) 180909
 - [ ] mod_wsgi
 - [ ] uwsgi
 - [ ] wsgi-standalone

@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../deploying/index.rst:2
 msgid "Deployment Options"
-msgstr ""
+msgstr "部署方式"
 
 #: ../../deploying/index.rst:4
 msgid ""
@@ -27,6 +27,9 @@ msgid ""
 "suitable for production** as it doesn't scale well.  Some of the options "
 "available for properly running Flask in production are documented here."
 msgstr ""
+"虽然轻便且易于使用，但是 Flask 的内建服务器不适合"
+"用于生产 ，它也不能很好的扩展。下面一些选项"
+"记录了在生产环境中正确运行 Flask 的可用方法"
 
 #: ../../deploying/index.rst:8
 msgid ""
@@ -35,28 +38,38 @@ msgid ""
 "it.  Just remember that your :class:`Flask` application object is the "
 "actual WSGI application."
 msgstr ""
+"如果想要把 Flask 应用部署到这里没有列出的 WSGI 服务器，"
+"请查询其文档中关于如何使用 WSGI 的部分，"
+"只要记住： :class:`Flask` 应用对象实质上是"
+"一个 WSGI 应用。"
 
 #: ../../deploying/index.rst:15
 msgid "Hosted options"
-msgstr ""
+msgstr "托管选项"
 
 #: ../../deploying/index.rst:17
 msgid ""
 "`Deploying Flask on Heroku <https://devcenter.heroku.com/articles"
 "/getting-started-with-python>`_"
 msgstr ""
+"`将 Flask 部署在 Heroku 上 <https://devcenter.heroku.com/articles"
+"/getting-started-with-python>`_"
 
 #: ../../deploying/index.rst:18
 msgid ""
 "`Deploying Flask on Google App Engine "
 "<https://cloud.google.com/appengine/docs/standard/python3/runtime>`_"
 msgstr ""
+"`将 Flask 部署在 Google App Engine 上 "
+"<https://cloud.google.com/appengine/docs/standard/python3/runtime>`_"
 
 #: ../../deploying/index.rst:19
 msgid ""
 "`Deploying Flask on Google Cloud Run "
 "<https://cloud.google.com/run/docs/quickstarts/build-and-deploy/python>`_"
 msgstr ""
+"`将 Flask 部署在 Google Cloud Run 上 "
+"<https://cloud.google.com/run/docs/quickstarts/build-and-deploy/python>`_"
 
 #: ../../deploying/index.rst:20
 msgid ""
@@ -64,20 +77,26 @@ msgid ""
 "<https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-"
 "python-flask.html>`_"
 msgstr ""
+"`将 Flask 部署在 AWS Elastic Beanstalk 上 "
+"<https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-"
+"python-flask.html>`_"
 
 #: ../../deploying/index.rst:21
 msgid ""
 "`Deploying on Azure (IIS) <https://docs.microsoft.com/en-us/azure/app-"
 "service/containers/how-to-configure-python>`_"
 msgstr ""
+"`部署在 Azure (IIS) 上 <https://docs.microsoft.com/en-us/azure/app-"
+"service/containers/how-to-configure-python>`_"
 
 #: ../../deploying/index.rst:22
 msgid ""
 "`Deploying on PythonAnywhere "
 "<https://help.pythonanywhere.com/pages/Flask/>`_"
 msgstr ""
+"`部署在 PythonAnywhere 上 "
+"<https://help.pythonanywhere.com/pages/Flask/>`_"
 
 #: ../../deploying/index.rst:25
 msgid "Self-hosted options"
-msgstr ""
-
+msgstr "自主托管选项"
