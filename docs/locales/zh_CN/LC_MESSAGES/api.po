@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 2.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-25 19:31+0800\n"
+"POT-Creation-Date: 2021-05-25 21:13+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: zh_CN <withlihui@gmail.com>\n"
@@ -242,7 +242,7 @@ msgstr ""
 #: werkzeug.wrappers.response.Response.get_wsgi_response
 #: werkzeug.wrappers.response.Response.make_conditional
 #: werkzeug.wrappers.response.Response.set_data
-msgid "Parameters"
+msgid "参数"
 msgstr ""
 
 #: flask.app.Flask:66 of
@@ -453,7 +453,7 @@ msgstr ""
 #: werkzeug.wrappers.response.Response.make_conditional
 #: werkzeug.wrappers.response.Response.make_sequence
 #: werkzeug.wrappers.response.Response.set_data
-msgid "Return type"
+msgid "返回类型"
 msgstr ""
 
 #: flask.app.Flask.add_template_global:1 of
@@ -1407,7 +1407,7 @@ msgstr ""
 #: werkzeug.wrappers.response.Response.get_app_iter
 #: werkzeug.wrappers.response.Response.get_wsgi_headers
 #: werkzeug.wrappers.response.Response.get_wsgi_response
-msgid "Returns"
+msgid "返回"
 msgstr ""
 
 #: flask.app.Flask.process_response:10 of
@@ -5303,7 +5303,7 @@ msgid ""
 msgstr ""
 
 #: flask.json.tag.TaggedJSONSerializer.register of
-msgid "Raises"
+msgid "引发"
 msgstr ""
 
 #: flask.json.tag.TaggedJSONSerializer.register:11 of
@@ -6602,3 +6602,14 @@ msgid ""
 "having to manually configure the application."
 msgstr ""
 
+#~ msgid "Parameters"
+#~ msgstr ""
+
+#~ msgid "Return type"
+#~ msgstr ""
+
+#~ msgid "Returns"
+#~ msgstr ""
+
+#~ msgid "Raises"
+#~ msgstr ""
