@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../blueprints.rst:2
 msgid "Modular Applications with Blueprints"
-msgstr ""
+msgstr "使用蓝图的模块化应用"
 
 #: ../../blueprints.rst:8
 msgid ""
@@ -32,14 +32,18 @@ msgid ""
 "  Rather it is a *blueprint* of how to construct or extend an "
 "application."
 msgstr ""
+"为了在一个或多个应用中支持模式复用，Flask 引入了蓝图的概念。蓝图可以极大地简化大型应用"
+"并且为 Flask 的扩展提供了一个集中注册应用修改操作的入口。:class:`Blueprint` 对象与 "
+":class:`Flask` 应用对象的工作方式类似，但它不是一个真正的应用，而是一个记录了如何构造"
+"或扩展应用的 *蓝图*。"
 
 #: ../../blueprints.rst:17
 msgid "Why Blueprints?"
-msgstr ""
+msgstr "为何要使用蓝图？"
 
 #: ../../blueprints.rst:19
 msgid "Blueprints in Flask are intended for these cases:"
-msgstr ""
+msgstr "Flask 中的蓝图有以下用途："
 
 #: ../../blueprints.rst:21
 msgid ""
@@ -47,6 +51,8 @@ msgid ""
 " applications; a project could instantiate an application object, "
 "initialize several extensions, and register a collection of blueprints."
 msgstr ""
+"把一个应用分解为一组蓝图。这是针对大型应用的理想方案：一个项目可以创建一个应用实例，"
+"初始化多个扩展，注册一系列蓝图。"
 
 #: ../../blueprints.rst:24
 msgid ""
@@ -54,12 +60,14 @@ msgid ""
 "Parameters in the URL prefix/subdomain become common view arguments (with"
 " defaults) across all view functions in the blueprint."
 msgstr ""
+"在应用的某个 URL 前缀和（或）子域上注册一个蓝图。在此URL 前缀和（或）子域上的参数将成为"
+"蓝图中所有视图的共用参数。"
 
 #: ../../blueprints.rst:27
 msgid ""
 "Register a blueprint multiple times on an application with different URL "
 "rules."
-msgstr ""
+msgstr "在一个应用上使用不同 URL 规则多次注册同一个蓝图。"
 
 #: ../../blueprints.rst:29
 msgid ""
@@ -67,12 +75,13 @@ msgid ""
 "through blueprints.  A blueprint does not have to implement applications "
 "or view functions."
 msgstr ""
+"通过蓝图提供模板过滤器、静态文件、模板及其他通用工具。蓝图并非必须实现应用或视图函数。"
 
 #: ../../blueprints.rst:32
 msgid ""
 "Register a blueprint on an application for any of these cases when "
 "initializing a Flask extension."
-msgstr ""
+msgstr "初始化 Flask 扩展时，为以上任意一种用途注册一个蓝图。"
 
 #: ../../blueprints.rst:35
 msgid ""
@@ -83,6 +92,10 @@ msgid ""
 "applications will have separate configs and will be managed at the WSGI "
 "layer."
 msgstr ""
+"Flask 中的蓝图并非一个可插拔的应用，因为它压根不是一个应用——它是一组可注册在应用对象上"
+"的操作的集合，甚至可以注册多次。那么为什么不用多个应该对象呢？你可以这么做（参见 "
+":doc:`/patterns/appdispatch`），但这样会导致你的应用各自拥有独立的配置，且只能在 WSGI "
+"层管理。"
 
 #: ../../blueprints.rst:42
 msgid ""
@@ -92,10 +105,12 @@ msgid ""
 "blueprint once an application was created without having to destroy the "
 "whole application object."
 msgstr ""
+"而蓝图能在 Flask 应用层面隔离，共享应用配置，并在注册时按需修改应用对象。它的不足之处是"
+"一旦应用对象被创建，蓝图就不能注销，除非销毁整个应用对象。"
 
 #: ../../blueprints.rst:49
 msgid "The Concept of Blueprints"
-msgstr ""
+msgstr "蓝图的概念"
 
 #: ../../blueprints.rst:51
 msgid ""
@@ -104,16 +119,19 @@ msgid ""
 " blueprints when dispatching requests and generating URLs from one "
 "endpoint to another."
 msgstr ""
+"蓝图的基本理念是它记录了注册到应用之后将要执行的操作。分配请求时，Flask 会把蓝图和视图函数"
+"关联起来，并且生成两个端点之间的 URL。"
 
 #: ../../blueprints.rst:57
 msgid "My First Blueprint"
-msgstr ""
+msgstr "第一个蓝图"
 
 #: ../../blueprints.rst:59
 msgid ""
 "This is what a very basic blueprint looks like.  In this case we want to "
 "implement a blueprint that does simple rendering of static templates::"
 msgstr ""
+"以下是一个最基础的蓝图示例。在此例中，我们使用了蓝图来简单地渲染静态模板::"
 
 #: ../../blueprints.rst:76
 msgid ""
@@ -125,20 +143,24 @@ msgid ""
 "this case also ``simple_page``). The blueprint's name does not modify the"
 " URL, only the endpoint."
 msgstr ""
+"当你使用 ``@simple_page.route`` 装饰器绑定一个函数时，蓝图会记录下当它被注册到应用上时"
+"即将进行的操作，即把 ``show`` 函数注册到应用上。此外它还会在函数的端点中加上一个前缀，也"
+"就是构造 :class:`Blueprint` 时所使用的名称（本例中即 ``simple_page``）。蓝图的名称不会"
+"改变 URL，只改变端点。"
 
 #: ../../blueprints.rst:85
 msgid "Registering Blueprints"
-msgstr ""
+msgstr "注册蓝图"
 
 #: ../../blueprints.rst:87
 msgid "So how do you register that blueprint?  Like this::"
-msgstr ""
+msgstr "如何注册此蓝图？可以这样::"
 
 #: ../../blueprints.rst:95
 msgid ""
 "If you check the rules registered on the application, you will find "
 "these::"
-msgstr ""
+msgstr "如果你查看应用上注册的 URL 规则，你可以看到"
 
 #: ../../blueprints.rst:103
 msgid ""
@@ -147,14 +169,16 @@ msgid ""
 "blueprint.  As you can see, they are also prefixed with the name of the "
 "blueprint and separated by a dot (``.``)."
 msgstr ""
+"第一条很明显来自应用本身的静态文件服务，另外两条是用于 ``simple_page`` 蓝图的 `show` "
+"函数的。如你所见，它们的前缀都是蓝图的名称，用一个点（``.``）分隔。
 
 #: ../../blueprints.rst:108
 msgid "Blueprints however can also be mounted at different locations::"
-msgstr ""
+msgstr "蓝图还可以挂载到不同的位置::"
 
 #: ../../blueprints.rst:112
 msgid "And sure enough, these are the generated rules::"
-msgstr ""
+msgstr "那么它生成的规则就自然是::"
 
 #: ../../blueprints.rst:119
 msgid ""
@@ -162,20 +186,22 @@ msgid ""
 "every blueprint might respond properly to that.  In fact it depends on "
 "how the blueprint is implemented if it can be mounted more than once."
 msgstr ""
+"在此基础上，你还可以多次注册蓝图，尽管不是每个蓝图都能正确响应。蓝图是否能多次注册实际上"
+"取决于蓝图的实现方式。"
 
 #: ../../blueprints.rst:124
 msgid "Nesting Blueprints"
-msgstr ""
+msgstr "嵌套的蓝图"
 
 #: ../../blueprints.rst:126
 msgid "It is possible to register a blueprint on another blueprint."
-msgstr ""
+msgstr "你可以把蓝图注册到另一个蓝图上。"
 
 #: ../../blueprints.rst:135
 msgid ""
 "The child blueprint will gain the parent's name as a prefix to its name, "
 "and child URLs will be prefixed with the parent's URL prefix."
-msgstr ""
+msgstr "子蓝图的名称会以父蓝图的名称作为前缀，子蓝图的 URL 也会以父蓝图的 URL 前缀作为前缀。"
 
 #: ../../blueprints.rst:143
 msgid ""
@@ -183,20 +209,22 @@ msgid ""
 "parent will trigger for the child. If a child does not have an error "
 "handler that can handle a given exception, the parent's will be tried."
 msgstr ""
+"注册在父蓝图上的请求前钩子及其他钩子也会在子蓝图上触发。如果子蓝图未给某错误指定处理函数，"
+"会去寻找父蓝图上的错误处理函数。"
 
 #: ../../blueprints.rst:149
 msgid "Blueprint Resources"
-msgstr ""
+msgstr "蓝图资源"
 
 #: ../../blueprints.rst:151
 msgid ""
 "Blueprints can provide resources as well.  Sometimes you might want to "
 "introduce a blueprint only for the resources it provides."
-msgstr ""
+msgstr "蓝图也能够提供资源，有时可能仅仅是为了提供资源而引入蓝图。"
 
 #: ../../blueprints.rst:155
 msgid "Blueprint Resource Folder"
-msgstr ""
+msgstr "蓝图资源文件夹"
 
 #: ../../blueprints.rst:157
 msgid ""
@@ -204,6 +232,8 @@ msgid ""
 "in a folder.  While multiple blueprints can originate from the same "
 "folder, it does not have to be the case and it's usually not recommended."
 msgstr ""
+"与普通应用类似，蓝图一般都放在一个文件夹中。虽然多个蓝图可以来源于同个文件夹，但你不必"
+"这么做，这也不是通常推荐的做法。"
 
 #: ../../blueprints.rst:161
 msgid ""
@@ -215,16 +245,20 @@ msgid ""
 "contained in will be the resource folder.  You can access the "
 ":attr:`Blueprint.root_path` property to see what the resource folder is::"
 msgstr ""
+"文件夹是从 :class:`Blueprint` 接受的第二个参数推断而来，通常为 `__name__`。"
+"此参数指定了蓝图所对应的 Python 模块或者包。如果它指向了一个实际存在的 Python 包"
+"（也就是文件系统中的一个文件夹），那么这个包即为资源文件夹；如果它是一个模块，包含该模块的"
+"包即为资源文件夹。你可以访问 :attr:`Blueprint.root_path` 属性来查看资源文件夹::"
 
 #: ../../blueprints.rst:172
 msgid ""
 "To quickly open sources from this folder you can use the "
 ":meth:`~Blueprint.open_resource` function::"
-msgstr ""
+msgstr "使用 :meth:`~Blueprint.open_resource` 方法来快速打开文件夹中的资源::"
 
 #: ../../blueprints.rst:179
 msgid "Static Files"
-msgstr ""
+msgstr "静态文件"
 
 #: ../../blueprints.rst:181
 msgid ""
@@ -232,6 +266,8 @@ msgid ""
 "to the folder on the filesystem with the ``static_folder`` argument. It "
 "is either an absolute path or relative to the blueprint's location::"
 msgstr ""
+"你可以把文件夹的路径传给蓝图的 ``static_folder`` 参数来让蓝图提供静态文件，它既可以是"
+"绝对路径，也可以是相对于蓝图路径的相对路径::"
 
 #: ../../blueprints.rst:187
 msgid ""
@@ -241,6 +277,9 @@ msgid ""
 "``url_prefix`` of the blueprint + ``/static``. If the blueprint has the "
 "prefix ``/admin``, the static URL will be ``/admin/static``."
 msgstr ""
+"默认情况下，路径最右端的部分将作为静态文件的 URL，可以通过指定 ``static_url_path`` 来改变。"
+"因为上例中文件夹名称是 ``static``，所以静态文件可以通过蓝图的 ``url_prefix`` 加上 ``/static`` "
+"访问。比如蓝图的 URL 前缀是 ``/admin``，则静态文件的 URL 为 ``/admin/static``。"
 
 #: ../../blueprints.rst:193
 msgid ""
@@ -248,6 +287,8 @@ msgid ""
 " it with :func:`url_for` like you would with the static folder of the "
 "application::"
 msgstr ""
+"端点的名称是 ``blueprint_name.static``。你可以使用 :func:`url_for` 来生成 URL，和应用中"
+"的静态文件夹一样::"
 
 #: ../../blueprints.rst:199
 msgid ""
@@ -258,23 +299,26 @@ msgid ""
 " are not searched if the file does not exist in the application static "
 "folder."
 msgstr ""
+"然而，如果蓝图没有 ``url_prefix`` 属性，你将不能访问蓝图中的静态文件。这是因为这个情况下 "
+"URL 会是 ``/static``，而应用级的 ``/static`` 路由会优先匹配。和模板文件夹不同，当 Flask 在应用的"
+"静态文件夹中找不到文件时，不会去搜索蓝图的静态文件夹。"
 
 #: ../../blueprints.rst:207
 msgid "Templates"
-msgstr ""
+msgstr "模板"
 
 #: ../../blueprints.rst:209
 msgid ""
 "If you want the blueprint to expose templates you can do that by "
 "providing the `template_folder` parameter to the :class:`Blueprint` "
 "constructor::"
-msgstr ""
+msgstr "如果你想在蓝图中暴露模板文件你可以给 :class:`Blueprint` 指定 `template_folder` 参数::"
 
 #: ../../blueprints.rst:214
 msgid ""
 "For static files, the path can be absolute or relative to the blueprint "
 "resource folder."
-msgstr ""
+msgstr "对静态文件来说，路径可以是绝对路径，也可以相对于蓝图的资源文件夹。"
 
 #: ../../blueprints.rst:217
 msgid ""
@@ -287,6 +331,10 @@ msgid ""
 "blueprints provide the same relative template path the first blueprint "
 "registered takes precedence over the others."
 msgstr ""
+"模板文件夹会被添加到模板的搜索路径中，但比应用的模板文件夹优先级更低。这样你可以很容易地"
+"在应用中覆写蓝图提供的模板。这也意味着如果你不希望蓝图模板被意外覆盖，你需要保证模板的相对"
+"路径与其他蓝图或应用的模板都不相同。如果有多个模板有相同的模板相对路径，第一个被注册的蓝图中的模板"
+"将被选中。"
 
 #: ../../blueprints.rst:226
 msgid ""
@@ -298,6 +346,10 @@ msgid ""
 "template overridden by a template named ``index.html`` in the actual "
 "application template folder."
 msgstr ""
+"因此，如果你的蓝图位于 ``yourapplication/admin`` 中，你想渲染模板 ``'admin/index.html'`` "
+"并且你指定了 `template_folder` 为 ``templates``，那么你必须将模板创建为 "
+":file:`yourapplication/admin/templates/admin/index.html`。 其中包含一个额外的 ``admin`` "
+"是为了防止模板被应用模板文件夹中一个名叫 ``index.html`` 的模板文件所覆盖。"
 
 #: ../../blueprints.rst:234
 msgid ""
@@ -306,6 +358,8 @@ msgid ""
 " to this blueprint, the best idea is to lay out your templates like "
 "this::"
 msgstr ""
+"进一步阐明：如果你有一个名为 ``admin`` 的蓝图，你希望渲染蓝图的模板 :file:`index.html`，最好按照"
+"如下方式存放模板文件::"
 
 #: ../../blueprints.rst:246
 msgid ""
@@ -316,10 +370,13 @@ msgid ""
 " print out the steps it goes through to locate templates on every "
 "``render_template`` call."
 msgstr ""
+"当你需要使用此模板时，使用 :file:`admin/index.html` 作为查找模板的名称。如果在加载模板时遇到任何问题，"
+"启用 ``EXPLAIN_TEMPLATE_LOADING`` 配置变量，它可以在每次 ``reder_template`` 调用时让 Flask 打印"
+"查找模板的步骤。"
 
 #: ../../blueprints.rst:253
 msgid "Building URLs"
-msgstr ""
+msgstr "构造 URL"
 
 #: ../../blueprints.rst:255
 msgid ""
@@ -328,6 +385,8 @@ msgid ""
 "prefix the URL endpoint with the name of the blueprint and a dot "
 "(``.``)::"
 msgstr ""
+"要从一个页面链接到其他页面，你可以像之前一样使用 :func:`url_for` 函数，只不过你需要在 URL 端点前面加上"
+"蓝图的名称以及一个点（``.``）::"
 
 #: ../../blueprints.rst:261
 msgid ""
@@ -336,16 +395,19 @@ msgid ""
 "you can use relative redirects by prefixing the endpoint with a dot "
 "only::"
 msgstr ""
+"另外，如果在一个蓝图的视图函数或者渲染的模板中需要链接到相同蓝图的其他端点，你可以使用相对重定向，"
+"只要在端点前面加上一个点就可以了::"
 
 #: ../../blueprints.rst:267
 msgid ""
 "This will link to ``admin.index`` for instance in case the current "
 "request was dispatched to any other admin blueprint endpoint."
 msgstr ""
+"只要当前请求被分发到任一 admin 蓝图的端点时，上例的 URL 会链接到 ``admin.index``。"
 
 #: ../../blueprints.rst:272
 msgid "Blueprint Error Handlers"
-msgstr ""
+msgstr "蓝图的错误处理"
 
 #: ../../blueprints.rst:274
 msgid ""
@@ -353,10 +415,12 @@ msgid ""
 ":class:`Flask` application object, so it is easy to make Blueprint-"
 "specific custom error pages."
 msgstr ""
+"与 :class:`Flask` 应用对象一样，蓝图也提供了 ``errorhandler`` 装饰器，所以创建蓝图特定的自定义错误页面"
+"非常容易。"
 
 #: ../../blueprints.rst:278
 msgid "Here is an example for a \"404 Page Not Found\" exception::"
-msgstr ""
+msgstr "下面是一个 “404 Page Not Found” 异常的例子::"
 
 #: ../../blueprints.rst:284
 msgid ""
@@ -371,8 +435,11 @@ msgid ""
 "handling strategies for these errors based on URL prefixes, they may be "
 "defined at the application level using the ``request`` proxy object::"
 msgstr ""
+"大多数错误处理器会按预期工作，然而，关于 404 和 405 错误处理有件事需要注意：它们只能由在此蓝图的其他视图函数中的 "
+"``raise`` 语句或 ``abort`` 触发，而不能由，比方说，无效的 URL 访问触发。这是因为蓝图并不“拥有”某个 URL 空间，所以"
+"当无效的 URL 访问发生时，应用实例无从得知应该运行哪个蓝图的错误处理器。如果你想基于 URL 前缀分别执行不同的错误处理"
+"策略，那么可以在应用层面使用 ``request`` 代理对象来区分定义::"
 
 #: ../../blueprints.rst:302
 msgid "See :doc:`/errorhandling`."
-msgstr ""
-
+msgstr "参见 :doc:`/errorhandling`。"
