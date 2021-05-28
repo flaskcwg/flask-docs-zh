@@ -184,7 +184,7 @@ if you doesn't finish the translation in ten days.
 - [ ] reqcontext
 - [ ] security
 - [ ] server
-- [ ] shell
+- [ ] shell [@LTakamori](https://github.com/LTakamori) LTakamori
 - [ ] signals
 - [ ] templating
 - [ ] testing
