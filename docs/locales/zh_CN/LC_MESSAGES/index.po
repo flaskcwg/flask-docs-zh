@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../index.rst:4
 msgid "Welcome to Flask"
-msgstr "Welcome to Flask"
+msgstr "欢迎来到 Flask 的世界"
 
 msgid "Flask: web development, one drop at a time"
 msgstr "Flask：Web 开发，一次一滴"

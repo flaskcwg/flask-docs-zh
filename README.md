@@ -91,7 +91,7 @@ An example of one such file, from docs/.../index.po, is given below.
 ```po
 #: ../../index.rst:4
 msgid "Welcome to Flask"
-msgstr "欢迎来到 Flask"
+msgstr "欢迎来到 Flask 的世界"
 ```
 
 Another case, msgid is multi-line text and contains reStructuredText syntax:
