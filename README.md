@@ -165,7 +165,7 @@ if you doesn't finish the translation in ten days.
 - [ ] appcontext [@rosekc](https://github.com/rosekc) rosekc
 - [ ] async-await
 - [ ] becomingbig
-- [ ] blueprints
+- [x] blueprints [@frostming](https://github.com/frostming) Frost Ming
 - [ ] changes
 - [ ] cli
 - [ ] config
