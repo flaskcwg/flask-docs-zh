@@ -45,7 +45,7 @@ msgstr ""
 
 #: ../../deploying/index.rst:15
 msgid "Hosted options"
-msgstr "托管选项"
+msgstr "托管服务"
 
 #: ../../deploying/index.rst:17
 msgid ""
