@@ -99,4 +99,4 @@ msgstr ""
 
 #: ../../deploying/index.rst:25
 msgid "Self-hosted options"
-msgstr "自主托管选项"
+msgstr "自建服务"
