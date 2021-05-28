@@ -176,7 +176,7 @@ msgid ""
 "you could also define some more helper methods for common things such as "
 "initializing the database, dropping tables etc."
 msgstr ""
-"如果你喜欢使用 shell 的感觉，你还可以为你自己创建一个包含你想要全部导入"
+"如果你喜欢使用 shell 的感觉，你还可以为你自己创建一个包含你想要全部导入内容"
 "的模块。你可以在那里定义一些操纵常见资源的辅助方法，比如初始化数据库，删除表"
 "等等。"
 
