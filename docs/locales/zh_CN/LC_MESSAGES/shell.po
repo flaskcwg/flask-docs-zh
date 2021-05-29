@@ -32,7 +32,7 @@ msgid ""
 msgstr ""
 "人们喜爱 Python 的原因之一就是它交互式的 shell。它基本上允许你实时地执行 "
 "Python 指令并立即获得反馈结果。 Flask 本身并没有附带一个交互式的 shell，因"
-"为它并不需要任何具体的前置条件，你只需要导入你的程序就可以愉快地进行玩耍了。"
+"为它并不需要任何具体的前置条件，你只需要导入你的程序就可以愉快地玩耍了。"
 
 #: ../../shell.rst:12
 msgid ""
@@ -43,10 +43,10 @@ msgid ""
 "available.  But the code you want to test might depend on them, so what can "
 "you do?"
 msgstr ""
-"不过依然存在一些便利的辅助工具，它们使得你使用 shell 的体验更加愉快。在交互"
-"式的控制台中存在的主要问题是你不能像浏览器一样触发一个请求，也就是说  :data:"
-"`~flask.g` ， :data:`~flask.request` 等对象无法被使用。但假如你写的代码却依赖"
-"于它们来进行调试，那么你应该怎么做呢？"
+"不过依然存在一些便利的辅助工具，它们使得你使用 shell 的体验更加愉快。交互"
+"式的控制台中的主要问题是你不能像浏览器一样触发一个请求，即无法使用说  :data:"
+"`~flask.g` ， :data:`~flask.request` 等对象。但假如你写的代码依赖"
+"它们来进行调试，那么你应该怎么做呢？"
 
 #: ../../shell.rst:19
 msgid ""
@@ -56,13 +56,13 @@ msgid ""
 "context."
 msgstr ""
 "这就是一些辅助函数大展拳脚的场景了。不过请牢记，这些函数不仅适用于交互式 "
-"shell 的场景下，还能用于单元测试以及其他需要虚假请求的情况下。"
+"shell 的场景下，还能用于单元测试以及其他需要伪造请求的情况。"
 
 #: ../../shell.rst:24
 msgid ""
 "Generally it's recommended that you read the :doc:`reqcontext` chapter of "
 "the documentation first."
-msgstr "通常情况下，我建议你在继续之前先阅读  :doc:`reqcontext` 这一章节。"
+msgstr "通常情况下建议先阅读  :doc:`reqcontext` 这一章节。"
 
 #: ../../shell.rst:28
 msgid "Command Line Interface"
@@ -115,7 +115,7 @@ msgstr "从这时开始，直到调用 `pop` 之前，你可以使用请求对�
 
 #: ../../shell.rst:59
 msgid "Firing Before/After Request"
-msgstr "发送请求前/后的动作"
+msgstr "触发请求前/后的动作"
 
 #: ../../shell.rst:61
 msgid ""
@@ -125,8 +125,8 @@ msgid ""
 "callback or the current user not being stored on the :data:`~flask.g` "
 "object etc."
 msgstr ""
-"仅仅创建请求上下文还不够，你仍然没有执行请求前通常运行的代码。假如在请求前的"
-"代码中包含了连接数据库的操作，这会导致导致你的数据库还不可用，这么做还有可能"
+"仅仅创建请求上下文还不够，你还没有执行请求前的一般会执行的动作。假如在请求前的"
+"钩子中包含了连接数据库的操作，这会导致你的数据库仍不可用，这么做还有可能"
 "导致当前用户没有被存储在 :data:`~flask.g` 中等一系列错误。"
 
 #: ../../shell.rst:67
@@ -151,7 +151,7 @@ msgid ""
 "functions (triggered by :meth:`~flask.Flask.process_response`) operate on a "
 "response object:"
 msgstr ""
-"如果要关闭一个请求，你需要在请求后函数（由 :meth:`~flask.Flask."
+"如果要关闭一个请求，你需要在请求后钩子函数（由 :meth:`~flask.Flask."
 "process_response` 触发）作用于响应对象前将它关闭："
 
 #: ../../shell.rst:85
@@ -162,8 +162,8 @@ msgid ""
 "context (such as database connections)."
 msgstr ""
 "注册为 :meth:`~flask.Flask.teardown_request` 的函数会在请求上下文弹出后自动"
-"执行。 所以，这就是我们自动释放之前被请求上下文申请的资源（比如数据库连接）"
-"的地方。"
+"执行。 所以，在这里释放之前由请求上下文申请的资源（比如数据库连接）"
+"就相当合适了。"
 
 #: ../../shell.rst:92
 msgid "Further Improving the Shell Experience"
