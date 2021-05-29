@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-25 19:31+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: rosekc <rose-kc@hotmail.com>\n"
 "Language-Team: zh_CN <withlihui@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../appcontext.rst:4
 msgid "The Application Context"
-msgstr ""
+msgstr "应用上下文"
 
 #: ../../appcontext.rst:6
 msgid ""
@@ -28,6 +28,9 @@ msgid ""
 "application around to each function, the :data:`current_app` and "
 ":data:`g` proxies are accessed instead."
 msgstr ""
+"应用上下文在一个请求、命令行命令以及其他活动期间保持对应用层面数据的追踪。相"
+"比起将应用上下文传递到每个函数当中，Flask 使用了 :data:`current_app` 和 :"
+"data:`g` 这两个代理对象来访问应用上下文。"
 
 #: ../../appcontext.rst:11
 msgid ""
@@ -35,10 +38,12 @@ msgid ""
 "level data during a request. A corresponding application context is "
 "pushed when a request context is pushed."
 msgstr ""
+"这与在一个请求当中跟踪请求层面的数据跟踪的 :doc:`/reqcontext` 类似。在一个请"
+"求上下文被推入线程局部栈时，对应的应用上下文也被推入。"
 
 #: ../../appcontext.rst:16
 msgid "Purpose of the Context"
-msgstr ""
+msgstr "上下文的目的"
 
 #: ../../appcontext.rst:18
 msgid ""
@@ -50,6 +55,11 @@ msgid ""
 "writing reusable :doc:`blueprints </blueprints>` or :doc:`extensions "
 "</extensions>` there won't be an ``app`` instance to import at all."
 msgstr ""
+":class:`Flask` 应用对象所拥有的属性（attributes），如 :attr:`~Flask.config`，"
+"在视图函数与 :doc:`CLI commands </cli>` 中会用到。然而，在项目的模块里导入"
+"（import）``app`` 可能会带来循环导入的问题。当使用 :doc:`应用工厂模式 </"
+"patterns/appfactories>` 、编写可重用的 :doc:`blueprints </blueprints>` 或者 :"
+"doc:`扩展 </extensions>`，``app`` 实例将完全无法被导入。"
 
 #: ../../appcontext.rst:27
 msgid ""
@@ -57,6 +67,8 @@ msgid ""
 "referring to an ``app`` directly, you use the :data:`current_app` proxy, "
 "which points to the application handling the current activity."
 msgstr ""
+"Flask 使用“应用上下文”来解决这个问题。使用指向当前活动的应用对象的代理 :data:"
+"`current_app` ，而不是直接引用 ``app``。"
 
 #: ../../appcontext.rst:31
 msgid ""
@@ -64,16 +76,20 @@ msgid ""
 "request. View functions, error handlers, and other functions that run "
 "during a request will have access to :data:`current_app`."
 msgstr ""
+"Flask 在处理一个请求时候会自动 *推入* 一个应用上下文。视图函数，错误处理，还"
+"有其他在请求中运行的函数将会访问 :data:`current_app`。"
 
 #: ../../appcontext.rst:35
 msgid ""
 "Flask will also automatically push an app context when running CLI "
 "commands registered with :attr:`Flask.cli` using ``@app.cli.command()``."
 msgstr ""
+"Flask 在运行通过 ``@app.cli.command()`` 在 :attr:`Flask.cli` 注册的命令行命令"
+"时也会自动推入一个应用上下文。"
 
 #: ../../appcontext.rst:40
 msgid "Lifetime of the Context"
-msgstr ""
+msgstr "上下文的生命周期"
 
 #: ../../appcontext.rst:42
 msgid ""
@@ -83,22 +99,30 @@ msgid ""
 " it pops the request context then the application context. Typically, an "
 "application context will have the same lifetime as a request."
 msgstr ""
+"应用上下文会在必要的时候创建以及销毁。当 Flask 应用准备处理一个请求的时候，将"
+"推入一个应用上下文以及请求上下文。当请求结束的时候，弹出应用上下文以及 :doc:"
+"`request context </reqcontext>`。通常来说，一个应用上下文与请求上下文拥有一致"
+"的生命周期。"
 
 #: ../../appcontext.rst:49
 msgid ""
 "See :doc:`/reqcontext` for more information about how the contexts work "
 "and the full life cycle of a request."
 msgstr ""
+"在 :doc:`/reqcontext` 中去了解更多关于上下文如何工作以及请求的完整生命周期的"
+"相关信息。"
 
 #: ../../appcontext.rst:54
 msgid "Manually Push a Context"
-msgstr ""
+msgstr "手动推入一个上下文"
 
 #: ../../appcontext.rst:56
 msgid ""
 "If you try to access :data:`current_app`, or anything that uses it, "
 "outside an application context, you'll get this error message:"
 msgstr ""
+"如果要在一个应用上下文之外的地方试图去访问 :data:`current_app` 或者有任何需要"
+"使用应用上下文代理对象的情况，有可能会收到这样的错误信息："
 
 #: ../../appcontext.rst:67
 msgid ""
@@ -108,6 +132,9 @@ msgid ""
 "``with`` block, and everything that runs in the block will have access to"
 " :data:`current_app`. ::"
 msgstr ""
+"如果在配置应用的时候（如初始化扩展）看到这样的错误信息，可以手动推入一个上下"
+"文，因为此刻可以直接访问到 ``app``。在 ``with`` 块中使用 :meth:`~Flask."
+"app_context`，所有在块内的运行的代码将可以访问 :data:`current_app`："
 
 #: ../../appcontext.rst:81
 msgid ""
@@ -115,10 +142,12 @@ msgid ""
 "configuring the application, it most likely indicates that you should "
 "move that code into a view function or CLI command."
 msgstr ""
+"如果你在配置应用以外场景遇到这个错误，绝大多数情况下意味着这些代码应该转移到"
+"视图函数以及命令行命令下。"
 
 #: ../../appcontext.rst:87
 msgid "Storing Data"
-msgstr ""
+msgstr "存储数据"
 
 #: ../../appcontext.rst:89
 msgid ""
@@ -127,6 +156,9 @@ msgid ""
 "purpose. It is a simple namespace object that has the same lifetime as an"
 " application context."
 msgstr ""
+"在请求中或者命令行命令里，应用上下文是存储一些通用数据的好地方。为了这个目"
+"的，Flask 提供了 :data:`g 对象<g>` 。这是一个简单的与应用上下文同样生命周期的"
+"命名空间对象。"
 
 #: ../../appcontext.rst:95
 msgid ""
@@ -136,26 +168,32 @@ msgid ""
 "requests. Use the :data:`session` or a database to store data across "
 "requests."
 msgstr ""
+"``g`` 表示 ”global“（全局）的意思，这也意味着数据 *在上下文中* 是属于全局的。"
+"在 ``g`` 的数据在上下文结束的时候会丢失，这不是两个请求之间存放数据的好地方。"
+"使用 :data:`session` 或者数据库来存放跨请求的数据。"
 
 #: ../../appcontext.rst:101
 msgid "A common use for :data:`g` is to manage resources during a request."
-msgstr ""
+msgstr "一种常见的使用 :data:`g` 的场景是管理一个请求中的资源。"
 
 #: ../../appcontext.rst:103
 msgid ""
 "``get_X()`` creates resource ``X`` if it does not exist, caching it as "
 "``g.X``."
 msgstr ""
+"``get_X()`` 在资源 ``X`` 不存在的时候创建了资源 ``X``，将其缓存到 ``g.X``。"
 
 #: ../../appcontext.rst:105
 msgid ""
 "``teardown_X()`` closes or otherwise deallocates the resource if it "
 "exists. It is registered as a :meth:`~Flask.teardown_appcontext` handler."
 msgstr ""
+"``teardown_X()`` 在资源存在的时候关闭或者释放它。函数被注册为 :meth:`~Flask."
+"teardown_appcontext` 钩子函数。"
 
 #: ../../appcontext.rst:109
 msgid "For example, you can manage a database connection using this pattern::"
-msgstr ""
+msgstr "例如，可以使用以下方式来处理数据库连接："
 
 #: ../../appcontext.rst:126
 msgid ""
@@ -163,18 +201,24 @@ msgid ""
 "connection, and it will be closed automatically at the end of the "
 "request."
 msgstr ""
+"在请求当中，所有调用 ``get_db()`` 的地方均会返回一样的连接，而这个连接会在请"
+"求结束的时候自动关闭。"
 
 #: ../../appcontext.rst:130
 msgid ""
 "You can use :class:`~werkzeug.local.LocalProxy` to make a new context "
 "local from ``get_db()``::"
 msgstr ""
+"通过 :class:`~werkzeug.local.LocalProxy` 可以从 ``get_db()`` 创建一个新的上下"
+"文本地变量："
 
 #: ../../appcontext.rst:136
 msgid ""
 "Accessing ``db`` will call ``get_db`` internally, in the same way that "
 ":data:`current_app` works."
 msgstr ""
+"访问 ``db`` 会内部调用 ``get_db``，就像访问 :data:`current_app` 的调用机制一"
+"样。"
 
 #: ../../appcontext.rst:141
 msgid ""
@@ -184,10 +228,13 @@ msgid ""
 ":data:`_app_ctx_stack.top <_app_ctx_stack>`. For more information see "
 ":doc:`/extensiondev`."
 msgstr ""
+"在编写扩展的过程当中，:data:`g` 应该为用户代码保留。内部数据应该存在上下文本"
+"身，要保证使用一个足够独特的名称。当前的上下文会通过 :data:`_app_ctx_stack."
+"top <_app_ctx_stack>` 获取。更多信息参见 :doc:`/extensiondev`。"
 
 #: ../../appcontext.rst:149
 msgid "Events and Signals"
-msgstr ""
+msgstr "事件与信号"
 
 #: ../../appcontext.rst:151
 msgid ""
@@ -195,6 +242,8 @@ msgid ""
 ":meth:`~Flask.teardown_appcontext` when the application context is "
 "popped."
 msgstr ""
+"应用会在应用上下文被弹出的时候，调用注册在 :meth:`~Flask."
+"teardown_appcontext` 的函数。"
 
 #: ../../appcontext.rst:155
 msgid ""
@@ -202,4 +251,6 @@ msgid ""
 "sent: :data:`appcontext_pushed`, :data:`appcontext_tearing_down`, and "
 ":data:`appcontext_popped`."
 msgstr ""
-
+"如果 :data:`~signals.signals_available` 为真，下列信号将被发送：:data:"
+"`appcontext_pushed`、:data:`appcontext_tearing_down`、以及 :data:"
+"`appcontext_popped`."

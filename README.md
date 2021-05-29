@@ -162,7 +162,7 @@ if you doesn't finish the translation in ten days.
 ### docs/
 
 - [ ] advanced_foreword (reserved)
-- [ ] appcontext [@rosekc](https://github.com/rosekc) rosekc
+- [x] appcontext [@rosekc](https://github.com/rosekc) rosekc
 - [ ] async-await
 - [ ] becomingbig
 - [ ] blueprints
