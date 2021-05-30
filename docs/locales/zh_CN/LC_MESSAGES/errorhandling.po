@@ -3,23 +3,24 @@
 # This file is distributed under the same license as the Flask package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Flask 2.1.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-25 19:31+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2021-05-30 23:34+0800\n"
 "Language-Team: zh_CN <withlihui@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
+"Last-Translator: \n"
+"Language: zh_CN\n"
+"X-Generator: Poedit 2.4.3\n"
 
 #: ../../errorhandling.rst:2
 msgid "Handling Application Errors"
-msgstr ""
+msgstr "应用错误处理"
 
 #: ../../errorhandling.rst:4
 #, python-format
@@ -30,55 +31,63 @@ msgid ""
 "involved will fail. Here are some situations where perfectly fine code "
 "can lead to server errors:"
 msgstr ""
+"应用出错，服务器出错。或早或晚，你会在生产环境中遇到错误。即便你的代码百"
+"分之百正确，你仍然会看到这些异常情况。为什么呢？因为其他的一切都可能会出"
+"错。以下是一些在完美代码下可能会引起服务器错误的情况："
 
 #: ../../errorhandling.rst:10
 msgid ""
 "the client terminated the request early and the application was still "
 "reading from the incoming data"
-msgstr ""
+msgstr "客户端已经中断了请求，但应用还在读取数据"
 
 #: ../../errorhandling.rst:12
 msgid "the database server was overloaded and could not handle the query"
-msgstr ""
+msgstr "数据库过载，无法再处理查询请求"
 
 #: ../../errorhandling.rst:13
 msgid "a filesystem is full"
-msgstr ""
+msgstr "文件系统已满"
 
 #: ../../errorhandling.rst:14
 msgid "a harddrive crashed"
-msgstr ""
+msgstr "硬盘崩溃"
 
 #: ../../errorhandling.rst:15
 msgid "a backend server overloaded"
-msgstr ""
+msgstr "后端服务器过载"
 
 #: ../../errorhandling.rst:16
 msgid "a programming error in a library you are using"
-msgstr ""
+msgstr "你使用的库中有程序性错误"
 
 #: ../../errorhandling.rst:17
 msgid "network connection of the server to another system failed"
-msgstr ""
+msgstr "服务器与其他系统的网络连接出错"
 
 #: ../../errorhandling.rst:19
 msgid ""
 "And that's just a small sample of issues you could be facing. So how do "
-"we deal with that sort of problem? By default if your application runs in"
-" production mode, and an exception is raised Flask will display a very "
-"simple page for you and log the exception to the "
-":attr:`~flask.Flask.logger`."
+"we deal with that sort of problem? By default if your application runs "
+"in production mode, and an exception is raised Flask will display a very "
+"simple page for you and log the exception to the :attr:`~flask.Flask."
+"logger`."
 msgstr ""
+"以上只是你可能遇到的问题的一小部分。所以我们该如何处理此类问题？如果你的"
+"程序在生产环境中运行，出现错误，默认情况下，Flask 会显示一个简单的错误页"
+"面，并且会把错误记录到 :attr:`~flask.Flask.logger`。"
 
 #: ../../errorhandling.rst:24
 msgid ""
 "But there is more you can do, and we will cover some better setups to "
 "deal with errors including custom exceptions and 3rd party tools."
 msgstr ""
+"但除此以外，你还可以做得更多。我们将会介绍一些更好的错误处理方式，包括自"
+"定义异常和第三方工具的使用。"
 
 #: ../../errorhandling.rst:31
 msgid "Error Logging Tools"
-msgstr ""
+msgstr "错误日志工具"
 
 #: ../../errorhandling.rst:33
 msgid ""
@@ -86,29 +95,37 @@ msgid ""
 "overwhelming if enough users are hitting the error and log files are "
 "typically never looked at. This is why we recommend using `Sentry "
 "<https://sentry.io/>`_ for dealing with application errors. It's "
-"available as a source-available project `on GitHub "
-"<https://github.com/getsentry/sentry>`_ and is also available as a "
-"`hosted version <https://sentry.io/signup/>`_ which you can try for free."
-" Sentry aggregates duplicate errors, captures the full stack trace and "
-"local variables for debugging, and sends you mails based on new errors or"
-" frequency thresholds."
+"available as a source-available project `on GitHub <https://github.com/"
+"getsentry/sentry>`_ and is also available as a `hosted version <https://"
+"sentry.io/signup/>`_ which you can try for free. Sentry aggregates "
+"duplicate errors, captures the full stack trace and local variables for "
+"debugging, and sends you mails based on new errors or frequency "
+"thresholds."
 msgstr ""
+"当足够多的用户触发了错误，即便只对那些包含严重错误的情况发送通知邮件，也"
+"将是一场灾难，而且日志文件却从来不会有人去看。这就是我们推荐使用 `Sentry "
+"<https://sentry.io/>`_ 来处理应用错误的原因。它可以通过开源代码 `on "
+"GitHub <https://github.com/getsentry/sentry>`_ 获得，也可以在 `hosted "
+"version <https://sentry.io/signup/>`_ 中免费试用。Sentry 会对重复的错误汇"
+"总，为后期调试记录下完整的堆栈和局部变量信息。同时会在发生新的错误或是达"
+"到预设的频率阈值时发送通知邮件。"
 
 #: ../../errorhandling.rst:44
 msgid ""
 "To use Sentry you need to install the ``sentry-sdk`` client with extra "
 "``flask`` dependencies."
 msgstr ""
+"要使用 Sentry 你需要安装带有 ``flask``  依赖的 ``sentry-sdk`` 客户端。"
 
 #: ../../errorhandling.rst:51
 msgid "And then add this to your Flask app:"
-msgstr ""
+msgstr "并把下面的内容添加到你的 Flask 应用中："
 
 #: ../../errorhandling.rst:60
 msgid ""
 "The ``YOUR_DSN_HERE`` value needs to be replaced with the DSN value you "
 "get from your Sentry installation."
-msgstr ""
+msgstr "这里的 ``YOUR_DSN_HERE`` 需要替换成安装 Sentry 时获得的 DSN 值。"
 
 #: ../../errorhandling.rst:63
 msgid ""
@@ -116,57 +133,73 @@ msgid ""
 "automatically reported to Sentry and from there you can receive error "
 "notifications."
 msgstr ""
+"安装后，导致内部服务器错误的故障将自动报告给 Sentry，你也将收到出错通知。"
 
 #: ../../errorhandling.rst:67
 msgid "See also:"
-msgstr ""
+msgstr "延伸阅读："
 
 #: ../../errorhandling.rst:69
 msgid ""
 "Sentry also supports catching errors from a worker queue (RQ, Celery, "
-"etc.) in a similar fashion. See the `Python SDK docs "
-"<https://docs.sentry.io/platforms/python/>`__ for more information."
+"etc.) in a similar fashion. See the `Python SDK docs <https://docs."
+"sentry.io/platforms/python/>`__ for more information."
 msgstr ""
+"类似地，Sentry 也支持从队列（RQ、Celery 等）捕获错误。请参阅 `Python SDK "
+"docs <https://docs.sentry.io/platforms/python/>`__ 。"
 
 #: ../../errorhandling.rst:72
 msgid ""
-"`Getting started with Sentry "
-"<https://docs.sentry.io/quickstart/?platform=python>`__"
+"`Getting started with Sentry <https://docs.sentry.io/quickstart/?"
+"platform=python>`__"
 msgstr ""
+"`Sentry 入门 <https://docs.sentry.io/quickstart/?platform=python>`__"
 
 #: ../../errorhandling.rst:73
 msgid ""
-"`Flask-specific documentation "
-"<https://docs.sentry.io/platforms/python/guides/flask/>`__"
+"`Flask-specific documentation <https://docs.sentry.io/platforms/python/"
+"guides/flask/>`__"
 msgstr ""
+"`Flask-相关文档 <https://docs.sentry.io/platforms/python/guides/flask/"
+">`__"
 
 #: ../../errorhandling.rst:77
 msgid "Error Handlers"
-msgstr ""
+msgstr "错误处理程序"
 
 #: ../../errorhandling.rst:79
 msgid ""
-"When an error occurs in Flask, an appropriate `HTTP status code "
-"<https://developer.mozilla.org/en-US/docs/Web/HTTP/Status>`__ will be "
-"returned. 400-499 indicate errors with the client's request data, or "
-"about the data requested. 500-599 indicate errors with the server or "
-"application itself."
+"When an error occurs in Flask, an appropriate `HTTP status code <https://"
+"developer.mozilla.org/en-US/docs/Web/HTTP/Status>`__ will be returned. "
+"400-499 indicate errors with the client's request data, or about the "
+"data requested. 500-599 indicate errors with the server or application "
+"itself."
 msgstr ""
+"当 Flask 应用发生错误时，将返回一个相应的 `HTTP 状态码 <https://"
+"developer.mozilla.org/en-US/docs/Web/HTTP/Status>`__ 。例如 400-499 的状"
+"态码表示客户端请求中的数据或所请求的数据错误，而 500-599 则表示服务器或应"
+"用本身的错误。"
 
 #: ../../errorhandling.rst:85
 msgid ""
 "You might want to show custom error pages to the user when an error "
 "occurs. This can be done by registering error handlers."
 msgstr ""
+"当错误发生时，如果想要显示一个自定义的错误页面，可以通过注册错误处理程序"
+"实现。"
 
 #: ../../errorhandling.rst:88
 msgid ""
 "An error handler is a function that returns a response when a type of "
 "error is raised, similar to how a view is a function that returns a "
 "response when a request URL is matched. It is passed the instance of the "
-"error being handled, which is most likely a "
-":exc:`~werkzeug.exceptions.HTTPException`."
+"error being handled, which is most likely a :exc:`~werkzeug.exceptions."
+"HTTPException`."
 msgstr ""
+"错误处理程序是当某种类型的错误发生时，会返回特定结果的一个函数。与返回和"
+"请求 URL 相匹配内容的视图函数类似。需要被处理的错误，多数情况下是 :exc:"
+"`~werkzeug.exceptions.HTTPException` 的某种实例，它会被传入对应的错误处理"
+"函数中。"
 
 #: ../../errorhandling.rst:93
 msgid ""
@@ -174,60 +207,82 @@ msgid ""
 "Make sure to provide the appropriate HTTP status code when returning a "
 "response from a handler."
 msgstr ""
+"请求响应的状态码并不会被设置为处理程序的错误代码。如果要从错误处理程序返"
+"回响应，请确保提供一个合理的 HTTP 状态码。"
 
 #: ../../errorhandling.rst:99
 msgid "Registering"
-msgstr ""
+msgstr "注册"
 
 #: ../../errorhandling.rst:101
 msgid ""
-"Register handlers by decorating a function with "
-":meth:`~flask.Flask.errorhandler`. Or use "
-":meth:`~flask.Flask.register_error_handler` to register the function "
-"later. Remember to set the error code when returning the response."
+"Register handlers by decorating a function with :meth:`~flask.Flask."
+"errorhandler`. Or use :meth:`~flask.Flask.register_error_handler` to "
+"register the function later. Remember to set the error code when "
+"returning the response."
 msgstr ""
+"使用 :meth:`~flask.Flask.errorhandler` 装饰器来注册错误处理程序。或者在之"
+"后用 :meth:`~flask.Flask.register_error_handler` 注册。在返回响应结果时，"
+"务必设置好错误代码。"
 
 #: ../../errorhandling.rst:115
 msgid ""
-":exc:`werkzeug.exceptions.HTTPException` subclasses like "
-":exc:`~werkzeug.exceptions.BadRequest` and their HTTP codes are "
-"interchangeable when registering handlers. (``BadRequest.code == 400``)"
+":exc:`werkzeug.exceptions.HTTPException` subclasses like :exc:`~werkzeug."
+"exceptions.BadRequest` and their HTTP codes are interchangeable when "
+"registering handlers. (``BadRequest.code == 400``)"
 msgstr ""
+"在注册错误处理程序时，:exc:`werkzeug.exceptions.HTTPException` 的子类，"
+"如 :exc:`~werkzeug.exceptions.BadRequest` 和它们的 HTTP 状态码可互相替"
+"换。（ ``BadRequest.code == 400`` ）"
 
 #: ../../errorhandling.rst:119
 msgid ""
-"Non-standard HTTP codes cannot be registered by code because they are not"
-" known by Werkzeug. Instead, define a subclass of "
-":class:`~werkzeug.exceptions.HTTPException` with the appropriate code and"
-" register and raise that exception class."
+"Non-standard HTTP codes cannot be registered by code because they are "
+"not known by Werkzeug. Instead, define a subclass of :class:`~werkzeug."
+"exceptions.HTTPException` with the appropriate code and register and "
+"raise that exception class."
 msgstr ""
+"因为 Werkzeug 不能识别非标准的 HTTP 代码，所以它们不能被注册。相反，应当"
+"使用适当的错误代码定义 :class:`~werkzeug.exceptions.HTTPException` 的一个"
+"子类，并注册和抛出该异常类。"
 
 #: ../../errorhandling.rst:134
 msgid ""
-"Handlers can be registered for any exception class, not just "
-":exc:`~werkzeug.exceptions.HTTPException` subclasses or HTTP status "
-"codes. Handlers can be registered for a specific class, or for all "
-"subclasses of a parent class."
+"Handlers can be registered for any exception class, not just :exc:"
+"`~werkzeug.exceptions.HTTPException` subclasses or HTTP status codes. "
+"Handlers can be registered for a specific class, or for all subclasses "
+"of a parent class."
 msgstr ""
+"除了 :exc:`~werkzeug.exceptions.HTTPException` 的子类或 HTTP 状态码，错误"
+"处理程序还可用于任何异常类注册。它既可以为某一特定类注册，也可以为一个父"
+"类的所有子类注册。"
 
 #: ../../errorhandling.rst:141
 msgid "Handling"
-msgstr ""
+msgstr "处理"
 
 #: ../../errorhandling.rst:143
 msgid ""
-"When building a Flask application you *will* run into exceptions. If some"
-" part of your code breaks while handling a request (and you have no error"
-" handlers registered), a \"500 Internal Server Error\" "
-"(:exc:`~werkzeug.exceptions.InternalServerError`) will be returned by "
-"default. Similarly, \"404 Not Found\" "
-"(:exc:`~werkzeug.exceptions.NotFound`) error will occur if a request is "
-"sent to an unregistered route. If a route receives an unallowed request "
-"method, a \"405 Method Not Allowed\" "
-"(:exc:`~werkzeug.exceptions.MethodNotAllowed`) will be raised. These are "
-"all subclasses of :class:`~werkzeug.exceptions.HTTPException` and are "
-"provided by default in Flask."
+"When building a Flask application you *will* run into exceptions. If "
+"some part of your code breaks while handling a request (and you have no "
+"error handlers registered), a \"500 Internal Server Error\" (:exc:"
+"`~werkzeug.exceptions.InternalServerError`) will be returned by default. "
+"Similarly, \"404 Not Found\" (:exc:`~werkzeug.exceptions.NotFound`) "
+"error will occur if a request is sent to an unregistered route. If a "
+"route receives an unallowed request method, a \"405 Method Not Allowed"
+"\" (:exc:`~werkzeug.exceptions.MethodNotAllowed`) will be raised. These "
+"are all subclasses of :class:`~werkzeug.exceptions.HTTPException` and "
+"are provided by default in Flask."
 msgstr ""
+"在构建 Flask 应用的过程中，你将会遇到各种错误和异常。如果在处理请求时（并"
+"未注册任何错误处理程序），你的某段代码发生了错误，默认情况下会返回一"
+"个“500 内部服务器错误”（:exc:`~werkzeug.exceptions."
+"InternalServerError`）。类似地，如果向一个未知的路由发起请求，就会发"
+"生“404 找不到资源” （:exc:`~werkzeug.exceptions.NotFound`）错误。如果某个"
+"路由接收到了一个请求，访问不被允许的方法，则会抛出“405 方法被禁止” （:"
+"exc:`~werkzeug.exceptions.MethodNotAllowed`） 错误。这些异常类都是 :"
+"class:`~werkzeug.exceptions.HTTPException` 的子类，并且都已经由 Flask 默"
+"认提供。"
 
 #: ../../errorhandling.rst:154
 msgid ""
@@ -236,25 +291,38 @@ msgid ""
 "pages. You might want to show custom error pages to the user when an "
 "error occurs. This can be done by registering error handlers."
 msgstr ""
+"Flask 使你可以抛出在 Werkzeug 中注册的任何 HTTP 异常。然而，默认的 HTTP "
+"异常仅返回简单的错误页面。当错误发生时，如果想要显示一个自定义的错误页"
+"面，可以通过注册错误处理程序实现。"
 
 #: ../../errorhandling.rst:159
 msgid ""
 "When Flask catches an exception while handling a request, it is first "
 "looked up by code. If no handler is registered for the code, Flask looks "
-"up the error by its class hierarchy; the most specific handler is chosen."
-" If no handler is registered, :class:`~werkzeug.exceptions.HTTPException`"
-" subclasses show a generic message about their code, while other "
-"exceptions are converted to a generic \"500 Internal Server Error\"."
+"up the error by its class hierarchy; the most specific handler is "
+"chosen. If no handler is registered, :class:`~werkzeug.exceptions."
+"HTTPException` subclasses show a generic message about their code, while "
+"other exceptions are converted to a generic \"500 Internal Server Error"
+"\"."
 msgstr ""
+"当 Flask 在处理请求时捕获到异常，首先它会检索你的代码。如果当前的这段代码"
+"没有注册过错误处理，那么 Flask 会根据这个错误的类继承关系继续查找，直到选"
+"定一个最合适的处理程序。如果没有任何已注册的错误处理程序，那么 :class:"
+"`~werkzeug.exceptions.HTTPException` 子类会显示一个代码相关的通用错误信"
+"息。而其他的异常，则会被转化成一个通用的 “500 内部服务器错误”。"
 
 #: ../../errorhandling.rst:165
 msgid ""
 "For example, if an instance of :exc:`ConnectionRefusedError` is raised, "
-"and a handler is registered for :exc:`ConnectionError` and "
-":exc:`ConnectionRefusedError`, the more specific "
-":exc:`ConnectionRefusedError` handler is called with the exception "
-"instance to generate the response."
+"and a handler is registered for :exc:`ConnectionError` and :exc:"
+"`ConnectionRefusedError`, the more specific :exc:"
+"`ConnectionRefusedError` handler is called with the exception instance "
+"to generate the response."
 msgstr ""
+"例如，当一个 :exc:`ConnectionRefusedError` 实例被抛出，同时有一个相应的错"
+"误处理程序注册到 :exc:`ConnectionError` 和 :exc:"
+"`ConnectionRefusedError` ，那么会调用更合适的 :exc:"
+"`ConnectionRefusedError` 来处理异常实例，并生成响应结果。"
 
 #: ../../errorhandling.rst:170
 msgid ""
@@ -264,10 +332,13 @@ msgid ""
 "handle 404 routing errors because the 404 occurs at the routing level "
 "before the blueprint can be determined."
 msgstr ""
+"当一个蓝图在处理抛出异常的请求时，注册到蓝图上的错误处理程序将优先于注册"
+"在全局中的错误处理程序。但是，蓝图并不能处理 404 路由错误，因为 404 错误"
+"发生在路由级别，这发生在蓝图确定之前。"
 
 #: ../../errorhandling.rst:178
 msgid "Generic Exception Handlers"
-msgstr ""
+msgstr "通用异常处理程序"
 
 #: ../../errorhandling.rst:180
 msgid ""
@@ -275,6 +346,8 @@ msgid ""
 "such as ``HTTPException`` or even ``Exception``. However, be aware that "
 "these will catch more than you might expect."
 msgstr ""
+"你可以为比较通用的基类，如 ``HTTPException`` 或甚至是 ``Exception`` 注册"
+"错误处理程序。但是，需要注意这会捕获超出你预期的更多异常。"
 
 #: ../../errorhandling.rst:184
 msgid ""
@@ -284,14 +357,22 @@ msgid ""
 "errors during routing. Be sure to craft your handler carefully so you "
 "don't lose information about the HTTP error."
 msgstr ""
+"例如，基于 ``HTTPException`` 的错误处理程序在把默认的 HTML 错误页面转化"
+"成 JSON 时非常有用。但是这个程序可能会被一些不是由你直接造成的事情触发，"
+"例如路由过程中的 404 和 405 错误。请严谨地设计你的错误处理程序，以确保不"
+"会丢失关于 HTTP 错误的有效信息。"
 
 #: ../../errorhandling.rst:209
 msgid ""
-"An error handler for ``Exception`` might seem useful for changing how all"
-" errors, even unhandled ones, are presented to the user. However, this is"
-" similar to doing ``except Exception:`` in Python, it will capture *all* "
-"otherwise unhandled errors, including all HTTP status codes."
+"An error handler for ``Exception`` might seem useful for changing how "
+"all errors, even unhandled ones, are presented to the user. However, "
+"this is similar to doing ``except Exception:`` in Python, it will "
+"capture *all* otherwise unhandled errors, including all HTTP status "
+"codes."
 msgstr ""
+"基于 ``Exception`` 的错误处理程序有助于更改所有，甚至是未处理错误的表现形"
+"式。但是，这与在 Python 中使用 ``except Exception:`` 类似，会捕获 *所有* "
+"未处理的异常，包括所有的 HTTP 状态代码。"
 
 #: ../../errorhandling.rst:215
 msgid ""
@@ -299,6 +380,8 @@ msgid ""
 "exceptions. Since ``HTTPException`` instances are valid WSGI responses, "
 "you could also pass them through directly."
 msgstr ""
+"在大多数情况下，为更确切的异常注册特定处理程序也是更为安全的。因为 "
+"``HTTPException`` 的实例是合法的 WSGI 响应，你也可以直接传递并处理它们。"
 
 #: ../../errorhandling.rst:232
 msgid ""
@@ -307,29 +390,37 @@ msgid ""
 "``Exception`` handler will not handle ``HTTPException`` subclasses "
 "because it the ``HTTPException`` handler is more specific."
 msgstr ""
+"错误处理程序依旧遵循异常类的继承关系。如果你同时基于 ``HTTPException`` "
+"和 ``Exception`` 注册异常处理程序，``Exception`` 处理程序并不会处理 "
+"``HTTPException`` 子类的异常，因为 ``HTTPException`` 的处理程序更为明确。"
 
 #: ../../errorhandling.rst:239
 msgid "Unhandled Exceptions"
-msgstr ""
+msgstr "未处理的异常"
 
 #: ../../errorhandling.rst:241
 msgid ""
 "When there is no error handler registered for an exception, a 500 "
-"Internal Server Error will be returned instead. See "
-":meth:`flask.Flask.handle_exception` for information about this behavior."
+"Internal Server Error will be returned instead. See :meth:`flask.Flask."
+"handle_exception` for information about this behavior."
 msgstr ""
+"当没有为某个异常注册错误处理程序时，就会返回一个 500 服务器内部错误。关于"
+"此行为的具体信息，请参阅 :meth:`flask.Flask.handle_exception`。"
 
 #: ../../errorhandling.rst:246
 msgid ""
-"If there is an error handler registered for ``InternalServerError``, this"
-" will be invoked. As of Flask 1.1.0, this error handler will always be "
-"passed an instance of ``InternalServerError``, not the original unhandled"
-" error."
+"If there is an error handler registered for ``InternalServerError``, "
+"this will be invoked. As of Flask 1.1.0, this error handler will always "
+"be passed an instance of ``InternalServerError``, not the original "
+"unhandled error."
 msgstr ""
+"若此时基于 ``InternalServerError`` 注册了错误处理程序，它就会被调用。自 "
+"Flask 1.1.0 起，这个错误处理程序将始终传入一个 ``InternalServerError`` 实"
+"例，而不是原本未处理的错误。"
 
 #: ../../errorhandling.rst:251
 msgid "The original error is available as ``e.original_exception``."
-msgstr ""
+msgstr "原始的错误对象可以通过 ``e.original_exception`` 获取。"
 
 #: ../../errorhandling.rst:253
 msgid ""
@@ -338,72 +429,85 @@ msgid ""
 "handler for \"500 Internal Server Error\" will not be used. Instead, the "
 "interactive debugger will be shown."
 msgstr ""
+"除了显式的 500 错误之外，基于 “500 服务器内部错误” 的错误处理程序也会被传"
+"入未捕获的错误。在调试模式下，对于“500 服务器内部错误” 的错误处理程序并不"
+"会触发。相反地，这将在交互式调试中显示。"
 
 #: ../../errorhandling.rst:260
 msgid "Custom Error Pages"
-msgstr ""
+msgstr "自定义错误页面"
 
 #: ../../errorhandling.rst:262
 msgid ""
-"Sometimes when building a Flask application, you might want to raise a "
-":exc:`~werkzeug.exceptions.HTTPException` to signal to the user that "
+"Sometimes when building a Flask application, you might want to raise a :"
+"exc:`~werkzeug.exceptions.HTTPException` to signal to the user that "
 "something is wrong with the request. Fortunately, Flask comes with a "
 "handy :func:`~flask.abort` function that aborts a request with a HTTP "
 "error from werkzeug as desired. It will also provide a plain black and "
 "white error page for you with a basic description, but nothing fancy."
 msgstr ""
+"有时在构建 Flask 应用时，你可能想要抛出 :exc:`~werkzeug.exceptions."
+"HTTPException` 异常来通知用户请求有误。幸运的是，Flask 带有一个方便的 :"
+"func:`~flask.abort` 函数，可以根据需要中止来自 Werkzeug 的带有 HTTP 错误"
+"的请求。它还提供了一个简单的黑白错误页面，其中包含基本描述，但没有其他花"
+"哨的设计。"
 
 #: ../../errorhandling.rst:269
 msgid ""
 "Depending on the error code it is less or more likely for the user to "
 "actually see such an error."
-msgstr ""
+msgstr "根据错误代码，用户实际看到此类错误的机会可大可小。"
 
 #: ../../errorhandling.rst:272
 msgid ""
 "Consider the code below, we might have a user profile route, and if the "
 "user fails to pass a username we can raise a \"400 Bad Request\". If the "
-"user passes a username and we can't find it, we raise a \"404 Not "
-"Found\"."
+"user passes a username and we can't find it, we raise a \"404 Not Found"
+"\"."
 msgstr ""
+"考虑如下的代码，我们有一个获取用户信息的路由，此时如果用户未能传入用户名"
+"参数字段，我们可以抛出一个 “400 请求无效” 错误。如果用户传入用户名而程序"
+"无法找到，则抛出一个 “404 找不到资源” 错误。"
 
 #: ../../errorhandling.rst:296
 msgid ""
 "Here is another example implementation for a \"404 Page Not Found\" "
 "exception:"
-msgstr ""
+msgstr "下面是另一个处理 “404 未找到页面” 异常的例子："
 
 #: ../../errorhandling.rst:307 ../../errorhandling.rst:361
 msgid "When using :doc:`/patterns/appfactories`:"
-msgstr ""
+msgstr "若使用 :doc:`/patterns/appfactories` ："
 
 #: ../../errorhandling.rst:321
 msgid "An example template might be this:"
-msgstr ""
+msgstr "而模版可能是这样的："
 
 #: ../../errorhandling.rst:335
 msgid "Further Examples"
-msgstr ""
+msgstr "进一步的例子"
 
 #: ../../errorhandling.rst:337
 msgid ""
 "The above examples wouldn't actually be an improvement on the default "
 "exception pages. We can create a custom 500.html template like this:"
 msgstr ""
+"上面的例子实际上对于默认的异常页面可能并不是一个改进。我们还可以创建一个 "
+"500.html 模板："
 
 #: ../../errorhandling.rst:350
 msgid ""
 "It can be implemented by rendering the template on \"500 Internal Server "
 "Error\":"
-msgstr ""
+msgstr "在发生“500 服务器内部错误”时，可以渲染该模板实现错误处理："
 
 #: ../../errorhandling.rst:375
 msgid "When using :doc:`/blueprints`:"
-msgstr ""
+msgstr "如果使用 :doc:`/blueprints` ："
 
 #: ../../errorhandling.rst:393
 msgid "Blueprint Error Handlers"
-msgstr ""
+msgstr "蓝图中的错误处理程序"
 
 #: ../../errorhandling.rst:395
 msgid ""
@@ -413,6 +517,10 @@ msgid ""
 "``raise`` statement or a call to ``abort`` in another of the blueprint's "
 "view functions; they are not invoked by, e.g., an invalid URL access."
 msgstr ""
+"在 :doc:`/blueprints` 中，大多数错误处理程序都会如我们预期工作。然而对于 "
+"404 和 405 的异常处理程序，需要注意这类的处理程序只能从对应的 ``raise`` "
+"语句或在蓝图的其他视图函数中的 ``abort`` 被调用。正如它们不会被无效的 "
+"URL 访问所调用。"
 
 #: ../../errorhandling.rst:401
 msgid ""
@@ -423,10 +531,14 @@ msgid ""
 "prefixes, they may be defined at the application level using the "
 "``request`` proxy object."
 msgstr ""
+"这是因为蓝图并不“拥有”某个 URL 空间，所以在遇到无效 URL 时，当前应用实例"
+"无法获知哪一个蓝图中的错误处理程序应该被调用。如果你想为这些错误在不同的 "
+"URL 前缀下，执行不同的处理策略，可以使用 ``request`` 代理对象在应用程序级"
+"别定义它们。"
 
 #: ../../errorhandling.rst:436
 msgid "Returning API Errors as JSON"
-msgstr ""
+msgstr "以 JSON 格式返回 API 错误"
 
 #: ../../errorhandling.rst:438
 msgid ""
@@ -435,14 +547,21 @@ msgid ""
 "of :mimetype:`text/html` they are emitting is not very useful for API "
 "consumers."
 msgstr ""
+"在 Flask 中构建 API 时，一些开发者意识到，内置异常对于 API 来说，表达能力"
+"不够，并且传达的 :mimetype:`text/html` 内容类型对于 API 使用者来说，也不"
+"具有很大价值。"
 
 #: ../../errorhandling.rst:442
 msgid ""
-"Using the same techniques as above and :func:`~flask.json.jsonify` we can"
-" return JSON responses to API errors.  :func:`~flask.abort` is called "
+"Using the same techniques as above and :func:`~flask.json.jsonify` we "
+"can return JSON responses to API errors.  :func:`~flask.abort` is called "
 "with a ``description`` parameter. The error handler will use that as the "
 "JSON error message, and set the status code to 404."
 msgstr ""
+"使用与上面相同的技术，通过 :func:`~flask.json.jsonify` 我们可以向 API 错"
+"误返回 JSON 格式的响应数据。在调用 :func:`~flask.abort` 时提供的 "
+"``description``  参数，错误处理程序会把它作为 JSON 中的错误消息，并且把状"
+"态代码设置为 404 。"
 
 #: ../../errorhandling.rst:464
 msgid ""
@@ -451,10 +570,13 @@ msgid ""
 "readable message, a status code for the error and some optional payload "
 "to give more context for the error."
 msgstr ""
+"我们也可以创建自定义异常类。例如，我们为 API 请求引入一个新的自定义异常，"
+"这个异常可以包含便于人类理解的文字信息、错误状态代码和一些能够为错误提供"
+"上下文情境的可选负载。"
 
 #: ../../errorhandling.rst:469
 msgid "This is a simple example:"
-msgstr ""
+msgstr "这是一个简单的例子："
 
 #: ../../errorhandling.rst:508
 msgid ""
@@ -462,24 +584,28 @@ msgid ""
 "some extra payload can be provided as a dictionary through the `payload` "
 "parameter."
 msgstr ""
+"现在，视图可以抛出带有错误信息的异常。此外，一些额外的数据也可以通过 "
+"`payload` 参数以字典的方式传入。"
 
 #: ../../errorhandling.rst:514
 msgid "Logging"
-msgstr ""
+msgstr "日志"
 
 #: ../../errorhandling.rst:516
 msgid ""
 "See :doc:`/logging` for information about how to log exceptions, such as "
 "by emailing them to admins."
 msgstr ""
+"关于如何记录异常的信息，例如通过电子邮件将它们发送给管理员，请参阅 :doc:"
+"`/logging` 。"
 
 #: ../../errorhandling.rst:521
 msgid "Debugging"
-msgstr ""
+msgstr "调试"
 
 #: ../../errorhandling.rst:523
 msgid ""
 "See :doc:`/debugging` for information about how to debug errors in "
 "development and production."
 msgstr ""
-
+"关于如何在开发和生产环境中调试错误的信息，请参阅 :doc:`/debugging` 。"

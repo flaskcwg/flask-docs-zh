@@ -172,7 +172,7 @@ if you doesn't finish the translation in ten days.
 - [ ] contributing
 - [ ] debugging
 - [ ] design
-- [ ] errorhandling [@qiufengyu](https://github.com/qiufengyu) Fengyu
+- [x] errorhandling [@qiufengyu](https://github.com/qiufengyu) Fengyu
 - [ ] extensiondev
 - [ ] extensions
 - [ ] foreword (reserved)
