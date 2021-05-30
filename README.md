@@ -181,7 +181,7 @@ if you doesn't finish the translation in ten days.
 - [x] installation [@greyli](https://github.com/greyli) Grey Li
 - [ ] logging
 - [ ] quickstart (reserved)
-- [ ] reqcontext [@rosekc](https://github.com/rosekc) rosekc
+- [x] reqcontext [@rosekc](https://github.com/rosekc) rosekc
 - [ ] security
 - [ ] server
 - [ ] shell [@LTakamori](https://github.com/LTakamori) LTakamori
