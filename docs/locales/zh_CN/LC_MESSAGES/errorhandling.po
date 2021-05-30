@@ -3,20 +3,19 @@
 # This file is distributed under the same license as the Flask package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Flask 2.1.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-25 19:31+0800\n"
-"PO-Revision-Date: 2021-05-30 23:34+0800\n"
+"Last-Translator: Fengyu <mrqiufengyu@gmail.com>\n"
+"PO-Revision-Date: 2021-05-30 23:54+0800\n"
 "Language-Team: zh_CN <withlihui@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
-"Last-Translator: \n"
-"Language: zh_CN\n"
-"X-Generator: Poedit 2.4.3\n"
 
 #: ../../errorhandling.rst:2
 msgid "Handling Application Errors"
