@@ -201,7 +201,7 @@ if you doesn't finish the translation in ten days.
 - [ ] install
 - [ ] layout
 - [ ] next
-- [ ] static
+- [x] static [@yunyuyuan](https://github.com/yunyuyuan) yun-yu-yuan
 - [ ] templates
 - [ ] tests
 - [ ] views
