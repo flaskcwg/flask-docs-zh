@@ -168,7 +168,7 @@ if you doesn't finish the translation in ten days.
 - [x] blueprints [@frostming](https://github.com/frostming) Frost Ming
 - [ ] changes
 - [ ] cli
-- [ ] config
+- [ ] config [@guiqiqi](https://github.com/guiqiqi) Doge-GUI
 - [ ] contributing
 - [ ] debugging
 - [ ] design
