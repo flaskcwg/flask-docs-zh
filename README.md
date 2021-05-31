@@ -199,7 +199,7 @@ if you doesn't finish the translation in ten days.
 - [ ] factory
 - [x] index [@greyli](https://github.com/greyli) Grey Li
 - [ ] install
-- [ ] layout
+- [x] layout [@greyli](https://github.com/greyli) Grey Li
 - [ ] next
 - [ ] static
 - [ ] templates
