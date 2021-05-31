@@ -183,7 +183,7 @@ if you doesn't finish the translation in ten days.
 - [ ] quickstart (reserved)
 - [ ] reqcontext [@rosekc](https://github.com/rosekc) rosekc
 - [ ] security
-- [ ] server
+- [ ] server [@LeeRnnGii](https://github.com/LeeRnnGii) LeeRnnGii
 - [ ] shell [@LTakamori](https://github.com/LTakamori) LTakamori
 - [ ] signals
 - [ ] templating
