@@ -175,7 +175,7 @@ if you doesn't finish the translation in ten days.
 - [ ] errorhandling [@qiufengyu](https://github.com/qiufengyu) Fengyu
 - [ ] extensiondev
 - [ ] extensions
-- [ ] foreword (reserved)
+- [x] foreword [@greyli](https://github.com/greyli) Grey Li
 - [ ] htmlfaq
 - [x] index [@greyli](https://github.com/greyli) Grey Li
 - [x] installation [@greyli](https://github.com/greyli) Grey Li
