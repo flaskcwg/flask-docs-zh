@@ -23,7 +23,7 @@ msgstr "给资深程序员的序言"
 
 #: ../../advanced_foreword.rst:5
 msgid "Thread-Locals in Flask"
-msgstr "Flask 的线程局部变量"
+msgstr "Flask 的线程局部对象"
 
 #: ../../advanced_foreword.rst:7
 msgid ""
@@ -41,10 +41,10 @@ msgid ""
 msgstr ""
 "Flask 设计决策中的重要一环便是让简单的任务保持简单。这些任务不应该编写大"
 "量的代码，也不应当限制你。因此，Flask 中的一些设计决策会让人感到惊讶或不"
-"合常规。例如，Flask 使用了线程局部变量（Thread-local Objects），所以不需"
+"合常规。例如，Flask 使用了线程局部对象（Thread-local Objects），所以不需"
 "要为了保持线程安全而将对象在各个函数中传递。这种方法很简单，但进行依赖注"
 "入或者尝试重用与请求相关的值的代码时，需要一个有效的请求上下文。Flask 项"
-"目坦诚地公开线程局部变量这个设计，而不会隐藏它们，并在使用它们的代码和文"
+"目坦诚地公开线程局部对象这个设计，而不会隐藏它们，并在使用它们的代码和文"
 "档中进行了标注。"
 
 #: ../../advanced_foreword.rst:20
