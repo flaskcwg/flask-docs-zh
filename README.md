@@ -36,7 +36,7 @@
 - [ ] changes
 - [ ] cli [@andysim3d](https://github.com/andysim3d) Andrew
 - [ ] config [@guiqiqi](https://github.com/guiqiqi) Doge-GUI
-- [ ] contributing
+- [ ] contributing [@greyli](https://github.com/greyli) Grey Li
 - [ ] debugging
 - [ ] design
 - [ ] errorhandling [@qiufengyu](https://github.com/qiufengyu) Fengyu
