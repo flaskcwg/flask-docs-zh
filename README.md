@@ -167,7 +167,7 @@ if you doesn't finish the translation in ten days.
 - [ ] becomingbig
 - [x] blueprints [@frostming](https://github.com/frostming) Frost Ming
 - [ ] changes
-- [ ] cli (reserves)
+- [ ] cli [@andysim3d](https://github.com/andysim3d) Andrew
 - [ ] config [@guiqiqi](https://github.com/guiqiqi) Doge-GUI
 - [ ] contributing
 - [ ] debugging
