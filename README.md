@@ -55,7 +55,7 @@
 - [ ] signals
 - [ ] templating
 - [ ] testing
-- [ ] views
+- [ ] views [@labike](https://github.com/labike) labike
 
 
 ### docs/tutorial/ (reserved)
