@@ -13,7 +13,9 @@ asgiref==3.3.4
 attrs==21.2.0
     # via pytest
 babel==2.9.1
-    # via sphinx
+    # via
+    #   sphinx
+    #   sphinx-intl
 blinker==1.4
     # via -r requirements/tests.in
 certifi==2020.12.5
@@ -23,7 +25,9 @@ cfgv==3.3.0
 chardet==4.0.0
     # via requests
 click==8.0.1
-    # via pip-tools
+    # via
+    #   pip-tools
+    #   sphinx-intl
 distlib==0.3.1
     # via virtualenv
 docutils==0.16
@@ -70,7 +74,7 @@ pluggy==0.13.1
     # via
     #   pytest
     #   tox
-pre-commit==2.12.1
+pre-commit==2.13.0
     # via -r requirements/dev.in
 py==1.10.0
     # via
@@ -98,6 +102,8 @@ six==1.16.0
     #   virtualenv
 snowballstemmer==2.1.0
     # via sphinx
+sphinx-intl==2.0.1
+    # via -r requirements/docs.in
 sphinx-issues==1.2.0
     # via -r requirements/docs.in
 sphinx-tabs==3.0.0
@@ -106,6 +112,7 @@ sphinx==4.0.2
     # via
     #   -r requirements/docs.in
     #   pallets-sphinx-themes
+    #   sphinx-intl
     #   sphinx-issues
     #   sphinx-tabs
     #   sphinxcontrib-log-cabinet

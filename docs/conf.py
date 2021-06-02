@@ -39,13 +39,14 @@ html_theme = "flask"
 html_theme_options = {"index_sidebar_logo": False}
 html_context = {
     "project_links": [
-        ProjectLink("Donate", "https://palletsprojects.com/donate"),
+        ProjectLink("捐赠", "https://palletsprojects.com/donate"),
         ProjectLink("PyPI Releases", "https://pypi.org/project/Flask/"),
-        ProjectLink("Source Code", "https://github.com/pallets/flask/"),
+        ProjectLink("源码", "https://github.com/pallets/flask/"),
         ProjectLink("Issue Tracker", "https://github.com/pallets/flask/issues/"),
-        ProjectLink("Website", "https://palletsprojects.com/p/flask/"),
+        ProjectLink("网站", "https://palletsprojects.com/p/flask/"),
         ProjectLink("Twitter", "https://twitter.com/PalletsTeam"),
-        ProjectLink("Chat", "https://discord.gg/pallets"),
+        ProjectLink("聊天", "https://discord.gg/pallets"),
+        ProjectLink("参与翻译", "https://github.com/greyli/flask-docs-zh"),
     ]
 }
 html_sidebars = {
@@ -56,7 +57,7 @@ singlehtml_sidebars = {"index": ["project.html", "localtoc.html", "ethicalads.ht
 html_static_path = ["_static"]
 html_favicon = "_static/flask-icon.png"
 html_logo = "_static/flask-icon.png"
-html_title = f"Flask Documentation ({version})"
+html_title = f"Flask 文档 ({version})"
 html_show_sourcelink = False
 
 # LaTeX ----------------------------------------------------------------
@@ -100,7 +101,7 @@ def setup(app):
 
 # Translation ----------------------------------------------------------
 
-locale_dirs = ['locales']   # path is example but recommended.
-gettext_compact = False     # optional.
-# see https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-language
-language = ''  # update this
+locale_dirs = ["locales"]
+gettext_compact = False
+language = "zh_CN"
+html_search_language = "zh"

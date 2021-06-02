@@ -10,8 +10,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-25 19:31+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: Grey Li <withlihui@gmail.com>\n"
+"Language-Team: zh_CN <withlihui@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,10 +19,10 @@ msgstr ""
 
 #: ../../index.rst:4
 msgid "Welcome to Flask"
-msgstr ""
+msgstr "欢迎来到 Flask 的世界"
 
 msgid "Flask: web development, one drop at a time"
-msgstr ""
+msgstr "Flask：Web 开发，一次一滴"
 
 #: ../../index.rst:11
 msgid ""
@@ -34,24 +34,30 @@ msgid ""
 "component of Flask in detail, with a full reference in the :doc:`api` "
 "section."
 msgstr ""
+"欢迎来到 Flask 的文档。你可以从 :doc:`installation` 入手，然后阅读 "
+":doc:`quickstart` 来了解基本概念。还有一个包含更多细节的 :doc:`tutorial/index` "
+"介绍如何用 Flask 创建一个很小但是完整的程序。一般的开发模式可以在 "
+":doc:`patterns/index` 章节找到。剩下的文档详细的介绍了 Flask 的每一个组成部件，"
+"其中 :doc:`api` 章节包括完整的 API 参考信息。"
 
 #: ../../index.rst:19
 msgid ""
 "Flask depends on the `Jinja`_ template engine and the `Werkzeug`_ WSGI "
 "toolkit. The documentation for these libraries can be found at:"
 msgstr ""
+"Flask 依赖 `Jinja`_ 模板引擎和 `Werkzeug`_ WSGI 工具集。这些库的文档如下："
 
 #: ../../index.rst:22
 msgid "`Jinja documentation <https://jinja.palletsprojects.com/>`_"
-msgstr ""
+msgstr "`Jinja 文档 <https://jinja.palletsprojects.com/>`_"
 
 #: ../../index.rst:23
 msgid "`Werkzeug documentation <https://werkzeug.palletsprojects.com/>`_"
-msgstr ""
+msgstr "`Werkzeug 文档 <https://werkzeug.palletsprojects.com/>`_"
 
 #: ../../index.rst:30
 msgid "User's Guide"
-msgstr ""
+msgstr "用户指南"
 
 #: ../../index.rst:32
 msgid ""
@@ -59,22 +65,24 @@ msgid ""
 "background information about Flask, then focuses on step-by-step "
 "instructions for web development with Flask."
 msgstr ""
+"这部分的文档大部分是独立章节，以一些关于 Flask 的背景信息开始，然后重点介绍如何"
+"使用 Flask 一步步进行 Web 开发。"
 
 #: ../../index.rst:66
 msgid "API Reference"
-msgstr ""
+msgstr "API 参考"
 
 #: ../../index.rst:68
 msgid ""
 "If you are looking for information on a specific function, class or "
 "method, this part of the documentation is for you."
 msgstr ""
+"如果你想找关于某个特定函数、类或方法的信息，那么这部分文档就是为你准备的。"
 
 #: ../../index.rst:78
 msgid "Additional Notes"
-msgstr ""
+msgstr "附加笔记"
 
 #: ../../index.rst:80
 msgid "Design notes, legal information and changelog are here for the interested."
-msgstr ""
-
+msgstr "如果你感兴趣的话，这里有一些设计笔记、法律信息和变更日志（changelog）。"
