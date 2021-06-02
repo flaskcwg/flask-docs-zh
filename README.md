@@ -1,4 +1,4 @@
-# The Chinese Translation of Flask's Documentation
+# The Chinese Translation of Flask Documentation
 
 这里是 Flask 文档中文翻译项目，欢迎参与！
 
@@ -8,7 +8,9 @@
 2. 阅读《[翻译要求与建议](https://github.com/greyli/flask-docs-zh/issues/11)》了解翻译要求。
 3. 在[这些讨论](https://github.com/greyli/flask-docs-zh/discussions/categories/vote)中分别投票选出你喜欢的中文 logo 字体、中文标语翻译和词汇翻译。
 
-**需要强调的是，完成一章的翻译要提交两个 PR：第一个 PR 在对应的章节条目后添加自己的用户名以认领章节（[示例 PR](https://github.com/greyli/flask-docs-zh/pull/20/files)）；第二个 PR 翻译对应的 `.po` 文件并勾选完成的章节条目（[示例 PR](https://github.com/greyli/flask-docs-zh/pull/43/files)）。先认领，再翻译，一次只认领一章。**
+**需要强调的是，完成一章的翻译要提交两个 PR：第一个 PR 在对应的章节条目后添加自己的用户名以认领章节（[示例 PR](https://github.com/greyli/flask-docs-zh/pull/45/files)）；第二个 PR 翻译对应的 `.po` 文件并勾选完成的章节条目（[示例 PR](https://github.com/greyli/flask-docs-zh/pull/43/files)）。先认领，再翻译，一次只认领一章。**
+
+除了贡献翻译，也欢迎帮助我们审阅已经[提交的翻译](https://github.com/greyli/flask-docs-zh/pulls?q=is%3Apr+is%3Aopen+label%3A%22awaiting+review%22)，谢谢。
 
 如果有其他问题和相关想法，请[创建 discussion](https://github.com/greyli/flask-docs-zh/discussions/new) 发起讨论；如果对翻译流程和项目设置有改进建议，或是发现了翻译错误和笔误，请[创建 issue](https://github.com/greyli/flask-docs-zh/issues/new) 反馈。
 
