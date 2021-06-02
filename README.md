@@ -30,7 +30,7 @@
 
 - [ ] advanced_foreword (reserved)
 - [ ] appcontext [@rosekc](https://github.com/rosekc) rosekc
-- [ ] async-await
+- [ ] async-await [@rosekc](https://github.com/your_username) rosekc
 - [ ] becomingbig
 - [x] blueprints [@frostming](https://github.com/frostming) Frost Ming
 - [ ] changes
