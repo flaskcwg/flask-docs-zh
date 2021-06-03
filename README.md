@@ -55,7 +55,7 @@
 - [ ] signals
 - [ ] templating
 - [ ] testing
-- [ ] views
+- [x] views [@shutaG](https://github.com/shutaG) shutaG
 
 
 ### docs/tutorial/ (reserved)
