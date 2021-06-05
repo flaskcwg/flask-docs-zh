@@ -222,7 +222,7 @@ if you doesn't finish the translation in ten days.
 
 - [ ] appdispatch
 - [ ] appfactories
-- [ ] caching [@pk00749](https://github.com/pk00749) York Li
+- [x] caching [@pk00749](https://github.com/pk00749) York Li
 - [ ] celery
 - [ ] deferredcallbacks
 - [ ] distribute
