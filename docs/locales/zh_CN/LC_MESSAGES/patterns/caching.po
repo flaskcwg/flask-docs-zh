@@ -45,3 +45,5 @@ msgid ""
 msgstr ""
 "Flask自身对你不提供缓存，但`Flask-Caching`_，一个Flask的扩展可以做到。"
 "Flask-Caching支持多种后后端，同时甚至可以开发你自己的缓存后端。"
+
+.. _Flask-Caching: https://flask-caching.readthedocs.io/en/latest/
