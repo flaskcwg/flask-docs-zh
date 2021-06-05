@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Flask 2.1.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-25 19:31+0800\n"
-"PO-Revision-Date: 2021-06-05 13:52+0800\n"
+"PO-Revision-Date: 2021-06-05 15:17+0800\n"
 "Language-Team: zh_CN <withlihui@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -39,11 +39,9 @@ msgstr ""
 
 #: ../../patterns/caching.rst:11
 msgid ""
-"Flask itself does not provide caching for you, but `Flask-Caching`_, an "
+"Flask itself does not provide caching for you, but `Flask-Caching <https://flask-caching.readthedocs.io/en/latest/>`_, an "
 "extension for Flask does. Flask-Caching supports various backends, and "
-"it is even possible to develop your own caching backend."
+"it is even possible to develop your own caching backend.
 msgstr ""
 "Flask自身对你不提供缓存，但`Flask-Caching`_，一个Flask的扩展可以做到。"
 "Flask-Caching支持多种后后端，同时甚至可以开发你自己的缓存后端。"
-
-.. _Flask-Caching: https://flask-caching.readthedocs.io/en/latest/
