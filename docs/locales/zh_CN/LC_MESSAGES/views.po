@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-25 19:31+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: labike <2219534298@qq.com>\n"
 "Language-Team: zh_CN <withlihui@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../views.rst:2
 msgid "Pluggable Views"
-msgstr ""
+msgstr "可插拔视图"
 
 #: ../../views.rst:6
 msgid ""
@@ -28,16 +28,21 @@ msgid ""
 "intention is that you can replace parts of the implementations and this "
 "way have customizable pluggable views."
 msgstr ""
+"Flask 0.7 受 Django 基于类而非函数创建视图的启发"
+"在普通视图的基础上引入了可插拔视图。"
+"主要意图在于可替换部分实现和能够自定义可插拔视图。"
 
 #: ../../views.rst:12
 msgid "Basic Principle"
-msgstr ""
+msgstr "基本原理"
 
 #: ../../views.rst:14
 msgid ""
 "Consider you have a function that loads a list of objects from the "
 "database and renders into a template::"
 msgstr ""
+"想象一下你有一个函数，它需要从数据库中获取一个列表数据"
+"并且将其渲染到模板中："
 
 #: ../../views.rst:22
 msgid ""
@@ -47,6 +52,10 @@ msgid ""
 "views come into place.  As the first step to convert this into a class "
 "based view you would do this::"
 msgstr ""
+"这很容易也很灵活，但是你可能想让它更灵活，比如为视图提供一个"
+"通用的方法以此让它同样的适配其他的数据模型和模板。"
+"那么基于类的可插拔视图刚好适用于此。首先你需要在这里将其转换成"
+"基于类的视图："
 
 #: ../../views.rst:39
 msgid ""
@@ -58,6 +67,11 @@ msgid ""
 "that function is the name of the endpoint that view will then have.  But "
 "this by itself is not helpful, so let's refactor the code a bit::"
 msgstr ""
+"正如你看到的你必须创建一个 :class:`flask.views.View` 的子类并且实现"
+" :meth:`~flask.views.View.dispatch_request` 方法。然后必须
+"通过 :meth:`~flask.views.View.as_view` 这个类方法将其转换"
+"为一个真正的视图函数。传递给该函数的字符串就是后面生成视图的端点的名称。"
+"但是这本身并没有什么用，所以让我们对代码进行做一点重构："
 
 #: ../../views.rst:70
 msgid ""
@@ -71,14 +85,19 @@ msgid ""
 ":meth:`~flask.views.View.as_view` function. For instance you can write a "
 "class like this::"
 msgstr ""
+"这个小示例对此教程帮助不大，但它已经足够解释清楚基本的原理了。"
+"当你使用基于类的视图时问题也会随之而来比如 ``self`` 指向了哪里。"
+"它的运行方式是当你发送一个请求时会随之创建一个类的新的实例"
+"并且 :meth:`~flask.views.View.dispatch_request` 会根据 URL 规则中的参数被调用。"
+"类本身会用传给 :meth:`~flask.views.View.as_view` 函数的参数进行实例化。 比如你可以编写一个这样的类："
 
 #: ../../views.rst:85
 msgid "And then you can register it like this::"
-msgstr ""
+msgstr "并且你可以像这样注册它："
 
 #: ../../views.rst:91
 msgid "Method Hints"
-msgstr ""
+msgstr "方法提示"
 
 #: ../../views.rst:93
 msgid ""
@@ -90,10 +109,14 @@ msgid ""
 " can provide a :attr:`~flask.views.View.methods` attribute that has this "
 "information::"
 msgstr ""
+"可插入视图通过用 :func:`~flask.Flask.route` 或更好的"
+" :meth:`~flask.Flask.add_url_rule` 方法将其像常规函数一样附加到应用程序上。"
+"然而这也意味着当你使用这种方式时你必须为其提供相应的 HTTP 方法名来支持该视图。"
+"为了将该信息转移到类中，你可以提供一个具有以下信息的 :attr:`~flask.views.View.methods` 属性："
 
 #: ../../views.rst:112
 msgid "Method Based Dispatching"
-msgstr ""
+msgstr "基于方法的调度"
 
 #: ../../views.rst:114
 msgid ""
@@ -102,6 +125,9 @@ msgid ""
 "easily do that.  Each HTTP method maps to a function with the same name "
 "(just in lowercase)::"
 msgstr ""
+"对于 RESTful API 来说，当你对每一个 HTTP 方法执行不同的的函数时它是特别有帮助的。"
+"用 :class:`flask.views.MethodView` 很轻松就可以做到。"
+"每个 HTTP 方法都会映射到一个具有相同名字的函数上："
 
 #: ../../views.rst:133
 msgid ""
@@ -109,10 +135,12 @@ msgid ""
 ":attr:`~flask.views.View.methods` attribute.  It's automatically set "
 "based on the methods defined in the class."
 msgstr ""
+"这样的话你就可以不用提供 :attr:`~flask.views.View.methods` 属性了。"
+"它会自动的为类中的方法进行设置。"
 
 #: ../../views.rst:138
 msgid "Decorating Views"
-msgstr ""
+msgstr "装饰器视图"
 
 #: ../../views.rst:140
 msgid ""
@@ -121,12 +149,16 @@ msgid ""
 " Instead you either have to decorate the return value of "
 ":meth:`~flask.views.View.as_view` by hand::"
 msgstr ""
+"由于类视图本身不是添加到路由系统的视图函数"
+"因此装饰它没有多大意义。 相反的你必须装饰 :meth:`~flask.views.View.as_view` 返回的值："
 
 #: ../../views.rst:156
 msgid ""
 "Starting with Flask 0.8 there is also an alternative way where you can "
 "specify a list of decorators to apply in the class declaration::"
 msgstr ""
+"从 Flask 0.8 开始，你还可以使用另一种方法"
+"指定要在类声明中应用的装饰器列表："
 
 #: ../../views.rst:162
 msgid ""
@@ -134,10 +166,12 @@ msgid ""
 "regular view decorators on the individual methods of the view however, "
 "keep this in mind."
 msgstr ""
+"由于对调用者来说它是隐式的，所以你不能在视图的个别方法上使用常规的视图装饰器，"
+"请谨记这一点。"
 
 #: ../../views.rst:167
 msgid "Method Views for APIs"
-msgstr ""
+msgstr "视图方法相关的API"
 
 #: ../../views.rst:169
 msgid ""
@@ -148,62 +182,65 @@ msgid ""
 " of the time.  For instance consider that you are exposing a user object "
 "on the web:"
 msgstr ""
+"Web API通常与 HTTP 一起使用, 所以它基于 :class:`~flask.views.MethodView` 对这样的API
+"做了很多有意义的实现。也就是说你要注意大多数情况下 API 会根据不同的 URL 规则跳转到有"
+"相同方法的视图中。 例如在 web 中暴露一个用户对象："
 
 #: ../../views.rst:177
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: ../../views.rst:177
 msgid "Method"
-msgstr ""
+msgstr "请求方法"
 
 #: ../../views.rst:177
 msgid "Description"
-msgstr ""
+msgstr "描述"
 
 #: ../../views.rst:179 ../../views.rst:180
 msgid "``/users/``"
-msgstr ""
+msgstr "``/users/``"
 
 #: ../../views.rst:179 ../../views.rst:181
 msgid "``GET``"
-msgstr ""
+msgstr "``GET``"
 
 #: ../../views.rst:179
 msgid "Gives a list of all users"
-msgstr ""
+msgstr "返回包含所有用户的list"
 
 #: ../../views.rst:180
 msgid "``POST``"
-msgstr ""
+msgstr "``POST``"
 
 #: ../../views.rst:180
 msgid "Creates a new user"
-msgstr ""
+msgstr "创建一个新用户"
 
 #: ../../views.rst:181 ../../views.rst:182 ../../views.rst:183
 msgid "``/users/<id>``"
-msgstr ""
+msgstr "``/users/<id>``"
 
 #: ../../views.rst:181
 msgid "Shows a single user"
-msgstr ""
+msgstr "展示一个用户"
 
 #: ../../views.rst:182
 msgid "``PUT``"
-msgstr ""
+msgstr "``PUT``"
 
 #: ../../views.rst:182
 msgid "Updates a single user"
-msgstr ""
+msgstr "更新一个用户"
 
 #: ../../views.rst:183
 msgid "``DELETE``"
-msgstr ""
+msgstr "``DELETE``"
 
 #: ../../views.rst:183
 msgid "Deletes a single user"
-msgstr ""
+msgstr "删除一个用户"
 
 #: ../../views.rst:186
 msgid ""
@@ -211,20 +248,24 @@ msgid ""
 ":class:`~flask.views.MethodView`?  The trick is to take advantage of the "
 "fact that you can provide multiple rules to the same view."
 msgstr ""
+"那么怎么用 :class:`~flask.views.MethodView` 来做到这一点呢？窍门在于"
+"你可以利用相同视图提供多个规则的事实来完成。"
 
 #: ../../views.rst:190
 msgid "Let's assume for the moment the view would look like this::"
-msgstr ""
+msgstr "我们暂时假设视图如下："
 
 #: ../../views.rst:214
 msgid ""
 "So how do we hook this up with the routing system?  By adding two rules "
 "and explicitly mentioning the methods for each::"
 msgstr ""
+"那么我们如何将其与路由系统连接起来呢？答案是通过添加两个规则"
+"并明确提及每个规则对应的方法："
 
 #: ../../views.rst:224
 msgid ""
 "If you have a lot of APIs that look similar you can refactor that "
 "registration code::"
 msgstr ""
-
+"如果你有很多看起来一样的 API 你可以把他们像下面的注册代码一样进行重构："
