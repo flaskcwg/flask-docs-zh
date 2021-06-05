@@ -39,7 +39,7 @@
 - [ ] contributing [@greyli](https://github.com/greyli) Grey Li
 - [ ] debugging
 - [ ] design
-- [ ] errorhandling [@qiufengyu](https://github.com/qiufengyu) Fengyu
+- [x] errorhandling [@qiufengyu](https://github.com/qiufengyu) Fengyu
 - [ ] extensiondev
 - [ ] extensions
 - [ ] foreword (reserved)
