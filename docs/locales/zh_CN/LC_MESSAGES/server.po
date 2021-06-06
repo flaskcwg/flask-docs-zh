@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-25 19:31+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: LeeRnnGii <rglee.dev.cs@gmail.com>\n"
 "Language-Team: zh_CN <withlihui@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../server.rst:4
 msgid "Development Server"
-msgstr ""
+msgstr "开发服务器"
 
 #: ../../server.rst:6
 msgid ""
@@ -27,6 +27,9 @@ msgid ""
 "development server. In development mode, this server provides an "
 "interactive debugger and will reload when code is changed."
 msgstr ""
+"Flask 提供了一个 ``run`` 命令来使用开发服务器运行"
+"应用。 在开发模式下，该服务器提供一个交互式调试器，"
+"并在代码更改时重新加载。"
 
 #: ../../server.rst:12
 msgid ""
@@ -34,14 +37,17 @@ msgid ""
 "intended for use only during local development. It is not designed to be "
 "particularly efficient, stable, or secure."
 msgstr ""
+"在部署到生产时不要使用开发服务器。"
+"开发服务器仅供在本地开发期间使用。"
+"它的设计并不特别高效，稳定，或安全。"
 
 #: ../../server.rst:16
 msgid "See :doc:`/deploying/index` for deployment options."
-msgstr ""
+msgstr "有关部署选项，请参阅 :doc:`/deploying/index`。"
 
 #: ../../server.rst:19
 msgid "Command Line"
-msgstr ""
+msgstr "命令行"
 
 #: ../../server.rst:21
 msgid ""
@@ -50,18 +56,21 @@ msgid ""
 "variable to point to your application, and ``FLASK_ENV=development`` to "
 "fully enable development mode."
 msgstr ""
+"``flask run`` 命令行脚本是运行开发服务器的推荐方式。"
+"它需要设置 ``FLASK_APP`` 来指向你的应用，并且设置"
+" ``FLASK_ENV=development`` 以完全启用开发模式。"
 
 #: ../../server.rst:28
 msgid "Bash"
-msgstr ""
+msgstr "Bash"
 
 #: ../../server.rst:36
 msgid "CMD"
-msgstr ""
+msgstr "CMD"
 
 #: ../../server.rst:44
 msgid "Powershell"
-msgstr ""
+msgstr "Powershell"
 
 #: ../../server.rst:52
 msgid ""
@@ -71,6 +80,10 @@ msgid ""
 "options, and  :doc:`/cli` for detailed instructions about configuring and"
 " using the CLI."
 msgstr ""
+"这将启用开发环境，包括交互式调试器和重载器，"
+"然后在 http://localhost:5000/ 上启动服务器。"
+"使用 ``flask run --help`` 查看可用选项，还可使用"
+" :doc:`/cli` 获取有关配置和使用 CLI 的详细说明。"
 
 #: ../../server.rst:60
 msgid ""
@@ -79,10 +92,14 @@ msgid ""
 "``FLASK_DEBUG=1``. This can still be used to control debug mode, but you "
 "should prefer setting the development environment as shown above."
 msgstr ""
+"在 Flask 1.0 之前 ``FLASK_ENV`` 环境变量不被支持"
+"并且你需要导出 ``FLASK_DEBUG=1`` 来启用调试模式。"
+"该方式仍可用于控制调试模式，但你应更喜欢如上所示"
+"的方式来设置开发环境。"
 
 #: ../../server.rst:68
 msgid "Lazy or Eager Loading"
-msgstr ""
+msgstr "懒惰加载 或 即时加载"
 
 #: ../../server.rst:70
 msgid ""
@@ -92,6 +109,10 @@ msgid ""
 "interactive debugger for the error, rather than crashing the server. This"
 " feature is called \"lazy loading\"."
 msgstr ""
+"在重载器中使用 ``flask run`` 命令时，即使你在代码中"
+"引入了语法错误或其它初始化错误，服务器仍会继续运行。"
+"访问网站将显示带有错误的交互式调试器，而非使服务器崩溃。"
+"该功能称为\"懒惰加载\"。"
 
 #: ../../server.rst:76
 msgid ""
@@ -100,6 +121,10 @@ msgid ""
 "site is accessed. This is intended to make errors more visible initially "
 "while still allowing the server to handle errors on reload."
 msgstr ""
+"如果在调用 ``flask run`` 时已经存在语法错误，"
+"它将立即失败并显示回溯信息，而非等到站点被访问。"
+"这样做的目的是使错误在最初时更加明显，同时仍然"
+"允许服务器在重新加载时处理错误。"
 
 #: ../../server.rst:81
 msgid ""
@@ -107,10 +132,13 @@ msgid ""
 "pass the ``--eager-loading`` option. To always keep the server running, "
 "even on the initial call, pass ``--lazy-loading``."
 msgstr ""
+"要覆盖此行为并始终立即失败，即使在重新加载时，"
+"请传递 ``--eager-loading`` 选项。为始终保持服务器运行，"
+"即使在初始调用时，请传递 ``--lazy-loading`` 选项。"
 
 #: ../../server.rst:87
 msgid "In Code"
-msgstr ""
+msgstr "在代码中"
 
 #: ../../server.rst:89
 msgid ""
@@ -120,6 +148,11 @@ msgid ""
 "The main difference from the CLI command is that the server will crash if"
 " there are errors when reloading."
 msgstr ""
+"作为 ``flask run`` 命令的替代方式，开发服务器"
+"也可使用 :meth:`Flask.run` 方法从 Python 启动。"
+"此方法采用类似于 CLI 选项的参数来控制服务器。"
+"与 CLI 命令的主要区别在于，如果重新加载时出现"
+"错误，服务器将会崩溃。"
 
 #: ../../server.rst:95
 msgid ""
@@ -127,10 +160,14 @@ msgid ""
 " ``FLASK_ENV=development`` environment variable is still required to "
 "fully enable development mode."
 msgstr ""
+"可以传递 ``debug=True`` 来启用调试器和重载器，"
+"但仍然需要 ``FLASK_ENV=development`` 环境变量"
+"才能完全启用开发模式。"
 
 #: ../../server.rst:99
 msgid ""
 "Place the call in a main block, otherwise it will interfere when trying "
 "to import and run the application with a production server later."
 msgstr ""
-
+"将调用放在主块中，否则使用生产服务器"
+"尝试导入和运行应用时将会发生干扰。"
