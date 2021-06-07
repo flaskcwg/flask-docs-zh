@@ -30,3 +30,8 @@ repos:
       - id: fix-byte-order-marker
       - id: trailing-whitespace
       - id: end-of-file-fixer
+  - repo: https://github.com/frostming/pofmt
+    rev: "0.1.0"
+    hooks:
+      - id: pofmt
+        additional_dependencies: ["pangu"]
