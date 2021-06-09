@@ -27,10 +27,10 @@ msgstr ""
 
 #: ../../debugging.rst:8
 msgid ""
-"**Do not run the development server, or enable the built-in debugger, in "
-"a production environment.** The debugger allows executing arbitrary "
-"Python code from the browser. It's protected by a pin, but that should "
-"not be relied on for security."
+"**Do not run the development server, or enable the built-in debugger, in a"
+" production environment.** The debugger allows executing arbitrary Python "
+"code from the browser. It's protected by a pin, but that should not be "
+"relied on for security."
 msgstr ""
 
 #: ../../debugging.rst:13
@@ -65,14 +65,14 @@ msgstr ""
 #: ../../debugging.rst:37
 msgid ""
 "The debugger allows executing arbitrary Python code from the browser. It "
-"is protected by a pin, but still represents a major security risk. Do not"
-" run the development server or debugger in a production environment."
+"is protected by a pin, but still represents a major security risk. Do not "
+"run the development server or debugger in a production environment."
 msgstr ""
 
 #: ../../debugging.rst:42
 msgid ""
-"To enable the debugger, run the development server with the ``FLASK_ENV``"
-" environment variable set to ``development``. This puts Flask in debug "
+"To enable the debugger, run the development server with the ``FLASK_ENV`` "
+"environment variable set to ``development``. This puts Flask in debug "
 "mode, which changes how it handles some errors, and enables the debugger "
 "and reloader."
 msgstr ""
@@ -112,17 +112,17 @@ msgstr ""
 #: ../../debugging.rst:88
 msgid ""
 "External debuggers, such as those provided by IDEs, can offer a more "
-"powerful debugging experience than the built-in debugger. They can also "
-"be used to step through code during a request before an error is raised, "
-"or if no error is raised. Some even have a remote mode so you can debug "
-"code running on another machine."
+"powerful debugging experience than the built-in debugger. They can also be"
+" used to step through code during a request before an error is raised, or "
+"if no error is raised. Some even have a remote mode so you can debug code "
+"running on another machine."
 msgstr ""
 
 #: ../../debugging.rst:94
 msgid ""
 "When using an external debugger, the app should still be in debug mode, "
-"but it can be useful to disable the built-in debugger and reloader, which"
-" can interfere."
+"but it can be useful to disable the built-in debugger and reloader, which "
+"can interfere."
 msgstr ""
 
 #: ../../debugging.rst:98
@@ -135,10 +135,9 @@ msgstr ""
 
 #: ../../debugging.rst:129
 msgid ""
-"Disabling these isn't required, an external debugger will continue to "
-"work with the following caveats. If the built-in debugger is not "
-"disabled, it will catch unhandled exceptions before the external debugger"
-" can. If the reloader is not disabled, it could cause an unexpected "
-"reload if code changes during debugging."
+"Disabling these isn't required, an external debugger will continue to work"
+" with the following caveats. If the built-in debugger is not disabled, it "
+"will catch unhandled exceptions before the external debugger can. If the "
+"reloader is not disabled, it could cause an unexpected reload if code "
+"changes during debugging."
 msgstr ""
-

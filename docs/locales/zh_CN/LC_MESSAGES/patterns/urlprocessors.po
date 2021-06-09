@@ -23,11 +23,11 @@ msgstr ""
 
 #: ../../patterns/urlprocessors.rst:6
 msgid ""
-"Flask 0.7 introduces the concept of URL processors.  The idea is that you"
-" might have a bunch of resources with common parts in the URL that you "
+"Flask 0.7 introduces the concept of URL processors.  The idea is that you "
+"might have a bunch of resources with common parts in the URL that you "
 "don't always explicitly want to provide.  For instance you might have a "
-"bunch of URLs that have the language code in it but you don't want to "
-"have to handle it in every single function yourself."
+"bunch of URLs that have the language code in it but you don't want to have"
+" to handle it in every single function yourself."
 msgstr ""
 
 #: ../../patterns/urlprocessors.rst:12
@@ -47,27 +47,27 @@ msgstr ""
 
 #: ../../patterns/urlprocessors.rst:35
 msgid ""
-"This is an awful lot of repetition as you have to handle the language "
-"code setting on the :data:`~flask.g` object yourself in every single "
-"function. Sure, a decorator could be used to simplify this, but if you "
-"want to generate URLs from one function to another you would have to "
-"still provide the language code explicitly which can be annoying."
+"This is an awful lot of repetition as you have to handle the language code"
+" setting on the :data:`~flask.g` object yourself in every single function."
+" Sure, a decorator could be used to simplify this, but if you want to "
+"generate URLs from one function to another you would have to still provide"
+" the language code explicitly which can be annoying."
 msgstr ""
 
 #: ../../patterns/urlprocessors.rst:41
 msgid ""
-"For the latter, this is where :func:`~flask.Flask.url_defaults` functions"
-" come in.  They can automatically inject values into a call to "
-":func:`~flask.url_for`.  The code below checks if the language code is "
-"not yet in the dictionary of URL values and if the endpoint wants a value"
-" named ``'lang_code'``::"
+"For the latter, this is where :func:`~flask.Flask.url_defaults` functions "
+"come in.  They can automatically inject values into a call to "
+":func:`~flask.url_for`.  The code below checks if the language code is not"
+" yet in the dictionary of URL values and if the endpoint wants a value "
+"named ``'lang_code'``::"
 msgstr ""
 
 #: ../../patterns/urlprocessors.rst:54
 msgid ""
-"The method :meth:`~werkzeug.routing.Map.is_endpoint_expecting` of the URL"
-" map can be used to figure out if it would make sense to provide a "
-"language code for the given endpoint."
+"The method :meth:`~werkzeug.routing.Map.is_endpoint_expecting` of the URL "
+"map can be used to figure out if it would make sense to provide a language"
+" code for the given endpoint."
 msgstr ""
 
 #: ../../patterns/urlprocessors.rst:58
@@ -83,10 +83,10 @@ msgstr ""
 msgid ""
 "That way you no longer have to do the `lang_code` assignment to "
 ":data:`~flask.g` in every function.  You can further improve that by "
-"writing your own decorator that prefixes URLs with the language code, but"
-" the more beautiful solution is using a blueprint.  Once the "
-"``'lang_code'`` is popped from the values dictionary and it will no "
-"longer be forwarded to the view function reducing the code to this::"
+"writing your own decorator that prefixes URLs with the language code, but "
+"the more beautiful solution is using a blueprint.  Once the "
+"``'lang_code'`` is popped from the values dictionary and it will no longer"
+" be forwarded to the view function reducing the code to this::"
 msgstr ""
 
 #: ../../patterns/urlprocessors.rst:99
@@ -95,11 +95,10 @@ msgstr ""
 
 #: ../../patterns/urlprocessors.rst:101
 msgid ""
-"Because blueprints can automatically prefix all URLs with a common string"
-" it's easy to automatically do that for every function.  Furthermore "
-"blueprints can have per-blueprint URL processors which removes a whole "
-"lot of logic from the :meth:`~flask.Flask.url_defaults` function because "
-"it no longer has to check if the URL is really interested in a "
+"Because blueprints can automatically prefix all URLs with a common string "
+"it's easy to automatically do that for every function.  Furthermore "
+"blueprints can have per-blueprint URL processors which removes a whole lot"
+" of logic from the :meth:`~flask.Flask.url_defaults` function because it "
+"no longer has to check if the URL is really interested in a "
 "``'lang_code'`` parameter::"
 msgstr ""
-

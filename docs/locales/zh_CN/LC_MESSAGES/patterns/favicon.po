@@ -44,13 +44,12 @@ msgstr ""
 
 #: ../../patterns/favicon.rst:20
 msgid ""
-"That's all you need for most browsers, however some really old ones do "
-"not support this standard. The old de-facto standard is to serve this "
-"file, with this name, at the website root. If your application is not "
-"mounted at the root path of the domain you either need to configure the "
-"web server to serve the icon at the root or if you can't do that you're "
-"out of luck. If however your application is the root you can simply route"
-" a redirect::"
+"That's all you need for most browsers, however some really old ones do not"
+" support this standard. The old de-facto standard is to serve this file, "
+"with this name, at the website root. If your application is not mounted at"
+" the root path of the domain you either need to configure the web server "
+"to serve the icon at the root or if you can't do that you're out of luck. "
+"If however your application is the root you can simply route a redirect::"
 msgstr ""
 
 #: ../../patterns/favicon.rst:30
@@ -61,9 +60,9 @@ msgstr ""
 
 #: ../../patterns/favicon.rst:41
 msgid ""
-"We can leave out the explicit mimetype and it will be guessed, but we may"
-" as well specify it to avoid the extra guessing, as it will always be the"
-" same."
+"We can leave out the explicit mimetype and it will be guessed, but we may "
+"as well specify it to avoid the extra guessing, as it will always be the "
+"same."
 msgstr ""
 
 #: ../../patterns/favicon.rst:45
@@ -82,4 +81,3 @@ msgid ""
 "The `Favicon <https://en.wikipedia.org/wiki/Favicon>`_ article on "
 "Wikipedia"
 msgstr ""
-

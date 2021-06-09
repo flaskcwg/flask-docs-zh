@@ -24,15 +24,15 @@ msgstr ""
 #: ../../patterns/sqlalchemy.rst:4
 msgid ""
 "Many people prefer `SQLAlchemy`_ for database access.  In this case it's "
-"encouraged to use a package instead of a module for your flask "
-"application and drop the models into a separate module (:doc:`packages`)."
-" While that is not necessary, it makes a lot of sense."
+"encouraged to use a package instead of a module for your flask application"
+" and drop the models into a separate module (:doc:`packages`). While that "
+"is not necessary, it makes a lot of sense."
 msgstr ""
 
 #: ../../patterns/sqlalchemy.rst:9
 msgid ""
-"There are four very common ways to use SQLAlchemy.  I will outline each "
-"of them here:"
+"There are four very common ways to use SQLAlchemy.  I will outline each of"
+" them here:"
 msgstr ""
 
 #: ../../patterns/sqlalchemy.rst:13
@@ -43,14 +43,14 @@ msgstr ""
 msgid ""
 "Because SQLAlchemy is a common database abstraction layer and object "
 "relational mapper that requires a little bit of configuration effort, "
-"there is a Flask extension that handles that for you.  This is "
-"recommended if you want to get started quickly."
+"there is a Flask extension that handles that for you.  This is recommended"
+" if you want to get started quickly."
 msgstr ""
 
 #: ../../patterns/sqlalchemy.rst:20
 msgid ""
-"You can download `Flask-SQLAlchemy`_ from `PyPI <https://pypi.org/project"
-"/Flask-SQLAlchemy/>`_."
+"You can download `Flask-SQLAlchemy`_ from `PyPI "
+"<https://pypi.org/project/Flask-SQLAlchemy/>`_."
 msgstr ""
 
 #: ../../patterns/sqlalchemy.rst:27
@@ -59,10 +59,10 @@ msgstr ""
 
 #: ../../patterns/sqlalchemy.rst:29
 msgid ""
-"The declarative extension in SQLAlchemy is the most recent method of "
-"using SQLAlchemy.  It allows you to define tables and models in one go, "
-"similar to how Django works.  In addition to the following text I "
-"recommend the official documentation on the `declarative`_ extension."
+"The declarative extension in SQLAlchemy is the most recent method of using"
+" SQLAlchemy.  It allows you to define tables and models in one go, similar"
+" to how Django works.  In addition to the following text I recommend the "
+"official documentation on the `declarative`_ extension."
 msgstr ""
 
 #: ../../patterns/sqlalchemy.rst:34
@@ -71,8 +71,8 @@ msgstr ""
 
 #: ../../patterns/sqlalchemy.rst:54
 msgid ""
-"To define your models, just subclass the `Base` class that was created by"
-" the code above.  If you are wondering why we don't have to care about "
+"To define your models, just subclass the `Base` class that was created by "
+"the code above.  If you are wondering why we don't have to care about "
 "threads here (like we did in the SQLite3 example above with the "
 ":data:`~flask.g` object): that's because SQLAlchemy does that for us "
 "already with the :class:`~sqlalchemy.orm.scoped_session`."
@@ -110,10 +110,10 @@ msgstr ""
 msgid ""
 "Manual object relational mapping has a few upsides and a few downsides "
 "versus the declarative approach from above.  The main difference is that "
-"you define tables and classes separately and map them together.  It's "
-"more flexible but a little more to type.  In general it works like the "
-"declarative approach, so make sure to also split up your application into"
-" multiple modules in a package."
+"you define tables and classes separately and map them together.  It's more"
+" flexible but a little more to type.  In general it works like the "
+"declarative approach, so make sure to also split up your application into "
+"multiple modules in a package."
 msgstr ""
 
 #: ../../patterns/sqlalchemy.rst:122
@@ -128,11 +128,13 @@ msgid ""
 msgstr ""
 
 #: ../../patterns/sqlalchemy.rst:145
-msgid "Here is an example table and model (put this into :file:`models.py`)::"
+msgid ""
+"Here is an example table and model (put this into :file:`models.py`)::"
 msgstr ""
 
 #: ../../patterns/sqlalchemy.rst:168
-msgid "Querying and inserting works exactly the same as in the example above."
+msgid ""
+"Querying and inserting works exactly the same as in the example above."
 msgstr ""
 
 #: ../../patterns/sqlalchemy.rst:172
@@ -162,7 +164,8 @@ msgid "SQLAlchemy will automatically commit for us."
 msgstr ""
 
 #: ../../patterns/sqlalchemy.rst:197
-msgid "To query your database, you use the engine directly or use a connection:"
+msgid ""
+"To query your database, you use the engine directly or use a connection:"
 msgstr ""
 
 #: ../../patterns/sqlalchemy.rst:202
@@ -180,4 +183,3 @@ msgid ""
 "For more information about SQLAlchemy, head over to the `website "
 "<https://www.sqlalchemy.org/>`_."
 msgstr ""
-

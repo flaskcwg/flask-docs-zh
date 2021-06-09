@@ -24,9 +24,9 @@ msgstr ""
 #: ../../patterns/templateinheritance.rst:4
 msgid ""
 "The most powerful part of Jinja is template inheritance. Template "
-"inheritance allows you to build a base \"skeleton\" template that "
-"contains all the common elements of your site and defines **blocks** that"
-" child templates can override."
+"inheritance allows you to build a base \"skeleton\" template that contains"
+" all the common elements of your site and defines **blocks** that child "
+"templates can override."
 msgstr ""
 
 #: ../../patterns/templateinheritance.rst:8
@@ -41,10 +41,9 @@ msgstr ""
 
 #: ../../patterns/templateinheritance.rst:15
 msgid ""
-"This template, which we'll call :file:`layout.html`, defines a simple "
-"HTML skeleton document that you might use for a simple two-column page. "
-"It's the job of \"child\" templates to fill the empty blocks with "
-"content:"
+"This template, which we'll call :file:`layout.html`, defines a simple HTML"
+" skeleton document that you might use for a simple two-column page. It's "
+"the job of \"child\" templates to fill the empty blocks with content:"
 msgstr ""
 
 #: ../../patterns/templateinheritance.rst:39
@@ -66,9 +65,8 @@ msgstr ""
 #, python-format
 msgid ""
 "The ``{% extends %}`` tag is the key here. It tells the template engine "
-"that this template \"extends\" another template.  When the template "
-"system evaluates this template, first it locates the parent.  The extends"
-" tag must be the first tag in the template.  To render the contents of a "
-"block defined in the parent template, use ``{{ super() }}``."
+"that this template \"extends\" another template.  When the template system"
+" evaluates this template, first it locates the parent.  The extends tag "
+"must be the first tag in the template.  To render the contents of a block "
+"defined in the parent template, use ``{{ super() }}``."
 msgstr ""
-

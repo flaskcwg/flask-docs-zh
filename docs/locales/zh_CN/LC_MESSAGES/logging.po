@@ -24,9 +24,9 @@ msgstr ""
 #: ../../logging.rst:4
 msgid ""
 "Flask uses standard Python :mod:`logging`. Messages about your Flask "
-"application are logged with :meth:`app.logger <flask.Flask.logger>`, "
-"which takes the same name as :attr:`app.name <flask.Flask.name>`. This "
-"logger can also be used to log your own messages."
+"application are logged with :meth:`app.logger <flask.Flask.logger>`, which"
+" takes the same name as :attr:`app.name <flask.Flask.name>`. This logger "
+"can also be used to log your own messages."
 msgstr ""
 
 #: ../../logging.rst:23
@@ -44,8 +44,8 @@ msgid ""
 "When you want to configure logging for your project, you should do it as "
 "soon as possible when the program starts. If :meth:`app.logger "
 "<flask.Flask.logger>` is accessed before logging is configured, it will "
-"add a default handler. If possible, configure logging before creating the"
-" application object."
+"add a default handler. If possible, configure logging before creating the "
+"application object."
 msgstr ""
 
 #: ../../logging.rst:35
@@ -61,11 +61,10 @@ msgstr ""
 #: ../../logging.rst:62
 msgid ""
 "If you do not configure logging yourself, Flask will add a "
-":class:`~logging.StreamHandler` to :meth:`app.logger "
-"<flask.Flask.logger>` automatically. During requests, it will write to "
-"the stream specified by the WSGI server in ``environ['wsgi.errors']`` "
-"(which is usually :data:`sys.stderr`). Outside a request, it will log to "
-":data:`sys.stderr`."
+":class:`~logging.StreamHandler` to :meth:`app.logger <flask.Flask.logger>`"
+" automatically. During requests, it will write to the stream specified by "
+"the WSGI server in ``environ['wsgi.errors']`` (which is usually "
+":data:`sys.stderr`). Outside a request, it will log to :data:`sys.stderr`."
 msgstr ""
 
 #: ../../logging.rst:70
@@ -86,9 +85,9 @@ msgstr ""
 #: ../../logging.rst:84
 msgid ""
 "When running the application on a remote server for production, you "
-"probably won't be looking at the log messages very often. The WSGI server"
-" will probably send log messages to a file, and you'll only check that "
-"file if a user tells you something went wrong."
+"probably won't be looking at the log messages very often. The WSGI server "
+"will probably send log messages to a file, and you'll only check that file"
+" if a user tells you something went wrong."
 msgstr ""
 
 #: ../../logging.rst:89
@@ -100,8 +99,8 @@ msgstr ""
 
 #: ../../logging.rst:110
 msgid ""
-"This requires that you have an SMTP server set up on the same server. See"
-" the Python docs for more information about configuring the handler."
+"This requires that you have an SMTP server set up on the same server. See "
+"the Python docs for more information about configuring the handler."
 msgstr ""
 
 #: ../../logging.rst:115
@@ -111,10 +110,10 @@ msgstr ""
 #: ../../logging.rst:117
 msgid ""
 "Seeing more information about the request, such as the IP address, may "
-"help debugging some errors. You can subclass :class:`logging.Formatter` "
-"to inject your own fields that can be used in messages. You can change "
-"the formatter for Flask's default handler, the mail handler defined "
-"above, or any other handler. ::"
+"help debugging some errors. You can subclass :class:`logging.Formatter` to"
+" inject your own fields that can be used in messages. You can change the "
+"formatter for Flask's default handler, the mail handler defined above, or "
+"any other handler. ::"
 msgstr ""
 
 #: ../../logging.rst:146
@@ -123,16 +122,15 @@ msgstr ""
 
 #: ../../logging.rst:148
 msgid ""
-"Other libraries may use logging extensively, and you want to see relevant"
-" messages from those logs too. The simplest way to do this is to add "
+"Other libraries may use logging extensively, and you want to see relevant "
+"messages from those logs too. The simplest way to do this is to add "
 "handlers to the root logger instead of only the app logger. ::"
 msgstr ""
 
 #: ../../logging.rst:158
 msgid ""
-"Depending on your project, it may be more useful to configure each logger"
-" you care about separately, instead of configuring only the root logger. "
-"::"
+"Depending on your project, it may be more useful to configure each logger "
+"you care about separately, instead of configuring only the root logger. ::"
 msgstr ""
 
 #: ../../logging.rst:171
@@ -156,4 +154,3 @@ msgid ""
 ":meth:`app.logger <flask.Flask.logger>` or its own named logger. Consult "
 "each extension's documentation for details."
 msgstr ""
-

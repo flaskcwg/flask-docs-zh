@@ -25,8 +25,8 @@ msgstr ""
 msgid ""
 "uWSGI is a deployment option on servers like `nginx`_, `lighttpd`_, and "
 "`cherokee`_; see :doc:`fastcgi` and :doc:`wsgi-standalone` for other "
-"options. To use your WSGI application with uWSGI protocol you will need a"
-" uWSGI server first. uWSGI is both a protocol and an application server; "
+"options. To use your WSGI application with uWSGI protocol you will need a "
+"uWSGI server first. uWSGI is both a protocol and an application server; "
 "the application server can serve uWSGI, FastCGI, and HTTP protocols."
 msgstr ""
 
@@ -42,11 +42,11 @@ msgstr ""
 
 #: ../../deploying/uwsgi.rst:15
 msgid ""
-"Please make sure in advance that any ``app.run()`` calls you might have "
-"in your application file are inside an ``if __name__ == '__main__':`` "
-"block or moved to a separate file.  Just make sure it's not called "
-"because this will always start a local WSGI server which we do not want "
-"if we deploy that application to uWSGI."
+"Please make sure in advance that any ``app.run()`` calls you might have in"
+" your application file are inside an ``if __name__ == '__main__':`` block "
+"or moved to a separate file.  Just make sure it's not called because this "
+"will always start a local WSGI server which we do not want if we deploy "
+"that application to uWSGI."
 msgstr ""
 
 #: ../../deploying/uwsgi.rst:22
@@ -54,7 +54,8 @@ msgid "Starting your app with uwsgi"
 msgstr ""
 
 #: ../../deploying/uwsgi.rst:24
-msgid "`uwsgi` is designed to operate on WSGI callables found in python modules."
+msgid ""
+"`uwsgi` is designed to operate on WSGI callables found in python modules."
 msgstr ""
 
 #: ../../deploying/uwsgi.rst:26
@@ -63,10 +64,10 @@ msgstr ""
 
 #: ../../deploying/uwsgi.rst:32
 msgid ""
-"The ``--manage-script-name`` will move the handling of ``SCRIPT_NAME`` to"
-" uwsgi, since it is smarter about that. It is used together with the "
-"``--mount`` directive which will make requests to ``/yourapplication`` be"
-" directed to ``myapp:app``. If your application is accessible at root "
+"The ``--manage-script-name`` will move the handling of ``SCRIPT_NAME`` to "
+"uwsgi, since it is smarter about that. It is used together with the "
+"``--mount`` directive which will make requests to ``/yourapplication`` be "
+"directed to ``myapp:app``. If your application is accessible at root "
 "level, you can use a single ``/`` instead of ``/yourapplication``. "
 "``myapp`` refers to the name of the file of your flask application "
 "(without extension) or the module which provides ``app``. ``app`` is the "
@@ -79,8 +80,8 @@ msgid ""
 "If you want to deploy your flask application inside of a virtual "
 "environment, you need to also add ``--virtualenv "
 "/path/to/virtual/environment``. You might also need to add ``--plugin "
-"python`` or ``--plugin python3`` depending on which python version you "
-"use for your project."
+"python`` or ``--plugin python3`` depending on which python version you use"
+" for your project."
 msgstr ""
 
 #: ../../deploying/uwsgi.rst:48
@@ -93,7 +94,6 @@ msgstr ""
 
 #: ../../deploying/uwsgi.rst:59
 msgid ""
-"This configuration binds the application to ``/yourapplication``.  If you"
-" want to have it in the URL root its a bit simpler::"
+"This configuration binds the application to ``/yourapplication``.  If you "
+"want to have it in the URL root its a bit simpler::"
 msgstr ""
-

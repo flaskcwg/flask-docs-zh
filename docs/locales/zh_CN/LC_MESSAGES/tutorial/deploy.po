@@ -54,15 +54,15 @@ msgstr ""
 
 #: ../../tutorial/deploy.rst:34
 msgid ""
-"You can find the file in ``dist/flaskr-1.0.0-py3-none-any.whl``. The file"
-" name is in the format of {project name}-{version}-{python tag} -{abi "
+"You can find the file in ``dist/flaskr-1.0.0-py3-none-any.whl``. The file "
+"name is in the format of {project name}-{version}-{python tag} -{abi "
 "tag}-{platform tag}."
 msgstr ""
 
 #: ../../tutorial/deploy.rst:38
 msgid ""
-"Copy this file to another machine, :ref:`set up a new virtualenv "
-"<install-create-env>`, then install the file with ``pip``."
+"Copy this file to another machine, :ref:`set up a new virtualenv <install-"
+"create-env>`, then install the file with ``pip``."
 msgstr ""
 
 #: ../../tutorial/deploy.rst:46
@@ -153,13 +153,12 @@ msgstr ""
 
 #: ../../tutorial/deploy.rst:132
 msgid ""
-"See :doc:`/deploying/index` for a list of many different ways to host "
-"your application. Waitress is just an example, chosen for the tutorial "
-"because it supports both Windows and Linux. There are many more WSGI "
-"servers and deployment options that you may choose for your project."
+"See :doc:`/deploying/index` for a list of many different ways to host your"
+" application. Waitress is just an example, chosen for the tutorial because"
+" it supports both Windows and Linux. There are many more WSGI servers and "
+"deployment options that you may choose for your project."
 msgstr ""
 
 #: ../../tutorial/deploy.rst:139
 msgid "Continue to :doc:`next`."
 msgstr ""
-

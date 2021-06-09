@@ -24,12 +24,12 @@ msgstr ""
 #: ../../patterns/singlepageapplications.rst:4
 msgid ""
 "Flask can be used to serve Single-Page Applications (SPA) by placing "
-"static files produced by your frontend framework in a subfolder inside of"
-" your project. You will also need to create a catch-all endpoint that "
+"static files produced by your frontend framework in a subfolder inside of "
+"your project. You will also need to create a catch-all endpoint that "
 "routes all requests to your SPA."
 msgstr ""
 
 #: ../../patterns/singlepageapplications.rst:9
-msgid "The following example demonstrates how to serve an SPA along with an API::"
+msgid ""
+"The following example demonstrates how to serve an SPA along with an API::"
 msgstr ""
-

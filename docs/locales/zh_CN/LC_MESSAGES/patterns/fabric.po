@@ -32,14 +32,14 @@ msgstr ""
 
 #: ../../patterns/fabric.rst:10
 msgid ""
-"Before we get started, here a quick checklist of things we have to ensure"
-" upfront:"
+"Before we get started, here a quick checklist of things we have to ensure "
+"upfront:"
 msgstr ""
 
 #: ../../patterns/fabric.rst:13
 msgid ""
-"Fabric 1.0 has to be installed locally.  This tutorial assumes the latest"
-" version of Fabric."
+"Fabric 1.0 has to be installed locally.  This tutorial assumes the latest "
+"version of Fabric."
 msgstr ""
 
 #: ../../patterns/fabric.rst:15
@@ -50,8 +50,8 @@ msgstr ""
 
 #: ../../patterns/fabric.rst:17
 msgid ""
-"In the following example we are using `mod_wsgi` for the remote servers."
-"  You can of course use your own favourite server there, but for this "
+"In the following example we are using `mod_wsgi` for the remote servers.  "
+"You can of course use your own favourite server there, but for this "
 "example we chose Apache + `mod_wsgi` because it's very easy to setup and "
 "has a simple way to reload applications without root access."
 msgstr ""
@@ -64,10 +64,9 @@ msgstr ""
 msgid ""
 "A fabfile is what controls what Fabric executes.  It is named "
 ":file:`fabfile.py` and executed by the `fab` command.  All the functions "
-"defined in that file will show up as `fab` subcommands.  They are "
-"executed on one or more hosts.  These hosts can be defined either in the "
-"fabfile or on the command line.  In this case we will add them to the "
-"fabfile."
+"defined in that file will show up as `fab` subcommands.  They are executed"
+" on one or more hosts.  These hosts can be defined either in the fabfile "
+"or on the command line.  In this case we will add them to the fabfile."
 msgstr ""
 
 #: ../../patterns/fabric.rst:32
@@ -84,8 +83,8 @@ msgstr ""
 #: ../../patterns/fabric.rst:67
 msgid ""
 "Now how do you execute that fabfile?  You use the `fab` command.  To "
-"deploy the current version of the code on the remote server you would use"
-" this command::"
+"deploy the current version of the code on the remote server you would use "
+"this command::"
 msgstr ""
 
 #: ../../patterns/fabric.rst:73
@@ -93,8 +92,8 @@ msgid ""
 "However this requires that our server already has the "
 ":file:`/var/www/yourapplication` folder created and "
 ":file:`/var/www/yourapplication/env` to be a virtual environment.  "
-"Furthermore are we not creating the configuration or ``.wsgi`` file on "
-"the server.  So how do we bootstrap a new server into our infrastructure?"
+"Furthermore are we not creating the configuration or ``.wsgi`` file on the"
+" server.  So how do we bootstrap a new server into our infrastructure?"
 msgstr ""
 
 #: ../../patterns/fabric.rst:79
@@ -124,8 +123,8 @@ msgstr ""
 #: ../../patterns/fabric.rst:99
 msgid ""
 "Create a new Apache config for ``yourapplication`` and activate it. Make "
-"sure to activate watching for changes of the ``.wsgi`` file so that we "
-"can automatically reload the application by touching it. See "
+"sure to activate watching for changes of the ``.wsgi`` file so that we can"
+" automatically reload the application by touching it. See "
 ":doc:`/deploying/mod_wsgi`."
 msgstr ""
 
@@ -141,21 +140,21 @@ msgstr ""
 
 #: ../../patterns/fabric.rst:110
 msgid ""
-"The WSGI file has to import the application and also to set an "
-"environment variable so that the application knows where to look for the "
-"config.  This is a short example that does exactly that::"
+"The WSGI file has to import the application and also to set an environment"
+" variable so that the application knows where to look for the config.  "
+"This is a short example that does exactly that::"
 msgstr ""
 
 #: ../../patterns/fabric.rst:118
 msgid ""
-"The application itself then has to initialize itself like this to look "
-"for the config at that environment variable::"
+"The application itself then has to initialize itself like this to look for"
+" the config at that environment variable::"
 msgstr ""
 
 #: ../../patterns/fabric.rst:125
 msgid ""
-"This approach is explained in detail in the :doc:`/config` section of the"
-" documentation."
+"This approach is explained in detail in the :doc:`/config` section of the "
+"documentation."
 msgstr ""
 
 #: ../../patterns/fabric.rst:129
@@ -167,8 +166,8 @@ msgid ""
 "Now as mentioned above, the application will find the correct "
 "configuration file by looking up the ``YOURAPPLICATION_CONFIG`` "
 "environment variable.  So we have to put the configuration in a place "
-"where the application will able to find it.  Configuration files have the"
-" unfriendly quality of being different on all computers, so you do not "
+"where the application will able to find it.  Configuration files have the "
+"unfriendly quality of being different on all computers, so you do not "
 "version them usually."
 msgstr ""
 
@@ -182,8 +181,8 @@ msgstr ""
 
 #: ../../patterns/fabric.rst:143
 msgid ""
-"Either way, in our case here we only expect one or two servers and we can"
-" upload them ahead of time by hand."
+"Either way, in our case here we only expect one or two servers and we can "
+"upload them ahead of time by hand."
 msgstr ""
 
 #: ../../patterns/fabric.rst:148
@@ -193,8 +192,8 @@ msgstr ""
 #: ../../patterns/fabric.rst:150
 msgid ""
 "Now we can do our first deployment.  We have set up the servers so that "
-"they have their virtual environments and activated apache configs.  Now "
-"we can pack up the application and deploy it::"
+"they have their virtual environments and activated apache configs.  Now we"
+" can pack up the application and deploy it::"
 msgstr ""
 
 #: ../../patterns/fabric.rst:156
@@ -202,8 +201,8 @@ msgid ""
 "Fabric will now connect to all servers and run the commands as written "
 "down in the fabfile.  First it will execute pack so that we have our "
 "tarball ready and then it will execute deploy and upload the source code "
-"to all servers and install it there.  Thanks to the :file:`setup.py` file"
-" we will automatically pull in the required libraries into our virtual "
+"to all servers and install it there.  Thanks to the :file:`setup.py` file "
+"we will automatically pull in the required libraries into our virtual "
 "environment."
 msgstr ""
 
@@ -232,20 +231,19 @@ msgstr ""
 #: ../../patterns/fabric.rst:173
 msgid ""
 "You could also put your application code into a repository and check out "
-"the latest version on the server and then install.  That way you can also"
-" easily go back to older versions."
+"the latest version on the server and then install.  That way you can also "
+"easily go back to older versions."
 msgstr ""
 
 #: ../../patterns/fabric.rst:176
 msgid ""
-"hook in testing functionality so that you can deploy to an external "
-"server and run the test suite."
+"hook in testing functionality so that you can deploy to an external server"
+" and run the test suite."
 msgstr ""
 
 #: ../../patterns/fabric.rst:179
 msgid ""
-"Working with Fabric is fun and you will notice that it's quite magical to"
-" type ``fab deploy`` and see your application being deployed "
-"automatically to one or more remote servers."
+"Working with Fabric is fun and you will notice that it's quite magical to "
+"type ``fab deploy`` and see your application being deployed automatically "
+"to one or more remote servers."
 msgstr ""
-

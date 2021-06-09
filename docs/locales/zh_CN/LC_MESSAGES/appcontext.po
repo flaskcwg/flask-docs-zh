@@ -23,17 +23,17 @@ msgstr ""
 
 #: ../../appcontext.rst:6
 msgid ""
-"The application context keeps track of the application-level data during "
-"a request, CLI command, or other activity. Rather than passing the "
-"application around to each function, the :data:`current_app` and "
-":data:`g` proxies are accessed instead."
+"The application context keeps track of the application-level data during a"
+" request, CLI command, or other activity. Rather than passing the "
+"application around to each function, the :data:`current_app` and :data:`g`"
+" proxies are accessed instead."
 msgstr ""
 
 #: ../../appcontext.rst:11
 msgid ""
 "This is similar to the :doc:`/reqcontext`, which keeps track of request-"
-"level data during a request. A corresponding application context is "
-"pushed when a request context is pushed."
+"level data during a request. A corresponding application context is pushed"
+" when a request context is pushed."
 msgstr ""
 
 #: ../../appcontext.rst:16
@@ -44,10 +44,10 @@ msgstr ""
 msgid ""
 "The :class:`Flask` application object has attributes, such as "
 ":attr:`~Flask.config`, that are useful to access within views and "
-":doc:`CLI commands </cli>`. However, importing the ``app`` instance "
-"within the modules in your project is prone to circular import issues. "
-"When using the :doc:`app factory pattern </patterns/appfactories>` or "
-"writing reusable :doc:`blueprints </blueprints>` or :doc:`extensions "
+":doc:`CLI commands </cli>`. However, importing the ``app`` instance within"
+" the modules in your project is prone to circular import issues. When "
+"using the :doc:`app factory pattern </patterns/appfactories>` or writing "
+"reusable :doc:`blueprints </blueprints>` or :doc:`extensions "
 "</extensions>` there won't be an ``app`` instance to import at all."
 msgstr ""
 
@@ -79,8 +79,8 @@ msgstr ""
 msgid ""
 "The application context is created and destroyed as necessary. When a "
 "Flask application begins handling a request, it pushes an application "
-"context and a :doc:`request context </reqcontext>`. When the request ends"
-" it pops the request context then the application context. Typically, an "
+"context and a :doc:`request context </reqcontext>`. When the request ends "
+"it pops the request context then the application context. Typically, an "
 "application context will have the same lifetime as a request."
 msgstr ""
 
@@ -103,17 +103,17 @@ msgstr ""
 #: ../../appcontext.rst:67
 msgid ""
 "If you see that error while configuring your application, such as when "
-"initializing an extension, you can push a context manually since you have"
-" direct access to the ``app``. Use :meth:`~Flask.app_context` in a "
-"``with`` block, and everything that runs in the block will have access to"
-" :data:`current_app`. ::"
+"initializing an extension, you can push a context manually since you have "
+"direct access to the ``app``. Use :meth:`~Flask.app_context` in a ``with``"
+" block, and everything that runs in the block will have access to "
+":data:`current_app`. ::"
 msgstr ""
 
 #: ../../appcontext.rst:81
 msgid ""
 "If you see that error somewhere else in your code not related to "
-"configuring the application, it most likely indicates that you should "
-"move that code into a view function or CLI command."
+"configuring the application, it most likely indicates that you should move"
+" that code into a view function or CLI command."
 msgstr ""
 
 #: ../../appcontext.rst:87
@@ -124,8 +124,8 @@ msgstr ""
 msgid ""
 "The application context is a good place to store common data during a "
 "request or CLI command. Flask provides the :data:`g object <g>` for this "
-"purpose. It is a simple namespace object that has the same lifetime as an"
-" application context."
+"purpose. It is a simple namespace object that has the same lifetime as an "
+"application context."
 msgstr ""
 
 #: ../../appcontext.rst:95
@@ -154,14 +154,14 @@ msgid ""
 msgstr ""
 
 #: ../../appcontext.rst:109
-msgid "For example, you can manage a database connection using this pattern::"
+msgid ""
+"For example, you can manage a database connection using this pattern::"
 msgstr ""
 
 #: ../../appcontext.rst:126
 msgid ""
 "During a request, every call to ``get_db()`` will return the same "
-"connection, and it will be closed automatically at the end of the "
-"request."
+"connection, and it will be closed automatically at the end of the request."
 msgstr ""
 
 #: ../../appcontext.rst:130
@@ -192,8 +192,7 @@ msgstr ""
 #: ../../appcontext.rst:151
 msgid ""
 "The application will call functions registered with "
-":meth:`~Flask.teardown_appcontext` when the application context is "
-"popped."
+":meth:`~Flask.teardown_appcontext` when the application context is popped."
 msgstr ""
 
 #: ../../appcontext.rst:155
@@ -202,4 +201,3 @@ msgid ""
 "sent: :data:`appcontext_pushed`, :data:`appcontext_tearing_down`, and "
 ":data:`appcontext_popped`."
 msgstr ""
-

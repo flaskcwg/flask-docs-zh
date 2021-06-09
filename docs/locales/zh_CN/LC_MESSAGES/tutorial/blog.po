@@ -24,9 +24,9 @@ msgstr ""
 #: ../../tutorial/blog.rst:6
 msgid ""
 "You'll use the same techniques you learned about when writing the "
-"authentication blueprint to write the blog blueprint. The blog should "
-"list all posts, allow logged in users to create posts, and allow the "
-"author of a post to edit or delete it."
+"authentication blueprint to write the blog blueprint. The blog should list"
+" all posts, allow logged in users to create posts, and allow the author of"
+" a post to edit or delete it."
 msgstr ""
 
 #: ../../tutorial/blog.rst:11
@@ -53,8 +53,8 @@ msgstr ""
 #: ../../tutorial/blog.rst:33
 msgid ""
 "Import and register the blueprint from the factory using "
-":meth:`app.register_blueprint() <Flask.register_blueprint>`. Place the "
-"new code at the end of the factory function before returning the app."
+":meth:`app.register_blueprint() <Flask.register_blueprint>`. Place the new"
+" code at the end of the factory function before returning the app."
 msgstr ""
 
 #: ../../tutorial/blog.rst:37
@@ -65,8 +65,8 @@ msgstr ""
 msgid ""
 "Unlike the auth blueprint, the blog blueprint does not have a "
 "``url_prefix``. So the ``index`` view will be at ``/``, the ``create`` "
-"view at ``/create``, and so on. The blog is the main feature of Flaskr, "
-"so it makes sense that the blog index will be the main index."
+"view at ``/create``, and so on. The blog is the main feature of Flaskr, so"
+" it makes sense that the blog index will be the main index."
 msgstr ""
 
 #: ../../tutorial/blog.rst:56
@@ -81,10 +81,10 @@ msgstr ""
 
 #: ../../tutorial/blog.rst:63
 msgid ""
-"In another application you might give the blog blueprint a ``url_prefix``"
-" and define a separate ``index`` view in the application factory, similar"
-" to the ``hello`` view. Then the ``index`` and ``blog.index`` endpoints "
-"and URLs would be different."
+"In another application you might give the blog blueprint a ``url_prefix`` "
+"and define a separate ``index`` view in the application factory, similar "
+"to the ``hello`` view. Then the ``index`` and ``blog.index`` endpoints and"
+" URLs would be different."
 msgstr ""
 
 #: ../../tutorial/blog.rst:70
@@ -107,9 +107,8 @@ msgid ""
 "When a user is logged in, the ``header`` block adds a link to the "
 "``create`` view. When the user is the author of a post, they'll see an "
 "\"Edit\" link to the ``update`` view for that post. ``loop.last`` is a "
-"special variable available inside `Jinja for loops`_. It's used to "
-"display a line after each post except the last one, to visually separate "
-"them."
+"special variable available inside `Jinja for loops`_. It's used to display"
+" a line after each post except the last one, to visually separate them."
 msgstr ""
 
 #: ../../tutorial/blog.rst:132
@@ -126,8 +125,8 @@ msgstr ""
 #: ../../tutorial/blog.rst:138
 msgid ""
 "The ``login_required`` decorator you wrote earlier is used on the blog "
-"views. A user must be logged in to visit these views, otherwise they will"
-" be redirected to the login page."
+"views. A user must be logged in to visit these views, otherwise they will "
+"be redirected to the login page."
 msgstr ""
 
 #: ../../tutorial/blog.rst:170
@@ -140,10 +139,10 @@ msgstr ""
 
 #: ../../tutorial/blog.rst:193
 msgid ""
-"Both the ``update`` and ``delete`` views will need to fetch a ``post`` by"
-" ``id`` and check if the author matches the logged in user. To avoid "
-"duplicating code, you can write a function to get the ``post`` and call "
-"it from each view."
+"Both the ``update`` and ``delete`` views will need to fetch a ``post`` by "
+"``id`` and check if the author matches the logged in user. To avoid "
+"duplicating code, you can write a function to get the ``post`` and call it"
+" from each view."
 msgstr ""
 
 #: ../../tutorial/blog.rst:217
@@ -157,10 +156,10 @@ msgstr ""
 
 #: ../../tutorial/blog.rst:223
 msgid ""
-"The ``check_author`` argument is defined so that the function can be used"
-" to get a ``post`` without checking the author. This would be useful if "
-"you wrote a view to show an individual post on a page, where the user "
-"doesn't matter because they're not modifying the post."
+"The ``check_author`` argument is defined so that the function can be used "
+"to get a ``post`` without checking the author. This would be useful if you"
+" wrote a view to show an individual post on a page, where the user doesn't"
+" matter because they're not modifying the post."
 msgstr ""
 
 #: ../../tutorial/blog.rst:258
@@ -170,18 +169,18 @@ msgid ""
 "real URL will look like ``/1/update``. Flask will capture the ``1``, "
 "ensure it's an :class:`int`, and pass it as the ``id`` argument. If you "
 "don't specify ``int:`` and instead do ``<id>``, it will be a string. To "
-"generate a URL to the update page, :func:`url_for` needs to be passed the"
-" ``id`` so it knows what to fill in: ``url_for('blog.update', "
+"generate a URL to the update page, :func:`url_for` needs to be passed the "
+"``id`` so it knows what to fill in: ``url_for('blog.update', "
 "id=post['id'])``. This is also in the ``index.html`` file above."
 msgstr ""
 
 #: ../../tutorial/blog.rst:268
 msgid ""
-"The ``create`` and ``update`` views look very similar. The main "
-"difference is that the ``update`` view uses a ``post`` object and an "
-"``UPDATE`` query instead of an ``INSERT``. With some clever refactoring, "
-"you could use one view and template for both actions, but for the "
-"tutorial it's clearer to keep them separate."
+"The ``create`` and ``update`` views look very similar. The main difference"
+" is that the ``update`` view uses a ``post`` object and an ``UPDATE`` "
+"query instead of an ``INSERT``. With some clever refactoring, you could "
+"use one view and template for both actions, but for the tutorial it's "
+"clearer to keep them separate."
 msgstr ""
 
 #: ../../tutorial/blog.rst:274
@@ -191,18 +190,18 @@ msgstr ""
 #: ../../tutorial/blog.rst:298
 msgid ""
 "This template has two forms. The first posts the edited data to the "
-"current page (``/<id>/update``). The other form contains only a button "
-"and specifies an ``action`` attribute that posts to the delete view "
-"instead. The button uses some JavaScript to show a confirmation dialog "
-"before submitting."
+"current page (``/<id>/update``). The other form contains only a button and"
+" specifies an ``action`` attribute that posts to the delete view instead. "
+"The button uses some JavaScript to show a confirmation dialog before "
+"submitting."
 msgstr ""
 
 #: ../../tutorial/blog.rst:304
 msgid ""
 "The pattern ``{{ request.form['title'] or post['title'] }}`` is used to "
-"choose what data appears in the form. When the form hasn't been "
-"submitted, the original ``post`` data appears, but if invalid form data "
-"was posted you want to display that so the user can fix the error, so "
+"choose what data appears in the form. When the form hasn't been submitted,"
+" the original ``post`` data appears, but if invalid form data was posted "
+"you want to display that so the user can fix the error, so "
 "``request.form`` is used instead. :data:`request` is another variable "
 "that's automatically available in templates."
 msgstr ""
@@ -215,18 +214,17 @@ msgstr ""
 msgid ""
 "The delete view doesn't have its own template, the delete button is part "
 "of ``update.html`` and posts to the ``/<id>/delete`` URL. Since there is "
-"no template, it will only handle the ``POST`` method and then redirect to"
-" the ``index`` view."
+"no template, it will only handle the ``POST`` method and then redirect to "
+"the ``index`` view."
 msgstr ""
 
 #: ../../tutorial/blog.rst:332
 msgid ""
 "Congratulations, you've now finished writing your application! Take some "
-"time to try out everything in the browser. However, there's still more to"
-" do before the project is complete."
+"time to try out everything in the browser. However, there's still more to "
+"do before the project is complete."
 msgstr ""
 
 #: ../../tutorial/blog.rst:336
 msgid "Continue to :doc:`install`."
 msgstr ""
-

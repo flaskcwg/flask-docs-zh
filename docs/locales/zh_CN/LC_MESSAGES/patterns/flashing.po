@@ -23,8 +23,8 @@ msgstr ""
 
 #: ../../patterns/flashing.rst:4
 msgid ""
-"Good applications and user interfaces are all about feedback.  If the "
-"user does not get enough feedback they will probably end up hating the "
+"Good applications and user interfaces are all about feedback.  If the user"
+" does not get enough feedback they will probably end up hating the "
 "application.  Flask provides a really simple way to give feedback to a "
 "user with the flashing system.  The flashing system basically makes it "
 "possible to record a message at the end of a request and access it next "
@@ -73,8 +73,8 @@ msgstr ""
 
 #: ../../patterns/flashing.rst:101
 msgid ""
-"To flash a message with a different category, just use the second "
-"argument to the :func:`~flask.flash` function::"
+"To flash a message with a different category, just use the second argument"
+" to the :func:`~flask.flash` function::"
 msgstr ""
 
 #: ../../patterns/flashing.rst:106
@@ -97,8 +97,7 @@ msgstr ""
 
 #: ../../patterns/flashing.rst:131
 msgid ""
-"Optionally you can pass a list of categories which filters the results of"
-" :func:`~flask.get_flashed_messages`.  This is useful if you wish to "
-"render each category in a separate block."
+"Optionally you can pass a list of categories which filters the results of "
+":func:`~flask.get_flashed_messages`.  This is useful if you wish to render"
+" each category in a separate block."
 msgstr ""
-

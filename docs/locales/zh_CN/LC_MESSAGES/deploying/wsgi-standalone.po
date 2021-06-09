@@ -23,10 +23,10 @@ msgstr ""
 
 #: ../../deploying/wsgi-standalone.rst:4
 msgid ""
-"There are popular servers written in Python that contain WSGI "
-"applications and serve HTTP.  These servers stand alone when they run; "
-"you can proxy to them from your web server.  Note the section on :ref"
-":`deploying-proxy-setups` if you run into issues."
+"There are popular servers written in Python that contain WSGI applications"
+" and serve HTTP.  These servers stand alone when they run; you can proxy "
+"to them from your web server.  Note the section on :ref:`deploying-proxy-"
+"setups` if you run into issues."
 msgstr ""
 
 #: ../../deploying/wsgi-standalone.rst:10
@@ -37,15 +37,15 @@ msgstr ""
 msgid ""
 "`Gunicorn`_ 'Green Unicorn' is a WSGI HTTP Server for UNIX. It's a pre-"
 "fork worker model ported from Ruby's Unicorn project. It supports both "
-"`eventlet`_ and `greenlet`_. Running a Flask application on this server "
-"is quite simple::"
+"`eventlet`_ and `greenlet`_. Running a Flask application on this server is"
+" quite simple::"
 msgstr ""
 
 #: ../../deploying/wsgi-standalone.rst:18
 msgid ""
-"`Gunicorn`_ provides many command-line options -- see ``gunicorn -h``. "
-"For example, to run a Flask application with 4 worker processes (``-w "
-"4``) binding to localhost port 4000 (``-b 127.0.0.1:4000``)::"
+"`Gunicorn`_ provides many command-line options -- see ``gunicorn -h``. For"
+" example, to run a Flask application with 4 worker processes (``-w 4``) "
+"binding to localhost port 4000 (``-b 127.0.0.1:4000``)::"
 msgstr ""
 
 #: ../../deploying/wsgi-standalone.rst:24
@@ -119,18 +119,18 @@ msgstr ""
 #: ../../deploying/wsgi-standalone.rst:94
 msgid ""
 "If you deploy your application using one of these servers behind an HTTP "
-"proxy you will need to rewrite a few headers in order for the application"
-" to work. The two problematic values in the WSGI environment usually are "
+"proxy you will need to rewrite a few headers in order for the application "
+"to work. The two problematic values in the WSGI environment usually are "
 "``REMOTE_ADDR`` and ``HTTP_HOST``.  You can configure your httpd to pass "
-"these headers, or you can fix them in middleware.  Werkzeug ships a fixer"
-" that will solve some common setups, but you might want to write your own"
-" WSGI middleware for specific setups."
+"these headers, or you can fix them in middleware.  Werkzeug ships a fixer "
+"that will solve some common setups, but you might want to write your own "
+"WSGI middleware for specific setups."
 msgstr ""
 
 #: ../../deploying/wsgi-standalone.rst:102
 msgid ""
-"Here's a simple nginx configuration which proxies to an application "
-"served on localhost at port 8000, setting appropriate headers:"
+"Here's a simple nginx configuration which proxies to an application served"
+" on localhost at port 8000, setting appropriate headers:"
 msgstr ""
 
 #: ../../deploying/wsgi-standalone.rst:126
@@ -153,7 +153,6 @@ msgstr ""
 
 #: ../../deploying/wsgi-standalone.rst:139
 msgid ""
-"If you want to rewrite the headers from another header, you might want to"
-" use a fixer like this::"
+"If you want to rewrite the headers from another header, you might want to "
+"use a fixer like this::"
 msgstr ""
-

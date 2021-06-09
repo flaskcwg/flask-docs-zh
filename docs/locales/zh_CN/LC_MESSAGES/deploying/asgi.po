@@ -23,11 +23,12 @@ msgstr ""
 
 #: ../../deploying/asgi.rst:6
 msgid ""
-"If you'd like to use an ASGI server you will need to utilise WSGI to ASGI"
-" middleware. The asgiref [WsgiToAsgi](https://github.com/django/asgiref"
-"#wsgi-to-asgi-adapter) adapter is recommended as it integrates with the "
-"event loop used for Flask's :ref:`async_await` support. You can use the "
-"adapter by wrapping the Flask app,"
+"If you'd like to use an ASGI server you will need to utilise WSGI to ASGI "
+"middleware. The asgiref "
+"[WsgiToAsgi](https://github.com/django/asgiref#wsgi-to-asgi-adapter) "
+"adapter is recommended as it integrates with the event loop used for "
+"Flask's :ref:`async_await` support. You can use the adapter by wrapping "
+"the Flask app,"
 msgstr ""
 
 #: ../../deploying/asgi.rst:24
@@ -35,4 +36,3 @@ msgid ""
 "and then serving the ``asgi_app`` with the asgi server, e.g. using "
 "`Hypercorn <https://gitlab.com/pgjones/hypercorn>`_,"
 msgstr ""
-

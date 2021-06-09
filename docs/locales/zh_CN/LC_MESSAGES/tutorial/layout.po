@@ -27,8 +27,8 @@ msgstr ""
 
 #: ../../tutorial/layout.rst:11
 msgid ""
-"Then follow the :doc:`installation instructions </installation>` to set "
-"up a Python virtual environment and install Flask for your project."
+"Then follow the :doc:`installation instructions </installation>` to set up"
+" a Python virtual environment and install Flask for your project."
 msgstr ""
 
 #: ../../tutorial/layout.rst:14
@@ -48,10 +48,10 @@ msgstr ""
 
 #: ../../tutorial/layout.rst:34
 msgid ""
-"However, as a project gets bigger, it becomes overwhelming to keep all "
-"the code in one file. Python projects use *packages* to organize code "
-"into multiple modules that can be imported where needed, and the tutorial"
-" will do this as well."
+"However, as a project gets bigger, it becomes overwhelming to keep all the"
+" code in one file. Python projects use *packages* to organize code into "
+"multiple modules that can be imported where needed, and the tutorial will "
+"do this as well."
 msgstr ""
 
 #: ../../tutorial/layout.rst:39
@@ -59,7 +59,8 @@ msgid "The project directory will contain:"
 msgstr ""
 
 #: ../../tutorial/layout.rst:41
-msgid "``flaskr/``, a Python package containing your application code and files."
+msgid ""
+"``flaskr/``, a Python package containing your application code and files."
 msgstr ""
 
 #: ../../tutorial/layout.rst:43
@@ -68,8 +69,8 @@ msgstr ""
 
 #: ../../tutorial/layout.rst:44
 msgid ""
-"``venv/``, a Python virtual environment where Flask and other "
-"dependencies are installed."
+"``venv/``, a Python virtual environment where Flask and other dependencies"
+" are installed."
 msgstr ""
 
 #: ../../tutorial/layout.rst:46
@@ -105,4 +106,3 @@ msgstr ""
 #: ../../tutorial/layout.rst:110
 msgid "Continue to :doc:`factory`."
 msgstr ""
-
