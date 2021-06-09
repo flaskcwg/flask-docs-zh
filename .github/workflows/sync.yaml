@@ -42,7 +42,8 @@ jobs:
       - name: Check and Commit
         run: |
           pip install pre-commit
-          pre-commit run --all-files pofmt
+          git add docs/
+          pre-commit run pofmt
           git add docs/ src/
           git commit -m "Update po files by GitHub Actions"
 
