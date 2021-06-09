@@ -26,9 +26,9 @@ msgstr "Flask：Web 开发，一次一滴"
 
 #: ../../index.rst:11
 msgid ""
-"Welcome to Flask's documentation. Get started with :doc:`installation` "
-"and then get an overview with the :doc:`quickstart`. There is also a more"
-" detailed :doc:`tutorial/index` that shows how to create a small but "
+"Welcome to Flask's documentation. Get started with :doc:`installation` and"
+" then get an overview with the :doc:`quickstart`. There is also a more "
+"detailed :doc:`tutorial/index` that shows how to create a small but "
 "complete application with Flask. Common patterns are described in the "
 ":doc:`patterns/index` section. The rest of the docs describe each "
 "component of Flask in detail, with a full reference in the :doc:`api` "
@@ -65,8 +65,8 @@ msgid ""
 "background information about Flask, then focuses on step-by-step "
 "instructions for web development with Flask."
 msgstr ""
-"这部分的文档大部分是独立章节，以一些关于 Flask 的背景信息开始，然后重点介绍如何"
-"使用 Flask 一步步进行 Web 开发。"
+"这部分的文档大部分是独立章节，以一些关于 Flask 的背景信息开始，"
+"然后重点介绍如何使用 Flask 一步步进行 Web 开发。"
 
 #: ../../index.rst:66
 msgid "API Reference"
@@ -76,13 +76,13 @@ msgstr "API 参考"
 msgid ""
 "If you are looking for information on a specific function, class or "
 "method, this part of the documentation is for you."
-msgstr ""
-"如果你想找关于某个特定函数、类或方法的信息，那么这部分文档就是为你准备的。"
+msgstr "如果你想找关于某个特定函数、类或方法的信息，那么这部分文档就是为你准备的。"
 
 #: ../../index.rst:78
 msgid "Additional Notes"
 msgstr "附加笔记"
 
 #: ../../index.rst:80
-msgid "Design notes, legal information and changelog are here for the interested."
+msgid ""
+"Design notes, legal information and changelog are here for the interested."
 msgstr "如果你感兴趣的话，这里有一些设计笔记、法律信息和变更日志（changelog）。"

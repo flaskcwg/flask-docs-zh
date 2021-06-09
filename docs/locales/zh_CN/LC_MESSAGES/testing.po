@@ -27,9 +27,9 @@ msgstr ""
 
 #: ../../testing.rst:6
 msgid ""
-"The origin of this quote is unknown and while it is not entirely correct,"
-" it is also not far from the truth.  Untested applications make it hard "
-"to improve existing code and developers of untested applications tend to "
+"The origin of this quote is unknown and while it is not entirely correct, "
+"it is also not far from the truth.  Untested applications make it hard to "
+"improve existing code and developers of untested applications tend to "
 "become pretty paranoid.  If an application has automated tests, you can "
 "safely make changes and instantly know if anything breaks."
 msgstr ""
@@ -54,8 +54,8 @@ msgstr ""
 #: ../../testing.rst:26
 msgid ""
 "First, we need an application to test; we will use the application from "
-"the :doc:`tutorial/index`. If you don't have that application yet, get "
-"the source code from :gh:`the examples <examples/tutorial>`."
+"the :doc:`tutorial/index`. If you don't have that application yet, get the"
+" source code from :gh:`the examples <examples/tutorial>`."
 msgstr ""
 
 #: ../../testing.rst:30
@@ -71,39 +71,39 @@ msgstr ""
 #: ../../testing.rst:36
 msgid ""
 "We begin by adding a tests directory under the application root.  Then "
-"create a Python file to store our tests (:file:`test_flaskr.py`). When we"
-" format the filename like ``test_*.py``, it will be auto-discoverable by "
+"create a Python file to store our tests (:file:`test_flaskr.py`). When we "
+"format the filename like ``test_*.py``, it will be auto-discoverable by "
 "pytest."
 msgstr ""
 
 #: ../../testing.rst:41
 msgid ""
-"Next, we create a `pytest fixture`_ called :func:`client` that configures"
-" the application for testing and initializes a new database::"
+"Next, we create a `pytest fixture`_ called :func:`client` that configures "
+"the application for testing and initializes a new database::"
 msgstr ""
 
 #: ../../testing.rst:66
 msgid ""
-"This client fixture will be called by each individual test.  It gives us "
-"a simple interface to the application, where we can trigger test requests"
-" to the application.  The client will also keep track of cookies for us."
+"This client fixture will be called by each individual test.  It gives us a"
+" simple interface to the application, where we can trigger test requests "
+"to the application.  The client will also keep track of cookies for us."
 msgstr ""
 
 #: ../../testing.rst:70
 msgid ""
-"During setup, the ``TESTING`` config flag is activated.  What this does "
-"is disable error catching during request handling, so that you get better"
-" error reports when performing test requests against the application."
+"During setup, the ``TESTING`` config flag is activated.  What this does is"
+" disable error catching during request handling, so that you get better "
+"error reports when performing test requests against the application."
 msgstr ""
 
 #: ../../testing.rst:75
 msgid ""
-"Because SQLite3 is filesystem-based, we can easily use the "
-":mod:`tempfile` module to create a temporary database and initialize it. "
-"The :func:`~tempfile.mkstemp` function does two things for us: it returns"
-" a low-level file handle and a random file name, the latter we use as "
-"database name.  We just have to keep the `db_fd` around so that we can "
-"use the :func:`os.close` function to close the file."
+"Because SQLite3 is filesystem-based, we can easily use the :mod:`tempfile`"
+" module to create a temporary database and initialize it. The "
+":func:`~tempfile.mkstemp` function does two things for us: it returns a "
+"low-level file handle and a random file name, the latter we use as "
+"database name.  We just have to keep the `db_fd` around so that we can use"
+" the :func:`os.close` function to close the file."
 msgstr ""
 
 #: ../../testing.rst:82
@@ -119,8 +119,8 @@ msgstr ""
 #: ../../testing.rst:95
 msgid ""
 "Even though it did not run any actual tests, we already know that our "
-"``flaskr`` application is syntactically valid, otherwise the import would"
-" have died with an exception."
+"``flaskr`` application is syntactically valid, otherwise the import would "
+"have died with an exception."
 msgstr ""
 
 #: ../../testing.rst:103
@@ -129,10 +129,10 @@ msgstr ""
 
 #: ../../testing.rst:105
 msgid ""
-"Now it's time to start testing the functionality of the application. "
-"Let's check that the application shows \"No entries here so far\" if we "
-"access the root of the application (``/``).  To do this, we add a new "
-"test function to :file:`test_flaskr.py`, like this::"
+"Now it's time to start testing the functionality of the application. Let's"
+" check that the application shows \"No entries here so far\" if we access "
+"the root of the application (``/``).  To do this, we add a new test "
+"function to :file:`test_flaskr.py`, like this::"
 msgstr ""
 
 #: ../../testing.rst:116
@@ -147,8 +147,8 @@ msgid ""
 "application with the given path.  The return value will be a "
 ":class:`~flask.Flask.response_class` object. We can now use the "
 ":attr:`~werkzeug.wrappers.Response.data` attribute to inspect the return "
-"value (as string) from the application. In this case, we ensure that "
-"``'No entries here so far'`` is part of the output."
+"value (as string) from the application. In this case, we ensure that ``'No"
+" entries here so far'`` is part of the output."
 msgstr ""
 
 #: ../../testing.rst:127
@@ -161,16 +161,17 @@ msgstr ""
 
 #: ../../testing.rst:142
 msgid ""
-"The majority of the functionality of our application is only available "
-"for the administrative user, so we need a way to log our test client in "
-"and out of the application.  To do this, we fire some requests to the "
-"login and logout pages with the required form data (username and "
-"password).  And because the login and logout pages redirect, we tell the "
-"client to `follow_redirects`."
+"The majority of the functionality of our application is only available for"
+" the administrative user, so we need a way to log our test client in and "
+"out of the application.  To do this, we fire some requests to the login "
+"and logout pages with the required form data (username and password).  And"
+" because the login and logout pages redirect, we tell the client to "
+"`follow_redirects`."
 msgstr ""
 
 #: ../../testing.rst:148
-msgid "Add the following two functions to your :file:`test_flaskr.py` file::"
+msgid ""
+"Add the following two functions to your :file:`test_flaskr.py` file::"
 msgstr ""
 
 #: ../../testing.rst:160
@@ -191,8 +192,8 @@ msgstr ""
 
 #: ../../testing.rst:199
 msgid ""
-"Here we check that HTML is allowed in the text but not in the title, "
-"which is the intended behavior."
+"Here we check that HTML is allowed in the text but not in the title, which"
+" is the intended behavior."
 msgstr ""
 
 #: ../../testing.rst:202
@@ -214,7 +215,8 @@ msgid ""
 msgstr ""
 
 #: ../../testing.rst:235
-msgid "All the other objects that are context bound can be used in the same way."
+msgid ""
+"All the other objects that are context bound can be used in the same way."
 msgstr ""
 
 #: ../../testing.rst:238
@@ -227,13 +229,12 @@ msgstr ""
 #: ../../testing.rst:242
 msgid ""
 "Note however that if you are using a test request context, the "
-":meth:`~flask.Flask.before_request` and "
-":meth:`~flask.Flask.after_request` functions are not called "
-"automatically.  However :meth:`~flask.Flask.teardown_request` functions "
-"are indeed executed when the test request context leaves the ``with`` "
-"block.  If you do want the :meth:`~flask.Flask.before_request` functions "
-"to be called as well, you need to call "
-":meth:`~flask.Flask.preprocess_request` yourself::"
+":meth:`~flask.Flask.before_request` and :meth:`~flask.Flask.after_request`"
+" functions are not called automatically.  However "
+":meth:`~flask.Flask.teardown_request` functions are indeed executed when "
+"the test request context leaves the ``with`` block.  If you do want the "
+":meth:`~flask.Flask.before_request` functions to be called as well, you "
+"need to call :meth:`~flask.Flask.preprocess_request` yourself::"
 msgstr ""
 
 #: ../../testing.rst:256
@@ -270,9 +271,9 @@ msgstr ""
 
 #: ../../testing.rst:293
 msgid ""
-"For a test it would be nice to override this user from the outside "
-"without having to change some code.  This can be accomplished with "
-"hooking the :data:`flask.appcontext_pushed` signal::"
+"For a test it would be nice to override this user from the outside without"
+" having to change some code.  This can be accomplished with hooking the "
+":data:`flask.appcontext_pushed` signal::"
 msgstr ""
 
 #: ../../testing.rst:307
@@ -294,8 +295,8 @@ msgstr ""
 #: ../../testing.rst:338
 msgid ""
 "If you were to use just the :meth:`~flask.Flask.test_client` without the "
-"``with`` block, the ``assert`` would fail with an error because `request`"
-" is no longer available (because you are trying to use it outside of the "
+"``with`` block, the ``assert`` would fail with an error because `request` "
+"is no longer available (because you are trying to use it outside of the "
 "actual request)."
 msgstr ""
 
@@ -305,28 +306,28 @@ msgstr ""
 
 #: ../../testing.rst:349
 msgid ""
-"Sometimes it can be very helpful to access or modify the sessions from "
-"the test client.  Generally there are two ways for this.  If you just "
-"want to ensure that a session has certain keys set to certain values you "
-"can just keep the context around and access :data:`flask.session`::"
+"Sometimes it can be very helpful to access or modify the sessions from the"
+" test client.  Generally there are two ways for this.  If you just want to"
+" ensure that a session has certain keys set to certain values you can just"
+" keep the context around and access :data:`flask.session`::"
 msgstr ""
 
 #: ../../testing.rst:358
 msgid ""
 "This however does not make it possible to also modify the session or to "
-"access the session before a request was fired.  Starting with Flask 0.8 "
-"we provide a so called “session transaction” which simulates the "
-"appropriate calls to open a session in the context of the test client and"
-" to modify it. At the end of the transaction the session is stored and "
-"ready to be used by the test client. This works independently of the "
-"session backend used::"
+"access the session before a request was fired.  Starting with Flask 0.8 we"
+" provide a so called “session transaction” which simulates the appropriate"
+" calls to open a session in the context of the test client and to modify "
+"it. At the end of the transaction the session is stored and ready to be "
+"used by the test client. This works independently of the session backend "
+"used::"
 msgstr ""
 
 #: ../../testing.rst:372
 msgid ""
-"Note that in this case you have to use the ``sess`` object instead of the"
-" :data:`flask.session` proxy.  The object however itself will provide the"
-" same interface."
+"Note that in this case you have to use the ``sess`` object instead of the "
+":data:`flask.session` proxy.  The object however itself will provide the "
+"same interface."
 msgstr ""
 
 #: ../../testing.rst:378
@@ -342,8 +343,8 @@ msgstr ""
 
 #: ../../testing.rst:402
 msgid ""
-"Passing the ``json`` argument in the test client methods sets the request"
-" data to the JSON-serialized object and sets the content type to "
+"Passing the ``json`` argument in the test client methods sets the request "
+"data to the JSON-serialized object and sets the content type to "
 "``application/json``. You can get the JSON data from the request or "
 "response with ``get_json``."
 msgstr ""
@@ -355,8 +356,8 @@ msgstr ""
 #: ../../testing.rst:413
 msgid ""
 "Click comes with `utilities for testing`_ your CLI commands. A "
-":class:`~click.testing.CliRunner` runs commands in isolation and captures"
-" the output in a :class:`~click.testing.Result` object."
+":class:`~click.testing.CliRunner` runs commands in isolation and captures "
+"the output in a :class:`~click.testing.Result` object."
 msgstr ""
 
 #: ../../testing.rst:417
@@ -377,7 +378,6 @@ msgstr ""
 #: ../../testing.rst:444
 msgid ""
 "If you want to test how your command parses parameters, without running "
-"the command, use its :meth:`~click.BaseCommand.make_context` method. This"
-" is useful for testing complex validation rules and custom types. ::"
+"the command, use its :meth:`~click.BaseCommand.make_context` method. This "
+"is useful for testing complex validation rules and custom types. ::"
 msgstr ""
-

@@ -24,9 +24,9 @@ msgstr ""
 #: ../../reqcontext.rst:6
 msgid ""
 "The request context keeps track of the request-level data during a "
-"request. Rather than passing the request object to each function that "
-"runs during a request, the :data:`request` and :data:`session` proxies "
-"are accessed instead."
+"request. Rather than passing the request object to each function that runs"
+" during a request, the :data:`request` and :data:`session` proxies are "
+"accessed instead."
 msgstr ""
 
 #: ../../reqcontext.rst:11
@@ -43,19 +43,19 @@ msgstr ""
 #: ../../reqcontext.rst:19
 msgid ""
 "When the :class:`Flask` application handles a request, it creates a "
-":class:`Request` object based on the environment it received from the "
-"WSGI server. Because a *worker* (thread, process, or coroutine depending "
-"on the server) handles only one request at a time, the request data can "
-"be considered global to that worker during that request. Flask uses the "
-"term *context local* for this."
+":class:`Request` object based on the environment it received from the WSGI"
+" server. Because a *worker* (thread, process, or coroutine depending on "
+"the server) handles only one request at a time, the request data can be "
+"considered global to that worker during that request. Flask uses the term "
+"*context local* for this."
 msgstr ""
 
 #: ../../reqcontext.rst:26
 msgid ""
 "Flask automatically *pushes* a request context when handling a request. "
 "View functions, error handlers, and other functions that run during a "
-"request will have access to the :data:`request` proxy, which points to "
-"the request object for the current request."
+"request will have access to the :data:`request` proxy, which points to the"
+" request object for the current request."
 msgstr ""
 
 #: ../../reqcontext.rst:33
@@ -65,22 +65,22 @@ msgstr ""
 #: ../../reqcontext.rst:35
 msgid ""
 "When a Flask application begins handling a request, it pushes a request "
-"context, which also pushes an :doc:`/appcontext`. When the request ends "
-"it pops the request context then the application context."
+"context, which also pushes an :doc:`/appcontext`. When the request ends it"
+" pops the request context then the application context."
 msgstr ""
 
 #: ../../reqcontext.rst:39
 msgid ""
 "The context is unique to each thread (or other worker type). "
-":data:`request` cannot be passed to another thread, the other thread will"
-" have a different context stack and will not know about the request the "
+":data:`request` cannot be passed to another thread, the other thread will "
+"have a different context stack and will not know about the request the "
 "parent thread was pointing to."
 msgstr ""
 
 #: ../../reqcontext.rst:44
 msgid ""
-"Context locals are implemented in Werkzeug. See :doc:`werkzeug:local` for"
-" more information on how this works internally."
+"Context locals are implemented in Werkzeug. See :doc:`werkzeug:local` for "
+"more information on how this works internally."
 msgstr ""
 
 #: ../../reqcontext.rst:49
@@ -89,24 +89,24 @@ msgstr ""
 
 #: ../../reqcontext.rst:51
 msgid ""
-"If you try to access :data:`request`, or anything that uses it, outside a"
-" request context, you'll get this error message:"
+"If you try to access :data:`request`, or anything that uses it, outside a "
+"request context, you'll get this error message:"
 msgstr ""
 
 #: ../../reqcontext.rst:62
 msgid ""
-"This should typically only happen when testing code that expects an "
-"active request. One option is to use the :meth:`test client "
-"<Flask.test_client>` to simulate a full request. Or you can use "
+"This should typically only happen when testing code that expects an active"
+" request. One option is to use the :meth:`test client <Flask.test_client>`"
+" to simulate a full request. Or you can use "
 ":meth:`~Flask.test_request_context` in a ``with`` block, and everything "
-"that runs in the block will have access to :data:`request`, populated "
-"with your test data. ::"
+"that runs in the block will have access to :data:`request`, populated with"
+" your test data. ::"
 msgstr ""
 
 #: ../../reqcontext.rst:77
 msgid ""
-"If you see that error somewhere else in your code not related to testing,"
-" it most likely indicates that you should move that code into a view "
+"If you see that error somewhere else in your code not related to testing, "
+"it most likely indicates that you should move that code into a view "
 "function."
 msgstr ""
 
@@ -135,23 +135,23 @@ msgid ""
 "When the request starts, a :class:`~ctx.RequestContext` is created and "
 "pushed, which creates and pushes an :class:`~ctx.AppContext` first if a "
 "context for that application is not already the top context. While these "
-"contexts are pushed, the :data:`current_app`, :data:`g`, :data:`request`,"
-" and :data:`session` proxies are available to the original thread "
-"handling the request."
+"contexts are pushed, the :data:`current_app`, :data:`g`, :data:`request`, "
+"and :data:`session` proxies are available to the original thread handling "
+"the request."
 msgstr ""
 
 #: ../../reqcontext.rst:102
 msgid ""
 "Because the contexts are stacks, other contexts may be pushed to change "
 "the proxies during a request. While this is not a common pattern, it can "
-"be used in advanced applications to, for example, do internal redirects "
-"or chain different applications together."
+"be used in advanced applications to, for example, do internal redirects or"
+" chain different applications together."
 msgstr ""
 
 #: ../../reqcontext.rst:107
 msgid ""
-"After the request is dispatched and a response is generated and sent, the"
-" request context is popped, which then pops the application context. "
+"After the request is dispatched and a response is generated and sent, the "
+"request context is popped, which then pops the application context. "
 "Immediately before they are popped, the :meth:`~Flask.teardown_request` "
 "and :meth:`~Flask.teardown_appcontext` functions are executed. These "
 "execute even if an unhandled exception occurred during dispatch."
@@ -178,16 +178,15 @@ msgstr ""
 #: ../../reqcontext.rst:127
 msgid ""
 "Before each request, :meth:`~Flask.before_request` functions are called. "
-"If one of these functions return a value, the other functions are "
-"skipped. The return value is treated as the response and the view "
-"function is not called."
+"If one of these functions return a value, the other functions are skipped."
+" The return value is treated as the response and the view function is not "
+"called."
 msgstr ""
 
 #: ../../reqcontext.rst:132
 msgid ""
-"If the :meth:`~Flask.before_request` functions did not return a response,"
-" the view function for the matched route is called and returns a "
-"response."
+"If the :meth:`~Flask.before_request` functions did not return a response, "
+"the view function for the matched route is called and returns a response."
 msgstr ""
 
 #: ../../reqcontext.rst:136
@@ -210,17 +209,17 @@ msgid ""
 "If an exception is raised before the teardown functions, Flask tries to "
 "match it with an :meth:`~Flask.errorhandler` function to handle the "
 "exception and return a response. If no error handler is found, or the "
-"handler itself raises an exception, Flask returns a generic ``500 "
-"Internal Server Error`` response. The teardown functions are still "
-"called, and are passed the exception object."
+"handler itself raises an exception, Flask returns a generic ``500 Internal"
+" Server Error`` response. The teardown functions are still called, and are"
+" passed the exception object."
 msgstr ""
 
 #: ../../reqcontext.rst:152
 msgid ""
 "If debug mode is enabled, unhandled exceptions are not converted to a "
 "``500`` response and instead are propagated to the WSGI server. This "
-"allows the development server to present the interactive debugger with "
-"the traceback."
+"allows the development server to present the interactive debugger with the"
+" traceback."
 msgstr ""
 
 #: ../../reqcontext.rst:159
@@ -232,8 +231,8 @@ msgid ""
 "The teardown callbacks are independent of the request dispatch, and are "
 "instead called by the contexts when they are popped. The functions are "
 "called even if there is an unhandled exception during dispatch, and for "
-"manually pushed contexts. This means there is no guarantee that any other"
-" parts of the request dispatch have run first. Be sure to write these "
+"manually pushed contexts. This means there is no guarantee that any other "
+"parts of the request dispatch have run first. Be sure to write these "
 "functions in a way that does not depend on other callbacks and will not "
 "fail."
 msgstr ""
@@ -241,8 +240,8 @@ msgstr ""
 #: ../../reqcontext.rst:169
 msgid ""
 "During testing, it can be useful to defer popping the contexts after the "
-"request ends, so that their data can be accessed in the test function. "
-"Use the :meth:`~Flask.test_client` as a ``with`` block to preserve the "
+"request ends, so that their data can be accessed in the test function. Use"
+" the :meth:`~Flask.test_client` as a ``with`` block to preserve the "
 "contexts until the ``with`` block exits."
 msgstr ""
 
@@ -271,8 +270,7 @@ msgstr ""
 #: ../../reqcontext.rst:214
 msgid ""
 ":data:`got_request_exception` is sent when an exception begins to be "
-"handled, but before an :meth:`~Flask.errorhandler` is looked up or "
-"called."
+"handled, but before an :meth:`~Flask.errorhandler` is looked up or called."
 msgstr ""
 
 #: ../../reqcontext.rst:218
@@ -288,15 +286,15 @@ msgstr ""
 #: ../../reqcontext.rst:225
 msgid ""
 "At the end of a request, the request context is popped and all data "
-"associated with it is destroyed. If an error occurs during development, "
-"it is useful to delay destroying the data for debugging purposes."
+"associated with it is destroyed. If an error occurs during development, it"
+" is useful to delay destroying the data for debugging purposes."
 msgstr ""
 
 #: ../../reqcontext.rst:229
 msgid ""
 "When the development server is running in development mode (the "
-"``FLASK_ENV`` environment variable is set to ``'development'``), the "
-"error and data will be preserved and shown in the interactive debugger."
+"``FLASK_ENV`` environment variable is set to ``'development'``), the error"
+" and data will be preserved and shown in the interactive debugger."
 msgstr ""
 
 #: ../../reqcontext.rst:233
@@ -319,9 +317,9 @@ msgstr ""
 #: ../../reqcontext.rst:246
 msgid ""
 "Some of the objects provided by Flask are proxies to other objects. The "
-"proxies are accessed in the same way for each worker thread, but point to"
-" the unique object bound to each worker behind the scenes as described on"
-" this page."
+"proxies are accessed in the same way for each worker thread, but point to "
+"the unique object bound to each worker behind the scenes as described on "
+"this page."
 msgstr ""
 
 #: ../../reqcontext.rst:251
@@ -339,8 +337,8 @@ msgstr ""
 
 #: ../../reqcontext.rst:257
 msgid ""
-"The reference to the proxied object is needed in some situations, such as"
-" sending :doc:`signals` or passing data to a background thread."
+"The reference to the proxied object is needed in some situations, such as "
+"sending :doc:`signals` or passing data to a background thread."
 msgstr ""
 
 #: ../../reqcontext.rst:261
@@ -348,4 +346,3 @@ msgid ""
 "If you need to access the underlying object that is proxied, use the "
 ":meth:`~werkzeug.local.LocalProxy._get_current_object` method::"
 msgstr ""
-

@@ -22,7 +22,8 @@ msgid "mod_wsgi (Apache)"
 msgstr ""
 
 #: ../../deploying/mod_wsgi.rst:4
-msgid "If you are using the `Apache`_ webserver, consider using `mod_wsgi`_."
+msgid ""
+"If you are using the `Apache`_ webserver, consider using `mod_wsgi`_."
 msgstr ""
 
 #: ../../deploying/mod_wsgi.rst:6
@@ -31,11 +32,11 @@ msgstr ""
 
 #: ../../deploying/mod_wsgi.rst:8
 msgid ""
-"Please make sure in advance that any ``app.run()`` calls you might have "
-"in your application file are inside an ``if __name__ == '__main__':`` "
-"block or moved to a separate file.  Just make sure it's not called "
-"because this will always start a local WSGI server which we do not want "
-"if we deploy that application to mod_wsgi."
+"Please make sure in advance that any ``app.run()`` calls you might have in"
+" your application file are inside an ``if __name__ == '__main__':`` block "
+"or moved to a separate file.  Just make sure it's not called because this "
+"will always start a local WSGI server which we do not want if we deploy "
+"that application to mod_wsgi."
 msgstr ""
 
 #: ../../deploying/mod_wsgi.rst:17
@@ -75,8 +76,8 @@ msgstr ""
 
 #: ../../deploying/mod_wsgi.rst:47
 msgid ""
-"If you encounter segfaulting child processes after the first apache "
-"reload you can safely ignore them.  Just restart the server."
+"If you encounter segfaulting child processes after the first apache reload"
+" you can safely ignore them.  Just restart the server."
 msgstr ""
 
 #: ../../deploying/mod_wsgi.rst:51
@@ -85,10 +86,10 @@ msgstr ""
 
 #: ../../deploying/mod_wsgi.rst:53
 msgid ""
-"To run your application you need a :file:`yourapplication.wsgi` file. "
-"This file contains the code `mod_wsgi` is executing on startup to get the"
-" application object.  The object called `application` in that file is "
-"then used as application."
+"To run your application you need a :file:`yourapplication.wsgi` file. This"
+" file contains the code `mod_wsgi` is executing on startup to get the "
+"application object.  The object called `application` in that file is then "
+"used as application."
 msgstr ""
 
 #: ../../deploying/mod_wsgi.rst:58
@@ -110,12 +111,12 @@ msgstr ""
 #: ../../deploying/mod_wsgi.rst:70
 msgid ""
 "Store that file somewhere that you will find it again (e.g.: "
-":file:`/var/www/yourapplication`) and make sure that `yourapplication` "
-"and all the libraries that are in use are on the python load path.  If "
-"you don't want to install it system wide consider using a `virtual "
-"python`_ instance.  Keep in mind that you will have to actually install "
-"your application into the virtualenv as well.  Alternatively there is the"
-" option to just patch the path in the ``.wsgi`` file before the import::"
+":file:`/var/www/yourapplication`) and make sure that `yourapplication` and"
+" all the libraries that are in use are on the python load path.  If you "
+"don't want to install it system wide consider using a `virtual python`_ "
+"instance.  Keep in mind that you will have to actually install your "
+"application into the virtualenv as well.  Alternatively there is the "
+"option to just patch the path in the ``.wsgi`` file before the import::"
 msgstr ""
 
 #: ../../deploying/mod_wsgi.rst:82
@@ -132,8 +133,8 @@ msgstr ""
 #: ../../deploying/mod_wsgi.rst:104
 msgid ""
 "Note: WSGIDaemonProcess isn't implemented in Windows and Apache will "
-"refuse to run with the above configuration. On a Windows system, "
-"eliminate those lines:"
+"refuse to run with the above configuration. On a Windows system, eliminate"
+" those lines:"
 msgstr ""
 
 #: ../../deploying/mod_wsgi.rst:118
@@ -144,8 +145,8 @@ msgstr ""
 
 #: ../../deploying/mod_wsgi.rst:123
 msgid ""
-"Most notably, the syntax for directory permissions has changed from httpd"
-" 2.2"
+"Most notably, the syntax for directory permissions has changed from httpd "
+"2.2"
 msgstr ""
 
 #: ../../deploying/mod_wsgi.rst:130
@@ -165,7 +166,8 @@ msgid "If your application does not run, follow this guide to troubleshoot:"
 msgstr ""
 
 #: ../../deploying/mod_wsgi.rst:153
-msgid "**Problem:** application does not run, errorlog shows SystemExit ignored"
+msgid ""
+"**Problem:** application does not run, errorlog shows SystemExit ignored"
 msgstr ""
 
 #: ../../deploying/mod_wsgi.rst:150
@@ -182,9 +184,9 @@ msgstr ""
 
 #: ../../deploying/mod_wsgi.rst:156
 msgid ""
-"Probably caused by your application running as the wrong user.  Make sure"
-" the folders the application needs access to have the proper privileges "
-"set and the application runs as the correct user (``user`` and ``group`` "
+"Probably caused by your application running as the wrong user.  Make sure "
+"the folders the application needs access to have the proper privileges set"
+" and the application runs as the correct user (``user`` and ``group`` "
 "parameter to the `WSGIDaemonProcess` directive)"
 msgstr ""
 
@@ -196,14 +198,13 @@ msgstr ""
 msgid ""
 "Keep in mind that mod_wsgi disallows doing anything with "
 ":data:`sys.stdout` and :data:`sys.stderr`.  You can disable this "
-"protection from the config by setting the `WSGIRestrictStdout` to "
-"``off``:"
+"protection from the config by setting the `WSGIRestrictStdout` to ``off``:"
 msgstr ""
 
 #: ../../deploying/mod_wsgi.rst:172
 msgid ""
-"Alternatively you can also replace the standard out in the .wsgi file "
-"with a different stream::"
+"Alternatively you can also replace the standard out in the .wsgi file with"
+" a different stream::"
 msgstr ""
 
 #: ../../deploying/mod_wsgi.rst:186
@@ -231,13 +232,14 @@ msgstr ""
 
 #: ../../deploying/mod_wsgi.rst:191
 msgid ""
-"To help deployment tools you can activate support for automatic "
-"reloading.  Whenever something changes the ``.wsgi`` file, `mod_wsgi` "
-"will reload all the daemon processes for us."
+"To help deployment tools you can activate support for automatic reloading."
+"  Whenever something changes the ``.wsgi`` file, `mod_wsgi` will reload "
+"all the daemon processes for us."
 msgstr ""
 
 #: ../../deploying/mod_wsgi.rst:195
-msgid "For that, just add the following directive to your `Directory` section:"
+msgid ""
+"For that, just add the following directive to your `Directory` section:"
 msgstr ""
 
 #: ../../deploying/mod_wsgi.rst:202
@@ -248,8 +250,8 @@ msgstr ""
 msgid ""
 "Virtual environments have the advantage that they never install the "
 "required dependencies system wide so you have a better control over what "
-"is used where.  If you want to use a virtual environment with mod_wsgi "
-"you have to modify your ``.wsgi`` file slightly."
+"is used where.  If you want to use a virtual environment with mod_wsgi you"
+" have to modify your ``.wsgi`` file slightly."
 msgstr ""
 
 #: ../../deploying/mod_wsgi.rst:209
@@ -261,4 +263,3 @@ msgid ""
 "This sets up the load paths according to the settings of the virtual "
 "environment.  Keep in mind that the path has to be absolute."
 msgstr ""
-

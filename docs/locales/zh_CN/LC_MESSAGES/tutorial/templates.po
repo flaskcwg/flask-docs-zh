@@ -34,31 +34,29 @@ msgstr ""
 #: ../../tutorial/templates.rst:13
 msgid ""
 "Templates are files that contain static data as well as placeholders for "
-"dynamic data. A template is rendered with specific data to produce a "
-"final document. Flask uses the `Jinja`_ template library to render "
-"templates."
+"dynamic data. A template is rendered with specific data to produce a final"
+" document. Flask uses the `Jinja`_ template library to render templates."
 msgstr ""
 
 #: ../../tutorial/templates.rst:18
 msgid ""
 "In your application, you will use templates to render `HTML`_ which will "
 "display in the user's browser. In Flask, Jinja is configured to "
-"*autoescape* any data that is rendered in HTML templates. This means that"
-" it's safe to render user input; any characters they've entered that "
-"could mess with the HTML, such as ``<`` and ``>`` will be *escaped* with "
-"*safe* values that look the same in the browser but don't cause unwanted "
-"effects."
+"*autoescape* any data that is rendered in HTML templates. This means that "
+"it's safe to render user input; any characters they've entered that could "
+"mess with the HTML, such as ``<`` and ``>`` will be *escaped* with *safe* "
+"values that look the same in the browser but don't cause unwanted effects."
 msgstr ""
 
 #: ../../tutorial/templates.rst:26
 msgid ""
-"Jinja looks and behaves mostly like Python. Special delimiters are used "
-"to distinguish Jinja syntax from the static data in the template. "
-"Anything between ``{{`` and ``}}`` is an expression that will be output "
-"to the final document. ``{%`` and ``%}`` denotes a control flow statement"
-" like ``if`` and ``for``. Unlike Python, blocks are denoted by start and "
-"end tags rather than indentation since static text within a block could "
-"change indentation."
+"Jinja looks and behaves mostly like Python. Special delimiters are used to"
+" distinguish Jinja syntax from the static data in the template. Anything "
+"between ``{{`` and ``}}`` is an expression that will be output to the "
+"final document. ``{%`` and ``%}`` denotes a control flow statement like "
+"``if`` and ``for``. Unlike Python, blocks are denoted by start and end "
+"tags rather than indentation since static text within a block could change"
+" indentation."
 msgstr ""
 
 #: ../../tutorial/templates.rst:39
@@ -79,19 +77,19 @@ msgstr ""
 
 #: ../../tutorial/templates.rst:74
 msgid ""
-":data:`g` is automatically available in templates. Based on if ``g.user``"
-" is set (from ``load_logged_in_user``), either the username and a log out"
-" link are displayed, or links to register and log in are displayed. "
+":data:`g` is automatically available in templates. Based on if ``g.user`` "
+"is set (from ``load_logged_in_user``), either the username and a log out "
+"link are displayed, or links to register and log in are displayed. "
 ":func:`url_for` is also automatically available, and is used to generate "
 "URLs to views instead of writing them out manually."
 msgstr ""
 
 #: ../../tutorial/templates.rst:80
 msgid ""
-"After the page title, and before the content, the template loops over "
-"each message returned by :func:`get_flashed_messages`. You used "
-":func:`flash` in the views to show error messages, and this is the code "
-"that will display them."
+"After the page title, and before the content, the template loops over each"
+" message returned by :func:`get_flashed_messages`. You used :func:`flash` "
+"in the views to show error messages, and this is the code that will "
+"display them."
 msgstr ""
 
 #: ../../tutorial/templates.rst:85
@@ -102,8 +100,8 @@ msgstr ""
 
 #: ../../tutorial/templates.rst:88
 msgid ""
-"``{% block title %}`` will change the title displayed in the browser's "
-"tab and window title."
+"``{% block title %}`` will change the title displayed in the browser's tab"
+" and window title."
 msgstr ""
 
 #: ../../tutorial/templates.rst:91
@@ -120,8 +118,8 @@ msgstr ""
 
 #: ../../tutorial/templates.rst:97
 msgid ""
-"The base template is directly in the ``templates`` directory. To keep the"
-" others organized, the templates for a blueprint will be placed in a "
+"The base template is directly in the ``templates`` directory. To keep the "
+"others organized, the templates for a blueprint will be placed in a "
 "directory with the same name as the blueprint."
 msgstr ""
 
@@ -145,20 +143,20 @@ msgstr ""
 #: ../../tutorial/templates.rst:129
 msgid ""
 "A useful pattern used here is to place ``{% block title %}`` inside ``{% "
-"block header %}``. This will set the title block and then output the "
-"value of it into the header block, so that both the window and page share"
-" the same title without writing it twice."
+"block header %}``. This will set the title block and then output the value"
+" of it into the header block, so that both the window and page share the "
+"same title without writing it twice."
 msgstr ""
 
 #: ../../tutorial/templates.rst:134
 msgid ""
 "The ``input`` tags are using the ``required`` attribute here. This tells "
 "the browser not to submit the form until those fields are filled in. If "
-"the user is using an older browser that doesn't support that attribute, "
-"or if they are using something besides a browser to make requests, you "
-"still want to validate the data in the Flask view. It's important to "
-"always fully validate the data on the server, even if the client does "
-"some validation as well."
+"the user is using an older browser that doesn't support that attribute, or"
+" if they are using something besides a browser to make requests, you still"
+" want to validate the data in the Flask view. It's important to always "
+"fully validate the data on the server, even if the client does some "
+"validation as well."
 msgstr ""
 
 #: ../../tutorial/templates.rst:144
@@ -167,8 +165,8 @@ msgstr ""
 
 #: ../../tutorial/templates.rst:146
 msgid ""
-"This is identical to the register template except for the title and "
-"submit button."
+"This is identical to the register template except for the title and submit"
+" button."
 msgstr ""
 
 #: ../../tutorial/templates.rst:149
@@ -188,8 +186,8 @@ msgstr ""
 
 #: ../../tutorial/templates.rst:176
 msgid ""
-"Try clicking the \"Register\" button without filling out the form and see"
-" that the browser shows an error message. Try removing the ``required`` "
+"Try clicking the \"Register\" button without filling out the form and see "
+"that the browser shows an error message. Try removing the ``required`` "
 "attributes from the ``register.html`` template and click \"Register\" "
 "again. Instead of the browser showing an error, the page will reload and "
 "the error from :func:`flash` in the view will be shown."
@@ -206,4 +204,3 @@ msgstr ""
 #: ../../tutorial/templates.rst:187
 msgid "Continue to :doc:`static`."
 msgstr ""
-

@@ -42,8 +42,8 @@ msgstr ""
 
 #: ../../deploying/index.rst:17
 msgid ""
-"`Deploying Flask on Heroku <https://devcenter.heroku.com/articles"
-"/getting-started-with-python>`_"
+"`Deploying Flask on Heroku <https://devcenter.heroku.com/articles/getting-"
+"started-with-python>`_"
 msgstr ""
 
 #: ../../deploying/index.rst:18
@@ -80,4 +80,3 @@ msgstr ""
 #: ../../deploying/index.rst:25
 msgid "Self-hosted options"
 msgstr ""
-

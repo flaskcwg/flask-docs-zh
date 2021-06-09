@@ -38,7 +38,8 @@ msgid ""
 msgstr ""
 
 #: ../../../CONTRIBUTING.rst:15
-msgid "The ``#get-help`` channel on our Discord chat: https://discord.gg/pallets"
+msgid ""
+"The ``#get-help`` channel on our Discord chat: https://discord.gg/pallets"
 msgstr ""
 
 #: ../../../CONTRIBUTING.rst:17
@@ -67,9 +68,9 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:31
 msgid ""
-"If possible, include a `minimal reproducible example`_ to help us "
-"identify the issue. This also helps check that the issue is not with your"
-" own code."
+"If possible, include a `minimal reproducible example`_ to help us identify"
+" the issue. This also helps check that the issue is not with your own "
+"code."
 msgstr ""
 
 #: ../../../CONTRIBUTING.rst:34
@@ -81,8 +82,7 @@ msgstr ""
 #: ../../../CONTRIBUTING.rst:36
 msgid ""
 "List your Python and Flask versions. If possible, check if this issue is "
-"already fixed in the latest releases or the latest code in the "
-"repository."
+"already fixed in the latest releases or the latest code in the repository."
 msgstr ""
 
 #: ../../../CONTRIBUTING.rst:44
@@ -91,11 +91,11 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:46
 msgid ""
-"If there is not an open issue for what you want to submit, prefer opening"
-" one for discussion before working on a PR. You can work on any issue "
-"that doesn't have an open PR linked to it or a maintainer assigned to it."
-" These show up in the sidebar. No need to ask if you can work on an issue"
-" that interests you."
+"If there is not an open issue for what you want to submit, prefer opening "
+"one for discussion before working on a PR. You can work on any issue that "
+"doesn't have an open PR linked to it or a maintainer assigned to it. These"
+" show up in the sidebar. No need to ask if you can work on an issue that "
+"interests you."
 msgstr ""
 
 #: ../../../CONTRIBUTING.rst:52
@@ -110,8 +110,8 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:57
 msgid ""
-"Include tests if your patch adds or changes code. Make sure the test "
-"fails without your patch."
+"Include tests if your patch adds or changes code. Make sure the test fails"
+" without your patch."
 msgstr ""
 
 #: ../../../CONTRIBUTING.rst:59
@@ -122,9 +122,8 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:61
 msgid ""
-"Add an entry in ``CHANGES.rst``. Use the same style as other entries. "
-"Also include ``.. versionchanged::`` inline changelogs in relevant "
-"docstrings."
+"Add an entry in ``CHANGES.rst``. Use the same style as other entries. Also"
+" include ``.. versionchanged::`` inline changelogs in relevant docstrings."
 msgstr ""
 
 #: ../../../CONTRIBUTING.rst:70
@@ -175,7 +174,8 @@ msgid "Upgrade pip and setuptools."
 msgstr ""
 
 #: ../../../CONTRIBUTING.rst:121
-msgid "Install the development dependencies, then install Flask in editable mode."
+msgid ""
+"Install the development dependencies, then install Flask in editable mode."
 msgstr ""
 
 #: ../../../CONTRIBUTING.rst:128
@@ -188,9 +188,9 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:145
 msgid ""
-"Create a branch to identify the issue you would like to work on. If "
-"you're submitting a bug or documentation fix, branch off of the latest "
-"\".x\" branch."
+"Create a branch to identify the issue you would like to work on. If you're"
+" submitting a bug or documentation fix, branch off of the latest \".x\" "
+"branch."
 msgstr ""
 
 #: ../../../CONTRIBUTING.rst:154
@@ -200,7 +200,8 @@ msgid ""
 msgstr ""
 
 #: ../../../CONTRIBUTING.rst:162
-msgid "Using your favorite editor, make your changes, `committing as you go`_."
+msgid ""
+"Using your favorite editor, make your changes, `committing as you go`_."
 msgstr ""
 
 #: ../../../CONTRIBUTING.rst:164
@@ -212,8 +213,7 @@ msgstr ""
 #: ../../../CONTRIBUTING.rst:166
 msgid ""
 "Push your commits to your fork on GitHub and `create a pull request`_. "
-"Link to the issue being addressed with ``fixes #123`` in the pull "
-"request."
+"Link to the issue being addressed with ``fixes #123`` in the pull request."
 msgstr ""
 
 #: ../../../CONTRIBUTING.rst:179
@@ -227,8 +227,8 @@ msgstr ""
 #: ../../../CONTRIBUTING.rst:187
 msgid ""
 "This runs the tests for the current environment, which is usually "
-"sufficient. CI will run the full suite when you submit your pull request."
-" You can run the full test suite with tox if you don't want to wait."
+"sufficient. CI will run the full suite when you submit your pull request. "
+"You can run the full test suite with tox if you don't want to wait."
 msgstr ""
 
 #: ../../../CONTRIBUTING.rst:198
@@ -265,4 +265,3 @@ msgstr ""
 #: ../../../CONTRIBUTING.rst:227
 msgid "Read more about `Sphinx <https://www.sphinx-doc.org/en/stable/>`__."
 msgstr ""
-

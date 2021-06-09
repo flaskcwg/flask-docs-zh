@@ -45,8 +45,8 @@ msgstr ""
 msgid ""
 "Multiple instances.  Imagine you want to run different versions of the "
 "same application.  Of course you could have multiple instances with "
-"different configs set up in your webserver, but if you use factories, you"
-" can have multiple instances of the same application running in the same "
+"different configs set up in your webserver, but if you use factories, you "
+"can have multiple instances of the same application running in the same "
 "application process which can be handy."
 msgstr ""
 
@@ -86,9 +86,8 @@ msgstr ""
 
 #: ../../patterns/appfactories.rst:61
 msgid ""
-"Using `Flask-SQLAlchemy <https://flask-"
-"sqlalchemy.palletsprojects.com/>`_, as an example, you should not do "
-"something along those lines::"
+"Using `Flask-SQLAlchemy <https://flask-sqlalchemy.palletsprojects.com/>`_,"
+" as an example, you should not do something along those lines::"
 msgstr ""
 
 #: ../../patterns/appfactories.rst:70
@@ -101,9 +100,9 @@ msgstr ""
 
 #: ../../patterns/appfactories.rst:83
 msgid ""
-"Using this design pattern, no application-specific state is stored on the"
-" extension object, so one extension object can be used for multiple apps."
-" For more information about the design of extensions refer to "
+"Using this design pattern, no application-specific state is stored on the "
+"extension object, so one extension object can be used for multiple apps. "
+"For more information about the design of extensions refer to "
 ":doc:`/extensiondev`."
 msgstr ""
 
@@ -112,7 +111,8 @@ msgid "Using Applications"
 msgstr ""
 
 #: ../../patterns/appfactories.rst:90
-msgid "To run such an application, you can use the :command:`flask` command:"
+msgid ""
+"To run such an application, you can use the :command:`flask` command:"
 msgstr ""
 
 #: ../../patterns/appfactories.rst:94 ../../patterns/appfactories.rst:120
@@ -146,8 +146,8 @@ msgstr ""
 
 #: ../../patterns/appfactories.rst:147
 msgid ""
-"The factory function above is not very clever, but you can improve it. "
-"The following changes are straightforward to implement:"
+"The factory function above is not very clever, but you can improve it. The"
+" following changes are straightforward to implement:"
 msgstr ""
 
 #: ../../patterns/appfactories.rst:150
@@ -168,4 +168,3 @@ msgid ""
 "Add in WSGI middlewares when the application is being created if "
 "necessary."
 msgstr ""
-

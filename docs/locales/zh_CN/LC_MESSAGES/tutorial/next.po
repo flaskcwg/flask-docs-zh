@@ -23,23 +23,23 @@ msgstr ""
 
 #: ../../tutorial/next.rst:4
 msgid ""
-"You've learned about quite a few Flask and Python concepts throughout the"
-" tutorial. Go back and review the tutorial and compare your code with the"
-" steps you took to get there. Compare your project to the :gh:`example "
-"project <examples/tutorial>`, which might look a bit different due to the"
-" step-by-step nature of the tutorial."
+"You've learned about quite a few Flask and Python concepts throughout the "
+"tutorial. Go back and review the tutorial and compare your code with the "
+"steps you took to get there. Compare your project to the :gh:`example "
+"project <examples/tutorial>`, which might look a bit different due to the "
+"step-by-step nature of the tutorial."
 msgstr ""
 
 #: ../../tutorial/next.rst:10
 msgid ""
-"There's a lot more to Flask than what you've seen so far. Even so, you're"
-" now equipped to start developing your own web applications. Check out "
-"the :doc:`/quickstart` for an overview of what Flask can do, then dive "
-"into the docs to keep learning. Flask uses `Jinja`_, `Click`_, "
-"`Werkzeug`_, and `ItsDangerous`_ behind the scenes, and they all have "
-"their own documentation too. You'll also be interested in "
-":doc:`/extensions` which make tasks like working with the database or "
-"validating form data easier and more powerful."
+"There's a lot more to Flask than what you've seen so far. Even so, you're "
+"now equipped to start developing your own web applications. Check out the "
+":doc:`/quickstart` for an overview of what Flask can do, then dive into "
+"the docs to keep learning. Flask uses `Jinja`_, `Click`_, `Werkzeug`_, and"
+" `ItsDangerous`_ behind the scenes, and they all have their own "
+"documentation too. You'll also be interested in :doc:`/extensions` which "
+"make tasks like working with the database or validating form data easier "
+"and more powerful."
 msgstr ""
 
 #: ../../tutorial/next.rst:19
@@ -89,4 +89,3 @@ msgstr ""
 #: ../../tutorial/next.rst:33
 msgid "Have fun and make awesome applications!"
 msgstr ""
-

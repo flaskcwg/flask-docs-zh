@@ -25,15 +25,15 @@ msgstr ""
 msgid ""
 "The authentication views and templates work, but they look very plain "
 "right now. Some `CSS`_ can be added to add style to the HTML layout you "
-"constructed. The style won't change, so it's a *static* file rather than "
-"a template."
+"constructed. The style won't change, so it's a *static* file rather than a"
+" template."
 msgstr ""
 
 #: ../../tutorial/static.rst:9
 msgid ""
 "Flask automatically adds a ``static`` view that takes a path relative to "
-"the ``flaskr/static`` directory and serves it. The ``base.html`` template"
-" already has a link to the ``style.css`` file:"
+"the ``flaskr/static`` directory and serves it. The ``base.html`` template "
+"already has a link to the ``style.css`` file:"
 msgstr ""
 
 #: ../../tutorial/static.rst:17
@@ -46,8 +46,8 @@ msgstr ""
 
 #: ../../tutorial/static.rst:22
 msgid ""
-"This tutorial isn't focused on how to write CSS, so you can just copy the"
-" following into the ``flaskr/static/style.css`` file:"
+"This tutorial isn't focused on how to write CSS, so you can just copy the "
+"following into the ``flaskr/static/style.css`` file:"
 msgstr ""
 
 #: ../../tutorial/static.rst:25
@@ -71,12 +71,11 @@ msgstr ""
 
 #: ../../tutorial/static.rst:66
 msgid ""
-"You can read more about CSS from `Mozilla's documentation <CSS_>`_. If "
-"you change a static file, refresh the browser page. If the change doesn't"
-" show up, try clearing your browser's cache."
+"You can read more about CSS from `Mozilla's documentation <CSS_>`_. If you"
+" change a static file, refresh the browser page. If the change doesn't "
+"show up, try clearing your browser's cache."
 msgstr ""
 
 #: ../../tutorial/static.rst:72
 msgid "Continue to :doc:`blog`."
 msgstr ""
-

@@ -40,17 +40,17 @@ msgstr ""
 
 #: ../../deploying/cgi.rst:13
 msgid ""
-"Please make sure in advance that any ``app.run()`` calls you might have "
-"in your application file are inside an ``if __name__ == '__main__':`` "
-"block or moved to a separate file.  Just make sure it's not called "
-"because this will always start a local WSGI server which we do not want "
-"if we deploy that application to CGI / app engine."
+"Please make sure in advance that any ``app.run()`` calls you might have in"
+" your application file are inside an ``if __name__ == '__main__':`` block "
+"or moved to a separate file.  Just make sure it's not called because this "
+"will always start a local WSGI server which we do not want if we deploy "
+"that application to CGI / app engine."
 msgstr ""
 
 #: ../../deploying/cgi.rst:19
 msgid ""
-"With CGI, you will also have to make sure that your code does not contain"
-" any ``print`` statements, or that ``sys.stdout`` is overridden by "
+"With CGI, you will also have to make sure that your code does not contain "
+"any ``print`` statements, or that ``sys.stdout`` is overridden by "
 "something that doesn't write into the HTTP response."
 msgstr ""
 
@@ -70,13 +70,14 @@ msgstr ""
 
 #: ../../deploying/cgi.rst:38
 msgid ""
-"Usually there are two ways to configure the server.  Either just copy the"
-" ``.cgi`` into a :file:`cgi-bin` (and use `mod_rewrite` or something "
+"Usually there are two ways to configure the server.  Either just copy the "
+"``.cgi`` into a :file:`cgi-bin` (and use `mod_rewrite` or something "
 "similar to rewrite the URL) or let the server point to the file directly."
 msgstr ""
 
 #: ../../deploying/cgi.rst:42
-msgid "In Apache for example you can put something like this into the config:"
+msgid ""
+"In Apache for example you can put something like this into the config:"
 msgstr ""
 
 #: ../../deploying/cgi.rst:48
@@ -90,4 +91,3 @@ msgstr ""
 #: ../../deploying/cgi.rst:59
 msgid "For more information consult the documentation of your webserver."
 msgstr ""
-

@@ -38,14 +38,20 @@ jobs:
           cd docs
           make gettext
           sphinx-intl update -p _build/gettext
-          cd ..
+
+      - name: Check and Commit
+        run: |
+          pip install pre-commit
           git add docs/
+          pre-commit run pofmt
+          git add docs/ src/
           git commit -m "Update po files by GitHub Actions"
 
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
 
       - name: Create issue
         shell: python

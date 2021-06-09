@@ -23,11 +23,11 @@ msgstr ""
 
 #: ../../tutorial/install.rst:4
 msgid ""
-"Making your project installable means that you can build a *distribution*"
-" file and install that in another environment, just like you installed "
-"Flask in your project's environment. This makes deploying your project "
-"the same as installing any other library, so you're using all the "
-"standard Python tools to manage everything."
+"Making your project installable means that you can build a *distribution* "
+"file and install that in another environment, just like you installed "
+"Flask in your project's environment. This makes deploying your project the"
+" same as installing any other library, so you're using all the standard "
+"Python tools to manage everything."
 msgstr ""
 
 #: ../../tutorial/install.rst:10
@@ -45,8 +45,8 @@ msgstr ""
 
 #: ../../tutorial/install.rst:17
 msgid ""
-"You can manage your project's dependencies just like other packages do, "
-"so ``pip install yourproject.whl`` installs them."
+"You can manage your project's dependencies just like other packages do, so"
+" ``pip install yourproject.whl`` installs them."
 msgstr ""
 
 #: ../../tutorial/install.rst:20
@@ -57,8 +57,8 @@ msgstr ""
 
 #: ../../tutorial/install.rst:24
 msgid ""
-"This is being introduced late in the tutorial, but in your future "
-"projects you should always start with this."
+"This is being introduced late in the tutorial, but in your future projects"
+" you should always start with this."
 msgstr ""
 
 #: ../../tutorial/install.rst:29
@@ -67,8 +67,8 @@ msgstr ""
 
 #: ../../tutorial/install.rst:31
 msgid ""
-"The ``setup.py`` file describes your project and the files that belong to"
-" it."
+"The ``setup.py`` file describes your project and the files that belong to "
+"it."
 msgstr ""
 
 #: ../../tutorial/install.rst:34
@@ -79,10 +79,10 @@ msgstr ""
 msgid ""
 "``packages`` tells Python what package directories (and the Python files "
 "they contain) to include. ``find_packages()`` finds these directories "
-"automatically so you don't have to type them out. To include other files,"
-" such as the static and templates directories, ``include_package_data`` "
-"is set. Python needs another file named ``MANIFEST.in`` to tell what this"
-" other data is."
+"automatically so you don't have to type them out. To include other files, "
+"such as the static and templates directories, ``include_package_data`` is "
+"set. Python needs another file named ``MANIFEST.in`` to tell what this "
+"other data is."
 msgstr ""
 
 #: ../../tutorial/install.rst:58
@@ -125,12 +125,11 @@ msgstr ""
 #: ../../tutorial/install.rst:109
 msgid ""
 "Nothing changes from how you've been running your project so far. "
-"``FLASK_APP`` is still set to ``flaskr`` and ``flask run`` still runs the"
-" application, but you can call it from anywhere, not just the ``flask-"
+"``FLASK_APP`` is still set to ``flaskr`` and ``flask run`` still runs the "
+"application, but you can call it from anywhere, not just the ``flask-"
 "tutorial`` directory."
 msgstr ""
 
 #: ../../tutorial/install.rst:114
 msgid "Continue to :doc:`tests`."
 msgstr ""
-

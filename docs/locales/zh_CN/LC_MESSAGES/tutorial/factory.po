@@ -23,27 +23,26 @@ msgstr ""
 
 #: ../../tutorial/factory.rst:6
 msgid ""
-"A Flask application is an instance of the :class:`Flask` class. "
-"Everything about the application, such as configuration and URLs, will be"
-" registered with this class."
+"A Flask application is an instance of the :class:`Flask` class. Everything"
+" about the application, such as configuration and URLs, will be registered"
+" with this class."
 msgstr ""
 
 #: ../../tutorial/factory.rst:10
 msgid ""
-"The most straightforward way to create a Flask application is to create a"
-" global :class:`Flask` instance directly at the top of your code, like "
-"how the \"Hello, World!\" example did on the previous page. While this is"
-" simple and useful in some cases, it can cause some tricky issues as the "
+"The most straightforward way to create a Flask application is to create a "
+"global :class:`Flask` instance directly at the top of your code, like how "
+"the \"Hello, World!\" example did on the previous page. While this is "
+"simple and useful in some cases, it can cause some tricky issues as the "
 "project grows."
 msgstr ""
 
 #: ../../tutorial/factory.rst:16
 msgid ""
-"Instead of creating a :class:`Flask` instance globally, you will create "
-"it inside a function. This function is known as the *application "
-"factory*. Any configuration, registration, and other setup the "
-"application needs will happen inside the function, then the application "
-"will be returned."
+"Instead of creating a :class:`Flask` instance globally, you will create it"
+" inside a function. This function is known as the *application factory*. "
+"Any configuration, registration, and other setup the application needs "
+"will happen inside the function, then the application will be returned."
 msgstr ""
 
 #: ../../tutorial/factory.rst:24
@@ -64,8 +63,8 @@ msgstr ""
 
 #: ../../tutorial/factory.rst:71
 msgid ""
-"``create_app`` is the application factory function. You'll add to it "
-"later in the tutorial, but it already does a lot."
+"``create_app`` is the application factory function. You'll add to it later"
+" in the tutorial, but it already does a lot."
 msgstr ""
 
 #: ../../tutorial/factory.rst:74
@@ -92,15 +91,15 @@ msgstr ""
 
 #: ../../tutorial/factory.rst:88
 msgid ""
-":meth:`app.config.from_mapping() <Config.from_mapping>` sets some default"
-" configuration that the app will use:"
+":meth:`app.config.from_mapping() <Config.from_mapping>` sets some default "
+"configuration that the app will use:"
 msgstr ""
 
 #: ../../tutorial/factory.rst:91
 msgid ""
-":data:`SECRET_KEY` is used by Flask and extensions to keep data safe. "
-"It's set to ``'dev'`` to provide a convenient value during development, "
-"but it should be overridden with a random value when deploying."
+":data:`SECRET_KEY` is used by Flask and extensions to keep data safe. It's"
+" set to ``'dev'`` to provide a convenient value during development, but it"
+" should be overridden with a random value when deploying."
 msgstr ""
 
 #: ../../tutorial/factory.rst:96
@@ -114,9 +113,9 @@ msgstr ""
 #: ../../tutorial/factory.rst:102
 msgid ""
 ":meth:`app.config.from_pyfile() <Config.from_pyfile>` overrides the "
-"default configuration with values taken from the ``config.py`` file in "
-"the instance folder if it exists. For example, when deploying, this can "
-"be used to set a real ``SECRET_KEY``."
+"default configuration with values taken from the ``config.py`` file in the"
+" instance folder if it exists. For example, when deploying, this can be "
+"used to set a real ``SECRET_KEY``."
 msgstr ""
 
 #: ../../tutorial/factory.rst:107
@@ -131,8 +130,8 @@ msgstr ""
 msgid ""
 ":func:`os.makedirs` ensures that :attr:`app.instance_path "
 "<Flask.instance_path>` exists. Flask doesn't create the instance folder "
-"automatically, but it needs to be created because your project will "
-"create the SQLite database file there."
+"automatically, but it needs to be created because your project will create"
+" the SQLite database file there."
 msgstr ""
 
 #: ../../tutorial/factory.rst:118
@@ -158,8 +157,8 @@ msgstr ""
 #: ../../tutorial/factory.rst:133
 msgid ""
 "Development mode shows an interactive debugger whenever a page raises an "
-"exception, and restarts the server whenever you make changes to the code."
-" You can leave it running and just reload the browser page as you follow "
+"exception, and restarts the server whenever you make changes to the code. "
+"You can leave it running and just reload the browser page as you follow "
 "the tutorial."
 msgstr ""
 
@@ -182,11 +181,10 @@ msgstr ""
 #: ../../tutorial/factory.rst:176
 msgid ""
 "Visit http://127.0.0.1:5000/hello in a browser and you should see the "
-"\"Hello, World!\" message. Congratulations, you're now running your Flask"
-" web application!"
+"\"Hello, World!\" message. Congratulations, you're now running your Flask "
+"web application!"
 msgstr ""
 
 #: ../../tutorial/factory.rst:180
 msgid "Continue to :doc:`database`."
 msgstr ""
-

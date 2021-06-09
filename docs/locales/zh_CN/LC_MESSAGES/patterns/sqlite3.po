@@ -35,11 +35,10 @@ msgstr ""
 #: ../../patterns/sqlite3.rst:27
 msgid ""
 "Now, to use the database, the application must either have an active "
-"application context (which is always true if there is a request in "
-"flight) or create an application context itself.  At that point the "
-"``get_db`` function can be used to get the current database connection.  "
-"Whenever the context is destroyed the database connection will be "
-"terminated."
+"application context (which is always true if there is a request in flight)"
+" or create an application context itself.  At that point the ``get_db`` "
+"function can be used to get the current database connection.  Whenever the"
+" context is destroyed the database connection will be terminated."
 msgstr ""
 
 #: ../../patterns/sqlite3.rst:33
@@ -55,10 +54,10 @@ msgstr ""
 
 #: ../../patterns/sqlite3.rst:47
 msgid ""
-"Please keep in mind that the teardown request and appcontext functions "
-"are always executed, even if a before-request handler failed or was never"
-" executed.  Because of this we have to make sure here that the database "
-"is there before we close it."
+"Please keep in mind that the teardown request and appcontext functions are"
+" always executed, even if a before-request handler failed or was never "
+"executed.  Because of this we have to make sure here that the database is "
+"there before we close it."
 msgstr ""
 
 #: ../../patterns/sqlite3.rst:53
@@ -68,9 +67,9 @@ msgstr ""
 #: ../../patterns/sqlite3.rst:55
 msgid ""
 "The upside of this approach (connecting on first use) is that this will "
-"only open the connection if truly necessary.  If you want to use this "
-"code outside a request context you can use it in a Python shell by "
-"opening the application context by hand::"
+"only open the connection if truly necessary.  If you want to use this code"
+" outside a request context you can use it in a Python shell by opening the"
+" application context by hand::"
 msgstr ""
 
 #: ../../patterns/sqlite3.rst:65
@@ -79,41 +78,40 @@ msgstr ""
 
 #: ../../patterns/sqlite3.rst:67
 msgid ""
-"Now in each request handling function you can access `get_db()` to get "
-"the current open database connection.  To simplify working with SQLite, a"
-" row factory function is useful.  It is executed for every result "
-"returned from the database to convert the result.  For instance, in order"
-" to get dictionaries instead of tuples, this could be inserted into the "
-"``get_db`` function we created above::"
+"Now in each request handling function you can access `get_db()` to get the"
+" current open database connection.  To simplify working with SQLite, a row"
+" factory function is useful.  It is executed for every result returned "
+"from the database to convert the result.  For instance, in order to get "
+"dictionaries instead of tuples, this could be inserted into the ``get_db``"
+" function we created above::"
 msgstr ""
 
 #: ../../patterns/sqlite3.rst:80
 msgid ""
 "This will make the sqlite3 module return dicts for this database "
-"connection, which are much nicer to deal with. Even more simply, we could"
-" place this in ``get_db`` instead::"
+"connection, which are much nicer to deal with. Even more simply, we could "
+"place this in ``get_db`` instead::"
 msgstr ""
 
 #: ../../patterns/sqlite3.rst:84
 msgid ""
 "This would use Row objects rather than dicts to return the results of "
-"queries. These are ``namedtuple`` s, so we can access them either by "
-"index or by key. For example, assuming we have a ``sqlite3.Row`` called "
-"``r`` for the rows ``id``, ``FirstName``, ``LastName``, and "
-"``MiddleInitial``::"
+"queries. These are ``namedtuple`` s, so we can access them either by index"
+" or by key. For example, assuming we have a ``sqlite3.Row`` called ``r`` "
+"for the rows ``id``, ``FirstName``, ``LastName``, and ``MiddleInitial``::"
 msgstr ""
 
 #: ../../patterns/sqlite3.rst:100
 msgid ""
-"Additionally, it is a good idea to provide a query function that combines"
-" getting the cursor, executing and fetching the results::"
+"Additionally, it is a good idea to provide a query function that combines "
+"getting the cursor, executing and fetching the results::"
 msgstr ""
 
 #: ../../patterns/sqlite3.rst:109
 msgid ""
 "This handy little function, in combination with a row factory, makes "
-"working with the database much more pleasant than it is by just using the"
-" raw cursor and connection objects."
+"working with the database much more pleasant than it is by just using the "
+"raw cursor and connection objects."
 msgstr ""
 
 #: ../../patterns/sqlite3.rst:113
@@ -127,9 +125,9 @@ msgstr ""
 #: ../../patterns/sqlite3.rst:127
 msgid ""
 "To pass variable parts to the SQL statement, use a question mark in the "
-"statement and pass in the arguments as a list.  Never directly add them "
-"to the SQL statement with string formatting because this makes it "
-"possible to attack the application using `SQL Injections "
+"statement and pass in the arguments as a list.  Never directly add them to"
+" the SQL statement with string formatting because this makes it possible "
+"to attack the application using `SQL Injections "
 "<https://en.wikipedia.org/wiki/SQL_injection>`_."
 msgstr ""
 
@@ -140,12 +138,11 @@ msgstr ""
 #: ../../patterns/sqlite3.rst:136
 msgid ""
 "Relational databases need schemas, so applications often ship a "
-"`schema.sql` file that creates the database.  It's a good idea to provide"
-" a function that creates the database based on that schema.  This "
-"function can do that for you::"
+"`schema.sql` file that creates the database.  It's a good idea to provide "
+"a function that creates the database based on that schema.  This function "
+"can do that for you::"
 msgstr ""
 
 #: ../../patterns/sqlite3.rst:148
 msgid "You can then create such a database from the Python shell:"
 msgstr ""
-

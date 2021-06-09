@@ -24,8 +24,8 @@ msgstr ""
 #: ../../patterns/mongoengine.rst:4
 msgid ""
 "Using a document database like MongoDB is a common alternative to "
-"relational SQL databases. This pattern shows how to use `MongoEngine`_, a"
-" document mapper library, to integrate with MongoDB."
+"relational SQL databases. This pattern shows how to use `MongoEngine`_, a "
+"document mapper library, to integrate with MongoDB."
 msgstr ""
 
 #: ../../patterns/mongoengine.rst:8
@@ -38,8 +38,8 @@ msgstr ""
 
 #: ../../patterns/mongoengine.rst:19
 msgid ""
-"Basic setup can be done by defining ``MONGODB_SETTINGS`` on "
-"``app.config`` and creating a ``MongoEngine`` instance. ::"
+"Basic setup can be done by defining ``MONGODB_SETTINGS`` on ``app.config``"
+" and creating a ``MongoEngine`` instance. ::"
 msgstr ""
 
 #: ../../patterns/mongoengine.rst:33
@@ -54,9 +54,9 @@ msgstr ""
 
 #: ../../patterns/mongoengine.rst:47
 msgid ""
-"If the document has nested fields, use ``EmbeddedDocument`` to defined "
-"the fields of the embedded document and ``EmbeddedDocumentField`` to "
-"declare it on the parent document. ::"
+"If the document has nested fields, use ``EmbeddedDocument`` to defined the"
+" fields of the embedded document and ``EmbeddedDocumentField`` to declare "
+"it on the parent document. ::"
 msgstr ""
 
 #: ../../patterns/mongoengine.rst:62
@@ -65,9 +65,9 @@ msgstr ""
 
 #: ../../patterns/mongoengine.rst:64
 msgid ""
-"Instantiate your document class with keyword arguments for the fields. "
-"You can also assign values to the field attributes after instantiation. "
-"Then call ``doc.save()``. ::"
+"Instantiate your document class with keyword arguments for the fields. You"
+" can also assign values to the field attributes after instantiation. Then "
+"call ``doc.save()``. ::"
 msgstr ""
 
 #: ../../patterns/mongoengine.rst:78
@@ -100,7 +100,6 @@ msgstr ""
 
 #: ../../patterns/mongoengine.rst:102
 msgid ""
-"Flask-MongoEngine adds helpful utilities on top of MongoEngine. Check out"
-" their `documentation <Flask-MongoEngine_>`_ as well."
+"Flask-MongoEngine adds helpful utilities on top of MongoEngine. Check out "
+"their `documentation <Flask-MongoEngine_>`_ as well."
 msgstr ""
-

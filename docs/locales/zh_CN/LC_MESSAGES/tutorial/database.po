@@ -31,11 +31,10 @@ msgstr ""
 #: ../../tutorial/database.rst:10
 msgid ""
 "SQLite is convenient because it doesn't require setting up a separate "
-"database server and is built-in to Python. However, if concurrent "
-"requests try to write to the database at the same time, they will slow "
-"down as each write happens sequentially. Small applications won't notice "
-"this. Once you become big, you may want to switch to a different "
-"database."
+"database server and is built-in to Python. However, if concurrent requests"
+" try to write to the database at the same time, they will slow down as "
+"each write happens sequentially. Small applications won't notice this. "
+"Once you become big, you may want to switch to a different database."
 msgstr ""
 
 #: ../../tutorial/database.rst:17
@@ -50,8 +49,8 @@ msgstr ""
 
 #: ../../tutorial/database.rst:27
 msgid ""
-"The first thing to do when working with a SQLite database (and most other"
-" Python database libraries) is to create a connection to it. Any queries "
+"The first thing to do when working with a SQLite database (and most other "
+"Python database libraries) is to create a connection to it. Any queries "
 "and operations are performed using the connection, which is closed after "
 "the work is finished."
 msgstr ""
@@ -70,8 +69,8 @@ msgstr ""
 
 #: ../../tutorial/database.rst:63
 msgid ""
-":data:`g` is a special object that is unique for each request. It is used"
-" to store data that might be accessed by multiple functions during the "
+":data:`g` is a special object that is unique for each request. It is used "
+"to store data that might be accessed by multiple functions during the "
 "request. The connection is stored and reused instead of creating a new "
 "connection if ``get_db`` is called a second time in the same request."
 msgstr ""
@@ -87,15 +86,15 @@ msgstr ""
 
 #: ../../tutorial/database.rst:75
 msgid ""
-":func:`sqlite3.connect` establishes a connection to the file pointed at "
-"by the ``DATABASE`` configuration key. This file doesn't have to exist "
-"yet, and won't until you initialize the database later."
+":func:`sqlite3.connect` establishes a connection to the file pointed at by"
+" the ``DATABASE`` configuration key. This file doesn't have to exist yet, "
+"and won't until you initialize the database later."
 msgstr ""
 
 #: ../../tutorial/database.rst:79
 msgid ""
-":class:`sqlite3.Row` tells the connection to return rows that behave like"
-" dicts. This allows accessing the columns by name."
+":class:`sqlite3.Row` tells the connection to return rows that behave like "
+"dicts. This allows accessing the columns by name."
 msgstr ""
 
 #: ../../tutorial/database.rst:82
@@ -113,9 +112,9 @@ msgstr ""
 #: ../../tutorial/database.rst:91
 msgid ""
 "In SQLite, data is stored in *tables* and *columns*. These need to be "
-"created before you can store and retrieve data. Flaskr will store users "
-"in the ``user`` table, and posts in the ``post`` table. Create a file "
-"with the SQL commands needed to create empty tables:"
+"created before you can store and retrieve data. Flaskr will store users in"
+" the ``user`` table, and posts in the ``post`` table. Create a file with "
+"the SQL commands needed to create empty tables:"
 msgstr ""
 
 #: ../../tutorial/database.rst:96
@@ -124,17 +123,17 @@ msgstr ""
 
 #: ../../tutorial/database.rst:117
 msgid ""
-"Add the Python functions that will run these SQL commands to the "
-"``db.py`` file:"
+"Add the Python functions that will run these SQL commands to the ``db.py``"
+" file:"
 msgstr ""
 
 #: ../../tutorial/database.rst:137
 msgid ""
-":meth:`open_resource() <Flask.open_resource>` opens a file relative to "
-"the ``flaskr`` package, which is useful since you won't necessarily know "
+":meth:`open_resource() <Flask.open_resource>` opens a file relative to the"
+" ``flaskr`` package, which is useful since you won't necessarily know "
 "where that location is when deploying the application later. ``get_db`` "
-"returns a database connection, which is used to execute the commands read"
-" from the file."
+"returns a database connection, which is used to execute the commands read "
+"from the file."
 msgstr ""
 
 #: ../../tutorial/database.rst:143
@@ -152,27 +151,27 @@ msgstr ""
 msgid ""
 "The ``close_db`` and ``init_db_command`` functions need to be registered "
 "with the application instance; otherwise, they won't be used by the "
-"application. However, since you're using a factory function, that "
-"instance isn't available when writing the functions. Instead, write a "
-"function that takes an application and does the registration."
+"application. However, since you're using a factory function, that instance"
+" isn't available when writing the functions. Instead, write a function "
+"that takes an application and does the registration."
 msgstr ""
 
 #: ../../tutorial/database.rst:164
 msgid ""
-":meth:`app.teardown_appcontext() <Flask.teardown_appcontext>` tells Flask"
-" to call that function when cleaning up after returning the response."
+":meth:`app.teardown_appcontext() <Flask.teardown_appcontext>` tells Flask "
+"to call that function when cleaning up after returning the response."
 msgstr ""
 
 #: ../../tutorial/database.rst:168
 msgid ""
-":meth:`app.cli.add_command() <click.Group.add_command>` adds a new "
-"command that can be called with the ``flask`` command."
+":meth:`app.cli.add_command() <click.Group.add_command>` adds a new command"
+" that can be called with the ``flask`` command."
 msgstr ""
 
 #: ../../tutorial/database.rst:171
 msgid ""
-"Import and call this function from the factory. Place the new code at the"
-" end of the factory function before returning the app."
+"Import and call this function from the factory. Place the new code at the "
+"end of the factory function before returning the app."
 msgstr ""
 
 #: ../../tutorial/database.rst:174
@@ -192,9 +191,9 @@ msgstr ""
 
 #: ../../tutorial/database.rst:196
 msgid ""
-"If you're still running the server from the previous page, you can either"
-" stop the server, or run this command in a new terminal. If you use a new"
-" terminal, remember to change to your project directory and activate the "
+"If you're still running the server from the previous page, you can either "
+"stop the server, or run this command in a new terminal. If you use a new "
+"terminal, remember to change to your project directory and activate the "
 "env as described in :doc:`/installation`. You'll also need to set "
 "``FLASK_APP`` and ``FLASK_ENV`` as shown on the previous page."
 msgstr ""
@@ -212,4 +211,3 @@ msgstr ""
 #: ../../tutorial/database.rst:213
 msgid "Continue to :doc:`views`."
 msgstr ""
-
