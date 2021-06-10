@@ -38,7 +38,7 @@
 - [ ] config [@guiqiqi](https://github.com/guiqiqi) Doge-GUI
 - [ ] contributing [@greyli](https://github.com/greyli) Grey Li
 - [ ] debugging
-- [ ] design
+- [ ] design [@shutaG](https://github.com/shutaG) shutaG
 - [ ] errorhandling [@qiufengyu](https://github.com/qiufengyu) Fengyu
 - [ ] extensiondev
 - [ ] extensions
@@ -55,7 +55,7 @@
 - [ ] signals
 - [ ] templating
 - [ ] testing
-- [ ] views
+- [ ] views [@labike](https://github.com/labike) labike
 
 
 ### docs/tutorial/ (reserved)
