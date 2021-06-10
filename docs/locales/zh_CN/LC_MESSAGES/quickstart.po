@@ -1028,4 +1028,3 @@ msgstr ""
 #: ../../quickstart.rst:938
 msgid "Ready to deploy your new Flask app? See :doc:`deploying/index`."
 msgstr ""
-

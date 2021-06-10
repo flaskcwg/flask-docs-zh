@@ -150,4 +150,3 @@ msgstr ""
 #: ../../shell.rst:99
 msgid "Just put them into a module (like `shelltools`) and import from there:"
 msgstr ""
-
