@@ -99,4 +99,3 @@ msgid ""
 " curious about the Flask design principles, head over to the section "
 "about :doc:`design`."
 msgstr ""
-

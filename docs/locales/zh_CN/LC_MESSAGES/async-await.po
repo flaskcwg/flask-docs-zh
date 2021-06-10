@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-30 19:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: rosekc <rose-kc@hotmail.com>\n"
 "Language-Team: zh_CN <withlihui@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../async-await.rst:4
 msgid "Using ``async`` and ``await``"
-msgstr ""
+msgstr "使用 ``async`` 和 ``await``"
 
 #: ../../async-await.rst:8
 msgid ""
@@ -29,10 +29,14 @@ msgid ""
 "where ``contextvars.ContextVar`` is available. This allows views to be "
 "defined with ``async def`` and use ``await``."
 msgstr ""
+"只要在安装 Flask 时加上 ``async`` 额外依赖（``pip install flask[async]``），"
+"包括路由、错误处理、请求前、请求后以及清理（teardown）的函数都可以使用协程函数。"
+"这需要 Python 3.7+ 的环境，以提供 ``contextvars.ContextVar`` 的支持。"
+"这允许视图函数使用 ``async def`` 定义，以及使用 ``await``。"
 
 #: ../../async-await.rst:21
 msgid "Using ``async`` on Windows on Python 3.8"
-msgstr ""
+msgstr "在 Windows，Python 3.8 环境下使用 ``async``"
 
 #: ../../async-await.rst:23
 msgid ""
@@ -40,10 +44,13 @@ msgid ""
 "something like ``ValueError: set_wakeup_fd only works in main thread``, "
 "please upgrade to Python 3.9."
 msgstr ""
+"在 Windows，Python 3.8 环境下存在一个与 asyncio 相关的 bug。如果遇到"
+"类似 ``ValueError: set_wakeup_fd only works in main thread`` 的信息，"
+"请升级到 Python 3.9。"
 
 #: ../../async-await.rst:29
 msgid "Performance"
-msgstr ""
+msgstr "性能"
 
 #: ../../async-await.rst:31
 msgid ""
@@ -52,6 +59,9 @@ msgid ""
 " request comes in to an async view, Flask will start an event loop in a "
 "thread, run the view function there, then return the result."
 msgstr ""
+"异步函数需要一个事件循环来执行。作为一个 WSGI 应用，Flask 使用一个线程去处理"
+"请求/响应循环。当请求进入一个异步视图函数时，Flask 将在一个线程中启动一个事件"
+"循环，在这个事件循环中执行视图函数，然后返回结果。"
 
 #: ../../async-await.rst:36
 msgid ""
@@ -61,6 +71,9 @@ msgid ""
 "etc. However, the number of requests your application can handle at one "
 "time will remain the same."
 msgstr ""
+"即使使用异步视图函数，每一个请求依然与一个线程绑定在一起。这样设计的好处是让"
+"视图函数中可以执行异步代码，例如多个并行的数据库查询，HTTP 请求外部 API 等等。"
+"然而，同一时间应用本身能接受的请求数量不会改变。"
 
 #: ../../async-await.rst:42
 msgid ""
@@ -70,10 +83,13 @@ msgid ""
 "most use cases, but Flask's async support enables writing and using code "
 "that wasn't possible natively before."
 msgstr ""
+"**异步并不一定比同步代码快。** 异步的优势是在 IO 密集任务上，但是在 CPU 密集任务上"
+"则不然。传统的 Flask 视图函数在大多数情况下是合适的选择，而 Flask 对异步的支持让"
+"运行和使用协程代码成为可能，这是以前原生环境无法做到的。"
 
 #: ../../async-await.rst:50
 msgid "Background tasks"
-msgstr ""
+msgstr "后台任务"
 
 #: ../../async-await.rst:52
 msgid ""
@@ -83,6 +99,9 @@ msgid ""
 "cancelled. Therefore you cannot spawn background tasks, for example via "
 "``asyncio.create_task``."
 msgstr ""
+"异步函数在其执行完成前，都一个事件循环中运行。当异步函数完成时，事件循环也将停止。"
+"这意味着异步函数完成的时候，所有尚未完成的其他衍生任务都将被取消。因此，不能使用"
+"类似 ``asyncio.create_task`` 的方法来创建后台任务。"
 
 #: ../../async-await.rst:58
 msgid ""
@@ -93,10 +112,14 @@ msgid ""
 ":ref:`asgi`. This works as the adapter creates an event loop that runs "
 "continually."
 msgstr ""
+"要使用后台任务，最好的方法就是使用任务队列去激活后台任务，而不是在视图函数中"
+"创建。考虑到这点，使用 ASGI 服务器来为 Flask 提供服务来创建后台任务，然后如"
+" :ref:`asgi` 提到的使用 asgiref 中的 WsgiToAsgi 适配器。这起作用是因为"
+"适配器创建了一个持续运行的事件循环。"
 
 #: ../../async-await.rst:67
 msgid "When to use Quart instead"
-msgstr ""
+msgstr "何时使用 Quart 作为替代品"
 
 #: ../../async-await.rst:69
 msgid ""
@@ -107,6 +130,10 @@ msgid ""
 "handle many concurrent requests, long running requests, and websockets "
 "without requiring multiple worker processes or threads."
 msgstr ""
+"基于实现上的不同，Flask 的异步支持的性能比异步优先的框架会稍低。如果已经拥有"
+"一个以异步为主的代码库，考虑使用 `Quart`_ 会更合理。Quart 是一个基于 `ASGI`_ "
+"的 Flask 重新实现版本（而 Flask 是基于 WSGI 的）。这让多并行请求，长时间运行"
+"的请求，以及 websockets 编程不再需要多个工作进程或线程。"
 
 #: ../../async-await.rst:76
 msgid ""
@@ -117,10 +144,14 @@ msgid ""
 "whether you should use Flask, Quart, or something else is ultimately up "
 "to understanding the specific needs of your project."
 msgstr ""
+"其实当前已经可以使用 Gevent 或 Eventlet 运行 Flask 来获得异步请求处理的好处。"
+"这些库通过为底层 Python 库打补丁的方式实现，而 ``async``/``await`` 与 ASGI"
+"使用了现代标准 Python 的特性。决定是否应使用 Flask，Quart 或其他工具最终取决于"
+"对项目的具体需求的理解。"
 
 #: ../../async-await.rst:88
 msgid "Extensions"
-msgstr ""
+msgstr "扩展"
 
 #: ../../async-await.rst:90
 msgid ""
@@ -131,6 +162,10 @@ msgid ""
 "awaitable either and will probably be blocking if called within an async "
 "view."
 msgstr ""
+"Flask 扩展系统的实现先于 Flask 异步支持，所以并不会假设视图函数是异步的。如果扩展"
+"提供了对视图函数的有附加功能的装饰器，这些装饰器因为不会异步等待（await）函数运行或者不是"
+"异步可等待（awaitable）的，在异步视图函数上可能不能正常运行。扩展提供的其他函数或许"
+"同样不是异步可等待的，在异步视图函数中调用的时候大概率会阻塞。"
 
 #: ../../async-await.rst:96
 msgid ""
@@ -139,16 +174,19 @@ msgid ""
 "provides a view function decorator add ``ensure_sync`` before calling the"
 " decorated function,"
 msgstr ""
+"扩展作者可以通过使用 :meth:`flask.Flask.ensure_sync` 方法来支持异步函数。"
+"举例来说，如果扩展提供了一个视图函数装饰器，使用 ``ensure_sync`` 调用被包裹的函数。"
 
 #: ../../async-await.rst:111
 msgid ""
 "Check the changelog of the extension you want to use to see if they've "
 "implemented async support, or make a feature request or PR to them."
 msgstr ""
+"检查扩展的更新记录，查看是否实现了异步支持。如果没有可以向他们提交 PR。"
 
 #: ../../async-await.rst:116
 msgid "Other event loops"
-msgstr ""
+msgstr "其他事件循环"
 
 #: ../../async-await.rst:118
 msgid ""
@@ -156,6 +194,8 @@ msgid ""
 "override :meth:`flask.Flask.ensure_sync` to change how async functions "
 "are wrapped to use a different library."
 msgstr ""
+"当前 Flask 只支持 :mod:`asyncio`。通过覆写 :meth:`flask.Flask.ensure_sync` "
+"来修改包裹异步函数的实现，以使用其他的库。"
 
 #~ msgid ""
 #~ "Routes, error handlers, before request, "
@@ -166,4 +206,3 @@ msgstr ""
 #~ " allows views to be defined with "
 #~ "``async def`` and use ``await``."
 #~ msgstr ""
-

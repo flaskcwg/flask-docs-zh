@@ -102,4 +102,3 @@ msgid ""
 "it no longer has to check if the URL is really interested in a "
 "``'lang_code'`` parameter::"
 msgstr ""
-

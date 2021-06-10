@@ -71,4 +71,3 @@ msgid ""
 " tag must be the first tag in the template.  To render the contents of a "
 "block defined in the parent template, use ``{{ super() }}``."
 msgstr ""
-

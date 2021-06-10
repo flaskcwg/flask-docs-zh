@@ -153,4 +153,3 @@ msgid ""
 "blueprint.  For a gentle introduction into this topic refer to the "
 ":doc:`/blueprints` chapter of the documentation."
 msgstr ""
-
