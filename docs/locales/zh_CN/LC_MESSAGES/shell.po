@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2010 Pallets
 # This file is distributed under the same license as the Flask package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# FIRST LTakamori <fluent_python@qq.com>, 2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Flask 2.1.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-25 19:31+0800\n"
-"PO-Revision-Date: 2021-05-28 21:55+0800\n"
+"PO-Revision-Date: 2021-06-12 13:42+0800\n"
 "Language-Team: zh_CN <withlihui@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Generated-By: Babel 2.9.1\n"
 "Last-Translator: LTakamori <fluent_python@qq.com>\n"
 "Language: zh_CN\n"
-"X-Generator: Poedit 2.4.3\n"
+"X-Generator: Poedit 3.0\n"
 
 #: ../../shell.rst:2
 msgid "Working with the Shell"
@@ -31,8 +31,8 @@ msgid ""
 "just import your application and start playing around."
 msgstr ""
 "人们喜爱 Python 的原因之一就是它交互式的 shell。它基本上允许你实时地执行 "
-"Python 指令并立即获得反馈结果。 Flask 本身并没有附带一个交互式的 shell，因"
-"为它并不需要任何具体的前置条件，你只需要导入你的程序就可以愉快地玩耍了。"
+"Python 指令并立即获得反馈结果。 Flask 本身并没有附带一个交互式的 shell，因为"
+"它并不需要任何具体的前置条件，你只需要导入你的程序就可以愉快地玩耍了。"
 
 #: ../../shell.rst:12
 msgid ""
@@ -43,10 +43,10 @@ msgid ""
 "available.  But the code you want to test might depend on them, so what can "
 "you do?"
 msgstr ""
-"不过依然存在一些便利的辅助工具，它们使得你使用 shell 的体验更加愉快。交互"
-"式的控制台中的主要问题是你不能像浏览器一样触发一个请求，即无法使用说  :data:"
-"`~flask.g` ， :data:`~flask.request` 等对象。但假如你写的代码依赖"
-"它们来进行调试，那么你应该怎么做呢？"
+"不过依然存在一些便利的辅助工具，它们使得你使用 shell 的体验更加愉快。交互式"
+"的控制台中的主要问题是你不能像浏览器一样触发一个请求，即无法使用 :data:"
+"`~flask.g`，:data:`~flask.request` 等对象。但假如你写的代码依赖它们来进行调"
+"试，那么你应该怎么做呢？"
 
 #: ../../shell.rst:19
 msgid ""
@@ -62,7 +62,7 @@ msgstr ""
 msgid ""
 "Generally it's recommended that you read the :doc:`reqcontext` chapter of "
 "the documentation first."
-msgstr "通常情况下建议先阅读  :doc:`reqcontext` 这一章节。"
+msgstr "通常情况下建议先阅读 :doc:`reqcontext` 这一章节。"
 
 #: ../../shell.rst:28
 msgid "Command Line Interface"
@@ -80,7 +80,7 @@ msgstr ""
 
 #: ../../shell.rst:35
 msgid "For more information see :doc:`/cli`."
-msgstr "更多信息可以查阅 :doc:`/cli` 。"
+msgstr "更多信息可以查阅 :doc:`/cli`。"
 
 #: ../../shell.rst:38
 msgid "Creating a Request Context"
@@ -92,9 +92,9 @@ msgid ""
 "using the :attr:`~flask.Flask.test_request_context` method which creates us "
 "a :class:`~flask.ctx.RequestContext`:"
 msgstr ""
-"在 shell 中创建一个正确的请求上下文最简单的方法就是使用  :attr:`~flask."
-"Flask.test_request_context` 方法，它能为我们创建一个 :class:`~flask.ctx."
-"RequestContext` :"
+"在 shell 中创建一个正确的请求上下文最简单的方法就是使用 :attr:`~flask.Flask."
+"test_request_context` 方法，它能为我们创建一个 :class:`~flask.ctx."
+"RequestContext`:"
 
 #: ../../shell.rst:46
 msgid ""
@@ -103,7 +103,7 @@ msgid ""
 "RequestContext.push` and :meth:`~flask.ctx.RequestContext.pop` methods by "
 "hand:"
 msgstr ""
-"通常来说你会使用  ``with`` 语句来激活请求对象，不过在 shell 中更方便的做法是"
+"通常来说你会使用 ``with`` 语句来激活请求对象，不过在 shell 中更方便的做法是"
 "手动调用 :meth:`~flask.ctx.RequestContext.push` 和 :meth:`~flask.ctx."
 "RequestContext.pop` 方法："
 
@@ -125,9 +125,9 @@ msgid ""
 "callback or the current user not being stored on the :data:`~flask.g` "
 "object etc."
 msgstr ""
-"仅仅创建请求上下文还不够，你还没有执行请求前的一般会执行的动作。假如在请求前的"
-"钩子中包含了连接数据库的操作，这会导致你的数据库仍不可用，这么做还有可能"
-"导致当前用户没有被存储在 :data:`~flask.g` 中等一系列错误。"
+"仅仅创建请求上下文还不够，你还没有执行请求前的一般会执行的动作。假如在请求前"
+"的钩子中包含了连接数据库的操作，这会导致你的数据库仍不可用，这么做还有可能导"
+"致当前用户没有被存储在 :data:`~flask.g` 中等一系列错误。"
 
 #: ../../shell.rst:67
 msgid ""
@@ -142,8 +142,8 @@ msgid ""
 "Keep in mind that the :meth:`~flask.Flask.preprocess_request` function "
 "might return a response object, in that case just ignore it."
 msgstr ""
-"请记住， :meth:`~flask.Flask.preprocess_request` 函数可能会返回一个响应对"
-"象，但在这种情况下，忽略这个返回值就好了。"
+"请记住，:meth:`~flask.Flask.preprocess_request` 函数可能会返回一个响应对象，"
+"但在这种情况下，忽略这个返回值就好了。"
 
 #: ../../shell.rst:77
 msgid ""
@@ -162,8 +162,8 @@ msgid ""
 "context (such as database connections)."
 msgstr ""
 "注册为 :meth:`~flask.Flask.teardown_request` 的函数会在请求上下文弹出后自动"
-"执行。 所以，在这里释放之前由请求上下文申请的资源（比如数据库连接）"
-"就相当合适了。"
+"执行。所以，在这里释放之前由请求上下文申请的资源（比如数据库连接）就相当合适"
+"了。"
 
 #: ../../shell.rst:92
 msgid "Further Improving the Shell Experience"
@@ -182,4 +182,4 @@ msgstr ""
 
 #: ../../shell.rst:99
 msgid "Just put them into a module (like `shelltools`) and import from there:"
-msgstr "你只需将它们放入一个模块（举个例子 `shelltools` ）并将其导入即可："
+msgstr "你只需将它们放入一个模块（比如 `shelltools`）并将其导入即可："
