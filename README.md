@@ -46,7 +46,7 @@
 - [ ] htmlfaq
 - [x] index [@greyli](https://github.com/greyli) Grey Li
 - [x] installation [@greyli](https://github.com/greyli) Grey Li
-- [x] logging [@FesonX](https://github.com/FesonX) FesonX
+- [ ] logging [@FesonX](https://github.com/FesonX) FesonX
 - [ ] quickstart (reserved)
 - [ ] reqcontext [@rosekc](https://github.com/rosekc) rosekc
 - [ ] security
