@@ -96,4 +96,3 @@ msgid ""
 "This configuration binds the application to ``/yourapplication``.  If you"
 " want to have it in the URL root its a bit simpler::"
 msgstr ""
-

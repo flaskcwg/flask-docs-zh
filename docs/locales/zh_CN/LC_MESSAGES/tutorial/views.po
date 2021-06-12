@@ -292,4 +292,3 @@ msgstr ""
 #: ../../tutorial/views.rst:301
 msgid "Continue to :doc:`templates`."
 msgstr ""
-

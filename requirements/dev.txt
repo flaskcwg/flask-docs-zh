@@ -10,8 +10,6 @@ appdirs==1.4.4
     # via virtualenv
 asgiref==3.3.4
     # via -r requirements/tests.in
-atomicwrites==1.4.0
-    # via pytest
 attrs==21.2.0
     # via pytest
 babel==2.9.1
@@ -30,12 +28,6 @@ click==8.0.1
     # via
     #   pip-tools
     #   sphinx-intl
-colorama==0.4.4
-    # via
-    #   click
-    #   pytest
-    #   sphinx
-    #   tox
 distlib==0.3.1
     # via virtualenv
 docutils==0.16
@@ -82,7 +74,7 @@ pluggy==0.13.1
     # via
     #   pytest
     #   tox
-pre-commit==2.12.1
+pre-commit==2.13.0
     # via -r requirements/dev.in
 py==1.10.0
     # via

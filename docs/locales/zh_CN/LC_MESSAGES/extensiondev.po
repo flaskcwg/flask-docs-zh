@@ -413,4 +413,3 @@ msgid ""
 "``python_requires=\">= 3.6\"`` in ``setup.py`` to indicate supported "
 "versions."
 msgstr ""
-
