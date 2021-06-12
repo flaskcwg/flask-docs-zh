@@ -29,7 +29,7 @@ msgstr "创建一个项目目录并进入："
 msgid ""
 "Then follow the :doc:`installation instructions </installation>` to set "
 "up a Python virtual environment and install Flask for your project."
-msgstr "然后按照 :doc:`安装说明 </installation>` 来设置一个 Python 虚拟环境并安装 Flask。"
+msgstr "然后按照 :doc:`安装说明 </installation>` 来建立一个 Python 虚拟环境并安装 Flask。"
 
 #: ../../tutorial/layout.rst:14
 msgid ""
@@ -90,7 +90,7 @@ msgstr ""
 
 #: ../../tutorial/layout.rst:50
 msgid "Any other project files you might add in the future."
-msgstr "其他任意你未来会添加的项目文件。"
+msgstr "其他未来会添加的项目文件。"
 
 #: ../../tutorial/layout.rst:54
 msgid "By the end, your project layout will look like this:"
@@ -104,7 +104,7 @@ msgid ""
 "write. For example, with git:"
 msgstr ""
 "如果你正在使用版本控制工具，在运行项目时生成的下列文件应该被忽略。也许还会有一些"
-"你使用的编辑器生成的其他文件。一般来说，你可以忽略自动生成的文件。以 git 为例，这"
+"编辑器相关的其他文件。一般来说，应该忽略自动生成的文件。以 git 为例，这"
 "可以通过把文件路径规则写到 ``.gitignore`` 文件实现："
 
 #: ../../tutorial/layout.rst:92
@@ -113,4 +113,4 @@ msgstr "``.gitignore``"
 
 #: ../../tutorial/layout.rst:110
 msgid "Continue to :doc:`factory`."
-msgstr "接下来是 :doc:`factory`。"
+msgstr "继续阅读 :doc:`factory`。"
