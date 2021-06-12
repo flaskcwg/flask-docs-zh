@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../blueprints.rst:2
 msgid "Modular Applications with Blueprints"
-msgstr "使用蓝图的模块化应用"
+msgstr "使用蓝图模块化应用"
 
 #: ../../blueprints.rst:8
 msgid ""
