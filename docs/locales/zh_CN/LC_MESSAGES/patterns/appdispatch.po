@@ -139,4 +139,3 @@ msgid ""
 "falls back to another application if the creator function returns "
 "``None``::"
 msgstr ""
-
