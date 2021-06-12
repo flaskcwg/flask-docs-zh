@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2010 Pallets
 # This file is distributed under the same license as the Flask package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# Grey Li <withlihui@gmail.com>, 2021.
 #
 #, fuzzy
 msgid ""
@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-25 19:31+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Grey Li <withlihui@gmail.com>\n"
 "Language-Team: zh_CN <withlihui@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -19,17 +19,17 @@ msgstr ""
 
 #: ../../tutorial/layout.rst:2
 msgid "Project Layout"
-msgstr ""
+msgstr "项目结构"
 
 #: ../../tutorial/layout.rst:4
 msgid "Create a project directory and enter it:"
-msgstr ""
+msgstr "创建一个项目目录并进入："
 
 #: ../../tutorial/layout.rst:11
 msgid ""
 "Then follow the :doc:`installation instructions </installation>` to set "
 "up a Python virtual environment and install Flask for your project."
-msgstr ""
+msgstr "然后按照 :doc:`安装说明 </installation>` 来建立一个 Python 虚拟环境并安装 Flask。"
 
 #: ../../tutorial/layout.rst:14
 msgid ""
@@ -37,14 +37,16 @@ msgid ""
 "directory from now on. The file names at the top of each code block are "
 "relative to this directory."
 msgstr ""
+"从现在开始，这个教程会假定你一直在 ``flask-tutorial`` 目录下工作。每一个代码块"
+"顶部的文件名都相对于这个目录。"
 
 #: ../../tutorial/layout.rst:20
 msgid "A Flask application can be as simple as a single file."
-msgstr ""
+msgstr "一个 Flask 应用可以简单到只有一个文件。"
 
 #: ../../tutorial/layout.rst:22
 msgid "``hello.py``"
-msgstr ""
+msgstr "``hello.py``"
 
 #: ../../tutorial/layout.rst:34
 msgid ""
@@ -53,42 +55,46 @@ msgid ""
 "into multiple modules that can be imported where needed, and the tutorial"
 " will do this as well."
 msgstr ""
+"然而，当项目变大时，把所有代码都放到一个文件里不太现实。Python 项目使用 *包* 来组织代码，"
+"代码被分别存放到包内不同的模块中，这些模块可以在需要时被导入。这也是这个教程将要采用的方式。"
 
 #: ../../tutorial/layout.rst:39
 msgid "The project directory will contain:"
-msgstr ""
+msgstr "项目目录将会包含："
 
 #: ../../tutorial/layout.rst:41
 msgid "``flaskr/``, a Python package containing your application code and files."
-msgstr ""
+msgstr "``flaskr/``，一个包含你的应用代码和文件的 Python 包。"
 
 #: ../../tutorial/layout.rst:43
 msgid "``tests/``, a directory containing test modules."
-msgstr ""
+msgstr "``tests/``，一个包含测试模块的目录。"
 
 #: ../../tutorial/layout.rst:44
 msgid ""
 "``venv/``, a Python virtual environment where Flask and other "
 "dependencies are installed."
-msgstr ""
+msgstr "``venv/``，一个 Python 虚拟环境文件夹，Flask 和其他依赖会被安装到这里。"
 
 #: ../../tutorial/layout.rst:46
 msgid "Installation files telling Python how to install your project."
-msgstr ""
+msgstr "安装文件，用来告诉 Python 如何安装你的项目。"
 
 #: ../../tutorial/layout.rst:47
 msgid ""
 "Version control config, such as `git`_. You should make a habit of using "
 "some type of version control for all your projects, no matter the size."
 msgstr ""
+"版本控制工具的配置文件，比如 `git`_。你应该养成为所有项目使用某类版本控制"
+"工具的习惯，不管项目大小。"
 
 #: ../../tutorial/layout.rst:50
 msgid "Any other project files you might add in the future."
-msgstr ""
+msgstr "其他未来会添加的项目文件。"
 
 #: ../../tutorial/layout.rst:54
 msgid "By the end, your project layout will look like this:"
-msgstr ""
+msgstr "最后，你的项目结构将会类似这样："
 
 #: ../../tutorial/layout.rst:87
 msgid ""
@@ -97,11 +103,14 @@ msgid ""
 "based on the editor you use. In general, ignore files that you didn't "
 "write. For example, with git:"
 msgstr ""
+"如果你正在使用版本控制工具，在运行项目时生成的下列文件应该被忽略。也许还会有一些"
+"编辑器相关的其他文件。一般来说，应该忽略自动生成的文件。以 git 为例，这"
+"可以通过把文件路径规则写到 ``.gitignore`` 文件实现："
 
 #: ../../tutorial/layout.rst:92
 msgid "``.gitignore``"
-msgstr ""
+msgstr "``.gitignore``"
 
 #: ../../tutorial/layout.rst:110
 msgid "Continue to :doc:`factory`."
-msgstr ""
+msgstr "继续阅读 :doc:`factory`。"
