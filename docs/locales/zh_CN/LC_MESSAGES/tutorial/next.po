@@ -89,4 +89,3 @@ msgstr ""
 #: ../../tutorial/next.rst:33
 msgid "Have fun and make awesome applications!"
 msgstr ""
-

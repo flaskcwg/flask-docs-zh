@@ -105,4 +105,3 @@ msgstr ""
 #: ../../tutorial/layout.rst:110
 msgid "Continue to :doc:`factory`."
 msgstr ""
-

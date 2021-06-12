@@ -380,4 +380,3 @@ msgid ""
 "the command, use its :meth:`~click.BaseCommand.make_context` method. This"
 " is useful for testing complex validation rules and custom types. ::"
 msgstr ""
-

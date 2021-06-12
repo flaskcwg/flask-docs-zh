@@ -212,4 +212,3 @@ msgstr ""
 #: ../../tutorial/database.rst:213
 msgid "Continue to :doc:`views`."
 msgstr ""
-

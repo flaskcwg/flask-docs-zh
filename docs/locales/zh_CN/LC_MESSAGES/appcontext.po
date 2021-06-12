@@ -202,4 +202,3 @@ msgid ""
 "sent: :data:`appcontext_pushed`, :data:`appcontext_tearing_down`, and "
 ":data:`appcontext_popped`."
 msgstr ""
-
