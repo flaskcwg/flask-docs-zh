@@ -35,4 +35,3 @@ msgid ""
 "and then serving the ``asgi_app`` with the asgi server, e.g. using "
 "`Hypercorn <https://gitlab.com/pgjones/hypercorn>`_,"
 msgstr ""
-

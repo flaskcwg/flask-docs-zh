@@ -96,4 +96,3 @@ msgid ""
 "Without the :func:`~flask.stream_with_context` function you would get a "
 ":class:`RuntimeError` at that point."
 msgstr ""
-
