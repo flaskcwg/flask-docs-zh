@@ -173,4 +173,3 @@ msgid ""
 "application demonstrating the code on this page, as well as the same "
 "thing using ``XMLHttpRequest`` and ``fetch``."
 msgstr ""
-

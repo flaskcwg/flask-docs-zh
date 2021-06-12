@@ -567,4 +567,3 @@ msgid ""
 "PyCharm, we can copy that configuration and alter the *Script* argument "
 "to run a different CLI command, e.g. ``flask shell``."
 msgstr ""
-
