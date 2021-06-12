@@ -1,178 +1,45 @@
-# Flask 中文文档
+# The Chinese Translation of Flask Documentation
 
 这里是 Flask 文档中文翻译项目，欢迎参与！
 
-1. 在开始翻译之前，请务必阅读下面的 Contributing Guide 了解贡献流程，然后阅读[这个 Issue](https://github.com/greyli/flask-docs-zh/issues/11) 了解翻译要求，在[这个 Discussion](https://github.com/greyli/flask-docs-zh/discussions/12) 投票选出你认为合适的翻译词汇，在[这个 Discussion](https://github.com/greyli/flask-docs-zh/discussions/32) 投票选出你喜欢的 Logo。
-2. 需要强调的是，完成一章的翻译要提交两个 PR：第一个 PR 在对应的章节条目后添加自己的用户名以认领章节；第二个 PR 翻译对应的 `.po` 文件并勾选完成的章节条目。先认领，再翻译，一次只认领一章。
-3. 不要改动任何 ReStructuredText 标记、变量/类/函数/方法名称、URL 等。
+参与前请完成以下任务：
 
-如果有其他问题和相关想法，请[创建 Discussion](https://github.com/greyli/flask-docs-zh/discussions/new) 发起讨论；如果对翻译流程和项目设置有改进建议，或是发现了翻译错误和笔误，请[创建 Issue](https://github.com/greyli/flask-docs-zh/issues/new) 反馈。
+1. 阅读《[贡献指南](https://github.com/greyli/flask-docs-zh/blob/main/CONTRIBUTING.md)》了解翻译贡献流程。
+2. 阅读《[翻译要求与建议](https://github.com/greyli/flask-docs-zh/issues/11)》了解翻译要求。
+3. 在[这些讨论](https://github.com/greyli/flask-docs-zh/discussions/categories/vote)中分别投票选出你喜欢的中文 logo 字体、中文标语翻译和词汇翻译。
 
-这个项目在后期会转移到 [Flask Community Work Group](https://github.com/flaskcwg) 组织，并链接到 Flask 官方文档作为官方中文翻译。
+**需要强调的是，完成一章的翻译要提交两个 PR：第一个 PR 在对应的章节条目后添加自己的用户名以认领章节（[示例 PR](https://github.com/greyli/flask-docs-zh/pull/45/files)）；第二个 PR 翻译对应的 `.po` 文件并勾选完成的章节条目（[示例 PR](https://github.com/greyli/flask-docs-zh/pull/43/files)）。先认领，再翻译，一次只认领一章。**
 
+除了贡献翻译，也欢迎帮助我们审阅已经[提交的翻译](https://github.com/greyli/flask-docs-zh/pulls?q=is%3Apr+is%3Aopen+label%3A%22awaiting+review%22)，谢谢。
 
-## Contributing Guide
+如果有其他问题和相关想法，请[创建 discussion](https://github.com/greyli/flask-docs-zh/discussions/new) 发起讨论；如果对翻译流程和项目设置有改进建议，或是发现了翻译错误和笔误，请[创建 issue](https://github.com/greyli/flask-docs-zh/issues/new) 反馈。
 
-
-### Installation
-
-- Click the "Fork" button to fork this repository on GitHub.
-- Clone your fork repository locally (replace `{username}` with your username):
-
-```
-$ git clone https://github.com/{username}/flask-docs-zh
-$ cd flask-docs-zh
-$ git remote add upstream https://github.com/greyli/flask-docs-zh
-```
-
-- Create a virtual environment and install requirements:
-
-For Linux/macOS:
-
-```
-$ python3 -m venv env
-$ source env/bin/activate
-$ python -m pip install --upgrade pip setuptools
-$ pip install -r requirements/dev.txt
-$ pip install -e .
-$ pre-commit install
-```
-
-For Windows:
-
-```
-> python -m venv env
-> env\Scripts\activate
-> python -m pip install --upgrade pip setuptools
-> pip install -r .\requirements\dev.txt
-> pip install -e .
-> pre-commit install
-```
+这个项目在后期会转移到 [FlaskCWG](https://github.com/flaskcwg) 组织，并在翻译完成后链接到 Flask 官方文档。
 
 
-### Self-Assignment
+## Reviewers
 
-- Open your fork repository on GitHub.
-- Click the "Fetch upstream" button to update your fork.
-- Click the edit button (a pencil icon in the upper right corner of the README)
-to edit the README.
-- Find the "Translation To-do List" section, mark the chapter you want to
-translate in following format:
-
-```
-- [ ] example @your_username Your Name
-```
-
-You can link the username to your GitHub profile:
-
-```
-- [ ] example [@your_username](https://github.com/your_username) Your Name
-```
-
-- Leave a commit message (e.g., "Assign example to @your_username"), then select
-"Create a new branch for this commit and start a pull request" and click the
-"Commit changes" button to create a PR.
+- Grey Li ([@greyli](https://github.com/greyli))
+- Frost Ming ([@frostming](https://github.com/frostming))
 
 
-### Translation
-
-- When the self-assignment PR is merged, create a new branch locally
-(be sure to update the example branch name, for example, `translate-cli`):
-
-```
-$ git fetch upstream
-$ git checkout -b your-branch-name upstream/main
-```
-
-- Translate the `.po` file in the `docs/locales/zh_CN/LC_MESSAGES` directory.
-
-An example of one such file, from docs/.../index.po, is given below.
-
-```po
-#: ../../index.rst:4
-msgid "Welcome to Flask"
-msgstr "欢迎来到 Flask"
-```
-
-Another case, msgid is multi-line text and contains reStructuredText syntax:
-
-```po
-#: ../../index.rst:11
-msgid ""
-"Welcome to Flask's documentation. Get started with :doc:`installation` "
-"and then get an overview with the :doc:`quickstart`."
-msgstr ""
-"欢迎来到 Flask 的文档。你可以从 :doc:`installation` 入手"
-"然后阅读 :doc:`quickstart` 来了解基本概念。"
-```
-
-Please be careful not to break reST notation. Most
-[po-editors](https://www.gnu.org/software/trans-coord/manual/web-trans/html_node/PO-Editors.html) will help you with that.
-
-- Mark the chapter as finished (fill the checkbox with "x"):
-
-```
-- [x] example @your_username Your Name
-```
-
-- Update the `Last-Translator` field at the top of the `.po` file.
-- Commit the changes:
-
-```
-$ git add docs/locales/zh_CN/LC_MESSAGES/example.po README.md
-$ git commit -m "Translate docs/example"
-```
-
-- Build the docs and preview the changes:
-
-For Linux/macOS:
-
-```
-$ cd docs
-$ make html
-```
-
-For Windows:
-
-```
-> cd docs
-> .\make.bat html
-```
-
-Open `{project_location}/docs/_build/html/index.html` in your browser to view the docs.
-
-- If everything is working as expected, push the changes to GitHub:
-
-```
-$ git push origin your-branch-name
-```
-
-- Open the home page of your forked repository, you will see a notice about
-the new branch. Click the "Compare & pull request" button to create a PR.
-- The translation coordinator will review your PR very soon. Thank you!
-
-
-## Translation To-do List
-
-Be sure only mark one chapter at a time, mark another one when the former
-PR is created. Unless it's a long chapter, we may reset the assignment
-if you doesn't finish the translation in ten days.
+## Translators (Translation To-do List)
 
 
 ### docs/
 
 - [ ] advanced_foreword (reserved)
 - [ ] appcontext [@rosekc](https://github.com/rosekc) rosekc
-- [ ] async-await
+- [ ] async-await [@rosekc](https://github.com/your_username) rosekc
 - [ ] becomingbig
-- [ ] blueprints
+- [x] blueprints [@frostming](https://github.com/frostming) Frost Ming
 - [ ] changes
-- [ ] cli
-- [ ] config
-- [ ] contributing
+- [ ] cli [@andysim3d](https://github.com/andysim3d) Andrew
+- [ ] config [@guiqiqi](https://github.com/guiqiqi) Doge-GUI
+- [ ] contributing [@greyli](https://github.com/greyli) Grey Li
 - [ ] debugging
-- [ ] design
-- [ ] errorhandling
+- [ ] design [@shutaG](https://github.com/shutaG) shutaG
+- [ ] errorhandling [@qiufengyu](https://github.com/qiufengyu) Fengyu
 - [ ] extensiondev
 - [ ] extensions
 - [ ] foreword (reserved)
@@ -181,14 +48,14 @@ if you doesn't finish the translation in ten days.
 - [x] installation [@greyli](https://github.com/greyli) Grey Li
 - [ ] logging
 - [ ] quickstart (reserved)
-- [ ] reqcontext
+- [ ] reqcontext [@rosekc](https://github.com/rosekc) rosekc
 - [ ] security
-- [ ] server
-- [ ] shell
+- [ ] server [@LeeRnnGii](https://github.com/LeeRnnGii) LeeRnnGii
+- [x] shell [@LTakamori](https://github.com/LTakamori) LTakamori
 - [ ] signals
 - [ ] templating
 - [ ] testing
-- [ ] views
+- [ ] views [@labike](https://github.com/labike) labike
 
 
 ### docs/tutorial/ (reserved)
@@ -222,7 +89,7 @@ if you doesn't finish the translation in ten days.
 
 - [ ] appdispatch
 - [ ] appfactories
-- [ ] caching
+- [ ] caching [@pk00749](https://github.com/pk00749) York Li
 - [ ] celery
 - [ ] deferredcallbacks
 - [ ] distribute

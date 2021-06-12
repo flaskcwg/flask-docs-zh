@@ -808,4 +808,3 @@ msgstr ""
 #: ../../config.rst:760
 msgid "Example usage for both::"
 msgstr ""
-
