@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-25 19:31+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: FesonX <fesonx@foxmail.com>\n"
 "Language-Team: zh_CN <withlihui@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../logging.rst:2
 msgid "Logging"
-msgstr ""
+msgstr "日志"
 
 #: ../../logging.rst:4
 msgid ""
@@ -28,16 +28,22 @@ msgid ""
 "which takes the same name as :attr:`app.name <flask.Flask.name>`. This "
 "logger can also be used to log your own messages."
 msgstr ""
+"Flask 使用标准的 Python :mod:`logging` 模块。"
+"与 Flask 应用相关的消息都使用 :meth:`app.logger <flask.Flask.logger>` 记录，"
+"该记录器的名称与 :attr:`app.name <flask.Flask.name>` 相同。"
+"这个日志记录器也可以用于你自己的日志记录。"
 
 #: ../../logging.rst:23
 msgid ""
 "If you don't configure logging, Python's default log level is usually "
 "'warning'. Nothing below the configured level will be visible."
 msgstr ""
+"若不进行日志配置，Python 的默认日志级别通常是 'warning'。"
+"低于你所配置日志级别的消息将不可见。"
 
 #: ../../logging.rst:28
 msgid "Basic Configuration"
-msgstr ""
+msgstr "基本配置"
 
 #: ../../logging.rst:30
 msgid ""
@@ -47,16 +53,22 @@ msgid ""
 "add a default handler. If possible, configure logging before creating the"
 " application object."
 msgstr ""
+"若想为你的项目配置日志，应当在程序启动时尽早进行配置。"
+"如果在日志配置前访问 :meth:`app.logger "
+"<flask.Flask.logger>` 对象，"
+"它会添加一个默认日志处理器。"
+"尽可能在创建应用对象之前配置日志。"
 
 #: ../../logging.rst:35
 msgid ""
 "This example uses :func:`~logging.config.dictConfig` to create a logging "
 "configuration similar to Flask's default, except for all logs::"
 msgstr ""
+"这个例子使用 :func:`~logging.config.dictConfig` 创建与 Flask 类似的默认日志配置::"
 
 #: ../../logging.rst:60
 msgid "Default Configuration"
-msgstr ""
+msgstr "默认配置"
 
 #: ../../logging.rst:62
 msgid ""
@@ -67,10 +79,13 @@ msgid ""
 "(which is usually :data:`sys.stderr`). Outside a request, it will log to "
 ":data:`sys.stderr`."
 msgstr ""
+"若未自行配置日志，Flask 会自动添加一个 :class:`~logging.StreamHandler` 到 :meth:`app.logger <flask.Flask.logger>`。"
+"在请求过程中，它将写入到由 WSGI 服务器指定的、保存在 ``environ['wsgi.errors']`` 中的日志流（这个值通常是 :data:`sys.stderr`）。"
+"请求之外的日志则会记录到 :data:`sys.stderr`。"
 
 #: ../../logging.rst:70
 msgid "Removing the Default Handler"
-msgstr ""
+msgstr "移除默认配置"
 
 #: ../../logging.rst:72
 msgid ""
@@ -78,10 +93,12 @@ msgid ""
 "<flask.Flask.logger>`, and need to remove the default handler, you can "
 "import and remove it::"
 msgstr ""
+"若你在访问 :meth:`app.logger <flask.Flask.logger>` 对象之后进行日志配置，"
+"并且需要移除默认的日志处理器，可以导入后移除它::"
 
 #: ../../logging.rst:82
 msgid "Email Errors to Admins"
-msgstr ""
+msgstr "将错误信息通过电子邮件发送给管理员"
 
 #: ../../logging.rst:84
 msgid ""
@@ -90,6 +107,8 @@ msgid ""
 " will probably send log messages to a file, and you'll only check that "
 "file if a user tells you something went wrong."
 msgstr ""
+"在生产环境中，当应用在远程服务器上运行时，你可能不会经常查看日志消息。"
+"WSGI 服务器可能会将日志消息输出到文件，而你将只在用户告诉你出错时才会查看日志文件。"
 
 #: ../../logging.rst:89
 msgid ""
@@ -97,16 +116,19 @@ msgid ""
 ":class:`logging.handlers.SMTPHandler` to send an email when errors and "
 "higher are logged. ::"
 msgstr ""
+"为了主动发现并修复错误，可以配置一个 :class:`logging.handlers.SMTPHandler`，"
+"当错误或者更高级别的日志被记录下来时就会发送一封电子邮件::"
 
 #: ../../logging.rst:110
 msgid ""
 "This requires that you have an SMTP server set up on the same server. See"
 " the Python docs for more information about configuring the handler."
 msgstr ""
+"这需要你在同一台服务器上搭建一个 SMTP 服务器。关于日志处理器的更多内容请参阅 Python 官方文档。"
 
 #: ../../logging.rst:115
 msgid "Injecting Request Information"
-msgstr ""
+msgstr "注入请求信息"
 
 #: ../../logging.rst:117
 msgid ""
@@ -116,10 +138,13 @@ msgid ""
 "the formatter for Flask's default handler, the mail handler defined "
 "above, or any other handler. ::"
 msgstr ""
+"了解请求的更多信息，例如 IP 地址，可能有助于调试某些错误。"
+"可以继承 :class:`logging.Formatter` 来注入自己的字段内容，用在日志消息上。"
+"然后，可以修改格式器 (Formatter) 用在 Flask 的默认处理器、上文定义的邮件处理器或者其他处理器上::"
 
 #: ../../logging.rst:146
 msgid "Other Libraries"
-msgstr ""
+msgstr "其他库"
 
 #: ../../logging.rst:148
 msgid ""
@@ -127,6 +152,8 @@ msgid ""
 " messages from those logs too. The simplest way to do this is to add "
 "handlers to the root logger instead of only the app logger. ::"
 msgstr ""
+"其他库可能会广泛地使用日志，而你也希望看到与之相关的日志。"
+"最简单的方式是向根日志记录器 (root logger) 添加处理器，而不仅仅是 app 日志记录器::"
 
 #: ../../logging.rst:158
 msgid ""
@@ -134,10 +161,12 @@ msgid ""
 " you care about separately, instead of configuring only the root logger. "
 "::"
 msgstr ""
+"单独为每个你关心的记录器进行配置，可能比只配置根记录器对你更有益，这取决于你的项目。"
+"::"
 
 #: ../../logging.rst:171
 msgid "Werkzeug"
-msgstr ""
+msgstr "Werkzeug"
 
 #: ../../logging.rst:173
 msgid ""
@@ -145,10 +174,12 @@ msgid ""
 "logger. If the root logger has no handlers configured, Werkzeug adds a "
 ":class:`~logging.StreamHandler` to its logger."
 msgstr ""
+"Werkzeug 记录基本的请求、响应信息到 ``'werkzeug'`` 日志记录器。"
+"如果根记录器没有配置任何处理器，Werkzeug 会向记录器添加一个 :class:`~logging.StreamHandler`。"
 
 #: ../../logging.rst:179
 msgid "Flask Extensions"
-msgstr ""
+msgstr "Flask 扩展"
 
 #: ../../logging.rst:181
 msgid ""
@@ -156,3 +187,5 @@ msgid ""
 ":meth:`app.logger <flask.Flask.logger>` or its own named logger. Consult "
 "each extension's documentation for details."
 msgstr ""
+"根据情况不同，扩展可能会选择将日志记录到 :meth:`app.logger <flask.Flask.logger>` 或者自己命名的记录器上。"
+"详情请参阅对应扩展的文档。"
