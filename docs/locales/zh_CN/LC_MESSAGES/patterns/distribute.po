@@ -213,4 +213,3 @@ msgid ""
 "folder instead of copying the data over.  You can then continue to work "
 "on the code without having to run ``install`` again after each change."
 msgstr ""
-

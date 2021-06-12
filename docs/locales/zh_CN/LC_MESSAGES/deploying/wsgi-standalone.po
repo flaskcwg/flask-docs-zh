@@ -156,4 +156,3 @@ msgid ""
 "If you want to rewrite the headers from another header, you might want to"
 " use a fixer like this::"
 msgstr ""
-

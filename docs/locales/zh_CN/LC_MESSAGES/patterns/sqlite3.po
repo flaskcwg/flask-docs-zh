@@ -148,4 +148,3 @@ msgstr ""
 #: ../../patterns/sqlite3.rst:148
 msgid "You can then create such a database from the Python shell:"
 msgstr ""
-
