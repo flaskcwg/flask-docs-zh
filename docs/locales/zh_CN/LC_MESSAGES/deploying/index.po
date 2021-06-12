@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2010 Pallets
 # This file is distributed under the same license as the Flask package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# Jiahua Wang <wjh180909@gmail.com>, 2021.
 #
 #, fuzzy
 msgid ""
@@ -27,9 +27,8 @@ msgid ""
 "suitable for production** as it doesn't scale well.  Some of the options "
 "available for properly running Flask in production are documented here."
 msgstr ""
-"虽然轻便且易于使用，但是 Flask 的内建服务器不适合"
-"用于生产 ，因为它不方便横向扩展。下面列出了一些"
-"在生产环境中正确运行 Flask 的可行方案。"
+"虽然轻便且易于使用，但是 **Flask 的内建服务器不适合用于生产**，因为它不方便横向"
+"扩展。下面列出了一些在生产环境中正确运行 Flask 的可行方案。"
 
 #: ../../deploying/index.rst:8
 msgid ""
@@ -38,10 +37,8 @@ msgid ""
 "it.  Just remember that your :class:`Flask` application object is the "
 "actual WSGI application."
 msgstr ""
-"如果想要把 Flask 应用部署到这里没有列出的 WSGI 服务器，"
-"请查询其文档中关于如何使用 WSGI 的部分，"
-"只要记住： :class:`Flask` 应用对象实质上是"
-"一个 WSGI 应用。"
+"如果想要把 Flask 应用部署到这里没有列出的 WSGI 服务器，请查询其文档中关于如何使
+"用 WSGI 的部分，只要记住：:class:`Flask` 应用对象实质上是一个 WSGI 应用。"
 
 #: ../../deploying/index.rst:15
 msgid "Hosted options"
@@ -86,7 +83,7 @@ msgid ""
 "`Deploying on Azure (IIS) <https://docs.microsoft.com/en-us/azure/app-"
 "service/containers/how-to-configure-python>`_"
 msgstr ""
-"`部署在 Azure (IIS) 上 <https://docs.microsoft.com/en-us/azure/app-"
+"`将 Flask 部署在 Azure (IIS) 上 <https://docs.microsoft.com/en-us/azure/app-"
 "service/containers/how-to-configure-python>`_"
 
 #: ../../deploying/index.rst:22
@@ -94,7 +91,7 @@ msgid ""
 "`Deploying on PythonAnywhere "
 "<https://help.pythonanywhere.com/pages/Flask/>`_"
 msgstr ""
-"`部署在 PythonAnywhere 上 "
+"`将 Flask 部署在 PythonAnywhere 上 "
 "<https://help.pythonanywhere.com/pages/Flask/>`_"
 
 #: ../../deploying/index.rst:25
