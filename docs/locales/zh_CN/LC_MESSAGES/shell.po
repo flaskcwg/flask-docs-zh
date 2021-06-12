@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2010 Pallets
 # This file is distributed under the same license as the Flask package.
-# FIRST LTakamori <fluent_python@qq.com>, 2021.
+# LTakamori <fluent_python@qq.com>, 2021.
 #
 msgid ""
 msgstr ""
