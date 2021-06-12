@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2010 Pallets
 # This file is distributed under the same license as the Flask package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# Grey Li <withlihui@gmail.com>, 2021.
 #
 #, fuzzy
 msgid ""
@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-25 19:31+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Grey Li <withlihui@gmail.com>\n"
 "Language-Team: zh_CN <withlihui@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../foreword.rst:2
 msgid "Foreword"
-msgstr ""
+msgstr "前言"
 
 #: ../../foreword.rst:4
 msgid ""
@@ -27,10 +27,12 @@ msgid ""
 " questions about the purpose and goals of the project, and when you "
 "should or should not be using it."
 msgstr ""
+"在开始学习 Flask 之前请先阅读这个前言。这部分内容有望回答一些关于 Flask 的"
+"目的和目标的问题，以及何时应该或不应该使用它。"
 
 #: ../../foreword.rst:9
 msgid "What does \"micro\" mean?"
-msgstr ""
+msgstr "“微”的含义"
 
 #: ../../foreword.rst:11
 msgid ""
@@ -43,6 +45,11 @@ msgid ""
 "Everything else is up to you, so that Flask can be everything you need "
 "and nothing you don't."
 msgstr ""
+"“微”并不意味着你的整个 web 应用都必须放到单个 Python 文件里（尽管它的确可以），"
+"也不意味着 Flask 功能匮乏。“微框架”中的“微”指的是 Flask 旨在保持核心简单且易于扩展。"
+"Flask 不会做太多决定，比如使用哪一种数据库。而它做的那些决定都非常容易改变，比如"
+"使用哪一种模板引擎。其他的一切都取决于你，所以 Flask 可以成为你需要的一切，而在"
+"你不需要的地方，它什么也不会做。"
 
 #: ../../foreword.rst:19
 msgid ""
@@ -55,10 +62,15 @@ msgid ""
 "and more. Flask may be \"micro\", but it's ready for production use on a "
 "variety of needs."
 msgstr ""
+"默认情况下，Flask 没有内置数据库抽象层、表单验证或其他不同的第三方库可以处理"
+"的功能。相反，Flask 支持使用扩展来给你的应用添加这类功能，在使用体验上就像是"
+"在 Flask 中实现的一样。许多扩展提供了数据库集成、表单验证、文件上传处理、各种"
+"开放认证技术等等。虽然 Flask 是一个“微”框架，但它也适用于在各种需求下的生产环"
+"境中使用。"
 
 #: ../../foreword.rst:28
 msgid "Configuration and Conventions"
-msgstr ""
+msgstr "配置与惯例"
 
 #: ../../foreword.rst:30
 msgid ""
@@ -69,16 +81,22 @@ msgid ""
 "While this can be changed, you usually don't have to, especially when "
 "getting started."
 msgstr ""
+"Flask 提供了很多配置选项，这些配置都有着合理的默认值。另外还有一些约定。比如，"
+"按照约定，模板和静态文件存放在应用的 Python 源码树的子目录中，名称分别为"
+" :file:`templates` 和 :file:`static`。虽然这些可以改变，但是通常不需要这么做，"
+"尤其是刚起步的时候。"
 
 #: ../../foreword.rst:38
 msgid "Growing with Flask"
-msgstr ""
+msgstr "与 Flask 共同成长"
 
 #: ../../foreword.rst:40
 msgid ""
 "Once you have Flask up and running, you'll find a variety of extensions "
 "available in the community to integrate your project for production."
 msgstr ""
+"一旦你的 Flask 应用运行起来了，你会在社区里找到各种各样的扩展可以集成到你的生产"
+"项目中。"
 
 #: ../../foreword.rst:43
 msgid ""
@@ -90,6 +108,10 @@ msgid ""
 "advantage of framework-agnostic tools built for WSGI, the Python web "
 "interface."
 msgstr ""
+"当你的代码规模逐渐增长时，你可以自由地做出适合你的项目的设计决定。Flask 会像 Python"
+"一样继续尽最大可能提供一个非常简单的胶水层。你可以在 SQLAlchemy 或其他数据库工"
+"具中实现进阶模式，合适的时候也可以引入非关系数据持久化，或是利用各种不限定框"
+"架的 WSGI（Python web 接口）工具。"
 
 #: ../../foreword.rst:50
 msgid ""
@@ -99,3 +121,6 @@ msgid ""
 " curious about the Flask design principles, head over to the section "
 "about :doc:`design`."
 msgstr ""
+"Flask 提供了许多钩子（hook）来自定义它的行为。如果你需要进行更多的自定义，``Flask`` 类"
+"非常容易子类化，具体可以参考 :doc:`becomingbig` 一章。如果你对 Flask 的设计理念感到"
+"好奇，请参阅 :doc:`design`。"
