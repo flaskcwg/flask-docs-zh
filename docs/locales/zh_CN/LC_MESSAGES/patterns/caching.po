@@ -16,8 +16,7 @@ msgstr ""
 "Generated-By: Babel 2.9.1\n"
 "Last-Translator: York H X Li <pk00749@163.com>\n"
 "X-Generator: Poedit 2.4.3\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: en_GB\n"
+"Language: zh_CN\n"
 
 #: ../../patterns/caching.rst:2
 msgid "Caching"
