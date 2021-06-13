@@ -21,6 +21,7 @@
 
 - Grey Li ([@greyli](https://github.com/greyli))
 - Frost Ming ([@frostming](https://github.com/frostming))
+- FesonX ([@FesonX](https://github.com/FesonX))
 
 
 ## Translators (Translation To-do List)
