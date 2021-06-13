@@ -80,7 +80,7 @@
 - [ ] cgi
 - [ ] fastcgi
 - [x] index [@180909](https://github.com/180909) 180909
-- [ ] mod_wsgi [@180909](https://github.com/180909) 180909
+- [x] mod_wsgi [@180909](https://github.com/180909) 180909
 - [ ] uwsgi
 - [ ] wsgi-standalone
 
