@@ -21,6 +21,7 @@
 
 - Grey Li ([@greyli](https://github.com/greyli))
 - Frost Ming ([@frostming](https://github.com/frostming))
+- FesonX ([@FesonX](https://github.com/FesonX))
 
 
 ## Translators (Translation To-do List)
@@ -30,7 +31,7 @@
 
 - [ ] advanced_foreword (reserved)
 - [ ] appcontext [@rosekc](https://github.com/rosekc) rosekc
-- [ ] async-await
+- [ ] async-await [@rosekc](https://github.com/your_username) rosekc
 - [ ] becomingbig
 - [x] blueprints [@frostming](https://github.com/frostming) Frost Ming
 - [ ] changes
@@ -38,24 +39,24 @@
 - [ ] config [@guiqiqi](https://github.com/guiqiqi) Doge-GUI
 - [x] contributing [@greyli](https://github.com/greyli) Grey Li
 - [ ] debugging
-- [ ] design
+- [ ] design [@shutaG](https://github.com/shutaG) shutaG
 - [ ] errorhandling [@qiufengyu](https://github.com/qiufengyu) Fengyu
 - [ ] extensiondev
 - [ ] extensions
-- [ ] foreword (reserved)
+- [x] foreword [@greyli](https://github.com/greyli) Grey Li
 - [ ] htmlfaq
 - [x] index [@greyli](https://github.com/greyli) Grey Li
 - [x] installation [@greyli](https://github.com/greyli) Grey Li
-- [ ] logging
+- [ ] logging [@FesonX](https://github.com/FesonX) FesonX
 - [ ] quickstart (reserved)
 - [ ] reqcontext [@rosekc](https://github.com/rosekc) rosekc
-- [ ] security
+- [ ] security [@kylinbin](https://github.com/kylinbin) kylin
 - [ ] server [@LeeRnnGii](https://github.com/LeeRnnGii) LeeRnnGii
-- [ ] shell [@LTakamori](https://github.com/LTakamori) LTakamori
+- [x] shell [@LTakamori](https://github.com/LTakamori) LTakamori
 - [ ] signals
 - [ ] templating
 - [ ] testing
-- [ ] views
+- [ ] views [@labike](https://github.com/labike) labike
 
 
 ### docs/tutorial/ (reserved)
@@ -66,7 +67,7 @@
 - [ ] factory
 - [x] index [@greyli](https://github.com/greyli) Grey Li
 - [ ] install
-- [ ] layout
+- [x] layout [@greyli](https://github.com/greyli) Grey Li
 - [ ] next
 - [ ] static
 - [ ] templates
@@ -79,8 +80,8 @@
 - [ ] asgi
 - [ ] cgi
 - [ ] fastcgi
-- [ ] index [@180909](https://github.com/180909) 180909
-- [ ] mod_wsgi
+- [x] index [@180909](https://github.com/180909) 180909
+- [ ] mod_wsgi [@180909](https://github.com/180909) 180909
 - [ ] uwsgi
 - [ ] wsgi-standalone
 
@@ -105,7 +106,7 @@
 - [ ] packages
 - [ ] requestchecksum
 - [ ] singlepageapplications
-- [ ] sqlalchemy
+- [ ] sqlalchemy [@wnykuang](https://github.com/wnykuang) wkuang
 - [ ] sqlite3
 - [ ] streaming
 - [ ] subclassing

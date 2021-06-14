@@ -63,4 +63,3 @@ msgid ""
 "create your own. Read :doc:`/extensiondev` to develop your own Flask "
 "extension."
 msgstr ""
-

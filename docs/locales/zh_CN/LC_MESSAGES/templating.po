@@ -271,4 +271,3 @@ msgid ""
 ":`registering-filters`), but this demonstrates how to pass functions in a"
 " context processor."
 msgstr ""
-

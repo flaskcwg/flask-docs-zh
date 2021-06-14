@@ -90,4 +90,3 @@ msgstr ""
 #: ../../tutorial/index.rst:64
 msgid "Continue to :doc:`layout`."
 msgstr "下一节是 :doc:`layout`。"
-
