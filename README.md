@@ -69,7 +69,7 @@
 - [ ] install
 - [x] layout [@greyli](https://github.com/greyli) Grey Li
 - [ ] next
-- [ ] static
+- [ ] static [@greyli](https://github.com/greyli) Grey Li
 - [ ] templates
 - [ ] tests
 - [ ] views
