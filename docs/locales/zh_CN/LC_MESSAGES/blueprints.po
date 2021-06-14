@@ -32,7 +32,7 @@ msgid ""
 "  Rather it is a *blueprint* of how to construct or extend an "
 "application."
 msgstr ""
-"为了在一个或多个应用中支持模式复用，Flask 引入了蓝图的概念。蓝图可以极大地简化大型应用"
+"为了在一个或多个应用中支持模式复用，Flask 引入了蓝图的概念。蓝图可以极大地简化大型应用的运作方式"
 "并且为 Flask 的扩展提供了一个集中注册应用修改操作的入口。:class:`Blueprint` 对象与 "
 ":class:`Flask` 应用对象的工作方式类似，但它不是一个真正的应用，而是一个记录了如何构造"
 "或扩展应用的 *蓝图*。"
@@ -43,7 +43,7 @@ msgstr "为何要使用蓝图？"
 
 #: ../../blueprints.rst:19
 msgid "Blueprints in Flask are intended for these cases:"
-msgstr "Flask 中的蓝图有以下用途："
+msgstr "Flask 中的蓝图为以下场景设计："
 
 #: ../../blueprints.rst:21
 msgid ""
@@ -92,8 +92,8 @@ msgid ""
 "applications will have separate configs and will be managed at the WSGI "
 "layer."
 msgstr ""
-"Flask 中的蓝图并非一个可插拔的应用，因为它压根不是一个应用——它是一组可注册在应用对象上"
-"的操作的集合，甚至可以注册多次。那么为什么不用多个应该对象呢？你可以这么做（参见 "
+"Flask 中的蓝图并非一个可插拔的应用，因为它实际上不是一个应用——它是一组可注册在应用对象上"
+"的操作的集合，甚至可以注册多次。那么为什么不用多个应用对象呢？你可以这么做（参见 "
 ":doc:`/patterns/appdispatch`），但这样会导致你的应用各自拥有独立的配置，且只能在 WSGI "
 "层管理。"
 
@@ -110,7 +110,7 @@ msgstr ""
 
 #: ../../blueprints.rst:49
 msgid "The Concept of Blueprints"
-msgstr "蓝图的概念"
+msgstr "蓝图的理念"
 
 #: ../../blueprints.rst:51
 msgid ""
@@ -119,8 +119,8 @@ msgid ""
 " blueprints when dispatching requests and generating URLs from one "
 "endpoint to another."
 msgstr ""
-"蓝图的基本理念是它记录了注册到应用之后将要执行的操作。分配请求时，Flask 会把蓝图和视图函数"
-"关联起来，并且生成两个端点之间的 URL。"
+"蓝图的基本理念是它记录了注册到应用之后将要执行的操作。在分配请求及生成两个端点间的URL时，"
+"Flask 会把蓝图和视图函数关联起来。"
 
 #: ../../blueprints.rst:57
 msgid "My First Blueprint"
@@ -160,7 +160,7 @@ msgstr "如何注册此蓝图？可以这样::"
 msgid ""
 "If you check the rules registered on the application, you will find "
 "these::"
-msgstr "如果你查看应用上注册的 URL 规则，你可以看到"
+msgstr "如果你查看应用上注册的 URL 规则，你可以看到::"
 
 #: ../../blueprints.rst:103
 msgid ""
@@ -312,7 +312,7 @@ msgid ""
 "If you want the blueprint to expose templates you can do that by "
 "providing the `template_folder` parameter to the :class:`Blueprint` "
 "constructor::"
-msgstr "如果你想在蓝图中暴露模板文件你可以给 :class:`Blueprint` 指定 `template_folder` 参数::"
+msgstr "如果你想在蓝图中暴露模板文件，你可以给 :class:`Blueprint` 指定 `template_folder` 参数::"
 
 #: ../../blueprints.rst:214
 msgid ""
@@ -407,7 +407,7 @@ msgstr ""
 
 #: ../../blueprints.rst:272
 msgid "Blueprint Error Handlers"
-msgstr "蓝图的错误处理"
+msgstr "蓝图的错误处理器"
 
 #: ../../blueprints.rst:274
 msgid ""
@@ -436,7 +436,7 @@ msgid ""
 "defined at the application level using the ``request`` proxy object::"
 msgstr ""
 "大多数错误处理器会按预期工作，然而，关于 404 和 405 错误处理有件事需要注意：它们只能由在此蓝图的其他视图函数中的 "
-"``raise`` 语句或 ``abort`` 触发，而不能由，比方说，无效的 URL 访问触发。这是因为蓝图并不“拥有”某个 URL 空间，所以"
+"``raise`` 语句或 ``abort`` 触发，而不能由类似于无效的 URL 访问这种错误触发。这是因为蓝图并不“拥有”某个 URL 空间，所以"
 "当无效的 URL 访问发生时，应用实例无从得知应该运行哪个蓝图的错误处理器。如果你想基于 URL 前缀分别执行不同的错误处理"
 "策略，那么可以在应用层面使用 ``request`` 代理对象来区分定义::"
 
