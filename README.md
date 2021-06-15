@@ -21,6 +21,7 @@
 
 - Grey Li ([@greyli](https://github.com/greyli))
 - Frost Ming ([@frostming](https://github.com/frostming))
+- FesonX ([@FesonX](https://github.com/FesonX))
 
 
 ## Translators (Translation To-do List)
@@ -38,20 +39,20 @@
 - [ ] config [@guiqiqi](https://github.com/guiqiqi) Doge-GUI
 - [ ] contributing [@greyli](https://github.com/greyli) Grey Li
 - [ ] debugging
-- [ ] design
+- [ ] design [@shutaG](https://github.com/shutaG) shutaG
 - [ ] errorhandling [@qiufengyu](https://github.com/qiufengyu) Fengyu
 - [ ] extensiondev
 - [ ] extensions
-- [ ] foreword (reserved)
+- [x] foreword [@greyli](https://github.com/greyli) Grey Li
 - [ ] htmlfaq
 - [x] index [@greyli](https://github.com/greyli) Grey Li
 - [x] installation [@greyli](https://github.com/greyli) Grey Li
-- [ ] logging
+- [ ] logging [@FesonX](https://github.com/FesonX) FesonX
 - [ ] quickstart (reserved)
 - [ ] reqcontext [@rosekc](https://github.com/rosekc) rosekc
-- [ ] security
+- [ ] security [@kylinbin](https://github.com/kylinbin) kylin
 - [ ] server [@LeeRnnGii](https://github.com/LeeRnnGii) LeeRnnGii
-- [ ] shell [@LTakamori](https://github.com/LTakamori) LTakamori
+- [x] shell [@LTakamori](https://github.com/LTakamori) LTakamori
 - [ ] signals
 - [ ] templating
 - [ ] testing
@@ -65,10 +66,10 @@
 - [ ] deploy
 - [ ] factory
 - [x] index [@greyli](https://github.com/greyli) Grey Li
-- [ ] install
-- [ ] layout
+- [ ] install [@greyli](https://github.com/greyli) Grey Li
+- [x] layout [@greyli](https://github.com/greyli) Grey Li
 - [ ] next
-- [ ] static
+- [ ] static [@greyli](https://github.com/greyli) Grey Li
 - [ ] templates
 - [ ] tests
 - [ ] views
@@ -79,8 +80,8 @@
 - [ ] asgi
 - [ ] cgi
 - [ ] fastcgi
-- [ ] index [@180909](https://github.com/180909) 180909
-- [ ] mod_wsgi
+- [x] index [@180909](https://github.com/180909) 180909
+- [ ] mod_wsgi [@180909](https://github.com/180909) 180909
 - [ ] uwsgi
 - [ ] wsgi-standalone
 
@@ -105,7 +106,7 @@
 - [ ] packages
 - [ ] requestchecksum
 - [ ] singlepageapplications
-- [ ] sqlalchemy
+- [ ] sqlalchemy [@wnykuang](https://github.com/wnykuang) wkuang
 - [ ] sqlite3
 - [ ] streaming
 - [ ] subclassing

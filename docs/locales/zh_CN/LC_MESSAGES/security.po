@@ -399,4 +399,3 @@ msgid ""
 "Depending on your site's use case, it may be good to show a warning about"
 " copying code in general."
 msgstr ""
-
