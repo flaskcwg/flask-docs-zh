@@ -53,7 +53,7 @@ msgid ""
 "based view you would do this::"
 msgstr ""
 "这很容易也很灵活，但是你可能想让它更灵活，比如为视图提供一个"
-"通用的方法以此让它同样的适配其他的数据模型和模板。"
+"通用的方法以此让它同样地适配其他的数据模型和模板。"
 "那么基于类的可插拔视图刚好适用于此。首先你需要在这里将其转换成"
 "基于类的视图："
 
@@ -67,7 +67,7 @@ msgid ""
 "that function is the name of the endpoint that view will then have.  But "
 "this by itself is not helpful, so let's refactor the code a bit::"
 msgstr ""
-"正如你看到的你必须创建一个 :class:`flask.views.View` 的子类并且实现"
+"如你所见，你必须继承 :class:`flask.views.View` 并实现"
 " :meth:`~flask.views.View.dispatch_request` 方法。然后必须
 "通过 :meth:`~flask.views.View.as_view` 这个类方法将其转换"
 "为一个真正的视图函数。传递给该函数的字符串就是后面生成视图的端点的名称。"
@@ -85,15 +85,15 @@ msgid ""
 ":meth:`~flask.views.View.as_view` function. For instance you can write a "
 "class like this::"
 msgstr ""
-"这个小示例对此教程帮助不大，但它已经足够解释清楚基本的原理了。"
-"当你使用基于类的视图时问题也会随之而来比如 ``self`` 指向了哪里。"
-"它的运行方式是当你发送一个请求时会随之创建一个类的新的实例"
+"这个小示例用处不大，但它已经足够解释清楚基本的原理了。"
+"当你使用基于类的视图时，问题也会随之而来，例如 ``self`` 指代何物。"
+"它的运行方式是，当你发送一个请求会随之创建一个新的类实例"
 "并且 :meth:`~flask.views.View.dispatch_request` 会根据 URL 规则中的参数被调用。"
 "类本身会用传给 :meth:`~flask.views.View.as_view` 函数的参数进行实例化。 比如你可以编写一个这样的类："
 
 #: ../../views.rst:85
 msgid "And then you can register it like this::"
-msgstr "并且你可以像这样注册它："
+msgstr "然后可以像这样注册它："
 
 #: ../../views.rst:91
 msgid "Method Hints"
@@ -149,7 +149,7 @@ msgid ""
 " Instead you either have to decorate the return value of "
 ":meth:`~flask.views.View.as_view` by hand::"
 msgstr ""
-"由于类视图本身不是添加到路由系统的视图函数"
+"由于类视图本身不是添加到路由系统的视图函数，"
 "因此装饰它没有多大意义。 相反的你必须装饰 :meth:`~flask.views.View.as_view` 返回的值："
 
 #: ../../views.rst:156
@@ -157,8 +157,8 @@ msgid ""
 "Starting with Flask 0.8 there is also an alternative way where you can "
 "specify a list of decorators to apply in the class declaration::"
 msgstr ""
-"从 Flask 0.8 开始，你还可以使用另一种方法"
-"指定要在类声明中应用的装饰器列表："
+"从 Flask 0.8 开始，你还可以使用另一种方法，"
+"在类的声明中指定要应用的装饰器列表："
 
 #: ../../views.rst:162
 msgid ""
@@ -171,7 +171,7 @@ msgstr ""
 
 #: ../../views.rst:167
 msgid "Method Views for APIs"
-msgstr "视图方法相关的API"
+msgstr "视图方法相关的 APIs"
 
 #: ../../views.rst:169
 msgid ""
@@ -182,8 +182,8 @@ msgid ""
 " of the time.  For instance consider that you are exposing a user object "
 "on the web:"
 msgstr ""
-"Web API通常与 HTTP 一起使用, 所以它基于 :class:`~flask.views.MethodView` 对这样的API
-"做了很多有意义的实现。也就是说你要注意大多数情况下 API 会根据不同的 URL 规则跳转到有"
+"Web API 通常与 HTTP 一起使用, 所以它基于 :class:`~flask.views.MethodView` 对这样的API
+"做了很多有意义的实现。也就是说，你要注意在大多数情况下 API 会根据不同的 URL 规则跳转到有"
 "相同方法的视图中。 例如在 web 中暴露一个用户对象："
 
 #: ../../views.rst:177
@@ -268,4 +268,4 @@ msgid ""
 "If you have a lot of APIs that look similar you can refactor that "
 "registration code::"
 msgstr ""
-"如果你有很多看起来一样的 API 你可以把他们像下面的注册代码一样进行重构："
+"如果你有很多看起来一样的 API，你可以将他们像下面的注册代码一样进行重构："
