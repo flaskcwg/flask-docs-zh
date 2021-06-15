@@ -229,4 +229,3 @@ msgstr ""
 #: ../../tutorial/blog.rst:336
 msgid "Continue to :doc:`install`."
 msgstr ""
-

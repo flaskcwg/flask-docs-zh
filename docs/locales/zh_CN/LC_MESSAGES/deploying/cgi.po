@@ -90,4 +90,3 @@ msgstr ""
 #: ../../deploying/cgi.rst:59
 msgid "For more information consult the documentation of your webserver."
 msgstr ""
-

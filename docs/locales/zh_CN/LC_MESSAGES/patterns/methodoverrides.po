@@ -42,4 +42,3 @@ msgstr ""
 #: ../../patterns/methodoverrides.rst:37
 msgid "To use this with Flask, wrap the app object with the middleware::"
 msgstr ""
-

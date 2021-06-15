@@ -227,4 +227,3 @@ msgstr ""
 #: ../../signals.rst:185
 msgid "Take a look at :ref:`core-signals-list` for a list of all builtin signals."
 msgstr ""
-

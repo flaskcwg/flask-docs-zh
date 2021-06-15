@@ -182,4 +182,3 @@ msgid ""
 msgstr ""
 "Flask 现在已经安装好了。阅读 :doc:`/quickstart` 或是前往 :doc:`文档概览 </index>` 进一步了解 "
 "Flask。"
-

@@ -21,3 +21,4 @@
 - [ ] 在本地生成文档并预览输出，处理所有错误和异常。
 - [ ] 运行 `pre-commit` 钩子，处理所有问题。
 - [ ] 更新 `.po` 文件顶部的 `Last-Translator` 字段。
+- [ ] 如果你是第一个翻译者，同时更新 `.po` 文件顶部的 `FIRST AUTHOR <EMAIL@ADDRESS>`，替换为你的名字和 Email 地址。
