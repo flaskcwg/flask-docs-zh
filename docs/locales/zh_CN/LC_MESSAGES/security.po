@@ -221,8 +221,8 @@ msgid ""
 "`~flask.jsonify` now supports serializing arrays."
 msgstr ""
 "ECMAScript 5 关闭了这个漏洞，所以所以只有非常老的浏览器仍然容易受到攻击，以及存"
-"在 `其他更严重的漏洞<https://github.com/pallets/flask/"
-"issues/248#issuecomment-59934857>`__，因而这个行为被改变了， :func:`~flask."
+"在 `其他更严重的漏洞 <https://github.com/pallets/flask/"
+"issues/248#issuecomment-59934857>`_，因而这个行为被改变了， :func:`~flask."
 "jsonify` 现在支持序列化数组。"
 
 #: ../../security.rst:120
