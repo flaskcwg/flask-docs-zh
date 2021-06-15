@@ -3,399 +3,471 @@
 # This file is distributed under the same license as the Flask package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Flask 2.1.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-25 19:31+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2021-06-15 16:18+0800\n"
 "Language-Team: zh_CN <withlihui@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
+"Last-Translator: kylin <kylin37091@gmail.com>\n"
+"Language: zh_CN\n"
+"X-Generator: Poedit 3.0\n"
 
 #: ../../security.rst:2
 msgid "Security Considerations"
-msgstr ""
+msgstr "安全注意事项"
 
 #: ../../security.rst:4
 msgid ""
-"Web applications usually face all kinds of security problems and it's "
-"very hard to get everything right.  Flask tries to solve a few of these "
-"things for you, but there are a couple more you have to take care of "
-"yourself."
+"Web applications usually face all kinds of security problems and it's very hard "
+"to get everything right.  Flask tries to solve a few of these things for you, "
+"but there are a couple more you have to take care of yourself."
 msgstr ""
+"Web 应用通常会面临各种安全问题，很难把所有的部分都处理好。 Flask 试图为你解决其中"
+"的一些问题，但还有很多需要你自己解决。"
 
 #: ../../security.rst:11
 msgid "Cross-Site Scripting (XSS)"
-msgstr ""
+msgstr "跨站脚本攻击（XSS）"
 
 #: ../../security.rst:13
 msgid ""
-"Cross site scripting is the concept of injecting arbitrary HTML (and with"
-" it JavaScript) into the context of a website.  To remedy this, "
-"developers have to properly escape text so that it cannot include "
-"arbitrary HTML tags.  For more information on that have a look at the "
-"Wikipedia article on `Cross-Site Scripting <https://en.wikipedia.org/wiki"
-"/Cross-site_scripting>`_."
+"Cross site scripting is the concept of injecting arbitrary HTML (and with it "
+"JavaScript) into the context of a website.  To remedy this, developers have to "
+"properly escape text so that it cannot include arbitrary HTML tags.  For more "
+"information on that have a look at the Wikipedia article on `Cross-Site "
+"Scripting <https://en.wikipedia.org/wiki/Cross-site_scripting>`_."
 msgstr ""
+"跨站脚本攻击是指将恶意的 HTML（以及附带的 JavaScript）代码注入到网站的环境中。 "
+"为了解决这个问题，开发人员必须正确地转义文本，使其无法包含恶意的 HTML 标签。 更"
+"多信息请看维基百科上的文章 `Cross-Site Scripting <https://en.wikipedia.org/wiki/"
+"Cross-site_scripting>`_."
 
 #: ../../security.rst:20
 msgid ""
-"Flask configures Jinja2 to automatically escape all values unless "
-"explicitly told otherwise.  This should rule out all XSS problems caused "
-"in templates, but there are still other places where you have to be "
-"careful:"
+"Flask configures Jinja2 to automatically escape all values unless explicitly "
+"told otherwise.  This should rule out all XSS problems caused in templates, but "
+"there are still other places where you have to be careful:"
 msgstr ""
+"Flask 配置了 Jinja2 自动转义所有值，除非显式指明不转义。这应该可以排除所有由模板"
+"引起的 XSS 问题，但仍有其他地方需要注意："
 
 #: ../../security.rst:25
 msgid "generating HTML without the help of Jinja2"
-msgstr ""
+msgstr "不使用 Jinja2 生成 HTML"
 
 #: ../../security.rst:26
 msgid "calling :class:`~flask.Markup` on data submitted by users"
-msgstr ""
+msgstr "在用户提交的数据上调用 :class:`~flask.Markup`"
 
 #: ../../security.rst:27
 msgid ""
 "sending out HTML from uploaded files, never do that, use the ``Content-"
 "Disposition: attachment`` header to prevent that problem."
 msgstr ""
+"发送上传的 HTML 文件，千万不要这样做，应该使用 ``Content-Disposition: "
+"attachment`` 头部来避免这个问题。"
 
 #: ../../security.rst:29
 msgid ""
-"sending out textfiles from uploaded files.  Some browsers are using "
-"content-type guessing based on the first few bytes so users could trick a"
-" browser to execute HTML."
+"sending out textfiles from uploaded files.  Some browsers are using content-"
+"type guessing based on the first few bytes so users could trick a browser to "
+"execute HTML."
 msgstr ""
+"发送上传的文本文件。一些浏览器会基于文件开头的几个字节推测文件的内容类型，"
+"因此用户可以欺骗浏览器执行 HTML。"
 
 #: ../../security.rst:33
 msgid ""
-"Another thing that is very important are unquoted attributes.  While "
-"Jinja2 can protect you from XSS issues by escaping HTML, there is one "
-"thing it cannot protect you from: XSS by attribute injection.  To counter"
-" this possible attack vector, be sure to always quote your attributes "
-"with either double or single quotes when using Jinja expressions in them:"
+"Another thing that is very important are unquoted attributes.  While Jinja2 can "
+"protect you from XSS issues by escaping HTML, there is one thing it cannot "
+"protect you from: XSS by attribute injection.  To counter this possible attack "
+"vector, be sure to always quote your attributes with either double or single "
+"quotes when using Jinja expressions in them:"
 msgstr ""
+"另外值得注意的是不使用引号的属性。 虽然 Jinja2 可以通过转义 HTML 避免 XSS 问题，"
+"但无法避免通过属性注入的 XSS。为了对付这种可能存在的攻击手段，在属性中使用 "
+"Jinja 表达式时，请保证属性值始终被包括在双引号或单引号内："
 
 #: ../../security.rst:43
 msgid ""
-"Why is this necessary?  Because if you would not be doing that, an "
-"attacker could easily inject custom JavaScript handlers.  For example an "
-"attacker could inject this piece of HTML+JavaScript:"
+"Why is this necessary?  Because if you would not be doing that, an attacker "
+"could easily inject custom JavaScript handlers.  For example an attacker could "
+"inject this piece of HTML+JavaScript:"
 msgstr ""
+"为什么必须这样做？因为如果不这样做，攻击者可以轻易注入定制的 JavaScript 事件处"
+"理器。例如，攻击者可以注入以下 HTML + JavaScript 代码："
 
 #: ../../security.rst:51
 msgid ""
-"When the user would then move with the mouse over the input, the cookie "
-"would be presented to the user in an alert window.  But instead of "
-"showing the cookie to the user, a good attacker might also execute any "
-"other JavaScript code.  In combination with CSS injections the attacker "
-"might even make the element fill out the entire page so that the user "
-"would just have to have the mouse anywhere on the page to trigger the "
-"attack."
+"When the user would then move with the mouse over the input, the cookie would "
+"be presented to the user in an alert window.  But instead of showing the cookie "
+"to the user, a good attacker might also execute any other JavaScript code.  In "
+"combination with CSS injections the attacker might even make the element fill "
+"out the entire page so that the user would just have to have the mouse anywhere "
+"on the page to trigger the attack."
 msgstr ""
+"当用户将鼠标移到输入框时，cookie 信息就会显示在弹出的警告窗口中。 一个聪明的攻击"
+"者可能不会直接向用户显示 cookie 信息，而是执行其他的 JavaScript 代码。 结合 CSS "
+"注入，攻击者甚至可能使该元素填满整个页面，这样用户将鼠标放在页面的任何位置都会触"
+"发攻击。"
 
 #: ../../security.rst:58
 msgid ""
 "There is one class of XSS issues that Jinja's escaping does not protect "
-"against. The ``a`` tag's ``href`` attribute can contain a `javascript:` "
-"URI, which the browser will execute when clicked if not secured properly."
+"against. The ``a`` tag's ``href`` attribute can contain a `javascript:` URI, "
+"which the browser will execute when clicked if not secured properly."
 msgstr ""
+"有一类 XSS 问题， Jinja 的转义并不能防止。``a`` 标签的 ``href`` 属性可以包含一个 "
+"`javascript:` URI，如果没有正确保护，在点击时浏览器就会执行。"
 
 #: ../../security.rst:67
 msgid ""
-"To prevent this, you'll need to set the :ref:`security-csp` response "
-"header."
-msgstr ""
+"To prevent this, you'll need to set the :ref:`security-csp` response header."
+msgstr "为了防止这种问题发生，你需要设置 :ref:`security-csp` 响应头部。"
 
 #: ../../security.rst:70
 msgid "Cross-Site Request Forgery (CSRF)"
-msgstr ""
+msgstr "跨站请求伪造（CSRF）"
 
 #: ../../security.rst:72
 msgid ""
-"Another big problem is CSRF.  This is a very complex topic and I won't "
-"outline it here in detail just mention what it is and how to "
-"theoretically prevent it."
+"Another big problem is CSRF.  This is a very complex topic and I won't outline "
+"it here in detail just mention what it is and how to theoretically prevent it."
 msgstr ""
+"另一个大问题是跨站请求伪造。这是一个很复杂的话题，细节不在这里赘述，仅仅谈谈它是"
+"什么以及如何在理论上避免这个问题。"
 
 #: ../../security.rst:76
 msgid ""
-"If your authentication information is stored in cookies, you have "
-"implicit state management.  The state of \"being logged in\" is "
-"controlled by a cookie, and that cookie is sent with each request to a "
-"page. Unfortunately that includes requests triggered by 3rd party sites."
-"  If you don't keep that in mind, some people might be able to trick your"
-" application's users with social engineering to do stupid things without "
-"them knowing."
+"If your authentication information is stored in cookies, you have implicit "
+"state management.  The state of \"being logged in\" is controlled by a cookie, "
+"and that cookie is sent with each request to a page. Unfortunately that "
+"includes requests triggered by 3rd party sites.  If you don't keep that in "
+"mind, some people might be able to trick your application's users with social "
+"engineering to do stupid things without them knowing."
 msgstr ""
+"如果你的认证信息存储在 cookie 中，你就有了隐式状态管理。“登录”的状态是由一个 "
+"cookie 控制的，对每个页面的请求都会发送这个 cookie。不幸的是，由第三方网站引发的"
+"请求也遵循同样的机制。如果你不牢记这一点，有人可能会用社交工程欺骗应用程序的用"
+"户，让他们在不知情的情况下做一些愚蠢的事情。"
 
 #: ../../security.rst:84
 msgid ""
-"Say you have a specific URL that, when you sent ``POST`` requests to will"
-" delete a user's profile (say ``http://example.com/user/delete``).  If an"
-" attacker now creates a page that sends a post request to that page with "
-"some JavaScript they just have to trick some users to load that page and "
-"their profiles will end up being deleted."
+"Say you have a specific URL that, when you sent ``POST`` requests to will "
+"delete a user's profile (say ``http://example.com/user/delete``).  If an "
+"attacker now creates a page that sends a post request to that page with some "
+"JavaScript they just have to trick some users to load that page and their "
+"profiles will end up being deleted."
 msgstr ""
+"假设你有一个特定的 URL，当你发送 ``POST`` 请求时会删除一个用户的资料（例如 "
+"``http://example.com/user/delete``）。 如果攻击者现在创建了一个页面可以通过一些 "
+"JavaScript 代码向你的特定 URL 发送 post 请求，只要欺骗用户来加载这个页面，用户资"
+"料就会被删除了。"
 
 #: ../../security.rst:90
 msgid ""
-"Imagine you were to run Facebook with millions of concurrent users and "
-"someone would send out links to images of little kittens.  When users "
-"would go to that page, their profiles would get deleted while they are "
-"looking at images of fluffy cats."
+"Imagine you were to run Facebook with millions of concurrent users and someone "
+"would send out links to images of little kittens.  When users would go to that "
+"page, their profiles would get deleted while they are looking at images of "
+"fluffy cats."
 msgstr ""
+"想象一下有数百万的并发用户的 Facebook ，有人发出小猫咪图片的链接。 当用户访问该"
+"页面看着毛茸茸的猫片时，他们的资料就被删除了。"
 
 #: ../../security.rst:95
 msgid ""
-"How can you prevent that?  Basically for each request that modifies "
-"content on the server you would have to either use a one-time token and "
-"store that in the cookie **and** also transmit it with the form data. "
-"After receiving the data on the server again, you would then have to "
-"compare the two tokens and ensure they are equal."
+"How can you prevent that?  Basically for each request that modifies content on "
+"the server you would have to either use a one-time token and store that in the "
+"cookie **and** also transmit it with the form data. After receiving the data on "
+"the server again, you would then have to compare the two tokens and ensure they "
+"are equal."
 msgstr ""
+"如何防止这种情况呢？基本上你可以这样做：每一个修改服务器内容的请求，必须使用一个"
+"一次性令牌，并将其存储在 cookie 中，传输表单数据时带上它。服务器再次接收到数据"
+"后，必须比较两个令牌，确保它们是相等的。"
 
 #: ../../security.rst:101
 msgid ""
-"Why does Flask not do that for you?  The ideal place for this to happen "
-"is the form validation framework, which does not exist in Flask."
+"Why does Flask not do that for you?  The ideal place for this to happen is the "
+"form validation framework, which does not exist in Flask."
 msgstr ""
+"为什么 Flask 不替你完成这个呢？因为这是表单验证框架要做的事，而 Flask 自身不包含"
+"表单验证。"
 
 #: ../../security.rst:107
 msgid "JSON Security"
-msgstr ""
+msgstr "JSON 安全"
 
 #: ../../security.rst:109
 msgid ""
-"In Flask 0.10 and lower, :func:`~flask.jsonify` did not serialize top-"
-"level arrays to JSON. This was because of a security vulnerability in "
-"ECMAScript 4."
+"In Flask 0.10 and lower, :func:`~flask.jsonify` did not serialize top-level "
+"arrays to JSON. This was because of a security vulnerability in ECMAScript 4."
 msgstr ""
+"在 Flask 0.10 以及更低版本中，因为 ECMAScript 4 中的安全漏洞，:func:`~flask."
+"jsonify` 没有将顶层数组序列化为 JSON。"
 
 #: ../../security.rst:112
 msgid ""
-"ECMAScript 5 closed this vulnerability, so only extremely old browsers "
-"are still vulnerable. All of these browsers have `other more serious "
-"vulnerabilities "
-"<https://github.com/pallets/flask/issues/248#issuecomment-59934857>`_, so"
-" this behavior was changed and :func:`~flask.jsonify` now supports "
-"serializing arrays."
+"ECMAScript 5 closed this vulnerability, so only extremely old browsers are "
+"still vulnerable. All of these browsers have `other more serious "
+"vulnerabilities <https://github.com/pallets/flask/"
+"issues/248#issuecomment-59934857>`_, so this behavior was changed and :func:"
+"`~flask.jsonify` now supports serializing arrays."
 msgstr ""
+"ECMAScript 5 关闭了这个漏洞，所以所以只有非常老的浏览器仍然容易受到攻击，以及存"
+"在`其他更严重的漏洞 <https://github.com/pallets/flask/"
+"issues/248#issuecomment-59934857>`_，因而这个行为被改变了， :func:`~flask."
+"jsonify` 现在支持序列化数组。"
 
 #: ../../security.rst:120
 msgid "Security Headers"
-msgstr ""
+msgstr "安全头部"
 
 #: ../../security.rst:122
 msgid ""
-"Browsers recognize various response headers in order to control security."
-" We recommend reviewing each of the headers below for use in your "
-"application. The `Flask-Talisman`_ extension can be used to manage HTTPS "
-"and the security headers for you."
+"Browsers recognize various response headers in order to control security. We "
+"recommend reviewing each of the headers below for use in your application. The "
+"`Flask-Talisman`_ extension can be used to manage HTTPS and the security "
+"headers for you."
 msgstr ""
+"为了控制安全性，浏览器识别各种响应头部。我们建议你在应用程序中检查以下每种头"
+"部， `Flask-Talisman`_ 扩展可用于管理 HTTPS 和安全头部。"
 
 #: ../../security.rst:130
 msgid "HTTP Strict Transport Security (HSTS)"
-msgstr ""
+msgstr "HTTP严格传输安全 (HSTS)"
 
 #: ../../security.rst:132
 msgid ""
-"Tells the browser to convert all HTTP requests to HTTPS, preventing man-"
-"in-the-middle (MITM) attacks. ::"
-msgstr ""
+"Tells the browser to convert all HTTP requests to HTTPS, preventing man-in-the-"
+"middle (MITM) attacks. ::"
+msgstr "指示浏览器把所有 HTTP 请求转为 HTTPS，防止中间人攻击(MITM) ::"
 
 #: ../../security.rst:137
 msgid ""
-"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-"
-"Transport-Security"
+"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-"
+"Security"
 msgstr ""
+"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-"
+"Security"
 
 #: ../../security.rst:142
 msgid "Content Security Policy (CSP)"
-msgstr ""
+msgstr "内容安全策略 (CSP)"
 
 #: ../../security.rst:144
 msgid ""
-"Tell the browser where it can load various types of resource from. This "
-"header should be used whenever possible, but requires some work to define"
-" the correct policy for your site. A very strict policy would be::"
+"Tell the browser where it can load various types of resource from. This header "
+"should be used whenever possible, but requires some work to define the correct "
+"policy for your site. A very strict policy would be::"
 msgstr ""
+"告诉浏览器可以从哪里加载各种类型的资源。应当尽可能使用这个头部，但需要为网站定义"
+"正确的策略。一个非常严格的策略是::"
 
 #: ../../security.rst:150
 msgid "https://csp.withgoogle.com/docs/index.html"
-msgstr ""
+msgstr "https://csp.withgoogle.com/docs/index.html"
 
 #: ../../security.rst:151
 msgid ""
-"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-"
-"Security-Policy"
+"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-"
+"Policy"
 msgstr ""
+"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-"
+"Policy"
 
 #: ../../security.rst:154
 msgid "X-Content-Type-Options"
-msgstr ""
+msgstr "X-Content-Type-Options"
 
 #: ../../security.rst:156
 msgid ""
-"Forces the browser to honor the response content type instead of trying "
-"to detect it, which can be abused to generate a cross-site scripting "
-"(XSS) attack. ::"
+"Forces the browser to honor the response content type instead of trying to "
+"detect it, which can be abused to generate a cross-site scripting (XSS) "
+"attack. ::"
 msgstr ""
+"强制浏览器接受响应的内容类型，而不是尝试检测它，防止被滥用而产生跨站脚本攻击"
+"（XSS）。::"
 
 #: ../../security.rst:162
 msgid ""
-"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-"
-"Options"
+"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options"
 msgstr ""
+"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options"
 
 #: ../../security.rst:165
 msgid "X-Frame-Options"
-msgstr ""
+msgstr "X-Frame-Options"
 
 #: ../../security.rst:167
 msgid ""
 "Prevents external sites from embedding your site in an ``iframe``. This "
-"prevents a class of attacks where clicks in the outer frame can be "
-"translated invisibly to clicks on your page's elements. This is also "
-"known as \"clickjacking\". ::"
+"prevents a class of attacks where clicks in the outer frame can be translated "
+"invisibly to clicks on your page's elements. This is also known as "
+"\"clickjacking\". ::"
 msgstr ""
+"防止外部网站将你的网站嵌入``iframe`` 中，可以避免一类攻击：对外框的点击无形地"
+"转化为对你的页面元素的点击。这也被称为“点击劫持”。::"
 
 #: ../../security.rst:174
 msgid "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options"
-msgstr ""
+msgstr "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options"
 
 #: ../../security.rst:177
 msgid "X-XSS-Protection"
-msgstr ""
+msgstr "X-XSS-Protection"
 
 #: ../../security.rst:179
 msgid ""
-"The browser will try to prevent reflected XSS attacks by not loading the "
-"page if the request contains something that looks like JavaScript and the"
-" response contains the same data. ::"
+"The browser will try to prevent reflected XSS attacks by not loading the page "
+"if the request contains something that looks like JavaScript and the response "
+"contains the same data. ::"
 msgstr ""
+"如果请求中含有一些类似 JavaScript 代码的东西，且响应中包含相同的数据，浏览器将试"
+"图通过不加载页面来防止反射式 XSS 攻击。 ::"
 
 #: ../../security.rst:185
 msgid "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection"
 msgstr ""
+"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection"
 
 #: ../../security.rst:191
 msgid "Set-Cookie options"
-msgstr ""
+msgstr "Set-Cookie 选项"
 
 #: ../../security.rst:193
 msgid ""
 "These options can be added to a ``Set-Cookie`` header to improve their "
-"security. Flask has configuration options to set these on the session "
-"cookie. They can be set on other cookies too."
+"security. Flask has configuration options to set these on the session cookie. "
+"They can be set on other cookies too."
 msgstr ""
+"下面这些选项可以添加到 ``Set-Cookie`` 头部中以提高安全性。Flask 配置选项可以将这"
+"些选项设置在会话 cookie 或者其他 cookie 上。"
 
 #: ../../security.rst:197
 msgid "``Secure`` limits cookies to HTTPS traffic only."
-msgstr ""
+msgstr "``Secure`` 限制 cookies 只用于 HTTPS 流量。"
 
 #: ../../security.rst:198
 msgid ""
-"``HttpOnly`` protects the contents of cookies from being read with "
-"JavaScript."
-msgstr ""
+"``HttpOnly`` protects the contents of cookies from being read with JavaScript."
+msgstr "``HttpOnly`` 保护 cookies 内容不被 JavaScript 读取。"
 
 #: ../../security.rst:200
 msgid ""
-"``SameSite`` restricts how cookies are sent with requests from external "
-"sites. Can be set to ``'Lax'`` (recommended) or ``'Strict'``. ``Lax`` "
-"prevents sending cookies with CSRF-prone requests from external sites, "
-"such as submitting a form. ``Strict`` prevents sending cookies with all "
-"external requests, including following regular links."
+"``SameSite`` restricts how cookies are sent with requests from external sites. "
+"Can be set to ``'Lax'`` (recommended) or ``'Strict'``. ``Lax`` prevents sending "
+"cookies with CSRF-prone requests from external sites, such as submitting a "
+"form. ``Strict`` prevents sending cookies with all external requests, including "
+"following regular links."
 msgstr ""
+"``SameSite`` 限制 cookies 与外部网站的请求一起发送。可设置为 ``’Lax’``（推荐）"
+"或``’Strict’``。``Lax`` 防止外部网站有 CSRF 请求倾向时（例如提交表单）发送"
+" cookies。``Strict`` 禁止所有外部请求发送 cookie，包括常规链接。"
 
 #: ../../security.rst:216
 msgid ""
-"Specifying ``Expires`` or ``Max-Age`` options, will remove the cookie "
-"after the given time, or the current time plus the age, respectively. If "
-"neither option is set, the cookie will be removed when the browser is "
-"closed. ::"
+"Specifying ``Expires`` or ``Max-Age`` options, will remove the cookie after the "
+"given time, or the current time plus the age, respectively. If neither option "
+"is set, the cookie will be removed when the browser is closed. ::"
 msgstr ""
+"指定 ``Expires`` 或 ``Max-Age`` 选项，cookie 会在超过了给定的时间或当前时间加上"
+"的期限之后被删除。如果两个选项都没有设置，cookie 将在浏览器关闭时被删除。::"
 
 #: ../../security.rst:223
 msgid ""
-"For the session cookie, if :attr:`session.permanent "
-"<flask.session.permanent>` is set, then "
-":data:`PERMANENT_SESSION_LIFETIME` is used to set the expiration. Flask's"
-" default cookie implementation validates that the cryptographic signature"
-" is not older than this value. Lowering this value may help mitigate "
+"For the session cookie, if :attr:`session.permanent <flask.session.permanent>` "
+"is set, then :data:`PERMANENT_SESSION_LIFETIME` is used to set the expiration. "
+"Flask's default cookie implementation validates that the cryptographic "
+"signature is not older than this value. Lowering this value may help mitigate "
 "replay attacks, where intercepted cookies can be sent at a later time. ::"
 msgstr ""
+"对于会话 cookie，如果设置了 :attr:`session.permanent <flask.session."
+"permanent>` ，那么就用 :data:`PERMANENT_SESSION_LIFETIME` 设置到期时间，Flask 的"
+"默认 cookie 实现会验证加密签名不超过这个值，降低此值有助于减少重复攻击，防止 "
+"cookie 被拦截后还可以在一段时间内有效发送的漏洞。 ::"
 
 #: ../../security.rst:241
 msgid ""
-"Use :class:`itsdangerous.TimedSerializer` to sign and validate other "
-"cookie values (or any values that need secure signatures)."
+"Use :class:`itsdangerous.TimedSerializer` to sign and validate other cookie "
+"values (or any values that need secure signatures)."
 msgstr ""
+"使用 :class:`itsdangerous.TimedSerializer` 来签名和验证其他 cookie 值（或任何需"
+"要安全签名的值）。"
 
 #: ../../security.rst:244
 msgid "https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies"
-msgstr ""
+msgstr "https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies"
 
 #: ../../security.rst:245
 msgid "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie"
-msgstr ""
+msgstr "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie"
 
 #: ../../security.rst:251
 msgid "HTTP Public Key Pinning (HPKP)"
-msgstr ""
+msgstr "HTTP 公钥锁定（HPKP）"
 
 #: ../../security.rst:253
 msgid ""
-"This tells the browser to authenticate with the server using only the "
-"specific certificate key to prevent MITM attacks."
-msgstr ""
+"This tells the browser to authenticate with the server using only the specific "
+"certificate key to prevent MITM attacks."
+msgstr "它告诉浏览器只使用特定的证书密钥与服务器进行验证，以防止 MITM 攻击。"
 
 #: ../../security.rst:257
 msgid ""
-"Be careful when enabling this, as it is very difficult to undo if you set"
-" up or upgrade your key incorrectly."
-msgstr ""
+"Be careful when enabling this, as it is very difficult to undo if you set up or "
+"upgrade your key incorrectly."
+msgstr "启用这个要小心，如果设置密钥或升级密钥不正确则难以撤销。"
 
 #: ../../security.rst:260
 msgid "https://developer.mozilla.org/en-US/docs/Web/HTTP/Public_Key_Pinning"
-msgstr ""
+msgstr "https://developer.mozilla.org/en-US/docs/Web/HTTP/Public_Key_Pinning"
 
 #: ../../security.rst:264
 msgid "Copy/Paste to Terminal"
-msgstr ""
+msgstr "复制/粘贴到终端"
 
 #: ../../security.rst:266
 msgid ""
-"Hidden characters such as the backspace character (``\\b``, ``^H``) can "
-"cause text to render differently in HTML than how it is interpreted if "
-"`pasted into a terminal <https://security.stackexchange.com/q/39118>`__."
+"Hidden characters such as the backspace character (``\\b``, ``^H``) can cause "
+"text to render differently in HTML than how it is interpreted if `pasted into a "
+"terminal <https://security.stackexchange.com/q/39118>`__."
 msgstr ""
+"隐藏的字符如退格符（``\\b``, ``^H``）会导致文本在 HTML 中的显示方式与 `粘贴到终"
+"端 <https://security.stackexchange.com/q/39118>`__ 的呈现方式不同。"
 
 #: ../../security.rst:270
 msgid ""
 "For example, ``import y\\bose\\bm\\bi\\bt\\be\\b`` renders as ``import "
-"yosemite`` in HTML, but the backspaces are applied when pasted into a "
-"terminal, and it becomes ``import os``."
+"yosemite`` in HTML, but the backspaces are applied when pasted into a terminal, "
+"and it becomes ``import os``."
 msgstr ""
+"例如，``import y\\bose\\bm\\bi\\bt\\be\\b`` 在 HTML 中显示为 ``import "
+"yosemite``，但在粘贴到终端时退格符生效，变成 ``import os``."
 
 #: ../../security.rst:274
 msgid ""
-"If you expect users to copy and paste untrusted code from your site, such"
-" as from comments posted by users on a technical blog, consider applying "
-"extra filtering, such as replacing all ``\\b`` characters."
+"If you expect users to copy and paste untrusted code from your site, such as "
+"from comments posted by users on a technical blog, consider applying extra "
+"filtering, such as replacing all ``\\b`` characters."
 msgstr ""
+"如果用户有可能从你的网站上复制和粘贴不受信任的代码，比如在技术博客上发布的评"
+"论，要考虑使用更多的过滤条件，例如替换所有 ``\\b`` 字符。"
 
 #: ../../security.rst:282
 msgid ""
 "Most modern terminals will warn about and remove hidden characters when "
 "pasting, so this isn't strictly necessary. It's also possible to craft "
-"dangerous commands in other ways that aren't possible to filter. "
-"Depending on your site's use case, it may be good to show a warning about"
-" copying code in general."
+"dangerous commands in other ways that aren't possible to filter. Depending on "
+"your site's use case, it may be good to show a warning about copying code in "
+"general."
 msgstr ""
+"大多数现代终端在粘贴时都会警告并删除隐藏的字符，所以严格来说这并不是必须的。还有"
+"以其他方式生成危险命令的可能，这些都是不可能完全过滤的。根据你的网站的使用情况来"
+"做决定，复制代码时显示一个一般警告也是可以的。"
