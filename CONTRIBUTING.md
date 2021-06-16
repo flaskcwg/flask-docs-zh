@@ -85,7 +85,7 @@ msgid ""
 "Welcome to Flask's documentation. Get started with :doc:`installation` "
 "and then get an overview with the :doc:`quickstart`."
 msgstr ""
-"欢迎来到 Flask 的文档。你可以从 :doc:`installation` 入手"
+"欢迎来到 Flask 的文档。你可以从 :doc:`installation` 入手，"
 "然后阅读 :doc:`quickstart` 来了解基本概念。"
 ```
 
