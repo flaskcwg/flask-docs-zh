@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2010 Pallets
 # This file is distributed under the same license as the Flask package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# w kuang <kuangwinnie@gmail.com>, 2021.
 #
 #, fuzzy
 msgid ""
@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-25 19:31+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: w kuang <kuangwinnie@gmail.com>\n"
 "Language-Team: zh_CN <withlihui@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -92,7 +92,7 @@ msgid ""
 msgstr ""
 "在`Base` 类下面创造一个子类，就可以定义你的数据模型。"
 "SQLAlchemy 已经帮我们在 :class:`~sqlalchemy.orm.scoped_session` 中处理好了"
-"线程，因此我们不需要像在SQLite3 中那样创建一个 :data:`~flask.g` 对象。"
+"线程，因此我们不需要像在 SQLite3 中那样创建一个 :data:`~flask.g` 对象。"
 
 
 #: ../../patterns/sqlalchemy.rst:60
@@ -207,11 +207,11 @@ msgid ""
 "You can also pass strings of SQL statements to the "
 ":meth:`~sqlalchemy.engine.base.Connection.execute` method:"
 msgstr ""
-"你还可以直接传一个SQL 语句字符串进 :meth:`~sqlalchemy.engine.base.Connection.execute` 方法"
+"你还可以直接传一个 SQL 语句字符串进 :meth:`~sqlalchemy.engine.base.Connection.execute` 方法"
 
 #: ../../patterns/sqlalchemy.rst:214
 msgid ""
 "For more information about SQLAlchemy, head over to the `website "
 "<https://www.sqlalchemy.org/>`_."
 msgstr ""
-"更多有关SQLAlchemy 的信息，请看 `网站 <https://www.sqlalchemy.org/>`_."
+"更多有关 SQLAlchemy 的信息，请看 `网站 <https://www.sqlalchemy.org/>`_."
