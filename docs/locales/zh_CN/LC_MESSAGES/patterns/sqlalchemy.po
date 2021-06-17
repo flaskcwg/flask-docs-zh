@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../patterns/sqlalchemy.rst:2
 msgid "SQLAlchemy in Flask"
-msgstr ""
+msgstr "Flask 中的 SQLAlchemy"
 
 #: ../../patterns/sqlalchemy.rst:4
 msgid ""
@@ -28,16 +28,22 @@ msgid ""
 "application and drop the models into a separate module (:doc:`packages`)."
 " While that is not necessary, it makes a lot of sense."
 msgstr ""
+"很多人通过 `SQLAlchemy`_ 来进行数据库的访问。在这种情况下，我们推荐在你的 flask 应用中"
+"使用包（ package ）而不是使用单独使用一整个模块（module）。 "
+"然后在你的包中将你的数据库模型分类成相对应的模块 (:doc:`packages`)。"
+"虽然这不是必须的，但是这会让你的代码更加有逻辑。"
 
 #: ../../patterns/sqlalchemy.rst:9
 msgid ""
 "There are four very common ways to use SQLAlchemy.  I will outline each "
 "of them here:"
 msgstr ""
+"接下来将会介绍四种常用的 SQLAlchemy 使用方式: "
 
 #: ../../patterns/sqlalchemy.rst:13
 msgid "Flask-SQLAlchemy Extension"
 msgstr ""
+"Flask-SQLAlchemy 插件"
 
 #: ../../patterns/sqlalchemy.rst:15
 msgid ""
@@ -46,16 +52,21 @@ msgid ""
 "there is a Flask extension that handles that for you.  This is "
 "recommended if you want to get started quickly."
 msgstr ""
+"作为一种数据库抽象层和对象关系映射器， SQLAlchemy 十分流行且易用。早已有人实现了对应的Flask 插件。"
+"如果你想快速上手，非常建议你直接使用它: "
 
 #: ../../patterns/sqlalchemy.rst:20
 msgid ""
 "You can download `Flask-SQLAlchemy`_ from `PyPI <https://pypi.org/project"
 "/Flask-SQLAlchemy/>`_."
 msgstr ""
+"`Flask-SQLAlchemy`_  官方下载地址："
+"`PyPI <https://pypi.org/project"
+"/Flask-SQLAlchemy/>`_."
 
 #: ../../patterns/sqlalchemy.rst:27
 msgid "Declarative"
-msgstr ""
+msgstr "声明"
 
 #: ../../patterns/sqlalchemy.rst:29
 msgid ""
@@ -64,10 +75,12 @@ msgid ""
 "similar to how Django works.  In addition to the following text I "
 "recommend the official documentation on the `declarative`_ extension."
 msgstr ""
+"可以像在Django 框架中那样，通过SQLAlchemy 中的声明扩展进行使用SQLAlchemy。"
+"我推荐各位查看一下 `声明`_ 的官方文档作为对本文档的补充。"
 
 #: ../../patterns/sqlalchemy.rst:34
 msgid "Here's the example :file:`database.py` module for your application::"
-msgstr ""
+msgstr "示例: :file:`database.py`"
 
 #: ../../patterns/sqlalchemy.rst:54
 msgid ""
@@ -77,6 +90,10 @@ msgid ""
 ":data:`~flask.g` object): that's because SQLAlchemy does that for us "
 "already with the :class:`~sqlalchemy.orm.scoped_session`."
 msgstr ""
+"在`Base` 类下面创造一个子类，就可以定义你的数据模型。"
+"SQLAlchemy 已经帮我们在 :class:`~sqlalchemy.orm.scoped_session` 中处理好了"
+"线程，因此我们不需要像在SQLite3 中那样创建一个 :data:`~flask.g` 对象。"
+
 
 #: ../../patterns/sqlalchemy.rst:60
 msgid ""
@@ -85,26 +102,29 @@ msgid ""
 "automatically remove database sessions at the end of the request or when "
 "the application shuts down::"
 msgstr ""
+"你只要将以下的代码片段放入你的应用模块中，你就可以通过声明的方式使用 SQLAlchemy。"
+"Flask 会在请求结束或者应用被关闭时移除数据库会话。"
 
 #: ../../patterns/sqlalchemy.rst:71
 msgid "Here is an example model (put this into :file:`models.py`, e.g.)::"
 msgstr ""
+"以下是一个示例模型 (譬如将其放入 :file:`models.py`)::"
 
 #: ../../patterns/sqlalchemy.rst:89
 msgid "To create the database you can use the `init_db` function:"
-msgstr ""
+msgstr "你可以通过 `init_db` 函数创建一个数据库: "
 
 #: ../../patterns/sqlalchemy.rst:94
 msgid "You can insert entries into the database like this:"
-msgstr ""
+msgstr "你可以像这样插入一条数据: "
 
 #: ../../patterns/sqlalchemy.rst:102
 msgid "Querying is simple as well:"
-msgstr ""
+msgstr "读取数据: "
 
 #: ../../patterns/sqlalchemy.rst:113
 msgid "Manual Object Relational Mapping"
-msgstr ""
+msgstr "手动进行对象关系映射"
 
 #: ../../patterns/sqlalchemy.rst:115
 msgid ""
@@ -115,10 +135,15 @@ msgid ""
 "declarative approach, so make sure to also split up your application into"
 " multiple modules in a package."
 msgstr ""
+"手动进行关系映射和声明式关系映射各有千秋，"
+"在手动进行对象关系映射时，你需要分别定义不同的表和类，并且将他们分别映射起来。"
+"这在给你提供更高的灵活度的同时，也会提高你的工程量。"
+"但通常来说他和声明式并没有什么区别，记得在你的项目中将其分门别类的放在不同的模块中。"
 
 #: ../../patterns/sqlalchemy.rst:122
 msgid "Here is an example :file:`database.py` module for your application::"
 msgstr ""
+"示例: :file:`database.py`"
 
 #: ../../patterns/sqlalchemy.rst:135
 msgid ""
@@ -126,57 +151,67 @@ msgid ""
 "request or application context shutdown.  Put this into your application "
 "module::"
 msgstr ""
+"让Flask 在请求结束或者应用被关闭时移除数据库会话的方式和声明式类似："
 
 #: ../../patterns/sqlalchemy.rst:145
 msgid "Here is an example table and model (put this into :file:`models.py`)::"
 msgstr ""
+"一个样例表和模型的对应例子：（将此放入 :file:`models.py` 中)::"
 
 #: ../../patterns/sqlalchemy.rst:168
 msgid "Querying and inserting works exactly the same as in the example above."
-msgstr ""
+msgstr "插入和查询数据:"
 
 #: ../../patterns/sqlalchemy.rst:172
 msgid "SQL Abstraction Layer"
-msgstr ""
+msgstr "SQL 抽象层"
 
 #: ../../patterns/sqlalchemy.rst:174
 msgid ""
 "If you just want to use the database system (and SQL) abstraction layer "
 "you basically only need the engine::"
-msgstr ""
+msgstr "如果你只是想使用数据库系统（和 SQL）抽象层，你基本上只需要这个 engine ，"
+"然后你就可以通过 engine 来像上面的例子一样载入你的表。 "
 
 #: ../../patterns/sqlalchemy.rst:182
 msgid ""
 "Then you can either declare the tables in your code like in the examples "
 "above, or automatically load them::"
 msgstr ""
+"或者像这样自动载入::"
 
 #: ../../patterns/sqlalchemy.rst:189
 msgid ""
 "To insert data you can use the `insert` method.  We have to get a "
 "connection first so that we can use a transaction:"
 msgstr ""
+"先连接上你的数据库，然后就可以通过 `insert` 方法生成一个事务进行数据插入。"
 
 #: ../../patterns/sqlalchemy.rst:195
 msgid "SQLAlchemy will automatically commit for us."
 msgstr ""
+"SQLAlchemy 会自动提交(commit) 这个事务。"
 
 #: ../../patterns/sqlalchemy.rst:197
 msgid "To query your database, you use the engine directly or use a connection:"
 msgstr ""
+"可以直接通过 engine 或者通过数据库链接来进行表的增删改查。"
 
 #: ../../patterns/sqlalchemy.rst:202
 msgid "These results are also dict-like tuples:"
 msgstr ""
+"得到的结果可以通过字典的读取方法读取:"
 
 #: ../../patterns/sqlalchemy.rst:208
 msgid ""
 "You can also pass strings of SQL statements to the "
 ":meth:`~sqlalchemy.engine.base.Connection.execute` method:"
 msgstr ""
+"你还可以直接传一个SQL 语句字符串进 :meth:`~sqlalchemy.engine.base.Connection.execute` 方法"
 
 #: ../../patterns/sqlalchemy.rst:214
 msgid ""
 "For more information about SQLAlchemy, head over to the `website "
 "<https://www.sqlalchemy.org/>`_."
 msgstr ""
+"更多有关SQLAlchemy 的信息，请看 `网站 <https://www.sqlalchemy.org/>`_."
