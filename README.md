@@ -106,7 +106,7 @@
 - [ ] packages
 - [ ] requestchecksum
 - [ ] singlepageapplications
-- [ ] sqlalchemy [@wnykuang](https://github.com/wnykuang) wkuang
+- [x] sqlalchemy [@wnykuang](https://github.com/wnykuang) wkuang
 - [ ] sqlite3
 - [ ] streaming
 - [ ] subclassing
