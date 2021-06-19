@@ -39,10 +39,7 @@ For Windows:
 
 ### Self-Assignment
 
-- Open your fork repository on GitHub.
-- Click the "Fetch upstream" button to update your fork.
-- Click the edit button (a pencil icon in the upper right corner of the README)
-to edit the README.
+- Open [this README.md file](https://github.com/greyli/flask-docs-zh/edit/main/README.md).
 - Find the "Translation To-do List" section, mark the chapter you want to
 translate in following format:
 
@@ -56,9 +53,8 @@ You can link the username to your GitHub profile:
 - [ ] example [@your_username](https://github.com/your_username) Your Name
 ```
 
-- Leave a commit message (e.g., "Assign example to @your_username"), then select
-"Create a new branch for this commit and start a pull request" and click the
-"Commit changes" button to create a PR.
+- Leave a commit message (e.g., "Assign example to @your_username"), then click the
+"Propose changes" button to create a PR.
 
 
 ### Translation
@@ -89,7 +85,7 @@ msgid ""
 "Welcome to Flask's documentation. Get started with :doc:`installation` "
 "and then get an overview with the :doc:`quickstart`."
 msgstr ""
-"欢迎来到 Flask 的文档。你可以从 :doc:`installation` 入手"
+"欢迎来到 Flask 的文档。你可以从 :doc:`installation` 入手，"
 "然后阅读 :doc:`quickstart` 来了解基本概念。"
 ```
 

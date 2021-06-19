@@ -32,7 +32,7 @@
 - [ ] advanced_foreword (reserved)
 - [ ] appcontext [@rosekc](https://github.com/rosekc) rosekc
 - [ ] async-await [@rosekc](https://github.com/your_username) rosekc
-- [ ] becomingbig
+- [ ] becomingbig [@yuxiaoy1](https://github.com/yuxiaoy1) Frank Yu
 - [x] blueprints [@frostming](https://github.com/frostming) Frost Ming
 - [ ] changes
 - [ ] cli [@andysim3d](https://github.com/andysim3d) Andrew
@@ -66,7 +66,7 @@
 - [ ] deploy
 - [ ] factory
 - [x] index [@greyli](https://github.com/greyli) Grey Li
-- [ ] install
+- [ ] install [@greyli](https://github.com/greyli) Grey Li
 - [x] layout [@greyli](https://github.com/greyli) Grey Li
 - [ ] next
 - [ ] static [@greyli](https://github.com/greyli) Grey Li
