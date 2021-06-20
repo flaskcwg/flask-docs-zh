@@ -26,7 +26,7 @@ msgid ""
 "Here are your options when growing your codebase or scaling your "
 "application."
 msgstr ""
-"当你的代码库日益壮大，应用需要进行扩展时，可以参考以下建议。"
+"当你的代码规模逐渐增长，应用需要进行扩展时，可以参考以下建议。"
 
 #: ../../becomingbig.rst:7
 msgid "Read the Source."
