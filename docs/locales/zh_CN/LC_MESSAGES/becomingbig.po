@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2010 Pallets
 # This file is distributed under the same license as the Flask package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# Frank Yu <withyuxiaoy@gmail.com>, 2021.
 #
 #, fuzzy
 msgid ""
@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-25 19:31+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Frank Yu <withyuxiaoy@gmail.com>\n"
 "Language-Team: zh_CN <withlihui@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -19,17 +19,18 @@ msgstr ""
 
 #: ../../becomingbig.rst:2
 msgid "Becoming Big"
-msgstr ""
+msgstr "大型应用"
 
 #: ../../becomingbig.rst:4
 msgid ""
 "Here are your options when growing your codebase or scaling your "
 "application."
 msgstr ""
+"当你的代码库日益壮大，应用需要进行扩展时，可以参考以下建议。"
 
 #: ../../becomingbig.rst:7
 msgid "Read the Source."
-msgstr ""
+msgstr "阅读源代码"
 
 #: ../../becomingbig.rst:9
 msgid ""
@@ -42,10 +43,15 @@ msgid ""
 "libraries, and documents its internal utilities so that you can find the "
 "hook points needed for your project."
 msgstr ""
+"Werkzeug（WSGI 工具集）和 Jinja（模板引擎）是两个被广泛使用的工具，Flask 的初衷有一"
+"部分是为了展示如何基于这些工具去创建自己的框架。随着不断地发展，Flask 被越来越多的用户认"
+"可了。当你的代码规模逐渐增长时，不要单纯地使用 Flask，而应该去理解它。请阅读 Flask 的源"
+"代码吧。Flask 的代码易读，文档公开，便于你直接使用其内部 API。并且 Flask 坚持把上游库中"
+"的 API 及其内部的工具文档化，以便你能找到项目所需的挂接点。"
 
 #: ../../becomingbig.rst:19
 msgid "Hook. Extend."
-msgstr ""
+msgstr "钩子与扩展"
 
 #: ../../becomingbig.rst:21
 msgid ""
@@ -58,10 +64,14 @@ msgid ""
 ":doc:`/extensions` in the community, and look for patterns to build your "
 "own extensions if you do not find the tools you need."
 msgstr ""
+":doc:`/api` 文档中随处可见重载，挂接点以及 :doc:`/signals`。你可以为诸如请求和响应"
+"对象定制自定义类。请深入研究你所使用的 API，并查找 Flask 中有哪些开箱即用的自定义功能。"
+"请研究如何重构你的项目，使它能够成为一个实用程序和 Flask 扩展的集合。你还可以探索社区中"
+"的许多 :doc:`/extensions`，如果找不到满意的，那就查找一些模式并建立自己的扩展吧。"
 
 #: ../../becomingbig.rst:31
 msgid "Subclass."
-msgstr ""
+msgstr "子类"
 
 #: ../../becomingbig.rst:33
 msgid ""
@@ -72,10 +82,13 @@ msgid ""
 "with :doc:`/patterns/appfactories`. See :doc:`/patterns/subclassing` for "
 "an example."
 msgstr ""
+":class:`~flask.Flask` 类有许多方法专为子类化而设计。你可以通过子类化 :class:`~flask.Flask`"
+" 快速地添加或定制行为（见链接的方法文档），并把子类实例化为一个应用程序。这种方法同样适用于"
+" :doc:`/patterns/appfactories`。:doc:`/patterns/subclassing` 中有案例可供参考。"
 
 #: ../../becomingbig.rst:40
 msgid "Wrap with middleware."
-msgstr ""
+msgstr "用中间件包装"
 
 #: ../../becomingbig.rst:42
 msgid ""
@@ -85,10 +98,13 @@ msgid ""
 " application and your HTTP server. Werkzeug includes several `middlewares"
 " <https://werkzeug.palletsprojects.com/middleware/>`_."
 msgstr ""
+":doc:`/appdispatch` 文档中详细阐述了如何应用中间件。你可以引入 WSGI 中间件来包装你"
+"的 Flask 实例，并在你的 Flask 应用程序和 HTTP 服务器之间引入一些改变。Werkzeug 库"
+"中包含一些 `中间件 <https://werkzeug.palletsprojects.com/middleware/>`_ 可供使用。"
 
 #: ../../becomingbig.rst:49
 msgid "Fork."
-msgstr ""
+msgstr "派生"
 
 #: ../../becomingbig.rst:51
 msgid ""
@@ -101,6 +117,10 @@ msgid ""
 "complex system to begin with which causes a steep learning curve and a "
 "lot of user frustration."
 msgstr ""
+"如果上面的选项都不奏效的话，那就派生 Flask 吧。Flask 的主要代码都在 Werkzeug 和"
+" Jinja2 这两个库中。这两个库起到了主要作用。Flask 只是把它们粘在一起而已。对于每个"
+"项目来说，都会遇到与底层框架之间并不合适的点（由于原始开发者的某些假定）。这是很自然的，"
+"如果不这样的话，框架从一开始就会变得非常复杂，从而带来陡峭的学习曲线，无法吸引到用户。"
 
 #: ../../becomingbig.rst:59
 msgid ""
@@ -109,6 +129,8 @@ msgid ""
 "reflected in the license of Flask.  You don't have to contribute any "
 "changes back if you decide to modify the framework."
 msgstr ""
+"这个问题并不是 Flask 所独有的。为了克服这些缺点，许多人会对他们的框架做出修改或者打一些补丁。"
+"这个理念在 Flask 的许可证中也有所体现。如果你决定修改框架，你并不需要对框架贡献任何的改动。"
 
 #: ../../becomingbig.rst:64
 msgid ""
@@ -118,10 +140,12 @@ msgid ""
 "depending on the number of changes.  Because of that, forking should be "
 "the very last resort."
 msgstr ""
+"当然，派生的缺点是 Flask 扩展很可能会失效，因为新框架会使用不同的导入名称。此外，"
+"取决于上游变化的数量，整合这些变化可能会变得复杂。正因为如此，派生应该是最后的选择。"
 
 #: ../../becomingbig.rst:71
 msgid "Scale like a pro."
-msgstr ""
+msgstr "专业级的可扩展性"
 
 #: ../../becomingbig.rst:73
 msgid ""
@@ -131,6 +155,9 @@ msgid ""
 "the data store you want to use and the Python implementation and "
 "webserver you are running on."
 msgstr ""
+"对于大多数 Web 应用来说，最复杂的莫过于如何对预期的用户量或数据量实现可扩展性。Flask"
+" 本身具有良好的可扩展性，整个应用的可扩展性只受限于你的应用程序代码、数据存储方式、"
+"以及你采用的 Python 实现和 Web 服务器。"
 
 #: ../../becomingbig.rst:79
 msgid ""
@@ -139,6 +166,8 @@ msgid ""
 " new server the application won't perform any better or would not even "
 "support a second server."
 msgstr ""
+"好的可扩展性意味着如果你把服务器的数量增加一倍，你的应用性能就会增加一倍。如果可扩展性不好"
+"，那么即使你增加一台新的服务器，也不会得到更好的性能，或者甚至根本不支持增加第二台服务器。"
 
 #: ../../becomingbig.rst:84
 msgid ""
@@ -151,10 +180,14 @@ msgid ""
 "processes to achieve concurrency which are all methods well supported by "
 "the underlying Werkzeug library."
 msgstr ""
+"Flask 中唯一会影响可扩展性的因素是上下文本地代理。Flask 中的上下文本地代理可以被定义"
+"为线程、进程或 greenlet。如果你使用的服务器的并发实现并不基于以上这些，那么 Flask "
+"就不支持使用这些全局代理。然而，大多数服务器都支持使用线程、greenlet 或独立进程来实现"
+"并发，Flask 的底层库 Werkzeug 对于这些也都能提供良好的支持。"
 
 #: ../../becomingbig.rst:94
 msgid "Discuss with the community."
-msgstr ""
+msgstr "与社区沟通"
 
 #: ../../becomingbig.rst:96
 msgid ""
@@ -165,3 +198,6 @@ msgid ""
 "developers to improve the tools for larger applications is getting "
 "feedback from users."
 msgstr ""
+"Flask 的开发者旨在让拥有大大小小代码库的用户都能使用该框架。如果你发现了由于 Flask"
+" 引起的问题，请立即通过邮件列表或 Discord 联系开发者。对于 Flask 及其扩展的开发者"
+"来说，提升其在大型应用中表现的最好方法就是得到用户的反馈。"
