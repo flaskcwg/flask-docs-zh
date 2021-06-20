@@ -98,7 +98,7 @@ msgid ""
 " application and your HTTP server. Werkzeug includes several `middlewares"
 " <https://werkzeug.palletsprojects.com/middleware/>`_."
 msgstr ""
-":doc:`/appdispatch` 文档中详细阐述了如何应用中间件。你可以引入 WSGI 中间件来包装你"
+":doc:`/patterns/appdispatch` 文档中详细阐述了如何应用中间件。你可以引入 WSGI 中间件来包装你"
 "的 Flask 实例，并在你的 Flask 应用程序和 HTTP 服务器之间引入一些改变。Werkzeug 库"
 "中包含一些 `中间件 <https://werkzeug.palletsprojects.com/middleware/>`_ 可供使用。"
 
