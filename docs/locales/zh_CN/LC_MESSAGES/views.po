@@ -28,7 +28,7 @@ msgid ""
 "intention is that you can replace parts of the implementations and this "
 "way have customizable pluggable views."
 msgstr ""
-"Flask 0.7 受 Django 基于类而非函数创建视图的启发"
+"Flask 0.7 受 Django 基于类而非函数创建视图的启发，"
 "在普通视图的基础上引入了可插拔视图。"
 "主要意图在于可替换部分实现和能够自定义可插拔视图。"
 
@@ -41,7 +41,7 @@ msgid ""
 "Consider you have a function that loads a list of objects from the "
 "database and renders into a template::"
 msgstr ""
-"想象一下你有一个函数，它需要从数据库中获取一个列表数据"
+"想象一下你有一个函数，它需要从数据库中获取一个列表数据，"
 "并且将其渲染到模板中："
 
 #: ../../views.rst:22
@@ -71,7 +71,7 @@ msgstr ""
 " :meth:`~flask.views.View.dispatch_request` 方法。然后必须
 "通过 :meth:`~flask.views.View.as_view` 这个类方法将其转换"
 "为一个真正的视图函数。传递给该函数的字符串就是后面生成视图的端点的名称。"
-"但是这本身并没有什么用，所以让我们对代码进行做一点重构："
+"但是这本身并没有什么用，所以让我们对代码做一点重构："
 
 #: ../../views.rst:70
 msgid ""
@@ -87,7 +87,7 @@ msgid ""
 msgstr ""
 "这个小示例用处不大，但它已经足够解释清楚基本的原理了。"
 "当你使用基于类的视图时，问题也会随之而来，例如 ``self`` 指代何物。"
-"它的运行方式是，当你发送一个请求会随之创建一个新的类实例"
+"它的运行方式是，当你发送一个请求会随之创建一个新的类实例，"
 "并且 :meth:`~flask.views.View.dispatch_request` 会根据 URL 规则中的参数被调用。"
 "类本身会用传给 :meth:`~flask.views.View.as_view` 函数的参数进行实例化。 比如你可以编写一个这样的类："
 
@@ -171,7 +171,7 @@ msgstr ""
 
 #: ../../views.rst:167
 msgid "Method Views for APIs"
-msgstr "视图方法相关的 APIs"
+msgstr "视图方法相关的 API"
 
 #: ../../views.rst:169
 msgid ""
@@ -208,7 +208,7 @@ msgstr "``GET``"
 
 #: ../../views.rst:179
 msgid "Gives a list of all users"
-msgstr "返回包含所有用户的list"
+msgstr "返回包含所有用户的列表"
 
 #: ../../views.rst:180
 msgid "``POST``"
@@ -248,8 +248,8 @@ msgid ""
 ":class:`~flask.views.MethodView`?  The trick is to take advantage of the "
 "fact that you can provide multiple rules to the same view."
 msgstr ""
-"那么怎么用 :class:`~flask.views.MethodView` 来做到这一点呢？窍门在于"
-"你可以利用相同视图提供多个规则的事实来完成。"
+"那么怎么用 :class:`~flask.views.MethodView` 来做到这一点呢？窍门是"
+"提供多个规则对应到同一个视图"
 
 #: ../../views.rst:190
 msgid "Let's assume for the moment the view would look like this::"
