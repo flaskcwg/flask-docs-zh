@@ -55,7 +55,7 @@
 - [x] shell [@LTakamori](https://github.com/LTakamori) LTakamori
 - [ ] signals
 - [ ] templating
-- [ ] testing
+- [ ] testing [@yuxiaoy1](https://github.com/yuxiaoy1) Frank Yu
 - [ ] views [@labike](https://github.com/labike) labike
 
 
