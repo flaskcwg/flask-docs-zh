@@ -265,4 +265,3 @@ msgstr ""
 #: ../../../CONTRIBUTING.rst:227
 msgid "Read more about `Sphinx <https://www.sphinx-doc.org/en/stable/>`__."
 msgstr ""
-

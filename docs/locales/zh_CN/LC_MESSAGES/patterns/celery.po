@@ -120,4 +120,3 @@ msgid ""
 "Now that the worker is running, ``wait`` will return the result once the "
 "task is finished."
 msgstr ""
-

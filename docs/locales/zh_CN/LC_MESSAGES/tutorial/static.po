@@ -79,4 +79,3 @@ msgstr ""
 #: ../../tutorial/static.rst:72
 msgid "Continue to :doc:`blog`."
 msgstr ""
-

@@ -37,4 +37,3 @@ msgid ""
 "extension for Flask does. Flask-Caching supports various backends, and it"
 " is even possible to develop your own caching backend."
 msgstr ""
-
