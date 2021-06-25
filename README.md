@@ -53,7 +53,7 @@
 - [ ] security [@kylinbin](https://github.com/kylinbin) kylin
 - [ ] server [@LeeRnnGii](https://github.com/LeeRnnGii) LeeRnnGii
 - [x] shell [@LTakamori](https://github.com/LTakamori) LTakamori
-- [ ] signals
+- [ ] signals [@labike](https://github.com/labike) labike
 - [ ] templating
 - [ ] testing [@yuxiaoy1](https://github.com/yuxiaoy1) Frank Yu
 - [ ] views [@labike](https://github.com/labike) labike
