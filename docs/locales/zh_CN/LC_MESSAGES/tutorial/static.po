@@ -28,7 +28,7 @@ msgid ""
 "constructed. The style won't change, so it's a *static* file rather than "
 "a template."
 msgstr ""
-"认证视图和模板现在可以工作，但是看起来非常简陋。使用一些 `CSS`_ 可以给你编写的 "
+"认证视图和模板能够正常使用，但是现在看起来还非常简陋。使用一些 `CSS`_ 可以给你编写的 "
 "HTML 结构增加样式。因为样式代码不会变化，所以这是一个 *静态* 文件而不是模板。"
 
 #: ../../tutorial/static.rst:9
@@ -56,7 +56,7 @@ msgid ""
 "This tutorial isn't focused on how to write CSS, so you can just copy the"
 " following into the ``flaskr/static/style.css`` file:"
 msgstr ""
-"这个教程不会关注如何写 CSS，所以你可以直接复制下面的代码到 ``flaskr/static/style.css`` 文件："
+"在本教程中，你不需要关注如何编写 CSS 文件，因此你可以直接复制下面的代码到 ``flaskr/static/style.css`` 文件："
 
 #: ../../tutorial/static.rst:25
 msgid "``flaskr/static/style.css``"
@@ -85,7 +85,7 @@ msgid ""
 "you change a static file, refresh the browser page. If the change doesn't"
 " show up, try clearing your browser's cache."
 msgstr ""
-"你可以在 `Mozilla 文档 <CSS_>`_ 阅读更多关于 CSS 的内容。如果静态文件产生了变化"
+"你可以在 `Mozilla 文档 <CSS_>`_ 阅读更多关于 CSS 的内容。如果修改了某一静态文件"
 "，刷新页面即可。如果变更没有生效，尝试清空浏览器缓存。"
 
 #: ../../tutorial/static.rst:72
