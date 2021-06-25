@@ -90,7 +90,7 @@
 
 - [ ] appdispatch
 - [ ] appfactories
-- [ ] caching [@pk00749](https://github.com/pk00749) York Li
+- [x] caching [@pk00749](https://github.com/pk00749) York Li
 - [ ] celery
 - [ ] deferredcallbacks
 - [ ] distribute
