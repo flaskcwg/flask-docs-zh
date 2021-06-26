@@ -29,7 +29,7 @@ msgid ""
 "way have customizable pluggable views."
 msgstr ""
 "Flask 0.7 受 Django 基于类而非函数创建视图的启发，"
-"在普通视图的基础上引入了可插拔视图。"
+"在通用视图的基础上引入了可插拔视图。"
 "主要意图在于可替换部分实现和能够自定义可插拔视图。"
 
 #: ../../views.rst:12
@@ -52,8 +52,8 @@ msgid ""
 "views come into place.  As the first step to convert this into a class "
 "based view you would do this::"
 msgstr ""
-"这很容易也很灵活，但是你可能想让它更灵活，比如为视图提供一个"
-"通用的方法以此让它同样地适配其他的数据模型和模板。"
+"这很容易也很灵活，但是你可能想让它更灵活，比如用一种通用的"
+"方式编写视图以便让它同样适配其他的数据模型和模板。"
 "那么基于类的可插拔视图刚好适用于此。首先你需要在这里将其转换成"
 "基于类的视图："
 
@@ -87,8 +87,8 @@ msgid ""
 msgstr ""
 "这个小示例用处不大，但它已经足够解释清楚基本的原理了。"
 "当你使用基于类的视图时，问题也会随之而来，例如 ``self`` 指代何物。"
-"它的运行方式是，当你发送一个请求会随之创建一个新的类实例，"
-"并且 :meth:`~flask.views.View.dispatch_request` 会根据 URL 规则中的参数被调用。"
+"它的运行方式是，当请求被调度/分配到这个视图类上时会随之创建一个新的类实例，"
+"并且 :meth:`~flask.views.View.dispatch_request` URL 规则中的参数会被传递给 dispatch_request 方法。"
 "类本身会用传给 :meth:`~flask.views.View.as_view` 函数的参数进行实例化。 比如你可以编写一个这样的类："
 
 #: ../../views.rst:85
@@ -109,10 +109,10 @@ msgid ""
 " can provide a :attr:`~flask.views.View.methods` attribute that has this "
 "information::"
 msgstr ""
-"可插入视图通过用 :func:`~flask.Flask.route` 或更好的"
+"可插拔视图通过用 :func:`~flask.Flask.route` 或更好的"
 " :meth:`~flask.Flask.add_url_rule` 方法将其像常规函数一样附加到应用程序上。"
-"然而这也意味着当你使用这种方式时你必须为其提供相应的 HTTP 方法名来支持该视图。"
-"为了将该信息转移到类中，你可以提供一个具有以下信息的 :attr:`~flask.views.View.methods` 属性："
+"然而这也意味着在注册的时候需要注明这个视图支持的 HTTP 方法。"
+"为了将该信息转移到类中，你可以提供一个具有这个信息的 :attr:`~flask.views.View.methods` 属性："
 
 #: ../../views.rst:112
 msgid "Method Based Dispatching"
@@ -125,7 +125,7 @@ msgid ""
 "easily do that.  Each HTTP method maps to a function with the same name "
 "(just in lowercase)::"
 msgstr ""
-"对于 RESTful API 来说，当你对每一个 HTTP 方法执行不同的的函数时它是特别有帮助的。"
+"对于 RESTful API 来说，对每一个 HTTP 方法执行不同的的函数时是特别有帮助的。"
 "用 :class:`flask.views.MethodView` 很轻松就可以做到。"
 "每个 HTTP 方法都会映射到一个具有相同名字的函数上："
 
@@ -136,11 +136,11 @@ msgid ""
 "based on the methods defined in the class."
 msgstr ""
 "这样的话你就可以不用提供 :attr:`~flask.views.View.methods` 属性了。"
-"它会自动的为类中的方法进行设置。"
+"它会自动的为类中的方法进行定义。"
 
 #: ../../views.rst:138
 msgid "Decorating Views"
-msgstr "装饰器视图"
+msgstr "装饰视图"
 
 #: ../../views.rst:140
 msgid ""
@@ -150,14 +150,14 @@ msgid ""
 ":meth:`~flask.views.View.as_view` by hand::"
 msgstr ""
 "由于类视图本身不是添加到路由系统的视图函数，"
-"因此装饰它没有多大意义。 相反的你必须装饰 :meth:`~flask.views.View.as_view` 返回的值："
+"因此装饰类本身没有多大意义。 相反，你必须手动装饰 :meth:`~flask.views.View.as_view` 的返回值："
 
 #: ../../views.rst:156
 msgid ""
 "Starting with Flask 0.8 there is also an alternative way where you can "
 "specify a list of decorators to apply in the class declaration::"
 msgstr ""
-"从 Flask 0.8 开始，你还可以使用另一种方法，"
+"从 Flask 0.8 开始，你还可以使用另一种替代方法，"
 "在类的声明中指定要应用的装饰器列表："
 
 #: ../../views.rst:162
@@ -166,12 +166,12 @@ msgid ""
 "regular view decorators on the individual methods of the view however, "
 "keep this in mind."
 msgstr ""
-"由于对调用者来说它是隐式的，所以你不能在视图的个别方法上使用常规的视图装饰器，"
+"由于对调用者来说参数名是隐式的，所以你不能在视图的个别方法上使用常规的视图装饰器，"
 "请谨记这一点。"
 
 #: ../../views.rst:167
 msgid "Method Views for APIs"
-msgstr "视图方法相关的 API"
+msgstr "方法视图 API"
 
 #: ../../views.rst:169
 msgid ""
@@ -182,9 +182,9 @@ msgid ""
 " of the time.  For instance consider that you are exposing a user object "
 "on the web:"
 msgstr ""
-"Web API 通常与 HTTP 一起使用, 所以它基于 :class:`~flask.views.MethodView` 对这样的API
-"做了很多有意义的实现。也就是说，你要注意在大多数情况下 API 会根据不同的 URL 规则跳转到有"
-"相同方法的视图中。 例如在 web 中暴露一个用户对象："
+"Web API 通常与 HTTP 一起使用, 所以它基于 :class:`~flask.views.MethodView` 对这样的 API "
+"做了很多有意义的实现。也就是说，多数时候 API 需要把不同的 URL 规则应用到同一个方法视图中。"
+"例如在 web 中暴露一个用户对象："
 
 #: ../../views.rst:177
 msgid "URL"
@@ -249,7 +249,7 @@ msgid ""
 "fact that you can provide multiple rules to the same view."
 msgstr ""
 "那么怎么用 :class:`~flask.views.MethodView` 来做到这一点呢？窍门是"
-"提供多个规则对应到同一个视图"
+"提供多个规则对应到同一个视图。"
 
 #: ../../views.rst:190
 msgid "Let's assume for the moment the view would look like this::"
@@ -261,11 +261,11 @@ msgid ""
 "and explicitly mentioning the methods for each::"
 msgstr ""
 "那么我们如何将其与路由系统连接起来呢？答案是通过添加两个规则"
-"并明确提及每个规则对应的方法："
+"并显示注明每个规则对应的方法："
 
 #: ../../views.rst:224
 msgid ""
 "If you have a lot of APIs that look similar you can refactor that "
 "registration code::"
 msgstr ""
-"如果你有很多看起来一样的 API，你可以将他们像下面的注册代码一样进行重构："
+"如果你有很多看起来一样的 API，你可以将他们像下面重构注册代码："
