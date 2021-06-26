@@ -261,4 +261,3 @@ msgid ""
 "This sets up the load paths according to the settings of the virtual "
 "environment.  Keep in mind that the path has to be absolute."
 msgstr ""
-

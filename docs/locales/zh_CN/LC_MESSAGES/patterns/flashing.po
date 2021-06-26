@@ -101,4 +101,3 @@ msgid ""
 " :func:`~flask.get_flashed_messages`.  This is useful if you wish to "
 "render each category in a separate block."
 msgstr ""
-

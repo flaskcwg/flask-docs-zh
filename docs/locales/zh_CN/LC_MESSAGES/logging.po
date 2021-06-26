@@ -156,4 +156,3 @@ msgid ""
 ":meth:`app.logger <flask.Flask.logger>` or its own named logger. Consult "
 "each extension's documentation for details."
 msgstr ""
-

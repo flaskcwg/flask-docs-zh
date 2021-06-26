@@ -165,4 +165,3 @@ msgid ""
 ":class:`~werkzeug.routing.Rule` to a view function. This is possible with"
 " this decorator. For example::"
 msgstr ""
-

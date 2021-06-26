@@ -348,4 +348,3 @@ msgid ""
 "If you need to access the underlying object that is proxied, use the "
 ":meth:`~werkzeug.local.LocalProxy._get_current_object` method::"
 msgstr ""
-

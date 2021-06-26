@@ -82,4 +82,3 @@ msgid ""
 "The `Favicon <https://en.wikipedia.org/wiki/Favicon>`_ article on "
 "Wikipedia"
 msgstr ""
-

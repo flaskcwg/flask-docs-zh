@@ -364,4 +364,3 @@ msgstr ""
 #: ../../htmlfaq.rst:206
 msgid "For most applications, it is undoubtedly better to use HTML5 than XHTML."
 msgstr ""
-

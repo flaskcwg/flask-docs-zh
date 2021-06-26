@@ -206,4 +206,3 @@ msgstr ""
 #: ../../tutorial/templates.rst:187
 msgid "Continue to :doc:`static`."
 msgstr ""
-

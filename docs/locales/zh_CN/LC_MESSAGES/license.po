@@ -111,4 +111,3 @@ msgid ""
 "https://palletsprojects.com/p/flask/ if you use it in a medium that "
 "supports links."
 msgstr ""
-

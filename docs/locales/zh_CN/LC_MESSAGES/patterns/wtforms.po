@@ -131,4 +131,3 @@ msgstr ""
 #: ../../patterns/wtforms.rst:122
 msgid "For more information about WTForms, head over to the `WTForms website`_."
 msgstr ""
-

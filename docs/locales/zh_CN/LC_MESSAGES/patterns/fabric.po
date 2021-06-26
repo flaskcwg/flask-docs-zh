@@ -248,4 +248,3 @@ msgid ""
 " type ``fab deploy`` and see your application being deployed "
 "automatically to one or more remote servers."
 msgstr ""
-
