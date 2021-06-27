@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Flask 2.1.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-25 19:31+0800\n"
-"PO-Revision-Date: 2021-06-23 22:20+0800\n"
+"PO-Revision-Date: 2021-06-27 14:58+0800\n"
 "Language-Team: zh_CN <withlihui@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -65,19 +65,19 @@ msgid ""
 "be modified just like any dictionary::"
 msgstr ""
 ":attr:`~flask.Flask.config` 实际上是字典类的一个子类，它可以像任何字典一样被编"
-"辑："
+"辑::"
 
 #: ../../config.rst:31
 msgid ""
 "Certain configuration values are also forwarded to the :attr:`~flask.Flask` "
 "object so you can read and write them from there::"
 msgstr ""
-"某些配置同时也会被转发到 :attr:`~flask.Flask` 对象，所以你可以在那里读写它们："
+"某些配置同时也会被转发到 :attr:`~flask.Flask` 对象，所以你可以在那里读写它们::"
 
 #: ../../config.rst:36
 msgid ""
 "To update multiple keys at once you can use the :meth:`dict.update` method::"
-msgstr "如果你想要一次更新多个设置，可以使用 :meth:`dict.update` 方法："
+msgstr "如果你想要一次更新多个设置，可以使用 :meth:`dict.update` 方法::"
 
 #: ../../config.rst:46
 msgid "Environment and Debug Features"
@@ -169,14 +169,14 @@ msgid ""
 "envvar:`FLASK_ENV` environment variable and may not behave as expected if set "
 "in code."
 msgstr ""
-"该配置值表明了应用在什么样的环境中运行。Flask 和扩展们可能会根据不同的环境启用不"
-"同的行为，像是启用调试模式。:attr:`~flask.Flask.env` 属性映射到该配置值。它本身"
-"由 :envvar:`FLASK_ENV` 环境变量设置，如果在代码中对其进行设置，那么它可能不会像"
-"预期那样起作用。"
+"表明了应用在什么样的环境中运行。Flask 和扩展们可能会根据不同的环境启用不同的行"
+"为，像是启用调试模式。:attr:`~flask.Flask.env` 属性映射到该配置值。它本身由 :"
+"envvar:`FLASK_ENV` 环境变量设置，如果在代码中对其进行设置，那么它可能不会像预期"
+"那样起作用。"
 
 #: ../../config.rst:113
 msgid "**Do not enable development when deploying in production.**"
-msgstr "**在生产环境中部署时请勿将该值配置为开发模式（``development``）**"
+msgstr "**在生产环境中部署时请勿将该值配置为开发模式。**"
 
 #: ../../config.rst:115
 msgid "Default: ``'production'``"
@@ -191,9 +191,9 @@ msgid ""
 "data:`ENV` is ``'development'`` and is overridden by the ``FLASK_DEBUG`` "
 "environment variable. It may not behave as expected if set in code."
 msgstr ""
-"该配置值表示是否启用了调试模式。当使用 ``flask run`` 启动开发服务器，对于未处理"
-"的异常，将会显示一个可交互的 Debugger；并且当代码发生更改时，服务器将会自动重新"
-"加载。:attr:`~flask.Flask.debug` 属性映射到该配置值。当 :data:`ENV` 为 "
+"表示是否启用了调试模式。当使用 ``flask run`` 启动开发服务器，对于未处理的异常，"
+"将会显示一个可交互的 Debugger；并且当代码发生更改时，服务器将会自动重新加载。:"
+"attr:`~flask.Flask.debug` 属性映射到该配置值。当 :data:`ENV` 为 "
 "``’development’`` 时将会启用调试模式，该配置值也会被 ``FLASK_DEBUG`` 环境变量覆"
 "盖。如果在代码中对其进行设置，那么它可能不会像预期那样起作用。"
 
@@ -205,7 +205,7 @@ msgstr "**在生产环境中请勿启用调试模式。**"
 msgid ""
 "Default: ``True`` if :data:`ENV` is ``'development'``, or ``False`` otherwise."
 msgstr ""
-"默认值：当 :data:`ENV` 为 ``’development’`` 时为 ``True``，否则为 ``Flase``。"
+"默认值：当 :data:`ENV` 为 ``’development’`` 时为 ``True``，否则为 ``False``。"
 
 #: ../../config.rst:136
 msgid ""
@@ -213,22 +213,21 @@ msgid ""
 "app's error handlers. Extensions may also change their behavior to facilitate "
 "easier testing. You should enable this in your own tests."
 msgstr ""
-"这个配置值表示是否启用测试模式。在该模式下的异常将会被传递，而不会被应用的错误处"
-"理代码处理。扩展们也可以更改他们的行为以方便测试。你应该在自己的测试中启用该功"
-"能。"
+"是否启用测试模式。在该模式下的异常将会被传递，而不会被应用的错误处理代码处理。扩"
+"展们也可以更改他们的行为以方便测试。你应该在自己的测试中启用该功能。"
 
 #: ../../config.rst:140 ../../config.rst:164 ../../config.rst:225
 #: ../../config.rst:263 ../../config.rst:347 ../../config.rst:368
 msgid "Default: ``False``"
-msgstr "默认值：``Flase``"
+msgstr "默认值：``False``"
 
 #: ../../config.rst:144
 msgid ""
 "Exceptions are re-raised rather than being handled by the app's error handlers. "
 "If not set, this is implicitly true if ``TESTING`` or ``DEBUG`` is enabled."
 msgstr ""
-"这个配置可以使异常被重新抛出而不是被应用的错误处理代码接管。如果没有设置它，那么"
-"在 ``TESTING`` 或 ``DEBUG`` 启用时，它默认打开。"
+"使异常被重新抛出而不是被应用的错误处理代码接管。如果没有设置它，那么在 "
+"``TESTING`` 或 ``DEBUG`` 启用时，它默认打开。"
 
 #: ../../config.rst:148 ../../config.rst:156 ../../config.rst:174
 #: ../../config.rst:188 ../../config.rst:203 ../../config.rst:210
@@ -243,9 +242,8 @@ msgid ""
 "true if ``DEBUG`` is true. This allows debuggers to introspect the request data "
 "on errors, and should normally not need to be set directly."
 msgstr ""
-"该配置值使得当异常发生时的请求上下文被保留。如果没有设置，当 ``DEBUG`` 为 True "
-"时该值默认为 True。它允许 Debugger 在出现异常时对请求数据进行检查，该值通常不需"
-"要直接设置。"
+"保留当异常发生时的请求上下文。如果没有设置，当 ``DEBUG`` 为 True 时该值默认为 "
+"True。它允许 Debugger 在出现异常时对请求数据进行检查，该值通常不需要直接设置。"
 
 #: ../../config.rst:160
 msgid ""
@@ -310,7 +308,7 @@ msgid ""
 "The path that the session cookie will be valid for. If not set, the cookie will "
 "be valid underneath ``APPLICATION_ROOT`` or ``/`` if that is not set."
 msgstr ""
-"这个配置指明了 Session Cookie 的有效路径。如果没有设置，那么 Cookie 将在 "
+"指明 Session Cookie 的有效路径。如果没有设置，那么 Cookie 将在 "
 "`APPLICATION_ROOT` 下有效，如果该配置也没有被设置，那么 Cookie 将在 `/` 下有效。"
 
 #: ../../config.rst:214
@@ -331,7 +329,7 @@ msgid ""
 "marked \"secure\". The application must be served over HTTPS for this to make "
 "sense."
 msgstr ""
-"当 Cookie 被标记为“安全”时，浏览器将仅通过 HTTPS 发送 Cookie。如果要使得该选项有"
+"当 Cookie 被标记为“安全”时，浏览器将仅通过 HTTPS 发送 Cookie。如果要使得该配置有"
 "意义，你的应用必须通过 HTTPS 提供服务。"
 
 #: ../../config.rst:229
@@ -339,6 +337,8 @@ msgid ""
 "Restrict how cookies are sent with requests from external sites. Can be set to "
 "``'Lax'`` (recommended) or ``'Strict'``. See :ref:`security-cookie`."
 msgstr ""
+"用于限制 Cookies 随请求发送至外域。可以被设置为 ``’Lax’`` （推荐值）或者 "
+"``’Strict’``。具体查看 :ref:`security-cookie`。"
 
 #: ../../config.rst:239
 msgid ""
@@ -346,16 +346,19 @@ msgid ""
 "number of seconds in the future. Can either be a :class:`datetime.timedelta` or "
 "an ``int``."
 msgstr ""
+"如果 ``session.permanent`` 被设置为 true，那么该配置值（按秒）将被设置为将来 "
+"Cookie 的过期时间。它可以是一个 :class:`datetime.timedelta` 或一个 ``int`` 对"
+"象。"
 
 #: ../../config.rst:243
 msgid ""
 "Flask's default cookie implementation validates that the cryptographic "
 "signature is not older than this value."
-msgstr ""
+msgstr "Flask 的默认 Cookie 实现会验证加密签名是否比这个值大。"
 
 #: ../../config.rst:246
 msgid "Default: ``timedelta(days=31)`` (``2678400`` seconds)"
-msgstr ""
+msgstr "默认值：``timedelta(days=31)`` (``2678400`` 秒)"
 
 #: ../../config.rst:250
 msgid ""
@@ -364,6 +367,9 @@ msgid ""
 "reliably keep the session from expiring, but uses more bandwidth. Non-permanent "
 "sessions are not affected."
 msgstr ""
+"当 ``session.permanent`` 为 true 时，是否每次随响应都发送 Cookie。每次都发送 "
+"Cookie（默认值）可以更可靠的保证会话不过期，但这会占用更多带宽。非永久回话不受该"
+"配置影响。"
 
 #: ../../config.rst:259
 msgid ""
@@ -371,6 +377,9 @@ msgid ""
 "with Flask. Some web servers, such as Apache, recognize this and serve the data "
 "more efficiently. This only makes sense when using such a server."
 msgstr ""
+"当提供文件时，设置 ``X-Sendfile`` 头而不是使用 Flask 本身提供数据。某些像是 "
+"Apache 之类的伺服器会识别该头并更有效率的发送文件数据。当且仅当使用了类似的伺服"
+"器时，该配置才有意义。"
 
 #: ../../config.rst:267
 msgid ""
@@ -379,18 +388,24 @@ msgid ""
 "per-file basis using :meth:`~flask.Flask.get_send_file_max_age` on the "
 "application or blueprint."
 msgstr ""
+"当提供文件时，该配置值（按秒）将被设置为缓存控制的最大值。它可以是一个 :class:"
+"`datetime.timedelta` 或一个 ``int`` 对象。你可以使用 :meth:`~flask.Flask."
+"get_send_file_max_age` 来在应用程序或者蓝图中针对每个文件覆盖该值。"
 
 #: ../../config.rst:273
 msgid ""
 "If ``None``, ``send_file`` tells the browser to use conditional requests will "
 "be used instead of a timed cache, which is usually preferable."
 msgstr ""
+"如果为 ``None``，那么 ``send_file`` 将告诉浏览器使用条件请求而不是基于时间的缓存"
+"控制，我们通常都这么做。"
 
 #: ../../config.rst:281
 msgid ""
 "Inform the application what host and port it is bound to. Required for "
 "subdomain route matching support."
 msgstr ""
+"告知应用程序它被绑定到的主机名以及端口。这在提供子域路由匹配支持时是必须的。"
 
 #: ../../config.rst:284
 msgid ""
@@ -399,12 +414,16 @@ msgid ""
 "cookies for domains without a dot. To use a domain locally, add any names that "
 "should route to the app to your ``hosts`` file. ::"
 msgstr ""
+"如果该配置被设置并且 :data:`SESSION_COOKIE_DOMAIN` 未被设置，那么 Cookie 域将被"
+"设置为它。现代浏览器通常不允许设置没有点的 Cookie 域。要想在本地使用一个域，请将"
+"所有路由到你应用程序的域名添加到 ``hosts`` 文件::"
 
 #: ../../config.rst:292
 msgid ""
 "If set, ``url_for`` can generate external URLs with only an application context "
 "instead of a request context."
 msgstr ""
+"如果它被设置，``url_for`` 仅可以产生应用程序上下文而不是请求上下文中的外部 URL。"
 
 #: ../../config.rst:299
 msgid ""
@@ -414,11 +433,16 @@ msgid ""
 "instead; see :doc:`/patterns/appdispatch` for examples of dispatch "
 "configuration)."
 msgstr ""
+"告诉应用程序它被挂载在应用 / Web 服务器的什么路径下。它可以用于在请求上下文外生"
+"成 URL（在请求上下文内部，调度器负责设置 ``SCRIPT_NAME``；关于调度配置的示例，请"
+"看 :doc:`/patterns/appdispatch`）。"
 
 #: ../../config.rst:305
 msgid ""
 "Will be used for the session cookie path if ``SESSION_COOKIE_PATH`` is not set."
 msgstr ""
+"如果没有设置 ``SESSION_COOKIE_PATH``，那么该值将被用于配制 Session 与 Cookie 的"
+"路径。"
 
 #: ../../config.rst:308
 msgid "Default: ``'/'``"
@@ -439,6 +463,8 @@ msgid ""
 "and the request does not specify a ``CONTENT_LENGTH``, no data will be read for "
 "security."
 msgstr ""
+"传入的请求数据中超过这个字节的数据将不会被读取。如果没有设置，并且请求没有指定 "
+"``CONTENT_LENGTH``，那么为了安全，将不会读取任何数据。"
 
 #: ../../config.rst:326
 msgid ""
@@ -447,6 +473,9 @@ msgid ""
 "implications when rendering the JSON into JavaScript in templates, and should "
 "typically remain enabled."
 msgstr ""
+"将对象序列化成 ASCII 编码的 JSON。如果该配置被禁用，那么在 ``jsonfiy`` 所返回的 "
+"JSON 中将可能包含 Unicode 字符。如果在模板中将 JSON 渲染为了 JavaScript 对象，这"
+"可能会影响安全性，通常该选项保持打开。"
 
 #: ../../config.rst:335
 msgid ""
@@ -863,8 +892,4 @@ msgstr ""
 
 #: ../../config.rst:760
 msgid "Example usage for both::"
-<<<<<<< Updated upstream
-msgstr ""
-=======
 msgstr "一起使用它们的例子::"
->>>>>>> Stashed changes
