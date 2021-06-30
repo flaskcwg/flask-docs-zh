@@ -63,7 +63,7 @@
 
 - [ ] blog
 - [ ] database
-- [ ] deploy
+- [ ] deploy [@greyli](https://github.com/greyli) Grey Li
 - [ ] factory [@greyli](https://github.com/greyli) Grey Li
 - [x] index [@greyli](https://github.com/greyli) Grey Li
 - [ ] install [@greyli](https://github.com/greyli) Grey Li
