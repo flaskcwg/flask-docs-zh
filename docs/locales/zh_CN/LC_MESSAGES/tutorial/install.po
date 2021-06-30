@@ -30,8 +30,8 @@ msgid ""
 "standard Python tools to manage everything."
 msgstr ""
 "让你的项目可以被安装意味着你可以构建一个 *发行* 文件并在另一个环境安装它，"
-"就像你在项目环境安装 Flask 一样。这让部署你的项目和安装其他任何库都一样，"
-"所以你可以使用所有标准的 Python 工具去管理一切。"
+"就像你在项目环境安装 Flask 一样。这使得部署你的项目和安装其他任何库没有区别，"
+"你就可以使用所有标准的 Python 工具去管理一切。"
 
 #: ../../tutorial/install.rst:10
 msgid ""
@@ -55,7 +55,7 @@ msgid ""
 "You can manage your project's dependencies just like other packages do, "
 "so ``pip install yourproject.whl`` installs them."
 msgstr ""
-"你可以像其他包一样管理项目依赖，所以执行 ``pip install yourproject.whl`` 可以"
+"你可以像其他包一样管理项目依赖，如此便可以执行 ``pip install yourproject.whl`` "
 "安装它们。"
 
 #: ../../tutorial/install.rst:20
