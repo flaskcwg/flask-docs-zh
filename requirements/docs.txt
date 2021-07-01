@@ -16,10 +16,6 @@ chardet==4.0.0
     # via requests
 click==8.0.1
     # via sphinx-intl
-colorama==0.4.4
-    # via
-    #   click
-    #   sphinx
 docutils==0.16
     # via
     #   sphinx
@@ -50,12 +46,6 @@ requests==2.25.1
     # via sphinx
 snowballstemmer==2.1.0
     # via sphinx
-sphinx-intl==2.0.1
-    # via -r requirements/docs.in
-sphinx-issues==1.2.0
-    # via -r requirements/docs.in
-sphinx-tabs==3.0.0
-    # via -r requirements/docs.in
 sphinx==4.0.2
     # via
     #   -r requirements/docs.in
@@ -64,6 +54,12 @@ sphinx==4.0.2
     #   sphinx-issues
     #   sphinx-tabs
     #   sphinxcontrib-log-cabinet
+sphinx-intl==2.0.1
+    # via -r requirements/docs.in
+sphinx-issues==1.2.0
+    # via -r requirements/docs.in
+sphinx-tabs==3.1.0
+    # via -r requirements/docs.in
 sphinxcontrib-applehelp==1.0.2
     # via sphinx
 sphinxcontrib-devhelp==1.0.2
