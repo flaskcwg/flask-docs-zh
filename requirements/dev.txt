@@ -52,10 +52,10 @@ jinja2==3.0.1
     # via sphinx
 markupsafe==2.0.1
     # via jinja2
-mypy-extensions==0.4.3
-    # via mypy
 mypy==0.812
     # via -r requirements/typing.in
+mypy-extensions==0.4.3
+    # via mypy
 nodeenv==1.6.0
     # via pre-commit
 packaging==20.9
@@ -68,7 +68,7 @@ pallets-sphinx-themes==2.0.1
     # via -r requirements/docs.in
 pep517==0.10.0
     # via pip-tools
-pip-tools==6.1.0
+pip-tools==6.2.0
     # via -r requirements/dev.in
 pluggy==0.13.1
     # via
@@ -102,12 +102,6 @@ six==1.16.0
     #   virtualenv
 snowballstemmer==2.1.0
     # via sphinx
-sphinx-intl==2.0.1
-    # via -r requirements/docs.in
-sphinx-issues==1.2.0
-    # via -r requirements/docs.in
-sphinx-tabs==3.0.0
-    # via -r requirements/docs.in
 sphinx==4.0.2
     # via
     #   -r requirements/docs.in
@@ -116,6 +110,12 @@ sphinx==4.0.2
     #   sphinx-issues
     #   sphinx-tabs
     #   sphinxcontrib-log-cabinet
+sphinx-intl==2.0.1
+    # via -r requirements/docs.in
+sphinx-issues==1.2.0
+    # via -r requirements/docs.in
+sphinx-tabs==3.0.0
+    # via -r requirements/docs.in
 sphinxcontrib-applehelp==1.0.2
     # via sphinx
 sphinxcontrib-devhelp==1.0.2
@@ -148,6 +148,8 @@ virtualenv==20.4.6
     # via
     #   pre-commit
     #   tox
+wheel==0.36.2
+    # via pip-tools
 
 # The following packages are considered to be unsafe in a requirements file:
 # pip
