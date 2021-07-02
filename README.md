@@ -66,7 +66,7 @@
 - [ ] deploy [@greyli](https://github.com/greyli) Grey Li
 - [ ] factory [@greyli](https://github.com/greyli) Grey Li
 - [x] index [@greyli](https://github.com/greyli) Grey Li
-- [ ] install [@greyli](https://github.com/greyli) Grey Li
+- [x] install [@greyli](https://github.com/greyli) Grey Li
 - [x] layout [@greyli](https://github.com/greyli) Grey Li
 - [ ] next [@greyli](https://github.com/greyli) Grey Li
 - [ ] static [@greyli](https://github.com/greyli) Grey Li
