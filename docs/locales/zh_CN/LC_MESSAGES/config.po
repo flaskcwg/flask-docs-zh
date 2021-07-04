@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Flask 2.1.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-25 19:31+0800\n"
-"PO-Revision-Date: 2021-06-27 14:58+0800\n"
+"PO-Revision-Date: 2021-07-04 13:29+0800\n"
 "Language-Team: zh_CN <withlihui@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -484,12 +484,17 @@ msgid ""
 "hash seed is. While not recommended, you can disable this for a possible "
 "performance improvement at the cost of caching."
 msgstr ""
+"将 JSON 对象的键按照字母顺序排序。这对缓存来说会有用，因为无论 Python 的哈希种子"
+"是什么，数据都可以以相同的方式被序列化。你可以禁用它，虽然我们不推荐这样做 —— 以"
+"缓存命中率为代价获取可能的性能提升。"
 
 #: ../../config.rst:344
 msgid ""
 "``jsonify`` responses will be output with newlines, spaces, and indentation for "
 "easier reading by humans. Always enabled in debug mode."
 msgstr ""
+"``jsonify`` 函数的响应将包含换行符、空格以及缩进，这将方便人类阅读。在调试模式下"
+"该选项将被启用。"
 
 #: ../../config.rst:351
 msgid "The mimetype of ``jsonify`` responses."
@@ -504,6 +509,7 @@ msgid ""
 "Reload templates when they are changed. If not set, it will be enabled in debug "
 "mode."
 msgstr ""
+"如果模板发生了改变，重新加载它。如果没有被设置，在调试模式下将被默认启用。"
 
 #: ../../config.rst:364
 msgid ""
@@ -511,6 +517,8 @@ msgid ""
 "useful to figure out why a template was not loaded or the wrong file appears to "
 "be loaded."
 msgstr ""
+"在调试信息中记录追踪模板文件是如何被加载的。这对搞清楚为什么一个模板没有被加载或"
+"者出现加载错误是很有帮助的。"
 
 #: ../../config.rst:372
 msgid ""
@@ -518,6 +526,8 @@ msgid ""
 "Larger cookies may be silently ignored by browsers. Set to ``0`` to disable the "
 "warning."
 msgstr ""
+"如果 Cookie 头大于该大小就会发出警告。默认为 ``4093``。更大的 Cookie 可以能会被"
+"浏览器默认忽略。将它设置为 ``0`` 可以禁用警告。"
 
 #: ../../config.rst:404
 msgid ""
@@ -529,17 +539,18 @@ msgstr ""
 
 #: ../../config.rst:408
 msgid "Added :data:`ENV` to reflect the :envvar:`FLASK_ENV` environment variable."
-msgstr ""
+msgstr "增加了 :data:`ENV` 用来映射 :envvar:`FLASK_ENV` 环境变量。"
 
 #: ../../config.rst:411
 msgid ""
 "Added :data:`SESSION_COOKIE_SAMESITE` to control the session cookie's "
 "``SameSite`` option."
 msgstr ""
+"增加了 :data:`SESSION_COOKIE_SAMESITE` 用于控制 Cookie 的 ``SameSite`` 选项。"
 
 #: ../../config.rst:414
 msgid "Added :data:`MAX_COOKIE_SIZE` to control a warning from Werkzeug."
-msgstr ""
+msgstr "增加了 :data:`MAX_COOKIE_SIZE` 用于控制 Werkzeug 的警告。"
 
 #: ../../config.rst:400
 msgid ""
@@ -634,6 +645,9 @@ msgid ""
 "on the config object as well to load from individual files.  For a complete "
 "reference, read the :class:`~flask.Config` object's documentation."
 msgstr ""
+"确保在早期时配置就被加载，这样在扩展程序在启动时就可以访问配置。也有其他的方法允"
+"许从单个文件中加载配置对象。 要获得完整的参考，请阅读 :class:`~flask.Config` 类"
+"的文档。"
 
 #: ../../config.rst:481
 msgid "Configuring from Data Files"
@@ -645,6 +659,8 @@ msgid ""
 "choice using :meth:`~flask.Config.from_file`. For example to load from a TOML "
 "file:"
 msgstr ""
+"你也可以使用 :meth:`~flask.Config.from_file` 从你现有格式的配置文件中加载配置。"
+"例如，从 TOML 文件中加载："
 
 #: ../../config.rst:492
 msgid "Or from a JSON file:"
@@ -660,10 +676,12 @@ msgid ""
 "may find it useful (or necessary) to control your configuration values directly "
 "from the environment."
 msgstr ""
+"除了使用环境变量指向配置文件外，你可能会发现直接从环境变量中控制配置值是很有用的"
+"（或者说，有必要的）。"
 
 #: ../../config.rst:507
 msgid "Environment variables can be set in the shell before starting the server:"
-msgstr ""
+msgstr "环境变量可以在启动服务之前就在 Shell 中设置："
 
 #: ../../config.rst:538
 msgid ""
@@ -671,11 +689,13 @@ msgid ""
 "environment variables are strings -- they are not automatically deserialized "
 "into Python types."
 msgstr ""
+"虽然这种方法使用起来很直接，但是重要的是要记住环境变量是字符串 —— 它们不会被自动"
+"反序列化成 Python 类实例。"
 
 #: ../../config.rst:542
 msgid ""
 "Here is an example of a configuration file that uses environment variables::"
-msgstr ""
+msgstr "下面是一个在配置文件中使用环境变量的例子::"
 
 #: ../../config.rst:555
 msgid ""
@@ -683,6 +703,8 @@ msgid ""
 "``True`` value in Python, which requires care if an environment explicitly sets "
 "values intended to be ``False``."
 msgstr ""
+"需要注意的是，除了空字符串之外的任何值在 Python 布尔类型中都将被解释为 "
+"``True``，如果环境明确的设置某个值为 ``False``，则需要小心处理。"
 
 #: ../../config.rst:559
 msgid ""
@@ -691,6 +713,9 @@ msgid ""
 "on the config object as well to load from individual files.  For a complete "
 "reference, read the :class:`~flask.Config` class documentation."
 msgstr ""
+"确保在早期时配置就被加载，这样在扩展程序在启动时就可以访问配置。也有其他的方法允"
+"许从单个文件中加载配置对象。 要获得完整的参考，请阅读 :class:`~flask.Config` 类"
+"的文档。"
 
 #: ../../config.rst:566
 msgid "Configuration Best Practices"
@@ -704,6 +729,8 @@ msgid ""
 "but there are a couple of things you can keep in mind to improve that "
 "experience:"
 msgstr ""
+"前面提到的方法有一些缺点：它会使得测试变得有些困难。一般来说，这个问题没有一个完"
+"美的解决方案，但是记住这几件事可以改善我们的测试体验："
 
 #: ../../config.rst:573
 msgid ""
@@ -712,6 +739,8 @@ msgid ""
 "configurations attached which makes unit testing a lot easier.  You can use "
 "this to pass in configuration as needed."
 msgstr ""
+"在一个函数中创建应用，并在程序中使用蓝图。这样你就可以使用不同的配置来创建不同的"
+"应用程序实例，这可以让单元测试变得更加容易。你可以利用这一点，根据需要传入配置。"
 
 #: ../../config.rst:578
 msgid ""
@@ -719,6 +748,8 @@ msgid ""
 "yourself to request-only accesses to the configuration you can reconfigure the "
 "object later on as needed."
 msgstr ""
+"不要写出在导入时就需要配置值的代码。如果你限制自己仅对配置进行请求访问，那么你就"
+"可以在以后根据需要重新配置对象。"
 
 #: ../../config.rst:585
 msgid "Development / Production"
@@ -733,6 +764,9 @@ msgid ""
 "configuration that overrides the values as necessary as mentioned in the "
 "example above::"
 msgstr ""
+"大多数的应用都需要不止一套配置。应用至少应该有一套用于开发服务器使用的配置以及一"
+"套用于生产环境的配置。这个问题最简单的解决方案是使用一个总是被加载的默认配置加上"
+"一个使用版本控制的部分配置，这样就可以在上面提到的例子中覆盖部分配置值::"
 
 #: ../../config.rst:598
 msgid ""
@@ -741,6 +775,9 @@ msgid ""
 "there are alternative ways as well.  For example you could use imports or "
 "subclassing."
 msgstr ""
+"这样你就只需要单独地添加配置文件 :file:`config.py` 并使用 "
+"``YOURAPPLICATION_SETTINGS=/path/to/config.py`` 将它导出到环境变量。尽管也有其他"
+"方法，例如使用子类。"
 
 #: ../../config.rst:603
 msgid ""
@@ -849,15 +886,15 @@ msgstr ""
 
 #: ../../config.rst:719
 msgid "Uninstalled module::"
-msgstr ""
+msgstr "卸载的模块::"
 
 #: ../../config.rst:724
 msgid "Uninstalled package::"
-msgstr ""
+msgstr "卸载的包::"
 
 #: ../../config.rst:730
 msgid "Installed module or package::"
-msgstr ""
+msgstr "加载的模块与包::"
 
 #: ../../config.rst:735
 msgid ""
@@ -865,6 +902,8 @@ msgid ""
 "the path to your virtualenv.  You can print the value of ``sys.prefix`` to see "
 "what the prefix is set to."
 msgstr ""
+"``$PREFIX`` 是你的 Python 安装路径.  它可能是 ``/usr`` 或者是你 virtualenv 的路"
+"径.  你可以使用 ``sys.prefix`` 用于检查该路径的值。"
 
 #: ../../config.rst:739
 msgid ""
