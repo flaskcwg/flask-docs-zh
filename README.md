@@ -55,7 +55,7 @@
 - [x] shell [@LTakamori](https://github.com/LTakamori) LTakamori
 - [ ] signals
 - [ ] templating
-- [ ] testing
+- [ ] testing [@yuxiaoy1](https://github.com/yuxiaoy1) Frank Yu
 - [ ] views [@labike](https://github.com/labike) labike
 
 
@@ -63,12 +63,12 @@
 
 - [ ] blog
 - [ ] database
-- [ ] deploy
-- [ ] factory
+- [ ] deploy [@greyli](https://github.com/greyli) Grey Li
+- [ ] factory [@greyli](https://github.com/greyli) Grey Li
 - [x] index [@greyli](https://github.com/greyli) Grey Li
-- [ ] install [@greyli](https://github.com/greyli) Grey Li
+- [x] install [@greyli](https://github.com/greyli) Grey Li
 - [x] layout [@greyli](https://github.com/greyli) Grey Li
-- [ ] next
+- [ ] next [@greyli](https://github.com/greyli) Grey Li
 - [ ] static [@greyli](https://github.com/greyli) Grey Li
 - [ ] templates
 - [ ] tests
@@ -90,7 +90,7 @@
 
 - [ ] appdispatch
 - [ ] appfactories
-- [ ] caching [@pk00749](https://github.com/pk00749) York Li
+- [x] caching [@pk00749](https://github.com/pk00749) York Li
 - [ ] celery
 - [ ] deferredcallbacks
 - [ ] distribute
