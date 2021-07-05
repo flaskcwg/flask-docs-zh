@@ -99,7 +99,7 @@ msgstr ""
 
 #: ../../server.rst:68
 msgid "Lazy or Eager Loading"
-msgstr "懒惰加载 或 即时加载"
+msgstr "懒惰加载或即时加载"
 
 #: ../../server.rst:70
 msgid ""
