@@ -39,7 +39,7 @@ msgid ""
 msgstr ""
 "在部署到生产时不要使用开发服务器。"
 "开发服务器仅供在本地开发期间使用。"
-"它的设计并不特别高效，稳定，或安全。"
+"它的设计并不特别高效、稳定、或安全。"
 
 #: ../../server.rst:16
 msgid "See :doc:`/deploying/index` for deployment options."
