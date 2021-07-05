@@ -57,7 +57,7 @@ msgid ""
 "fully enable development mode."
 msgstr ""
 "``flask run`` 命令行脚本是运行开发服务器的推荐方式。"
-"它需要设置 ``FLASK_APP`` 来指向你的应用，并且设置"
+"它需要设置 ``FLASK_APP`` 这个环境变量来指向你的应用，并且设置"
 " ``FLASK_ENV=development`` 以完全启用开发模式。"
 
 #: ../../server.rst:28
