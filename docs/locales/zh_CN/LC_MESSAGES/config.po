@@ -251,7 +251,7 @@ msgid ""
 "be handled by the interactive debugger instead of returning it as a simple "
 "error response."
 msgstr ""
-"对于 ``HTTPException`` 类型的错误，如果没有被捕获，那么它将被交予可交互 "
+"对于 ``HTTPException`` 类型的错误，如果没有被捕获，那么它将被交给交互式 "
 "Debugger 处理，而不是简单的返回一个错误响应。"
 
 #: ../../config.rst:168
@@ -607,7 +607,7 @@ msgid ""
 "afterwards."
 msgstr ""
 "如果你能将配置存储在一个单独的文件中，最好是存储在实际的应用包外部，那么配置就会"
-"变的更加有用。这样就可以通过使用各种包处理工具 (:doc:`/patterns/distribute`) 来"
+"变得更加有用。这样就可以通过使用各种包处理工具 (:doc:`/patterns/distribute`) 来"
 "分发你的应用，并且可以在之后对配置进行修改。"
 
 #: ../../config.rst:426
