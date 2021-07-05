@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Flask 2.1.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-25 19:31+0800\n"
-"PO-Revision-Date: 2021-07-04 13:29+0800\n"
+"PO-Revision-Date: 2021-07-05 16:55+0800\n"
 "Language-Team: zh_CN <withlihui@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -65,19 +65,19 @@ msgid ""
 "be modified just like any dictionary::"
 msgstr ""
 ":attr:`~flask.Flask.config` 实际上是字典类的一个子类，它可以像任何字典一样被编"
-"辑::"
+"辑："
 
 #: ../../config.rst:31
 msgid ""
 "Certain configuration values are also forwarded to the :attr:`~flask.Flask` "
 "object so you can read and write them from there::"
 msgstr ""
-"某些配置同时也会被转发到 :attr:`~flask.Flask` 对象，所以你可以在那里读写它们::"
+"某些配置同时也会被转发到 :attr:`~flask.Flask` 对象，所以你可以在那里读写它们："
 
 #: ../../config.rst:36
 msgid ""
 "To update multiple keys at once you can use the :meth:`dict.update` method::"
-msgstr "如果你想要一次更新多个设置，可以使用 :meth:`dict.update` 方法::"
+msgstr "如果你想要一次更新多个设置，可以使用 :meth:`dict.update` 方法："
 
 #: ../../config.rst:46
 msgid "Environment and Debug Features"
@@ -180,7 +180,7 @@ msgstr "**在生产环境中部署时请勿将该值配置为开发模式。**"
 
 #: ../../config.rst:115
 msgid "Default: ``'production'``"
-msgstr "默认值：``’production’``"
+msgstr "默认值：``'production'``"
 
 #: ../../config.rst:121
 msgid ""
@@ -194,7 +194,7 @@ msgstr ""
 "表示是否启用了调试模式。当使用 ``flask run`` 启动开发服务器，对于未处理的异常，"
 "将会显示一个可交互的 Debugger；并且当代码发生更改时，服务器将会自动重新加载。:"
 "attr:`~flask.Flask.debug` 属性映射到该配置值。当 :data:`ENV` 为 "
-"``’development’`` 时将会启用调试模式，该配置值也会被 ``FLASK_DEBUG`` 环境变量覆"
+"``'development'`` 时将会启用调试模式，该配置值也会被 ``FLASK_DEBUG`` 环境变量覆"
 "盖。如果在代码中对其进行设置，那么它可能不会像预期那样起作用。"
 
 #: ../../config.rst:129
@@ -205,7 +205,7 @@ msgstr "**在生产环境中请勿启用调试模式。**"
 msgid ""
 "Default: ``True`` if :data:`ENV` is ``'development'``, or ``False`` otherwise."
 msgstr ""
-"默认值：当 :data:`ENV` 为 ``’development’`` 时为 ``True``，否则为 ``False``。"
+"默认值：当 :data:`ENV` 为 ``'development'`` 时为 ``True``，否则为 ``False``。"
 
 #: ../../config.rst:136
 msgid ""
@@ -252,7 +252,7 @@ msgid ""
 "error response."
 msgstr ""
 "对于 ``HTTPException`` 类型的错误，如果没有被捕获，那么它将被交予可交互 "
-"Debugger 处理，而不是简单的饭绘一个错误响应。"
+"Debugger 处理，而不是简单的返回一个错误响应。"
 
 #: ../../config.rst:168
 msgid ""
@@ -276,7 +276,7 @@ msgid ""
 msgstr ""
 "该密钥将被用于安全地签署 Session Cookie，还可以用于扩展，以及任何你应用中关于安"
 "全的其他需求。它应该是一个足够长的随机 ``bytes`` 或者 ``str``。举个例子，你可以"
-"把下面的输出复制到你的配置中::"
+"把下面的输出复制到你的配置中："
 
 #: ../../config.rst:186
 msgid ""
@@ -291,7 +291,7 @@ msgstr "Session Cookie 的名称。如果你有一个同名的 Cookie，那么�
 
 #: ../../config.rst:195
 msgid "Default: ``'session'``"
-msgstr "默认值：``’session’``"
+msgstr "默认值：``'session'``"
 
 #: ../../config.rst:199
 msgid ""
@@ -300,7 +300,7 @@ msgid ""
 "``False``, the cookie's domain will not be set."
 msgstr ""
 "这是 Session Cookie 的作用域规则。如果没有被设置，那么 Cookie 将会对 :data:"
-"`SERVER_NAME` 的所有子域生效。如果设置为 `False`，那么 Cookie 的作用域将不会被设"
+"`SERVER_NAME` 的所有子域生效。如果设置为 ``False``，那么 Cookie 的作用域将不会被设"
 "置。"
 
 #: ../../config.rst:207
@@ -309,14 +309,14 @@ msgid ""
 "be valid underneath ``APPLICATION_ROOT`` or ``/`` if that is not set."
 msgstr ""
 "指明 Session Cookie 的有效路径。如果没有设置，那么 Cookie 将在 "
-"`APPLICATION_ROOT` 下有效，如果该配置也没有被设置，那么 Cookie 将在 `/` 下有效。"
+"``APPLICATION_ROOT`` 下有效，如果该配置也没有被设置，那么 Cookie 将在 `/` 下有效。"
 
 #: ../../config.rst:214
 msgid ""
 "Browsers will not allow JavaScript access to cookies marked as \"HTTP only\" "
 "for security."
 msgstr ""
-"浏览器为了保证安全，不允许 JavaScript 代码访问标记为 “HTTP only” 的 Cookies。"
+"浏览器为了保证安全，将不允许 JavaScript 代码访问标记为 “HTTP only” 的 Cookies。"
 
 #: ../../config.rst:217 ../../config.rst:255 ../../config.rst:331
 #: ../../config.rst:340
@@ -337,8 +337,8 @@ msgid ""
 "Restrict how cookies are sent with requests from external sites. Can be set to "
 "``'Lax'`` (recommended) or ``'Strict'``. See :ref:`security-cookie`."
 msgstr ""
-"用于限制 Cookies 随请求发送至外域。可以被设置为 ``’Lax’`` （推荐值）或者 "
-"``’Strict’``。具体查看 :ref:`security-cookie`。"
+"用于限制 Cookies 随请求发送至外域。可以被设置为 ``'Lax'`` （推荐值）或者 "
+"``'Strict'``。具体查看 :ref:`security-cookie`。"
 
 #: ../../config.rst:239
 msgid ""
@@ -368,7 +368,7 @@ msgid ""
 "sessions are not affected."
 msgstr ""
 "当 ``session.permanent`` 为 true 时，是否每次随响应都发送 Cookie。每次都发送 "
-"Cookie（默认值）可以更可靠的保证会话不过期，但这会占用更多带宽。非永久回话不受该"
+"Cookie（默认值）可以更可靠的保证会话不过期，但这会占用更多带宽。非永久会话不受该"
 "配置影响。"
 
 #: ../../config.rst:259
@@ -415,8 +415,8 @@ msgid ""
 "should route to the app to your ``hosts`` file. ::"
 msgstr ""
 "如果该配置被设置并且 :data:`SESSION_COOKIE_DOMAIN` 未被设置，那么 Cookie 域将被"
-"设置为它。现代浏览器通常不允许设置没有点的 Cookie 域。要想在本地使用一个域，请将"
-"所有路由到你应用程序的域名添加到 ``hosts`` 文件::"
+"设置为该值。现代浏览器通常不允许设置不带点的 Cookie 域。要想在本地使用一个域，请将"
+"所有路由到你应用程序的域名添加到 ``hosts`` 文件："
 
 #: ../../config.rst:292
 msgid ""
@@ -441,21 +441,21 @@ msgstr ""
 msgid ""
 "Will be used for the session cookie path if ``SESSION_COOKIE_PATH`` is not set."
 msgstr ""
-"如果没有设置 ``SESSION_COOKIE_PATH``，那么该值将被用于配制 Session 与 Cookie 的"
+"如果没有设置 ``SESSION_COOKIE_PATH``，那么该值将被用于配置 Session 与 Cookie 的"
 "路径。"
 
 #: ../../config.rst:308
 msgid "Default: ``'/'``"
-msgstr "默认值：``’/‘``"
+msgstr "默认值：``'/'``"
 
 #: ../../config.rst:312
 msgid ""
 "Use this scheme for generating external URLs when not in a request context."
-msgstr "当不再请求上下文中时，这个模式被用来生成外部 URL。"
+msgstr "当不再请求上下文中时，该配置被用来生成外部 URL。"
 
 #: ../../config.rst:314
 msgid "Default: ``'http'``"
-msgstr "默认值：``’http’``"
+msgstr "默认值：``'http'``"
 
 #: ../../config.rst:318
 msgid ""
@@ -502,7 +502,7 @@ msgstr "``jsonfiy`` 响应的 Mimetype。"
 
 #: ../../config.rst:353
 msgid "Default: ``'application/json'``"
-msgstr "默认值：``’application/json’``"
+msgstr "默认值：``'application/json'``"
 
 #: ../../config.rst:357
 msgid ""
@@ -636,7 +636,7 @@ msgstr ""
 
 #: ../../config.rst:468
 msgid "Here is an example of a configuration file::"
-msgstr "这是一份示例的配置文件::"
+msgstr "这是一份示例的配置文件："
 
 #: ../../config.rst:473
 msgid ""
@@ -695,7 +695,7 @@ msgstr ""
 #: ../../config.rst:542
 msgid ""
 "Here is an example of a configuration file that uses environment variables::"
-msgstr "下面是一个在配置文件中使用环境变量的例子::"
+msgstr "下面是一个在配置文件中使用环境变量的例子："
 
 #: ../../config.rst:555
 msgid ""
@@ -766,7 +766,7 @@ msgid ""
 msgstr ""
 "大多数的应用都需要不止一套配置。应用至少应该有一套用于开发服务器使用的配置以及一"
 "套用于生产环境的配置。这个问题最简单的解决方案是使用一个总是被加载的默认配置加上"
-"一个使用版本控制的部分配置，这样就可以在上面提到的例子中覆盖部分配置值::"
+"一个使用版本控制的部分配置，这样就可以在上面提到的例子中覆盖部分配置值："
 
 #: ../../config.rst:598
 msgid ""
@@ -788,18 +788,22 @@ msgid ""
 "`production`, `development` etc and import different hard-coded files based on "
 "that."
 msgstr ""
+"在 Django 世界中非常流行的是在配置文件中显式导入，通过在文件顶部添加 ``from "
+"yourapplication.default_settings import *`` 并进行手动覆盖。你也可以管理一个像"
+"是 ``YOURAPPLICATION_MODE`` 的环境变量，并将其设置为 `production`、"
+"`development` 之类的值，并基于此导入不同的硬编码文件。"
 
 #: ../../config.rst:610
 msgid ""
 "An interesting pattern is also to use classes and inheritance for "
 "configuration::"
-msgstr ""
+msgstr "使用类继承也是进行配置的一个有趣方式："
 
 #: ../../config.rst:626
 msgid ""
 "To enable such a config you just have to call into :meth:`~flask.Config."
 "from_object`::"
-msgstr ""
+msgstr "要启用这个配置，只需要调用 :meth:`~flask.Config.from_object`："
 
 #: ../../config.rst:631
 msgid ""
@@ -807,18 +811,21 @@ msgid ""
 "object. If you need to instantiate the class, such as to access a property, "
 "then you must do so before calling :meth:`~flask.Config.from_object`::"
 msgstr ""
+"请注意 :meth:`~flask.Config.from_object` 并不实例化类。如果你需要要访问类的一个"
+"属性，那么必须在调用 :meth:`~flask.Config.from_object` 之前就对它进行实例化："
 
 #: ../../config.rst:643
 msgid ""
 "Instantiating the configuration object allows you to use ``@property`` in your "
 "configuration classes::"
-msgstr ""
+msgstr "实例化配置对象允许你在配置类中使用 ``@property``："
 
 #: ../../config.rst:666
 msgid ""
 "There are many different ways and it's up to you how you want to manage your "
 "configuration files.  However here a list of good recommendations:"
 msgstr ""
+"有很多不同的管理配置文件的方法，怎么使用它们取决于你。不过仍然有一些不错的建议："
 
 #: ../../config.rst:669
 msgid ""
@@ -826,6 +833,8 @@ msgid ""
 "with this default configuration or import it in your own configuration files "
 "before overriding values."
 msgstr ""
+"在你的版本控制中保留一个默认配置。在覆盖配置值之前，要么用默认配置来填充，要么在"
+"要使用的配置中导入这个默认配置。"
 
 #: ../../config.rst:672
 msgid ""
@@ -836,6 +845,10 @@ msgid ""
 "projects you can even create your own script for sourcing that activates a "
 "virtualenv and exports the development configuration for you."
 msgstr ""
+"使用环境变量来切换配置。它可以在 Python 解释器之外完成，并使得开发和部署变得更加"
+"容易，因为你可以很快速轻松的在不同的配置之间进行切换，而根本不需要改动代码。如果"
+"你经常要在不同的项目上进行开发，你甚至可以写一个脚本为你管理激活的 virtualenv 环"
+"境并导出对应的开发配置。"
 
 #: ../../config.rst:679
 msgid ""
@@ -843,10 +856,12 @@ msgid ""
 "separately to the production server(s).  For some details about how to do that, "
 "head over to the :doc:`/patterns/fabric` pattern."
 msgstr ""
+"使用像是 `fabric`_ 这样的工具，将代码和配置分别推送到服务器上。关于如何做到这一"
+"点的更多细节，请参考 :doc:`/patterns/fabric` 的模式。"
 
 #: ../../config.rst:690
 msgid "Instance Folders"
-msgstr ""
+msgstr "实例文件夹"
 
 #: ../../config.rst:694
 msgid ""
@@ -857,6 +872,10 @@ msgid ""
 "applications are not packages in which case the root path refers to the "
 "contents of the package."
 msgstr ""
+"Flask 0.8 引入了实例文件夹的概念。Flask 在很长的一段时间内都可以直接引用应用文件"
+"夹路径（通过 :attr:`Flask.root_path`）。这也是很多开发者加载存储在应用目录内配置"
+"文件的方式。但是很不幸，这只在应用程序不是包的情况下工作的很好，在这种情况下，根"
+"路径指向的是包的内容。"
 
 #: ../../config.rst:701
 msgid ""
@@ -866,6 +885,9 @@ msgid ""
 "perfect place to drop things that either change at runtime or configuration "
 "files."
 msgstr ""
+"从 Flask 0.8 开始，一个新的 :attr:`Flask.instance_path` 属性被引入。它指的是一个"
+"叫做“实例文件夹”的新概念。实例文件夹被设计为不受版本控制管理，而是依赖于部署。如"
+"果有什么在运行时需要改变的东西，或者是配置文件，这是存放它们的完美地方。"
 
 #: ../../config.rst:707
 msgid ""
@@ -873,28 +895,30 @@ msgid ""
 "the Flask application or you can let Flask autodetect the instance folder.  For "
 "explicit configuration use the `instance_path` parameter::"
 msgstr ""
+"当创建 Flask 应用时，你可以显式的提供实例文件夹的路径，也可以让 Flask 去自动检测"
+"实例文件夹。如果要显式配置使用实例文件夹，请使用 `instance_path` 参数："
 
 #: ../../config.rst:714
 msgid "Please keep in mind that this path *must* be absolute when provided."
-msgstr ""
+msgstr "请记住提供的该路径 *一定* 要是绝对路径。"
 
 #: ../../config.rst:716
 msgid ""
 "If the `instance_path` parameter is not provided the following default "
 "locations are used:"
-msgstr ""
+msgstr "如果没有提供 `instance_path` 参数，默认使用这些位置："
 
 #: ../../config.rst:719
 msgid "Uninstalled module::"
-msgstr "卸载的模块::"
+msgstr "卸载的模块："
 
 #: ../../config.rst:724
 msgid "Uninstalled package::"
-msgstr "卸载的包::"
+msgstr "卸载的包："
 
 #: ../../config.rst:730
 msgid "Installed module or package::"
-msgstr "加载的模块与包::"
+msgstr "加载的模块与包："
 
 #: ../../config.rst:735
 msgid ""
@@ -914,6 +938,10 @@ msgid ""
 "default) to “relative to instance folder” via the `instance_relative_config` "
 "switch to the application constructor::"
 msgstr ""
+"由于配置对象提供了通过相对路径加载配置文件的功能，所以如果需要的话，我们可以将通"
+"过文件名加载配置文件的方式改为通过相对于实例目录的方式。加载配置文件的相对路径可"
+"以通过应用的 `instance_relative_config` 开关控制，在“相对于应用根目录”与“相对于"
+"实例文件夹”之间切换："
 
 #: ../../config.rst:748
 msgid ""
@@ -921,6 +949,8 @@ msgid ""
 "module and then override the config from a file in the instance folder if it "
 "exists::"
 msgstr ""
+"这是一个关于如何将 Flask 配置为首先从模块加载配置，之后再从实例文件夹中加载覆盖"
+"配置的例子（如果存在该文件的话）："
 
 #: ../../config.rst:756
 msgid ""
@@ -928,7 +958,10 @@ msgid ""
 "instance_path`.  Flask also provides a shortcut to open a file from the "
 "instance folder with :meth:`Flask.open_instance_resource`."
 msgstr ""
+"实例文件夹的路径可以通过 :attr:`Flask.instance_path` 查看。除此之外，Flask 还提"
+"供了一个快捷方式，通过 :meth:`Flask.open_instance_resource` 来打开实例文件夹中的"
+"文件。"
 
 #: ../../config.rst:760
 msgid "Example usage for both::"
-msgstr "一起使用它们的例子::"
+msgstr "一起使用它们的例子："
