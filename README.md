@@ -70,7 +70,7 @@
 - [x] layout [@greyli](https://github.com/greyli) Grey Li
 - [ ] next [@greyli](https://github.com/greyli) Grey Li
 - [ ] static [@greyli](https://github.com/greyli) Grey Li
-- [ ] templates
+- [ ] templates [@greyli](https://github.com/greyli) Grey Li
 - [ ] tests
 - [ ] views
 
