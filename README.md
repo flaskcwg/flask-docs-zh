@@ -77,7 +77,7 @@
 
 ### docs/deploying/
 
-- [ ] asgi
+- [ ] asgi [@180909](https://github.com/180909) 180909
 - [ ] cgi
 - [ ] fastcgi
 - [x] index [@180909](https://github.com/180909) 180909
