@@ -180,4 +180,3 @@ msgid ""
 "For more information about SQLAlchemy, head over to the `website "
 "<https://www.sqlalchemy.org/>`_."
 msgstr ""
-

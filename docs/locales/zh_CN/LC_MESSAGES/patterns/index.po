@@ -37,4 +37,3 @@ msgid ""
 "but Flask makes it easy to implement them. Some common patterns are "
 "collected in the following pages."
 msgstr ""
-
