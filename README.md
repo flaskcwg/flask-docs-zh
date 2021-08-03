@@ -61,7 +61,7 @@
 
 ### docs/tutorial/ (reserved)
 
-- [ ] blog
+- [ ] blog [@greyli](https://github.com/greyli) Grey Li
 - [ ] database [@greyli](https://github.com/greyli) Grey Li
 - [ ] deploy [@greyli](https://github.com/greyli) Grey Li
 - [ ] factory [@greyli](https://github.com/greyli) Grey Li
