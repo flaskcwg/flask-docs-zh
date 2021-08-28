@@ -49,7 +49,7 @@
 - [x] installation [@greyli](https://github.com/greyli) Grey Li
 - [ ] logging [@FesonX](https://github.com/FesonX) FesonX
 - [ ] quickstart (reserved)
-- [ ] reqcontext [@rosekc](https://github.com/rosekc) rosekc
+- [x] reqcontext [@rosekc](https://github.com/rosekc) rosekc
 - [ ] security [@kylinbin](https://github.com/kylinbin) kylin
 - [ ] server [@LeeRnnGii](https://github.com/LeeRnnGii) LeeRnnGii
 - [x] shell [@LTakamori](https://github.com/LTakamori) LTakamori
