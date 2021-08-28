@@ -212,7 +212,7 @@ msgid ""
 "during all of these stages."
 msgstr ""
 "Flask 在不同阶段中会分配请求，这会影响请求、响应以及错误处理。在这些阶段"
-"中，上下文在可用状态。"
+"中，上下文处于可用状态。"
 
 #: ../../reqcontext.rst:123
 msgid ""
