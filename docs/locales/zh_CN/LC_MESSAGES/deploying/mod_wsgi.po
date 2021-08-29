@@ -298,7 +298,7 @@ msgstr ""
 
 #: ../../deploying/mod_wsgi.rst:209
 msgid "Add the following lines to the top of your ``.wsgi`` file::"
-msgstr "在你的 ``.wsgi`` 文件顶部加入下面这行："
+msgstr "在你的 ``.wsgi`` 文件顶部加入下面这行::"
 
 #: ../../deploying/mod_wsgi.rst:215
 msgid ""
