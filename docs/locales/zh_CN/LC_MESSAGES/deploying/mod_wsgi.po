@@ -51,7 +51,7 @@ msgid ""
 "using a package manager or compile it yourself.  The mod_wsgi "
 "`installation instructions`_ cover source installations on UNIX systems."
 msgstr ""
-"如果你还没有安装 `mod_wsgi` ，你可以使用包管理器安装它或者自己编译它。在 UNIX 系统"
+"如果你还没有安装 `mod_wsgi` ，你可以使用包管理器安装或者自行编译。在 UNIX 系统"
 "中如何以源代码形式安装 mod_wsgi 请参考 `installation instructions`_ "
 
 #: ../../deploying/mod_wsgi.rst:23
