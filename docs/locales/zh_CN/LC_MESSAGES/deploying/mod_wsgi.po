@@ -59,7 +59,7 @@ msgid ""
 "If you are using Ubuntu/Debian you can apt-get it and activate it as "
 "follows:"
 msgstr ""
-"如果你使用的是 Ubuntu/Debian 系统，你可以使用如下的 apt-get 命令来安装："
+"如果你使用的是 Ubuntu/Debian 系统，你可以使用如下的 apt-get 命令来安装并启用："
 
 #: ../../deploying/mod_wsgi.rst:30
 msgid ""
