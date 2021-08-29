@@ -275,7 +275,7 @@ msgid ""
 "will reload all the daemon processes for us."
 msgstr ""
 "为了辅助部署工具，你可以激活自动重载。这样，一旦 ``.wsgi`` 文件有所变动，"
-" `mod_wsgi` 就会自动重新转入所有守护进程。"
+"`mod_wsgi` 就会自动重新加载所有守护进程。"
 
 #: ../../deploying/mod_wsgi.rst:195
 msgid "For that, just add the following directive to your `Directory` section:"
