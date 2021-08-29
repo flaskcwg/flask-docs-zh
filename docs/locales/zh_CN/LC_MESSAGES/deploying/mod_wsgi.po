@@ -292,7 +292,7 @@ msgid ""
 "is used where.  If you want to use a virtual environment with mod_wsgi "
 "you have to modify your ``.wsgi`` file slightly."
 msgstr ""
-"使用虚拟环境的优点是不必在系统中安装应用所需要的依赖，这样我们就可以更好地按照自己"
+"使用虚拟环境的优点是不必在系统范围安装应用所需的依赖，这样就可以更好地控制"
 "的需要进行控制。如果要在虚拟环境下使用 mod_wsgi ，那么我们要对 ``.wsgi`` 文件"
 "略作改变。"
 
