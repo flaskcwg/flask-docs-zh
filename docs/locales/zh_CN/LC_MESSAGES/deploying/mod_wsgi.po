@@ -37,7 +37,7 @@ msgid ""
 "because this will always start a local WSGI server which we do not want "
 "if we deploy that application to mod_wsgi."
 msgstr ""
-"请务必把 ``app.run()`` 放在 ``if __name__ == '__main__':`` 内部或者放在单独"
+"请提前确认把 ``app.run()`` 放在 ``if __name__ == '__main__':`` 代码块中或者放在单独"
 "的文件中，这样可以确保它不会被调用。因为，每调用一次就会开启一个本地的 WSGI 服务器，"
 "但我们使用该方法部署应用时，我们并不需要使用本地服务器。"
 
