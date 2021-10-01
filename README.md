@@ -71,7 +71,7 @@
 - [ ] next [@greyli](https://github.com/greyli) Grey Li
 - [ ] static [@greyli](https://github.com/greyli) Grey Li
 - [ ] templates [@greyli](https://github.com/greyli) Grey Li
-- [ ] tests [@greyli](https://github.com/greyli) Grey Li
+- [x] tests [@greyli](https://github.com/greyli) Grey Li
 - [ ] views
 
 
