@@ -72,7 +72,7 @@
 - [ ] static [@greyli](https://github.com/greyli) Grey Li
 - [ ] templates [@greyli](https://github.com/greyli) Grey Li
 - [ ] tests [@greyli](https://github.com/greyli) Grey Li
-- [ ] views
+- [ ] views [@greyli](https://github.com/greyli) Grey Li
 
 
 ### docs/deploying/
