@@ -95,7 +95,7 @@
 - [ ] deferredcallbacks
 - [ ] distribute
 - [ ] fabric
-- [ ] favicon
+- [ ] favicon [@ImJuanan](https://github.com/ImJuanan) Juan An
 - [ ] fileuploads
 - [ ] flashing
 - [ ] index
