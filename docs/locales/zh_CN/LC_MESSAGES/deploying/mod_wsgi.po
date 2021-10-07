@@ -204,7 +204,7 @@ msgid ""
 msgstr ""
 "你的应用文件中有 ``app.run()`` 调用，但并未放入 ``if __name__ == '__main__':``。"
 "要么把 :meth:`~flask.Flask.run` 的调用从文件移除，放入一个单独的 :file:`run.py` 文件"
-"中，要么请将它让入 if 块中。"
+"中，否则请将它让入 if 块中。"
 
 #: ../../deploying/mod_wsgi.rst:160
 msgid "**Problem:** application gives permission errors"
