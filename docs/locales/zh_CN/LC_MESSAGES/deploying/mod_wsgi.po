@@ -66,7 +66,7 @@ msgid ""
 "If you are using a yum based distribution (Fedora, OpenSUSE, etc..) you "
 "can install it as follows:"
 msgstr ""
-"如果你使用的是基于 yum 的发行版（ Fedora, OpenSUSE 等等）的系统，你可以这样安装："
+"如果你使用的是基于 yum 的发行版（Fedora, OpenSUSE 等等）的系统，你可以这样安装："
 
 #: ../../deploying/mod_wsgi.rst:37
 msgid ""
