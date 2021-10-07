@@ -252,7 +252,7 @@ msgid ""
 "you either have to put the folder into the pythonpath the file is stored "
 "in, or convert your application into a package."
 msgstr ""
-"你的应用可能是一个单独的 .py 文件，并且你把它符号连接到了 site-packages 文件夹中。"
+"你的应用可能是一个单独的 .py 文件，并且你把它软连接到了 site-packages 文件夹中。"
 "这样是不起作用的，你必须把文件夹放入 pythonpath 中，或者把你的应用转换成包。"
 
 #: ../../deploying/mod_wsgi.rst:184
