@@ -107,7 +107,7 @@ msgstr ""
 
 #: ../../deploying/mod_wsgi.rst:58
 msgid "For most applications the following file should be sufficient::"
-msgstr "对大多数应用来说，文件中包含以下内容就足够了："
+msgstr "对大多数应用来说，文件中包含以下内容就足够了::"
 
 #: ../../deploying/mod_wsgi.rst:62
 msgid ""
