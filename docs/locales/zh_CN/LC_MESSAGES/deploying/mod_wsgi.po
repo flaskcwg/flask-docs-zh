@@ -121,7 +121,7 @@ msgid ""
 "If you don't have a factory function for application creation but a "
 "singleton instance you can directly import that one as `application`."
 msgstr ""
-"如果你的应用没有创建工厂函数，只是一个独立的实例，那么可以直接把实例导入为 "
+"如果你没有一个用来创建应用的工厂函数，而是一个单例，那么可以直接把它导入为 "
 " `application` 。"
 
 #: ../../deploying/mod_wsgi.rst:70
