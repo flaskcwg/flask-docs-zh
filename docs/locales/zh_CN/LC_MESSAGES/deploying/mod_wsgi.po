@@ -177,7 +177,7 @@ msgstr ""
 
 #: ../../deploying/mod_wsgi.rst:130
 msgid "to httpd 2.4 syntax"
-msgstr "改变为 httpd 2.4 的语法"
+msgstr "变更为 httpd 2.4 的语法"
 
 #: ../../deploying/mod_wsgi.rst:137
 msgid "For more information consult the `mod_wsgi documentation`_."
