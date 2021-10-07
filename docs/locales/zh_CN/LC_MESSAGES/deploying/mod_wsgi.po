@@ -141,7 +141,7 @@ msgstr ""
 
 #: ../../deploying/mod_wsgi.rst:82
 msgid "Configuring Apache"
-msgstr "配置 Apache "
+msgstr "配置 Apache"
 
 #: ../../deploying/mod_wsgi.rst:84
 msgid ""
