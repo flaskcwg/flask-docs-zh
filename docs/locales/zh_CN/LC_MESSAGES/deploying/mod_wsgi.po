@@ -261,7 +261,7 @@ msgid ""
 "filename is used to locate the resources and for symlinks the wrong "
 "filename is picked up."
 msgstr ""
-"产生这种错误的原因是对于非安装包来说，模块的文件名用于定位资源，如果使用符号连接"
+"产生这种错误的原因是对于非安装包来说，模块的文件名用于定位资源，如果使用软连接"
 "的话就会定位到错误的文件名。"
 
 #: ../../deploying/mod_wsgi.rst:189
