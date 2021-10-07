@@ -114,7 +114,7 @@ msgid ""
 "If a factory function is used in a :file:`__init__.py` file, then the "
 "function should be imported::"
 msgstr ""
-"如果你在 :file:`__init__.py` 文件中使用到了工厂函数，那么该函数应当被导入："
+"如果你在 :file:`__init__.py` 文件中使用到了工厂函数，那么该函数应当被导入::"
 
 #: ../../deploying/mod_wsgi.rst:67
 msgid ""
