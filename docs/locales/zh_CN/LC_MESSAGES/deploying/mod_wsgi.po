@@ -202,7 +202,7 @@ msgid ""
 "that :meth:`~flask.Flask.run` call from the file and move it into a "
 "separate :file:`run.py` file or put it into such an if block."
 msgstr ""
-"你的应用文件中有 ``app.run()`` 调用，但并未放入 ``if __name__ == '__main__':`` "
+"你的应用文件中有 ``app.run()`` 调用，但并未放入 ``if __name__ == '__main__':``。"
 "块中。要么把 :meth:`~flask.Flask.run` 函数放入一个单独的 :file:`run.py` 文件"
 "中，要么请将它让入 if 块中。"
 
