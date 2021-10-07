@@ -158,7 +158,7 @@ msgid ""
 "refuse to run with the above configuration. On a Windows system, "
 "eliminate those lines:"
 msgstr ""
-"注意： WSGIDaemonProcess 不能在 Windows 中实现，并且 Apache 将拒绝以上述配置"
+"注意： WSGIDaemonProcess 未在 Windows 中实现，并且 Apache 将拒绝以上述配置"
 "运行。在 Windows 中，请删除这些行："
 
 #: ../../deploying/mod_wsgi.rst:118
