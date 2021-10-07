@@ -189,7 +189,7 @@ msgstr "故障排除"
 
 #: ../../deploying/mod_wsgi.rst:147
 msgid "If your application does not run, follow this guide to troubleshoot:"
-msgstr "如果你的应用并没有启动，请按照以下指导排除故障："
+msgstr "如果你的应用没有启动，请按照以下指导排除故障："
 
 #: ../../deploying/mod_wsgi.rst:153
 msgid "**Problem:** application does not run, errorlog shows SystemExit ignored"
