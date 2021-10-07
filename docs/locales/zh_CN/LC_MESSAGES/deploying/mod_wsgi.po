@@ -193,7 +193,7 @@ msgstr "如果你的应用没有启动，请按照以下指导排除故障："
 
 #: ../../deploying/mod_wsgi.rst:153
 msgid "**Problem:** application does not run, errorlog shows SystemExit ignored"
-msgstr " **问题:** 应用无法启动，错误信息日志显示 SystemExit ignored "
+msgstr " **问题:** 应用无法启动，错误信息显示 SystemExit ignored "
 
 #: ../../deploying/mod_wsgi.rst:150
 msgid ""
