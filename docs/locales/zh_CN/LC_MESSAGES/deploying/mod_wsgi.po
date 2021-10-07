@@ -103,7 +103,7 @@ msgid ""
 msgstr ""
 "你需要一个 :file:`yourapplication.wsgi` 文件才能启动你的应用。"
 "该文件包含 `mod_wsgi` 启动时所需要运行的代码，通过代码可以获取到应用对象。"
-"文件中的 `application` 对象就是以后使用到的应用。"
+"文件中的 `application` 对象就是之后使用到的应用。"
 
 #: ../../deploying/mod_wsgi.rst:58
 msgid "For most applications the following file should be sufficient::"
