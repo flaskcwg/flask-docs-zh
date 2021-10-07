@@ -239,7 +239,7 @@ msgid ""
 "Alternatively you can also replace the standard out in the .wsgi file "
 "with a different stream::"
 msgstr ""
-"或者你也可以在 .wsgi 文件中设置使用不同的流替代标准流："
+"或者你也可以在 .wsgi 文件中使用不同的流替代标准流："
 
 #: ../../deploying/mod_wsgi.rst:186
 msgid "**Problem:** accessing resources gives IO errors"
