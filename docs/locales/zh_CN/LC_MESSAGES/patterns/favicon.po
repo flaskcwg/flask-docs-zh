@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2010 Pallets
 # This file is distributed under the same license as the Flask package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# Juan An <yangxk196@163.com>, 2021.
 #
 #, fuzzy
 msgid ""
@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-25 19:31+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Juan An <yangxk196@163.com>\n"
 "Language-Team: zh_CN <withlihui@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -19,13 +19,15 @@ msgstr ""
 
 #: ../../patterns/favicon.rst:2
 msgid "Adding a favicon"
-msgstr ""
+msgstr "添加 Favicon"
 
 #: ../../patterns/favicon.rst:4
 msgid ""
 "A \"favicon\" is an icon used by browsers for tabs and bookmarks. This "
 "helps to distinguish your website and to give it a unique brand."
 msgstr ""
+"\"Favicon\"是浏览器用于在标签页和书签收藏夹等处显示的图标，它赋予你的站点"
+"一个独特的标志并增加其区分度。"
 
 #: ../../patterns/favicon.rst:7
 msgid ""
@@ -35,12 +37,16 @@ msgid ""
 "by all relevant browsers. Put the icon in your static directory as "
 ":file:`favicon.ico`."
 msgstr ""
+"一个常见的问题是如何在 Flask 应用中添加 favicon。首先，你当然得准备一个可用的图标，"
+"它应该是一个 16×16 像素的ICO格式文件。尽管制式上这不是必须的，但是这一事实标准为"
+"所有现代浏览器所支持。将这一图标放置在静态文件目录下并以 :file:`favicon.ico` 命名。"
 
 #: ../../patterns/favicon.rst:13
 msgid ""
 "Now, to get browsers to find your icon, the correct way is to add a link "
 "tag in your HTML. So, for example:"
 msgstr ""
+"现在，为了使浏览器访问到你的图标，正确的方法是在 HTML 文档中添加一个 link 标签。例如："
 
 #: ../../patterns/favicon.rst:20
 msgid ""
@@ -52,12 +58,19 @@ msgid ""
 "out of luck. If however your application is the root you can simply route"
 " a redirect::"
 msgstr ""
+"对于大多数浏览器这就足以奏效了，但是一些过于老旧的浏览器无法通过上述方法添加 favicon。"
+"旧有的事实标准是在站点域名的根路径下提供以 :file:`favicon.ico` 命名的图标文件。"
+"如果你的应用不是在站点域名的根路径下创建，那么你需要配置 web 服务器来在根路径下提供图标，"
+"如果你不能这样做，那么你就不太走运了。然而，如果你的应用在根路径下，你可以轻易地注册一个"
+"路由重定向至图标："
 
 #: ../../patterns/favicon.rst:30
 msgid ""
 "If you want to save the extra redirect request you can also write a view "
 "using :func:`~flask.send_from_directory`::"
 msgstr ""
+"如果你希望节省多余的重定向请求，也可以调用 :func:`~flask.send_from_directory` "
+"编写一个视图函数："
 
 #: ../../patterns/favicon.rst:41
 msgid ""
@@ -65,6 +78,8 @@ msgid ""
 " as well specify it to avoid the extra guessing, as it will always be the"
 " same."
 msgstr ""
+"其中显式传入的 mimetype 参数可以省略，浏览器将自行判断文件类型。不过我们也可以指定 MIME "
+"类型来避免多余的推测，因为图标文件总是同一类型。"
 
 #: ../../patterns/favicon.rst:45
 msgid ""
@@ -72,13 +87,16 @@ msgid ""
 "better to configure your dedicated web server to serve it; refer to the "
 "web server's documentation."
 msgstr ""
+"上述代码将通过你的应用来提供图标，不过如果可能的话，更好的方式是配置你所使用的 web 服务器"
+"来提供图标。请参考 web 服务器相关的文档。"
 
 #: ../../patterns/favicon.rst:50
 msgid "See also"
-msgstr ""
+msgstr "另见"
 
 #: ../../patterns/favicon.rst:52
 msgid ""
 "The `Favicon <https://en.wikipedia.org/wiki/Favicon>`_ article on "
 "Wikipedia"
 msgstr ""
+"维基百科上关于 `Favicon <https://en.wikipedia.org/wiki/Favicon>`_ 的文章"
