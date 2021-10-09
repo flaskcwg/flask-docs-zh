@@ -98,7 +98,7 @@
 - [ ] favicon [@ImJuanan](https://github.com/ImJuanan) Juan An
 - [ ] fileuploads
 - [ ] flashing
-- [ ] index
+- [ ] index [@180909](https://github.com/180909) 180909
 - [ ] jquery
 - [ ] lazyloading
 - [ ] methodoverrides
