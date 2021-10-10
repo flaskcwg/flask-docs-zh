@@ -231,7 +231,7 @@ msgid ""
 "protection from the config by setting the `WSGIRestrictStdout` to "
 "``off``:"
 msgstr ""
-"请记住 mod_wsgi 不允许使用 :data:`sys.stdout` 以及 :data:`sys.stderr` 。"
+"请记住 mod_wsgi 不允许使用 :data:`sys.stdout` 以及 :data:`sys.stderr`。"
 "你可以把 `WSGIRestrictStdout` 设置为 ``off`` 来关闭这个保护："
 
 #: ../../deploying/mod_wsgi.rst:172
