@@ -150,7 +150,7 @@ msgid ""
 "execute the application under a different user for security reasons:"
 msgstr ""
 "最后，你要为你的应用创建一个 Apache 配置文件。在下面的例子中，出于安全考虑，"
-"我们让 `mod_wsgi` 在一个不同的用户下执行应用程序。"
+"我们让 `mod_wsgi` 用另一个用户执行应用程序。"
 
 #: ../../deploying/mod_wsgi.rst:104
 msgid ""
