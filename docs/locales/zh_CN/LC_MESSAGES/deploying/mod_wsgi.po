@@ -208,7 +208,7 @@ msgstr ""
 
 #: ../../deploying/mod_wsgi.rst:160
 msgid "**Problem:** application gives permission errors"
-msgstr " **问题:** 应用抛出权限错误"
+msgstr " **问题：** 应用抛出权限错误"
 
 #: ../../deploying/mod_wsgi.rst:156
 msgid ""
