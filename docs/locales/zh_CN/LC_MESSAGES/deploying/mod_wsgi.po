@@ -166,7 +166,7 @@ msgid ""
 "Note: There have been some changes in access control configuration for "
 "`Apache 2.4`_."
 msgstr ""
-"注意： `Apache 2.4`_ 的访问控制配置发生了一些改变。"
+"注意：`Apache 2.4`_ 的访问控制配置发生了一些改变。"
 
 #: ../../deploying/mod_wsgi.rst:123
 msgid ""
