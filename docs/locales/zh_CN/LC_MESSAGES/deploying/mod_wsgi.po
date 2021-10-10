@@ -222,7 +222,7 @@ msgstr ""
 
 #: ../../deploying/mod_wsgi.rst:176
 msgid "**Problem:** application dies with an error on print"
-msgstr "**问题：**应用在打印时抛出错误终止"
+msgstr "**问题：** 应用在打印时抛出错误终止"
 
 #: ../../deploying/mod_wsgi.rst:163
 msgid ""
@@ -243,7 +243,7 @@ msgstr ""
 
 #: ../../deploying/mod_wsgi.rst:186
 msgid "**Problem:** accessing resources gives IO errors"
-msgstr "**问题：**访问资源时 IO 错误"
+msgstr "**问题：** 访问资源时 IO 错误"
 
 #: ../../deploying/mod_wsgi.rst:179
 msgid ""
