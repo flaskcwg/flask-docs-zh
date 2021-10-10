@@ -74,7 +74,7 @@ msgid ""
 "using pkg_add:"
 msgstr ""
 "在 FreeBSD 系统中，你可以通过编译 `www/mod_wsgi` 或是使用 pkg_add 来安装"
-" `mod_wsgi` ："
+" `mod_wsgi`："
 
 #: ../../deploying/mod_wsgi.rst:44
 msgid ""
