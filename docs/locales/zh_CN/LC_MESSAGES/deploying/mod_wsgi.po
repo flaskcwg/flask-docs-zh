@@ -81,7 +81,7 @@ msgid ""
 "If you are using pkgsrc you can install `mod_wsgi` by compiling the "
 "`www/ap2-wsgi` package."
 msgstr ""
-"如果你使用 pkgsrc ，那你可以通过编译 `www/ap2-wsgi` 包来安装 `mod_wsgi` 。"
+"如果你使用 pkgsrc，那你可以通过编译 `www/ap2-wsgi` 包来安装 `mod_wsgi`。"
 
 #: ../../deploying/mod_wsgi.rst:47
 msgid ""
