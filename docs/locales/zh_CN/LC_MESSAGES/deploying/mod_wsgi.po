@@ -122,7 +122,7 @@ msgid ""
 "singleton instance you can directly import that one as `application`."
 msgstr ""
 "如果你没有一个用来创建应用的工厂函数，而是一个单例，那么可以直接把它导入为 "
-" `application` 。"
+" `application`。"
 
 #: ../../deploying/mod_wsgi.rst:70
 msgid ""
