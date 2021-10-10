@@ -136,7 +136,7 @@ msgid ""
 msgstr ""
 "把文件放在以后能找得到的地方（比如：:file:`/var/www/yourapplication`），并确保"
 " `yourapplication` 和所有使用到的库都位于 python 加载路径中。如果你不想在系统环境中"
-"安装，你可以考虑使用 `virtual python`_ 环境。请记住，最好将你的应用程序放入虚拟"
+"安装，你可以考虑使用 `virtual python`_ 实例。请记住，最好将你的应用程序放入虚拟"
 "环境中。有一个可选项是在导入前在 ``.wsgi`` 文件中加入路径::"
 
 #: ../../deploying/mod_wsgi.rst:82
