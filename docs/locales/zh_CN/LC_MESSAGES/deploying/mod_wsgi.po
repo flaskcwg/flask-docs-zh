@@ -173,7 +173,7 @@ msgid ""
 "Most notably, the syntax for directory permissions has changed from httpd"
 " 2.2"
 msgstr ""
-"最值得注意的是，目录权限的语法从 httpd 2.2 "
+"最值得注意的是，目录权限的语法从 httpd 2.2"
 
 #: ../../deploying/mod_wsgi.rst:130
 msgid "to httpd 2.4 syntax"
