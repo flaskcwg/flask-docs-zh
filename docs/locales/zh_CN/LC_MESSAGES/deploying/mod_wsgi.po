@@ -181,7 +181,7 @@ msgstr "变更为 httpd 2.4 的语法"
 
 #: ../../deploying/mod_wsgi.rst:137
 msgid "For more information consult the `mod_wsgi documentation`_."
-msgstr "想要了解更多信息，请移步 `mod_wsgi documentation`_ 。"
+msgstr "想要了解更多信息，请移步 `mod_wsgi documentation`_。"
 
 #: ../../deploying/mod_wsgi.rst:145
 msgid "Troubleshooting"
