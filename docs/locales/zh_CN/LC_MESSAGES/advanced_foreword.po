@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2010 Pallets
 # This file is distributed under the same license as the Flask package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# rosekc <rose-kc@hotmail.com>, 2021.
 #
 #, fuzzy
 msgid ""
@@ -77,7 +77,7 @@ msgid ""
 msgstr ""
 "不巧的是，有很多方法能让 Web 应用置于危险之地。Flask 可以保护应用免受常见"
 "的跨站脚本（XSS）攻击——这是现代 Web 应用程序最常见的安全问题之一。除非有"
-"意将不安全的HTML标记为安全，Flask 和底层的 Jinja2 模板引擎将保护应用免受"
+"意将不安全的 HTML 标记为安全，Flask 和底层的 Jinja2 模板引擎将保护应用免受"
 "其害。尽管如此，仍有很多引发安全问题的情况存在。"
 
 #: ../../advanced_foreword.rst:36
