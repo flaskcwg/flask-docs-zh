@@ -48,7 +48,7 @@
 - [x] index [@greyli](https://github.com/greyli) Grey Li
 - [x] installation [@greyli](https://github.com/greyli) Grey Li
 - [ ] logging [@FesonX](https://github.com/FesonX) FesonX
-- [ ] quickstart (reserved)
+- [ ] quickstart [@greyli](https://github.com/greyli) Grey Li
 - [x] reqcontext [@rosekc](https://github.com/rosekc) rosekc
 - [ ] security [@kylinbin](https://github.com/kylinbin) kylin
 - [ ] server [@LeeRnnGii](https://github.com/LeeRnnGii) LeeRnnGii
@@ -59,7 +59,7 @@
 - [ ] views [@labike](https://github.com/labike) labike
 
 
-### docs/tutorial/ (reserved)
+### docs/tutorial/
 
 - [ ] blog [@greyli](https://github.com/greyli) Grey Li
 - [ ] database [@greyli](https://github.com/greyli) Grey Li
