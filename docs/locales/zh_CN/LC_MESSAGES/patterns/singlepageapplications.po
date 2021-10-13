@@ -32,4 +32,3 @@ msgstr ""
 #: ../../patterns/singlepageapplications.rst:9
 msgid "The following example demonstrates how to serve an SPA along with an API::"
 msgstr ""
-

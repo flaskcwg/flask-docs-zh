@@ -202,4 +202,3 @@ msgid ""
 "called `Flask-Uploads`_ that implements a full fledged upload mechanism "
 "that allows controlling which file extensions are allowed to be uploaded."
 msgstr ""
-

@@ -36,4 +36,3 @@ msgid ""
 "This is the recommended approach for overriding or augmenting Flask's "
 "internal functionality."
 msgstr ""
-
