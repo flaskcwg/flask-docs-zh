@@ -51,8 +51,8 @@ msgid ""
 "using a package manager or compile it yourself.  The mod_wsgi "
 "`installation instructions`_ cover source installations on UNIX systems."
 msgstr ""
-"如果你还没有安装 `mod_wsgi` ，你可以使用包管理器安装或者自行编译。在 UNIX 系统"
-"中如何以源代码形式安装 mod_wsgi 请参考 `installation instructions`_ "
+"如果你还没有安装 `mod_wsgi`，你可以使用包管理器安装或者自行编译。在 UNIX 系统"
+"中如何以源代码形式安装 mod_wsgi 请参考 `installation instructions`_。"
 
 #: ../../deploying/mod_wsgi.rst:23
 msgid ""
@@ -193,7 +193,7 @@ msgstr "如果你的应用没有启动，请按照以下指导排除故障："
 
 #: ../../deploying/mod_wsgi.rst:153
 msgid "**Problem:** application does not run, errorlog shows SystemExit ignored"
-msgstr " **问题：** 应用无法启动，错误日志显示 SystemExit ignored "
+msgstr " **问题：** 应用无法启动，错误日志显示 SystemExit ignored"
 
 #: ../../deploying/mod_wsgi.rst:150
 msgid ""
@@ -217,7 +217,7 @@ msgid ""
 "set and the application runs as the correct user (``user`` and ``group`` "
 "parameter to the `WSGIDaemonProcess` directive)"
 msgstr ""
-"有可能是使用了错误的用户去启动应用。请检查你的用户及其所在的组（ `WSGIDaemonProcess` "
+"有可能是使用了错误的用户去启动应用。请检查你的用户及其所在的组（`WSGIDaemonProcess`"
 "的 ``user`` 和 ``group`` 参数）是否有权限访问应用所在的文件夹"
 
 #: ../../deploying/mod_wsgi.rst:176
