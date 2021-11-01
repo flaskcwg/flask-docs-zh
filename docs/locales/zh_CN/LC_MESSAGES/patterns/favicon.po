@@ -70,7 +70,7 @@ msgid ""
 "using :func:`~flask.send_from_directory`::"
 msgstr ""
 "如果你希望避免多余的重定向请求，也可以调用 :func:`~flask.send_from_directory` "
-"编写一个视图函数::"
+"编写一个视图函数："
 
 #: ../../patterns/favicon.rst:41
 msgid ""
