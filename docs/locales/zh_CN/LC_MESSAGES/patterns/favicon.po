@@ -88,7 +88,7 @@ msgid ""
 "web server's documentation."
 msgstr ""
 "上述代码将通过你的应用来提供图标，不过如果可能的话，更好的方式是配置你所使用的 web 服务器"
-"来提供图标。请参考 web 服务器相关的文档。"
+"来提供图标。请参考 web 服务器的文档。"
 
 #: ../../patterns/favicon.rst:50
 msgid "See also"
