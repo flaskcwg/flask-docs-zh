@@ -26,7 +26,7 @@ msgid ""
 "A \"favicon\" is an icon used by browsers for tabs and bookmarks. This "
 "helps to distinguish your website and to give it a unique brand."
 msgstr ""
-"\"Favicon\" 是浏览器用于在标签页和书签收藏夹等处显示的图标，它赋予你的站点"
+"“Favicon”是浏览器用于在标签页和书签收藏夹等处显示的图标，它赋予你的站点"
 "一个独特的标志并增加其区分度。"
 
 #: ../../patterns/favicon.rst:7
