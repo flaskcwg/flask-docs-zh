@@ -37,7 +37,7 @@ msgid ""
 "it.  Just remember that your :class:`Flask` application object is the "
 "actual WSGI application."
 msgstr ""
-"如果想要把 Flask 应用部署到这里没有列出的 WSGI 服务器，请查询其文档中关于如何使
+"如果想要把 Flask 应用部署到这里没有列出的 WSGI 服务器，请查询其文档中关于如何使"
 "用 WSGI 的部分，只要记住：:class:`Flask` 应用对象实质上是一个 WSGI 应用。"
 
 #: ../../deploying/index.rst:15
