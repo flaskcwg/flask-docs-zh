@@ -120,7 +120,8 @@ msgid ""
 "modify the session cookie, or anything else that uses the secret key."
 msgstr ""
 "在这个教程的一开始，你为 :data:`SECRET_KEY` 设置了一个默认值。在生产环境中，它"
-"应该被更换为一个随机字节串。否则的话，攻击者可以使用常用的 ``'dev'`` 键去修改会话 "
+"应该被更换为一个随机字节串。否则，攻击者可以使用常用的 ``'dev'`` 密钥去修改会话 "
+
 "cookie，或是其他任何使用密钥的数据。"
 
 #: ../../tutorial/deploy.rst:87
