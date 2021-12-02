@@ -63,6 +63,9 @@
 
 - [ ] blog [@greyli](https://github.com/greyli) Grey Li
 - [ ] database [@greyli](https://github.com/greyli) Grey Li
+- [x] deploy [@greyli](https://github.com/greyli) Grey Li
+- [ ] blog [@greyli](https://github.com/greyli) Grey Li
+- [ ] database [@greyli](https://github.com/greyli) Grey Li
 - [ ] deploy [@greyli](https://github.com/greyli) Grey Li
 - [ ] factory [@greyli](https://github.com/greyli) Grey Li
 - [x] index [@greyli](https://github.com/greyli) Grey Li
