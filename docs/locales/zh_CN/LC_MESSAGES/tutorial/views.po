@@ -55,7 +55,7 @@ msgid ""
 "separate module. Since the blog needs to know about authentication, "
 "you'll write the authentication one first."
 msgstr ""
-"Flaskr 将会有两个蓝图，一个用于认证函数，一个用于博客帖子相关的函数。每一个蓝图的代码"
+"Flaskr 将会有两个蓝图，一个用于认证相关的函数，一个用于博客帖子相关的函数。每一个蓝图的代码"
 "将存放在单独的模块中。因为博客需要使用认证功能，所以你要先编写认证蓝图。"
 
 #: ../../tutorial/views.rst:27 ../../tutorial/views.rst:79
@@ -136,7 +136,7 @@ msgid ""
 "will be ``'POST'``. In this case, start validating the input."
 msgstr ""
 "如果用户提交了表单，:attr:`request.method <Request.method>` 会是 ``'POST'``。"
-"在这种情况下，开始验证输入的数据。"
+"在这种情况下，视图开始验证输入的数据。"
 
 #: ../../tutorial/views.rst:122
 msgid ""
@@ -162,7 +162,8 @@ msgid ""
 msgstr ""
 "通过查询数据库并检查是否有结果返回，验证 ``username`` 是否已经被注册。"
 ":meth:`db.execute <sqlite3.Connection.execute>` 接受一个 SQL 查询，其中包含"
-"代表任意用户输入的 ``?`` 占位符，以及一个用来替换占位符的数据元组。"
+"代表任意用户输入的 ``?`` 占位符，以及一个用来替换占位符的数据元组。数据库相关的库"
+"将负责转义值，使得你不易受到 *SQL 注入攻击*。
 
 #: ../../tutorial/views.rst:136
 msgid ""
@@ -217,7 +218,7 @@ msgid ""
 msgstr ""
 "当用户最初导航到 ``auth/register`` 时，或是有验证错误时，应该显示一个带有注册表单的 "
 "HTML 页面。:func:`render_template` 将渲染一个包含该 HTML 页面的模板，你将在教程"
-"的下一章编写它。"
+"的下一章编写相关代码。"
 
 #: ../../tutorial/views.rst:167
 msgid "Login"
@@ -278,7 +279,7 @@ msgid ""
 msgstr ""
 ":meth:`bp.before_app_request() <Blueprint.before_app_request>` 注册一个函数并"
 "让它在每一个视图函数之前运行，不管请求发到哪一个 URL。``load_logged_in_user`` 检查"
-"用户的 ID 是否存储在 :data:`session` 中，并从数据库中获取那个用户的数据，将其存储到 "
+"用户的 ID 是否存储在 :data:`session` 中，并从数据库中获取对应用户的数据，将其存储到 "
 ":data:`g.user <g>` 上——它存在于单个请求的生命周期内。如果没有用户 ID，或是 ID 不存在，"
 "``g.user`` 将是 ``None``。"
 
@@ -331,7 +332,7 @@ msgid ""
 "function."
 msgstr ""
 ":func:`url_for` 函数根据视图名称和参数生成到一个视图的 URL。视图的名称也被叫做 "
-"*端点（endpoint）*，默认它和视图函数的名称相同。"
+"*端点（endpoint）*，默认情况下，它和视图函数的名称相同。"
 
 #: ../../tutorial/views.rst:290
 msgid ""
