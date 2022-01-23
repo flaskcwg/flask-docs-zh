@@ -76,7 +76,7 @@ msgid ""
 "request. View functions, error handlers, and other functions that run "
 "during a request will have access to :data:`current_app`."
 msgstr ""
-"Flask 在处理请求时候会自动 *推入* 一个应用上下文。视图函数，错误处理，还"
+"Flask 在处理请求时候会自动 *推入* 一个应用上下文。视图函数、错误处理器、还"
 "有其他在请求中运行的函数将可以访问 :data:`current_app`。"
 
 #: ../../appcontext.rst:35
