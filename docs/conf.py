@@ -46,7 +46,7 @@ html_context = {
         ProjectLink("网站", "https://palletsprojects.com/p/flask/"),
         ProjectLink("Twitter", "https://twitter.com/PalletsTeam"),
         ProjectLink("聊天", "https://discord.gg/pallets"),
-        ProjectLink("文档翻译源码", "https://github.com/greyli/flask-docs-zh"),
+        ProjectLink("参与翻译", "https://github.com/greyli/flask-docs-zh"),
     ]
 }
 html_sidebars = {
@@ -101,7 +101,7 @@ def setup(app):
 
 # Translation ----------------------------------------------------------
 
-locale_dirs = ['locales']
+locale_dirs = ["locales"]
 gettext_compact = False
-language = 'zh_CN'
-html_search_language = 'zh'
+language = "zh_CN"
+html_search_language = "zh"

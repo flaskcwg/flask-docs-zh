@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2010 Pallets
 # This file is distributed under the same license as the Flask package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# rosekc <rose-kc@hotmail.com>, 2021.
 #
 #, fuzzy
 msgid ""
@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-25 19:31+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: rosekc <rose-kc@hotmail.com>\n"
 "Language-Team: zh_CN <withlihui@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -19,11 +19,11 @@ msgstr ""
 
 #: ../../advanced_foreword.rst:2
 msgid "Foreword for Experienced Programmers"
-msgstr ""
+msgstr "给资深程序员的序言"
 
 #: ../../advanced_foreword.rst:5
 msgid "Thread-Locals in Flask"
-msgstr ""
+msgstr "Flask 的线程局部对象"
 
 #: ../../advanced_foreword.rst:7
 msgid ""
@@ -39,14 +39,21 @@ msgid ""
 "does not hide them, and calls out in the code and documentation where "
 "they are used."
 msgstr ""
+"Flask 设计决策中的重要一环便是让简单的任务保持简单。这些任务不应该编写大"
+"量的代码，也不应当限制你。因此，Flask 中的一些设计决策会让人感到惊讶或不"
+"合常规。例如，Flask 使用了线程局部对象（Thread-local Objects），所以不需"
+"要为了保持线程安全而将对象在各个函数中传递。这个方法很方便，但进行依赖注"
+"入或者尝试重用与请求相关的值的代码时，需要一个有效的请求上下文。Flask 项"
+"目坦诚地公开线程局部对象这个设计，而不会隐藏它们，并在使用它们的代码和文"
+"档中进行了标注。"
 
 #: ../../advanced_foreword.rst:20
 msgid "Develop for the Web with Caution"
-msgstr ""
+msgstr "谨慎地进行 Web 应用开发"
 
 #: ../../advanced_foreword.rst:22
 msgid "Always keep security in mind when building web applications."
-msgstr ""
+msgstr "在进行 Web 应用开发的时候，时刻牢记安全的重要性。"
 
 #: ../../advanced_foreword.rst:24
 msgid ""
@@ -55,6 +62,9 @@ msgid ""
 "you with data. And even if you are the only user that might leave data in"
 " your application, you still want that data to be stored securely."
 msgstr ""
+"在编写一个 Web 应用的时候，很可能会允许用户注册并将其数据保留在服"
+"务器上。用户将数据托付给你。即便这个应用只有你自己一个用户，数据的安全存储"
+"仍然是值得留意的一点。"
 
 #: ../../advanced_foreword.rst:29
 msgid ""
@@ -65,6 +75,10 @@ msgid ""
 "underlying Jinja2 template engine have you covered.  But there are many "
 "more ways to cause security problems."
 msgstr ""
+"不巧的是，有很多方法能让 Web 应用置于危险之地。Flask 可以保护应用免受常见"
+"的跨站脚本（XSS）攻击——这是现代 Web 应用程序最常见的安全问题之一。除非有"
+"意将不安全的 HTML 标记为安全，Flask 和底层的 Jinja2 模板引擎将保护应用免受"
+"其害。尽管如此，仍有很多引发安全问题的情况存在。"
 
 #: ../../advanced_foreword.rst:36
 msgid ""
@@ -78,6 +92,11 @@ msgid ""
 "probing for ways to fill your database with spam, links to malicious "
 "software, and the like."
 msgstr ""
+"该文档将提醒你有关 Web 开发中需要注意安全性的地方。其中一些安全隐患比想"
+"象的要复杂得多，而且有时我们都低估了攻击者利用漏洞的可能性——直到聪明的攻击者"
+"找到了一个利用应用程序的漏洞。同时，不要以为应用程序不够重要就不足以吸引攻"
+"击者。根据攻击类型的不同，自动化的机器人很可能会以各种方法将垃圾请求、"
+"指向恶意软件的链接之类的东西灌满数据库。"
 
 #: ../../advanced_foreword.rst:45
 msgid ""
@@ -85,4 +104,5 @@ msgid ""
 "must build with caution, watching for exploits when building to your "
 "requirements."
 msgstr ""
-
+"Flask与任何其他框架一样，需要开发人员谨慎构建，并在实现需求的同时留意"
+"漏洞被利用的情况。"
