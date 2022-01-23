@@ -30,7 +30,7 @@
 ### docs/
 
 - [x] advanced_foreword [@rosekc](https://github.com/rosekc) rosekc
-- [ ] appcontext [@rosekc](https://github.com/rosekc) rosekc
+- [x] appcontext [@rosekc](https://github.com/rosekc) rosekc
 - [ ] async-await [@rosekc](https://github.com/your_username) rosekc
 - [ ] becomingbig [@yuxiaoy1](https://github.com/yuxiaoy1) Frank Yu
 - [x] blueprints [@frostming](https://github.com/frostming) Frost Ming
