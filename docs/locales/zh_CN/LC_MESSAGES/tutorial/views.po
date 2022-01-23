@@ -197,7 +197,7 @@ msgid ""
 " the URL later without changing all code that links to it. "
 ":func:`redirect` generates a redirect response to the generated URL."
 msgstr ""
-"保存用户后，他们被重定向到登录页面。:func:`url_for` 根据其名称生成到 login 视图的 URL。"
+"保存用户后，他们被重定向到登录页面。:func:`url_for` 根据其名称生成到 ``login`` 视图的 URL。"
 "和直接写出来 URL 相比，这是更推荐的做法，因为它允许你以后轻松更改 URL 而不用更新所有链接到它"
 "的代码。:func:`redirect` 生成一个重定向响应到生成的 URL。"
 
