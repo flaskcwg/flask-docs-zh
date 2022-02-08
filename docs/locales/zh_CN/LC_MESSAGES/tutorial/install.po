@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2010 Pallets
 # This file is distributed under the same license as the Flask package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# Grey Li <withlihui@gmail.com>, 2021.
 #
 #, fuzzy
 msgid ""
@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-25 19:31+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Grey Li <withlihui@gmail.com>\n"
 "Language-Team: zh_CN <withlihui@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../tutorial/install.rst:2
 msgid "Make the Project Installable"
-msgstr ""
+msgstr "让项目可安装"
 
 #: ../../tutorial/install.rst:4
 msgid ""
@@ -29,12 +29,17 @@ msgid ""
 "the same as installing any other library, so you're using all the "
 "standard Python tools to manage everything."
 msgstr ""
+"让你的项目可以被安装意味着你可以构建一个 *发行* 文件并在另一个环境安装它，"
+"就像你在项目环境安装 Flask 一样。这使得部署你的项目和安装其他任何库没有区别，"
+"你就可以使用所有标准的 Python 工具去管理一切。"
 
 #: ../../tutorial/install.rst:10
 msgid ""
 "Installing also comes with other benefits that might not be obvious from "
 "the tutorial or as a new Python user, including:"
 msgstr ""
+"安装项目也会带来一些也许在这个教程中或对于 Python 新用户来说并不明显的其他好处，"
+"这包括："
 
 #: ../../tutorial/install.rst:13
 msgid ""
@@ -42,38 +47,42 @@ msgid ""
 "only because you're running from your project's directory. Installing "
 "means you can import it no matter where you run from."
 msgstr ""
+"目前，Python 和 Flask 理解如何使用 ``flaskr`` 包仅仅因为你是从项目文件夹运行它。"
+"安装则意味着不论从哪里运行都可以导入它。"
 
 #: ../../tutorial/install.rst:17
 msgid ""
 "You can manage your project's dependencies just like other packages do, "
 "so ``pip install yourproject.whl`` installs them."
 msgstr ""
+"你可以像其他包一样管理项目依赖，如此便可以执行 ``pip install yourproject.whl`` "
+"安装它们。"
 
 #: ../../tutorial/install.rst:20
 msgid ""
 "Test tools can isolate your test environment from your development "
 "environment."
-msgstr ""
+msgstr "测试工具可以将测试环境与你的开发环境隔离开来。"
 
 #: ../../tutorial/install.rst:24
 msgid ""
 "This is being introduced late in the tutorial, but in your future "
 "projects you should always start with this."
-msgstr ""
+msgstr "这一章被放到了教程的后面，但是你未来的项目应该始终从这一步开始。"
 
 #: ../../tutorial/install.rst:29
 msgid "Describe the Project"
-msgstr ""
+msgstr "描述项目"
 
 #: ../../tutorial/install.rst:31
 msgid ""
 "The ``setup.py`` file describes your project and the files that belong to"
 " it."
-msgstr ""
+msgstr "``setup.py`` 文件描述了项目和项目相关的文件。"
 
 #: ../../tutorial/install.rst:34
 msgid "``setup.py``"
-msgstr ""
+msgstr "``setup.py``"
 
 #: ../../tutorial/install.rst:51
 msgid ""
@@ -84,10 +93,14 @@ msgid ""
 "is set. Python needs another file named ``MANIFEST.in`` to tell what this"
 " other data is."
 msgstr ""
+"``packages`` 告诉 Python 包括哪些包目录（以及它们包含的 Python 文件）。"
+"``find_packages()`` 会自动找到这些目录，所以你不用逐个写出。要加入其他"
+"文件，比如静态文件和模板目录，就要设置 ``include_package_data``。Python"
+"需要另外一个叫做 ``MANIFEST.in`` 的文件来指明具体的其他文件是哪些。"
 
 #: ../../tutorial/install.rst:58
 msgid "``MANIFEST.in``"
-msgstr ""
+msgstr "``MANIFEST.in``"
 
 #: ../../tutorial/install.rst:66
 msgid ""
@@ -95,20 +108,22 @@ msgid ""
 "directories, and the ``schema.sql`` file, but to exclude all bytecode "
 "files."
 msgstr ""
+"这会告诉 Python 复制 ``static`` 和 ``templates`` 目录下的所有文件以及 "
+"``schema.sql`` 文件，但是排除所有字节码（bytecode）文件。"
 
 #: ../../tutorial/install.rst:70
 msgid ""
 "See the `official packaging guide`_ for another explanation of the files "
 "and options used."
-msgstr ""
+msgstr "参阅 `官方打包教程`_ 了解对所使用的文件和选项的更多解释。"
 
 #: ../../tutorial/install.rst:77
 msgid "Install the Project"
-msgstr ""
+msgstr "安装项目"
 
 #: ../../tutorial/install.rst:79
 msgid "Use ``pip`` to install your project in the virtual environment."
-msgstr ""
+msgstr "使用 ``pip`` 在虚拟环境中安装你的项目。"
 
 #: ../../tutorial/install.rst:85
 msgid ""
@@ -117,10 +132,13 @@ msgid ""
 "make changes to your local code, you'll only need to re-install if you "
 "change the metadata about the project, such as its dependencies."
 msgstr ""
+"这告诉 pip 在当前目录找到 ``setup.py`` 并以 *可编辑* 或 *开发* 模式安装它。可"
+"编辑模式意味着当你对本地代码做出改动时，只有改变了 setup.py 文件中的关于项目的"
+"元信息（比如它的依赖），才需要重新安装项目。"
 
 #: ../../tutorial/install.rst:90
 msgid "You can observe that the project is now installed with ``pip list``."
-msgstr ""
+msgstr "项目现在已经被安装了，你可以在 ``pip list`` 命令的输出里找到它。"
 
 #: ../../tutorial/install.rst:109
 msgid ""
@@ -129,7 +147,10 @@ msgid ""
 " application, but you can call it from anywhere, not just the ``flask-"
 "tutorial`` directory."
 msgstr ""
+"目前为止，运行项目的方式并没有任何改变。``FLASK_APP`` 仍然被设为 ``flaskr``，"
+"``flask run`` 仍然会运行应用，不过现在你可以在任意位置运行它，而不仅仅是 "
+"``flask-tutorial`` 目录。"
 
 #: ../../tutorial/install.rst:114
 msgid "Continue to :doc:`tests`."
-msgstr ""
+msgstr "继续阅读 :doc:`tests`。"
