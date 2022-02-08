@@ -48,7 +48,7 @@ msgid ""
 "``flaskr/static`` directory and referenced with ``url_for('static', "
 "filename='...')``."
 msgstr ""
-"除了 CSS，还有其他类型的静态文件比如 JavaScript 或是 logo 图片。它们都需要放在 "
+"除了 CSS，还有其他类型的静态文件比如 JavaScript 函数或是 logo 图片。它们都需要放在 "
 "``flaskr/static`` 目录下，并使用 ``url_for('static', filename='...')`` 引入。"
 
 #: ../../tutorial/static.rst:22
@@ -77,7 +77,7 @@ msgid ""
 msgstr "访问 http://127.0.0.1:5000/auth/login 看到的页面应该类似下面的截图。"
 
 msgid "screenshot of login page"
-msgstr "登陆页面截图"
+msgstr "登录页面截图"
 
 #: ../../tutorial/static.rst:66
 msgid ""
