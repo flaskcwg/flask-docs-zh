@@ -55,7 +55,7 @@ msgstr ""
 msgid ""
 "If you want to keep developing your Flaskr project, here are some ideas "
 "for what to try next:"
-msgstr "如果你想继续开发你的 Flaskr 项目，这里有一些接下来可以尝试的创意："
+msgstr "如果你想继续开发你的 Flaskr 项目，这里有一些接下来可以尝试的想法："
 
 #: ../../tutorial/next.rst:22
 msgid ""
