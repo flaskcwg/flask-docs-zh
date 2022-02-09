@@ -19,9 +19,9 @@
 
 ## Reviewers
 
+- FesonX ([@FesonX](https://github.com/FesonX))
 - Grey Li ([@greyli](https://github.com/greyli))
 - Frost Ming ([@frostming](https://github.com/frostming))
-- FesonX ([@FesonX](https://github.com/FesonX))
 
 
 ## Translators (Translation To-do List)
@@ -29,8 +29,8 @@
 
 ### docs/
 
-- [ ] advanced_foreword (reserved)
-- [ ] appcontext [@rosekc](https://github.com/rosekc) rosekc
+- [x] advanced_foreword [@rosekc](https://github.com/rosekc) rosekc
+- [x] appcontext [@rosekc](https://github.com/rosekc) rosekc
 - [ ] async-await [@rosekc](https://github.com/your_username) rosekc
 - [ ] becomingbig [@yuxiaoy1](https://github.com/yuxiaoy1) Frank Yu
 - [x] blueprints [@frostming](https://github.com/frostming) Frost Ming
@@ -48,8 +48,8 @@
 - [x] index [@greyli](https://github.com/greyli) Grey Li
 - [x] installation [@greyli](https://github.com/greyli) Grey Li
 - [ ] logging [@FesonX](https://github.com/FesonX) FesonX
-- [ ] quickstart (reserved)
-- [ ] reqcontext [@rosekc](https://github.com/rosekc) rosekc
+- [ ] quickstart [@greyli](https://github.com/greyli) Grey Li
+- [x] reqcontext [@rosekc](https://github.com/rosekc) rosekc
 - [ ] security [@kylinbin](https://github.com/kylinbin) kylin
 - [ ] server [@LeeRnnGii](https://github.com/LeeRnnGii) LeeRnnGii
 - [x] shell [@LTakamori](https://github.com/LTakamori) LTakamori
@@ -59,26 +59,29 @@
 - [ ] views [@labike](https://github.com/labike) labike
 
 
-### docs/tutorial/ (reserved)
+### docs/tutorial/
 
-- [ ] blog
+- [ ] blog [@greyli](https://github.com/greyli) Grey Li
+- [ ] database [@greyli](https://github.com/greyli) Grey Li
+- [x] deploy [@greyli](https://github.com/greyli) Grey Li
+- [ ] blog [@greyli](https://github.com/greyli) Grey Li
 - [ ] database [@greyli](https://github.com/greyli) Grey Li
 - [ ] deploy [@greyli](https://github.com/greyli) Grey Li
 - [ ] factory [@greyli](https://github.com/greyli) Grey Li
 - [x] index [@greyli](https://github.com/greyli) Grey Li
 - [x] install [@greyli](https://github.com/greyli) Grey Li
 - [x] layout [@greyli](https://github.com/greyli) Grey Li
-- [ ] next [@greyli](https://github.com/greyli) Grey Li
-- [ ] static [@greyli](https://github.com/greyli) Grey Li
+- [x] next [@greyli](https://github.com/greyli) Grey Li
+- [x] static [@greyli](https://github.com/greyli) Grey Li
 - [ ] templates [@greyli](https://github.com/greyli) Grey Li
-- [ ] tests
-- [ ] views
+- [ ] tests [@greyli](https://github.com/greyli) Grey Li
+- [x] views [@greyli](https://github.com/greyli) Grey Li
 
 
 ### docs/deploying/
 
 - [x] asgi [@180909](https://github.com/180909) 180909
-- [ ] cgi
+- [ ] cgi [@StevenAZy](https://github.com/StevenAZy) StevenAZy
 - [ ] fastcgi
 - [x] index [@180909](https://github.com/180909) 180909
 - [ ] mod_wsgi [@180909](https://github.com/180909) 180909
@@ -95,7 +98,7 @@
 - [ ] deferredcallbacks
 - [ ] distribute
 - [ ] fabric
-- [ ] favicon
+- [x] favicon [@ImJuanan](https://github.com/ImJuanan) Juan An
 - [ ] fileuploads
 - [ ] flashing
 - [ ] index
