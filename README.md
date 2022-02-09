@@ -80,7 +80,7 @@
 
 ### docs/deploying/
 
-- [ ] asgi [@180909](https://github.com/180909) 180909
+- [x] asgi [@180909](https://github.com/180909) 180909
 - [ ] cgi [@StevenAZy](https://github.com/StevenAZy) StevenAZy
 - [ ] fastcgi
 - [x] index [@180909](https://github.com/180909) 180909
