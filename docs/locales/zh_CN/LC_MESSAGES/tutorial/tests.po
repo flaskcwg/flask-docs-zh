@@ -425,7 +425,7 @@ msgid ""
 "file."
 msgstr ""
 "有一些额外的配置可以添加到项目的 ``setup.cfg`` 文件。它们并不是必须的，但是可以简化运行"
-"测试和计算覆盖率的命令，"
+"测试和计算覆盖率的命令。"
 
 #: ../../tutorial/tests.rst:497
 msgid "``setup.cfg``"
