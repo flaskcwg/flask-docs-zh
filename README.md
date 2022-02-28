@@ -1,6 +1,6 @@
-[![Translation progress](https://jalkhov.github.io/docspro/badge/zh_progress.svg)](https://github.com/Jalkhov/docspro)
-
 # The Chinese Translation of Flask Documentation
+
+[![Translation progress](https://jalkhov.github.io/docspro/badge/zh_progress.svg)](https://github.com/Jalkhov/docspro)
 
 这里是 Flask 文档中文翻译项目，欢迎参与！
 
