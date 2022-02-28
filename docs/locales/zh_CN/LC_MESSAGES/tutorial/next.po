@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2010 Pallets
 # This file is distributed under the same license as the Flask package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# Grey Li <withlihui@gmail.com>, 2021.
 #
 #, fuzzy
 msgid ""
@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-25 19:31+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Grey Li <withlihui@gmail.com>\n"
 "Language-Team: zh_CN <withlihui@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../tutorial/next.rst:2
 msgid "Keep Developing!"
-msgstr ""
+msgstr "继续开发！"
 
 #: ../../tutorial/next.rst:4
 msgid ""
@@ -29,6 +29,10 @@ msgid ""
 "project <examples/tutorial>`, which might look a bit different due to the"
 " step-by-step nature of the tutorial."
 msgstr ""
+"通过这个教程，你已经学会了很多关于 Flask 和 Python 的概念。现在你可以回过头回顾"
+"整个教程，并把你的代码与这些代码对应的教程步骤进行比较。将你的项目与 "
+":gh:`示例项目 <examples/tutorial>` 进行比较，由于教程是逐步进行的，它也许会看"
+"起来有一些不同。"
 
 #: ../../tutorial/next.rst:10
 msgid ""
@@ -41,51 +45,56 @@ msgid ""
 ":doc:`/extensions` which make tasks like working with the database or "
 "validating form data easier and more powerful."
 msgstr ""
+"Flask 能够做的事情远比你目前看到的要多得多。即便如此，你已经具备了开始开发自己的 "
+"web 应用的能力。阅读 :doc:`/quickstart` 了解 Flask 能够做什么，然后深入文档继续"
+"学习。Flask 在幕后使用 `Jinja`_、`Click`_、`Werkzeug`_ 和 `ItsDangerous`_，而且"
+"它们也都有自己的文档。你还会对 :doc:`/extensions` 感兴趣，它们可以让数据库交互和表单"
+"数据验证等任务变得更容易和强大。"
 
 #: ../../tutorial/next.rst:19
 msgid ""
 "If you want to keep developing your Flaskr project, here are some ideas "
 "for what to try next:"
-msgstr ""
+msgstr "如果你想继续开发你的 Flaskr 项目，这里有一些接下来可以尝试的想法："
 
 #: ../../tutorial/next.rst:22
 msgid ""
 "A detail view to show a single post. Click a post's title to go to its "
 "page."
-msgstr ""
+msgstr "一个用来展示单个帖子的详情视图。点击一个帖子的标题可以访问到它的详情页面。"
 
 #: ../../tutorial/next.rst:24
 msgid "Like / unlike a post."
-msgstr ""
+msgstr "点赞/取消点赞一个帖子。"
 
 #: ../../tutorial/next.rst:25
 msgid "Comments."
-msgstr ""
+msgstr "评论。"
 
 #: ../../tutorial/next.rst:26
 msgid "Tags. Clicking a tag shows all the posts with that tag."
-msgstr ""
+msgstr "标签。点击标签会显示所有使用了这个标签的帖子。"
 
 #: ../../tutorial/next.rst:27
 msgid "A search box that filters the index page by name."
-msgstr ""
+msgstr "一个按名字过滤索引页的搜索框。"
 
 #: ../../tutorial/next.rst:28
 msgid "Paged display. Only show 5 posts per page."
-msgstr ""
+msgstr "分页显示。每页只显示 5 篇帖子。"
 
 #: ../../tutorial/next.rst:29
 msgid "Upload an image to go along with a post."
-msgstr ""
+msgstr "每个帖子支持上传一张图片。"
 
 #: ../../tutorial/next.rst:30
 msgid "Format posts using Markdown."
-msgstr ""
+msgstr "使用 Markdown 格式化帖子。"
 
 #: ../../tutorial/next.rst:31
 msgid "An RSS feed of new posts."
-msgstr ""
+msgstr "新帖子的 RSS 订阅。"
 
 #: ../../tutorial/next.rst:33
 msgid "Have fun and make awesome applications!"
-msgstr ""
+msgstr "祝你玩得开心，并做出有趣的应用！"
