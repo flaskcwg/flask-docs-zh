@@ -38,7 +38,7 @@
 - [x] blueprints [@frostming](https://github.com/frostming) Frost Ming
 - [ ] changes
 - [ ] cli [@andysim3d](https://github.com/andysim3d) Andrew
-- [ ] config [@guiqiqi](https://github.com/guiqiqi) Doge-GUI
+- [x] config [@guiqiqi](https://github.com/guiqiqi) Doge Gui
 - [ ] contributing [@greyli](https://github.com/greyli) Grey Li
 - [ ] debugging
 - [ ] design [@shutaG](https://github.com/shutaG) shutaG
