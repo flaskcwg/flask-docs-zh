@@ -82,8 +82,8 @@ msgid ""
 msgstr ""
 "这将启用开发环境，包括交互式调试器和重载器，"
 "然后在 http://localhost:5000/ 上启动服务器。"
-"使用 ``flask run --help`` 查看可用选项，还可使用"
-" :doc:`/cli` 获取有关配置和使用 CLI 的详细说明。"
+"使用 ``flask run --help`` 查看可用选项，还可访问"
+" :doc:`/cli` 查看有关配置和使用 CLI 的详细说明。"
 
 #: ../../server.rst:60
 msgid ""
