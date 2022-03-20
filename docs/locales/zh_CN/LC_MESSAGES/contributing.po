@@ -84,7 +84,7 @@ msgid ""
 "Describe what actually happened. Include the full traceback if there was "
 "an exception."
 msgstr ""
-"描述实际发生的情况。如果有异常发生，给出完整的回溯信息。"
+"描述实际发生的情况。如果有异常发生，给出完整的错误堆栈信息。"
 
 #: ../../../CONTRIBUTING.rst:36
 msgid ""
@@ -150,7 +150,7 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:70
 msgid "First time setup"
-msgstr "初始环境设置"
+msgstr "首次设置"
 
 #: ../../../CONTRIBUTING.rst:72
 msgid "Download and install the `latest version of git`_."
@@ -166,7 +166,7 @@ msgstr "确保你有一个 `GitHub 账号`_。"
 
 #: ../../../CONTRIBUTING.rst:81
 msgid "Fork Flask to your GitHub account by clicking the `Fork`_ button."
-msgstr "点击 `Fork`_ 按钮把 Flask 派生到你的 GitHub 仓库。"
+msgstr "点击 `Fork`_ 按钮把 Flask 复刻（Fork）到你的 GitHub 仓库。"
 
 #: ../../../CONTRIBUTING.rst:82
 msgid "`Clone`_ the main repository locally."
@@ -178,7 +178,7 @@ msgid ""
 "with your username. This names the remote \"fork\", the default Pallets "
 "remote is \"origin\"."
 msgstr ""
-"把你的派生仓库作为推送工作代码的远程仓库。使用你的用户名替代 ``{username}``。"
+"把你的复刻仓库作为推送工作代码的远程仓库。使用你的用户名替代 ``{username}``。"
 "这会把远程仓库命名为“fork”，默认的 Pallets 远程仓库为“origin”。"
 
 #: ../../../CONTRIBUTING.rst:97
