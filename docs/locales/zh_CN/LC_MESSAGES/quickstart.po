@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2010 Pallets
 # This file is distributed under the same license as the Flask package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# Grey Li <withlihui@gmail.com>, 2021.
 #
 #, fuzzy
 msgid ""
@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-25 19:31+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Grey Li <withlihui@gmail.com>\n"
 "Language-Team: zh_CN <withlihui@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -19,31 +19,34 @@ msgstr ""
 
 #: ../../quickstart.rst:2
 msgid "Quickstart"
-msgstr ""
+msgstr "快速开始"
 
 #: ../../quickstart.rst:4
 msgid ""
 "Eager to get started? This page gives a good introduction to Flask. "
 "Follow :doc:`installation` to set up a project and install Flask first."
 msgstr ""
+"想要快速上手 Flask？这个页面提供了一个精简的 Flask 介绍。首先跟随 :doc:`installation` "
+"创建一个项目并安装 Flask。"
 
 #: ../../quickstart.rst:9
 msgid "A Minimal Application"
-msgstr ""
+msgstr "一个最简应用"
 
 #: ../../quickstart.rst:11
 msgid "A minimal Flask application looks something like this:"
-msgstr ""
+msgstr "一个最小的 Flask 应用看起来类似这样："
 
 #: ../../quickstart.rst:23
 msgid "So what did that code do?"
-msgstr ""
+msgstr "那么那些代码做了什么？"
 
 #: ../../quickstart.rst:25
 msgid ""
 "First we imported the :class:`~flask.Flask` class. An instance of this "
 "class will be our WSGI application."
 msgstr ""
+"首先我们导入了 :class:`~flask.Flask` 类。一个该类的实例将会是我们的 WSGI 应用。"
 
 #: ../../quickstart.rst:27
 msgid ""
@@ -53,6 +56,8 @@ msgid ""
 "that Flask knows where to look for resources such as templates and static"
 " files."
 msgstr ""
+"接着我们创建一个这个类的实例。第一个参数是应用的模块或包的名字。``__name__`` 是一个方便"
+"的指向这个名字的快捷变量，在大多数情况下都适用。"
 
 #: ../../quickstart.rst:32
 msgid ""
@@ -84,19 +89,19 @@ msgstr ""
 
 #: ../../quickstart.rst:49 ../../quickstart.rst:157
 msgid "Bash"
-msgstr ""
+msgstr "Bash"
 
 #: ../../quickstart.rst:57 ../../quickstart.rst:164
 msgid "CMD"
-msgstr ""
+msgstr "CMD"
 
 #: ../../quickstart.rst:65 ../../quickstart.rst:171
 msgid "Powershell"
-msgstr ""
+msgstr "Powershell"
 
 #: ../../quickstart.rst:73
 msgid "Application Discovery Behavior"
-msgstr ""
+msgstr "应用发现行为"
 
 #: ../../quickstart.rst:75
 msgid ""
@@ -154,7 +159,7 @@ msgstr ""
 
 #: ../../quickstart.rst:112
 msgid "Old Version of Flask"
-msgstr ""
+msgstr "旧版本的 Flask"
 
 #: ../../quickstart.rst:114
 msgid ""
@@ -167,7 +172,7 @@ msgstr ""
 
 #: ../../quickstart.rst:121
 msgid "Invalid Import Name"
-msgstr ""
+msgstr "无效的导入名称"
 
 #: ../../quickstart.rst:123
 msgid ""
@@ -186,7 +191,7 @@ msgstr ""
 
 #: ../../quickstart.rst:133
 msgid "Debug Mode"
-msgstr ""
+msgstr "调试模式"
 
 #: ../../quickstart.rst:135
 msgid ""
@@ -197,7 +202,7 @@ msgid ""
 msgstr ""
 
 msgid "The interactive debugger in action."
-msgstr ""
+msgstr "交互式调试器"
 
 #: ../../quickstart.rst:147
 msgid ""
@@ -236,7 +241,7 @@ msgstr ""
 
 #: ../../quickstart.rst:189
 msgid "HTML Escaping"
-msgstr ""
+msgstr "HTML 转义"
 
 #: ../../quickstart.rst:191
 msgid ""
@@ -265,10 +270,11 @@ msgid ""
 "``<name>`` in the route captures a value from the URL and passes it to "
 "the view function. These variable rules are explained below."
 msgstr ""
+"路由里的 ``<name>`` 从 URL 捕捉一个值并传递它到视图函数。这些变量规则的解释在下面。"
 
 #: ../../quickstart.rst:217
 msgid "Routing"
-msgstr ""
+msgstr "路由"
 
 #: ../../quickstart.rst:219
 msgid ""
@@ -276,22 +282,25 @@ msgid ""
 " likely to like a page and come back if the page uses a meaningful URL "
 "they can remember and use to directly visit a page."
 msgstr ""
+"现代 web 应用使用有意义的 URL 来帮助用户。如果一个页面使用了有意义的 URL，用户更可能"
+"会喜欢这个页面并回访。"
 
 #: ../../quickstart.rst:223
 msgid ""
 "Use the :meth:`~flask.Flask.route` decorator to bind a function to a URL."
 " ::"
-msgstr ""
+msgstr "使用 :meth:`~flask.Flask.route` 装饰器把一个函数绑定到一个 URL。"
 
 #: ../../quickstart.rst:233
 msgid ""
 "You can do more! You can make parts of the URL dynamic and attach "
 "multiple rules to a function."
 msgstr ""
+"你还可以做更多事情！你可以让 URL 的一部分变动态并且附加多个规则到一个函数。"
 
 #: ../../quickstart.rst:237
 msgid "Variable Rules"
-msgstr ""
+msgstr "变量规则"
 
 #: ../../quickstart.rst:239
 msgid ""
@@ -303,51 +312,51 @@ msgstr ""
 
 #: ../../quickstart.rst:261
 msgid "Converter types:"
-msgstr ""
+msgstr "转换器类型："
 
 #: ../../quickstart.rst:264
 msgid "``string``"
-msgstr ""
+msgstr "``string``"
 
 #: ../../quickstart.rst:264
 msgid "(default) accepts any text without a slash"
-msgstr ""
+msgstr "（默认）接受不包含斜线的任意文字"
 
 #: ../../quickstart.rst:265
 msgid "``int``"
-msgstr ""
+msgstr "``int``"
 
 #: ../../quickstart.rst:265
 msgid "accepts positive integers"
-msgstr ""
+msgstr "接受正整数"
 
 #: ../../quickstart.rst:266
 msgid "``float``"
-msgstr ""
+msgstr "``float``"
 
 #: ../../quickstart.rst:266
 msgid "accepts positive floating point values"
-msgstr ""
+msgstr "接受正浮点数"
 
 #: ../../quickstart.rst:267
 msgid "``path``"
-msgstr ""
+msgstr "``path``"
 
 #: ../../quickstart.rst:267
 msgid "like ``string`` but also accepts slashes"
-msgstr ""
+msgstr "类似 ``string`` 但同时接受斜线"
 
 #: ../../quickstart.rst:268
 msgid "``uuid``"
-msgstr ""
+msgstr "``uuid``"
 
 #: ../../quickstart.rst:268
 msgid "accepts UUID strings"
-msgstr ""
+msgstr "接受 UUID 字符串"
 
 #: ../../quickstart.rst:273
 msgid "Unique URLs / Redirection Behavior"
-msgstr ""
+msgstr "唯一 URLs / 重定向行为"
 
 #: ../../quickstart.rst:275
 msgid "The following two rules differ in their use of a trailing slash. ::"
