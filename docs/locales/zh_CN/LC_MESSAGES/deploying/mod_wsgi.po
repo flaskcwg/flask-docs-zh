@@ -19,11 +19,11 @@ msgstr ""
 
 #: ../../deploying/mod_wsgi.rst:2
 msgid "mod_wsgi (Apache)"
-msgstr ""
+msgstr "mod_wsgi (Apache)"
 
 #: ../../deploying/mod_wsgi.rst:4
 msgid "If you are using the `Apache`_ webserver, consider using `mod_wsgi`_."
-msgstr "如果你使用的是 `Apache`_ 网络服务器 ，建议你考虑下使用 `mod_wsgi`_ 。"
+msgstr "如果你使用的是 `Apache`_ 网络服务器 ，可以考虑使用 `mod_wsgi`_ 。"
 
 #: ../../deploying/mod_wsgi.rst:6
 msgid "Watch Out"
@@ -39,7 +39,7 @@ msgid ""
 msgstr ""
 "请提前确认把 ``app.run()`` 放在 ``if __name__ == '__main__':`` 代码块中或者放在"
 "单独的文件中，这样可以确保它不会被调用。因为每调用一次就会开启一个本地的 WSGI 服务器，"
-"如果我们将应用部署到 mod_wsgi 时，我们并不需要开启本地服务器。"
+"如果我们将应用部署到 mod_wsgi，并不需要开启本地服务器。"
 
 #: ../../deploying/mod_wsgi.rst:17
 msgid "Installing `mod_wsgi`"
@@ -52,7 +52,7 @@ msgid ""
 "`installation instructions`_ cover source installations on UNIX systems."
 msgstr ""
 "如果你还没有安装 `mod_wsgi`，你可以使用包管理器安装或者自行编译。在 UNIX 系统"
-"中如何以源代码形式安装 mod_wsgi 请参考 `installation instructions`_。"
+"中如何以源代码形式安装 mod_wsgi 请参考 `安装操作`_。"
 
 #: ../../deploying/mod_wsgi.rst:23
 msgid ""
@@ -66,22 +66,21 @@ msgid ""
 "If you are using a yum based distribution (Fedora, OpenSUSE, etc..) you "
 "can install it as follows:"
 msgstr ""
-"如果你使用的是基于 yum 的发行版（Fedora, OpenSUSE 等等）的系统，你可以这样安装："
+"如果你使用的是基于 yum 的发行版（Fedora、OpenSUSE 等）的系统，你可以这样安装："
 
 #: ../../deploying/mod_wsgi.rst:37
 msgid ""
 "On FreeBSD install `mod_wsgi` by compiling the `www/mod_wsgi` port or by "
 "using pkg_add:"
 msgstr ""
-"在 FreeBSD 系统中，你可以通过编译 `www/mod_wsgi` 或是使用 pkg_add 来安装"
-"`mod_wsgi`："
+"在 FreeBSD 系统中，可以通过编译 `www/mod_wsgi` 或是使用 pkg_add 来安装 `mod_wsgi`："
 
 #: ../../deploying/mod_wsgi.rst:44
 msgid ""
 "If you are using pkgsrc you can install `mod_wsgi` by compiling the "
 "`www/ap2-wsgi` package."
 msgstr ""
-"如果你使用 pkgsrc，那你可以通过编译 `www/ap2-wsgi` 包来安装 `mod_wsgi`。"
+"如果你使用 pkgsrc，可以通过编译 `www/ap2-wsgi` 包来安装 `mod_wsgi`。"
 
 #: ../../deploying/mod_wsgi.rst:47
 msgid ""
@@ -107,22 +106,21 @@ msgstr ""
 
 #: ../../deploying/mod_wsgi.rst:58
 msgid "For most applications the following file should be sufficient::"
-msgstr "对大多数应用来说，文件中包含以下内容就足够了::"
+msgstr "对大多数应用来说，文件中包含以下内容就足够了："
 
 #: ../../deploying/mod_wsgi.rst:62
 msgid ""
 "If a factory function is used in a :file:`__init__.py` file, then the "
 "function should be imported::"
 msgstr ""
-"如果你在 :file:`__init__.py` 文件中使用到了工厂函数，那么该函数应当被导入::"
+"如果你在 :file:`__init__.py` 文件中使用到了工厂函数，那么该函数应当被导入："
 
 #: ../../deploying/mod_wsgi.rst:67
 msgid ""
 "If you don't have a factory function for application creation but a "
 "singleton instance you can directly import that one as `application`."
 msgstr ""
-"如果你没有一个用来创建应用的工厂函数，而是一个单例，那么可以直接把它导入为 "
-"`application`。"
+"如果你没有一个用来创建应用的工厂函数，而是一个单例，那么可以直接把它导入为 `application`。"
 
 #: ../../deploying/mod_wsgi.rst:70
 msgid ""
@@ -134,10 +132,10 @@ msgid ""
 "your application into the virtualenv as well.  Alternatively there is the"
 " option to just patch the path in the ``.wsgi`` file before the import::"
 msgstr ""
-"把文件放在以后能找得到的地方（比如：:file:`/var/www/yourapplication`），并确保"
-"`yourapplication` 和所有使用到的库都位于 python 加载路径中。如果你不想在系统环境中"
-"安装，你可以考虑使用 `virtual python`_ 实例。请记住，最好将你的应用程序放入虚拟"
-"环境中。有一个可选项是在导入前在 ``.wsgi`` 文件中加入路径::"
+"把文件放在以后能找得到的地方（比如：:file:`/var/www/yourapplication`），并确保 "
+"`yourapplication` 和所有使用到的库都位于 Python 加载路径中。如果你不想在系统环境中"
+"安装，你可以考虑使用 `虚拟 Python`_ 实例。请记住，这时你也需要将你的应用程序安装到虚拟"
+"环境中。另外一个选项是在 ``.wsgi`` 文件中的导入语句前加入路径："
 
 #: ../../deploying/mod_wsgi.rst:82
 msgid "Configuring Apache"
@@ -173,7 +171,7 @@ msgid ""
 "Most notably, the syntax for directory permissions has changed from httpd"
 " 2.2"
 msgstr ""
-"最值得注意的是，目录权限的语法从 httpd 2.2"
+"最值得注意的是，目录权限的语法已经从 httpd 2.2"
 
 #: ../../deploying/mod_wsgi.rst:130
 msgid "to httpd 2.4 syntax"
@@ -181,7 +179,7 @@ msgstr "变更为 httpd 2.4 的语法"
 
 #: ../../deploying/mod_wsgi.rst:137
 msgid "For more information consult the `mod_wsgi documentation`_."
-msgstr "想要了解更多信息，请移步 `mod_wsgi documentation`_。"
+msgstr "想要了解更多信息，请参考 `mod_wsgi 文档`_。"
 
 #: ../../deploying/mod_wsgi.rst:145
 msgid "Troubleshooting"
@@ -217,12 +215,12 @@ msgid ""
 "set and the application runs as the correct user (``user`` and ``group`` "
 "parameter to the `WSGIDaemonProcess` directive)"
 msgstr ""
-"有可能是使用了错误的用户去启动应用。请检查你的用户及其所在的组（`WSGIDaemonProcess`"
+"有可能是使用了错误的用户去启动应用。请检查你的用户及其所在的组（`WSGIDaemonProcess` "
 "的 ``user`` 和 ``group`` 参数）是否有权限访问应用所在的文件夹"
 
 #: ../../deploying/mod_wsgi.rst:176
 msgid "**Problem:** application dies with an error on print"
-msgstr "**问题：** 应用在打印时抛出错误终止"
+msgstr "**问题：** 应用在打印时抛出错误并终止"
 
 #: ../../deploying/mod_wsgi.rst:163
 msgid ""
@@ -232,14 +230,14 @@ msgid ""
 "``off``:"
 msgstr ""
 "请记住 mod_wsgi 不允许使用 :data:`sys.stdout` 以及 :data:`sys.stderr`。"
-"你可以把 `WSGIRestrictStdout` 设置为 ``off`` 来关闭这个保护："
+"你可以把 `WSGIRestrictStdout` 设置为 ``off`` 来关闭这个保护机制："
 
 #: ../../deploying/mod_wsgi.rst:172
 msgid ""
 "Alternatively you can also replace the standard out in the .wsgi file "
 "with a different stream::"
 msgstr ""
-"或者你也可以在 .wsgi 文件中使用不同的流替代标准流::"
+"或者你也可以在 .wsgi 文件中使用不同的流（stream）替代标准输出："
 
 #: ../../deploying/mod_wsgi.rst:186
 msgid "**Problem:** accessing resources gives IO errors"
@@ -253,7 +251,7 @@ msgid ""
 "in, or convert your application into a package."
 msgstr ""
 "你的应用可能是一个单独的 .py 文件，并且你把它软连接到了 site-packages 文件夹中。"
-"这样是不起作用的，你必须把文件夹放入 pythonpath 中，或者把你的应用转换成包。"
+"这样是不起作用的，你必须把文件夹放入文件所在的 Python 路径中，或者把你的应用转换成包。"
 
 #: ../../deploying/mod_wsgi.rst:184
 msgid ""
@@ -298,7 +296,7 @@ msgstr ""
 
 #: ../../deploying/mod_wsgi.rst:209
 msgid "Add the following lines to the top of your ``.wsgi`` file::"
-msgstr "在你的 ``.wsgi`` 文件顶部加入下面这行::"
+msgstr "在你的 ``.wsgi`` 文件顶部加入下面这行："
 
 #: ../../deploying/mod_wsgi.rst:215
 msgid ""
