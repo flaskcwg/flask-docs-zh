@@ -64,7 +64,7 @@ msgid ""
 "This example uses :func:`~logging.config.dictConfig` to create a logging "
 "configuration similar to Flask's default, except for all logs::"
 msgstr ""
-"这个例子使用 :func:`~logging.config.dictConfig` 创建与 Flask 类似的默认日志配置::"
+"这个例子使用 :func:`~logging.config.dictConfig` 创建与 Flask 类似的默认日志配置："
 
 #: ../../logging.rst:60
 msgid "Default Configuration"
@@ -85,7 +85,7 @@ msgstr ""
 
 #: ../../logging.rst:70
 msgid "Removing the Default Handler"
-msgstr "移除默认配置"
+msgstr "移除默认日志处理器"
 
 #: ../../logging.rst:72
 msgid ""
@@ -94,7 +94,7 @@ msgid ""
 "import and remove it::"
 msgstr ""
 "若你在访问 :meth:`app.logger <flask.Flask.logger>` 对象之后进行日志配置，"
-"并且需要移除默认的日志处理器，可以导入后移除它::"
+"并且需要移除默认的日志处理器，可以导入后移除它："
 
 #: ../../logging.rst:82
 msgid "Email Errors to Admins"
@@ -117,7 +117,7 @@ msgid ""
 "higher are logged. ::"
 msgstr ""
 "为了主动发现并修复错误，可以配置一个 :class:`logging.handlers.SMTPHandler`，"
-"当错误或者更高级别的日志被记录下来时就会发送一封电子邮件::"
+"当错误或者更高级别的日志被记录下来时就会发送一封电子邮件："
 
 #: ../../logging.rst:110
 msgid ""
@@ -140,7 +140,7 @@ msgid ""
 msgstr ""
 "了解请求的更多信息，例如 IP 地址，可能有助于调试某些错误。"
 "可以继承 :class:`logging.Formatter` 来注入自己的字段内容，用在日志消息上。"
-"然后，可以修改格式器 (Formatter) 用在 Flask 的默认处理器、上文定义的邮件处理器或者其他处理器上::"
+"然后，可以修改格式器 (Formatter) 用在 Flask 的默认处理器、上文定义的邮件处理器或者其他处理器上："
 
 #: ../../logging.rst:146
 msgid "Other Libraries"
@@ -153,7 +153,7 @@ msgid ""
 "handlers to the root logger instead of only the app logger. ::"
 msgstr ""
 "其他库可能会广泛地使用日志，而你也希望看到与之相关的日志。"
-"最简单的方式是向根日志记录器 (root logger) 添加处理器，而不仅仅是 app 日志记录器::"
+"最简单的方式是向根日志记录器 (root logger) 添加处理器，而不仅仅是 app 日志记录器："
 
 #: ../../logging.rst:158
 msgid ""
@@ -161,8 +161,7 @@ msgid ""
 " you care about separately, instead of configuring only the root logger. "
 "::"
 msgstr ""
-"单独为每个你关心的记录器进行配置，可能比只配置根记录器对你更有益，这取决于你的项目。"
-"::"
+"单独为每个你关心的记录器进行配置，可能比只配置根记录器对你更有益，这取决于你的项目："
 
 #: ../../logging.rst:171
 msgid "Werkzeug"
