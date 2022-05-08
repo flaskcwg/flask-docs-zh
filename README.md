@@ -64,10 +64,7 @@
 ### docs/tutorial/
 
 - [x] blog [@greyli](https://github.com/greyli) Grey Li
-- [ ] database [@greyli](https://github.com/greyli) Grey Li
-- [x] deploy [@greyli](https://github.com/greyli) Grey Li
-- [ ] blog [@greyli](https://github.com/greyli) Grey Li
-- [ ] database [@greyli](https://github.com/greyli) Grey Li
+- [x] database [@greyli](https://github.com/greyli) Grey Li
 - [ ] deploy [@greyli](https://github.com/greyli) Grey Li
 - [ ] factory [@greyli](https://github.com/greyli) Grey Li
 - [x] index [@greyli](https://github.com/greyli) Grey Li
@@ -75,7 +72,7 @@
 - [x] layout [@greyli](https://github.com/greyli) Grey Li
 - [x] next [@greyli](https://github.com/greyli) Grey Li
 - [x] static [@greyli](https://github.com/greyli) Grey Li
-- [ ] templates [@greyli](https://github.com/greyli) Grey Li
+- [x] templates [@greyli](https://github.com/greyli) Grey Li
 - [x] tests [@greyli](https://github.com/greyli) Grey Li
 - [x] views [@greyli](https://github.com/greyli) Grey Li
 
