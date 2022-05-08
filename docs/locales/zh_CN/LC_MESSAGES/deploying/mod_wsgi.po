@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2010 Pallets
 # This file is distributed under the same license as the Flask package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# Jiahua Wang <wjh180909@gmail.com>, 2021.
 #
 #, fuzzy
 msgid ""
@@ -19,15 +19,15 @@ msgstr ""
 
 #: ../../deploying/mod_wsgi.rst:2
 msgid "mod_wsgi (Apache)"
-msgstr ""
+msgstr "mod_wsgi (Apache)"
 
 #: ../../deploying/mod_wsgi.rst:4
 msgid "If you are using the `Apache`_ webserver, consider using `mod_wsgi`_."
-msgstr ""
+msgstr "如果你使用的是 `Apache`_ 网络服务器 ，可以考虑使用 `mod_wsgi`_ 。"
 
 #: ../../deploying/mod_wsgi.rst:6
 msgid "Watch Out"
-msgstr ""
+msgstr "注意"
 
 #: ../../deploying/mod_wsgi.rst:8
 msgid ""
@@ -37,10 +37,13 @@ msgid ""
 "because this will always start a local WSGI server which we do not want "
 "if we deploy that application to mod_wsgi."
 msgstr ""
+"请提前确认把 ``app.run()`` 放在 ``if __name__ == '__main__':`` 代码块中或者放在"
+"单独的文件中，这样可以确保它不会被调用。因为每调用一次就会开启一个本地的 WSGI 服务器，"
+"如果我们将应用部署到 mod_wsgi，并不需要开启本地服务器。"
 
 #: ../../deploying/mod_wsgi.rst:17
 msgid "Installing `mod_wsgi`"
-msgstr ""
+msgstr "安装 `mod_wsgi`"
 
 #: ../../deploying/mod_wsgi.rst:19
 msgid ""
@@ -48,40 +51,47 @@ msgid ""
 "using a package manager or compile it yourself.  The mod_wsgi "
 "`installation instructions`_ cover source installations on UNIX systems."
 msgstr ""
+"如果你还没有安装 `mod_wsgi`，你可以使用包管理器安装或者自行编译。在 UNIX 系统"
+"中如何以源代码形式安装 mod_wsgi 请参考 `安装操作`_。"
 
 #: ../../deploying/mod_wsgi.rst:23
 msgid ""
 "If you are using Ubuntu/Debian you can apt-get it and activate it as "
 "follows:"
 msgstr ""
+"如果你使用的是 Ubuntu/Debian 系统，你可以使用如下的 apt-get 命令来安装并启用："
 
 #: ../../deploying/mod_wsgi.rst:30
 msgid ""
 "If you are using a yum based distribution (Fedora, OpenSUSE, etc..) you "
 "can install it as follows:"
 msgstr ""
+"如果你使用的是基于 yum 的发行版（Fedora、OpenSUSE 等）的系统，你可以这样安装："
 
 #: ../../deploying/mod_wsgi.rst:37
 msgid ""
 "On FreeBSD install `mod_wsgi` by compiling the `www/mod_wsgi` port or by "
 "using pkg_add:"
 msgstr ""
+"在 FreeBSD 系统中，可以通过编译 `www/mod_wsgi` 或是使用 pkg_add 来安装 `mod_wsgi`："
 
 #: ../../deploying/mod_wsgi.rst:44
 msgid ""
 "If you are using pkgsrc you can install `mod_wsgi` by compiling the "
 "`www/ap2-wsgi` package."
 msgstr ""
+"如果你使用 pkgsrc，可以通过编译 `www/ap2-wsgi` 包来安装 `mod_wsgi`。"
 
 #: ../../deploying/mod_wsgi.rst:47
 msgid ""
 "If you encounter segfaulting child processes after the first apache "
 "reload you can safely ignore them.  Just restart the server."
 msgstr ""
+"如果你在第一次 apache 重新加载后遇到子进程段错误的话，不必理会，重启服务器即可。"
 
 #: ../../deploying/mod_wsgi.rst:51
 msgid "Creating a `.wsgi` file"
-msgstr ""
+msgstr "创建一个 `.wsgi` 文件"
 
 #: ../../deploying/mod_wsgi.rst:53
 msgid ""
@@ -90,22 +100,27 @@ msgid ""
 " application object.  The object called `application` in that file is "
 "then used as application."
 msgstr ""
+"你需要一个 :file:`yourapplication.wsgi` 文件才能启动你的应用。"
+"该文件包含 `mod_wsgi` 启动时所需要运行的代码，通过代码可以获取到应用对象。"
+"文件中的 `application` 对象就是之后使用到的应用。"
 
 #: ../../deploying/mod_wsgi.rst:58
 msgid "For most applications the following file should be sufficient::"
-msgstr ""
+msgstr "对大多数应用来说，文件中包含以下内容就足够了："
 
 #: ../../deploying/mod_wsgi.rst:62
 msgid ""
 "If a factory function is used in a :file:`__init__.py` file, then the "
 "function should be imported::"
 msgstr ""
+"如果你在 :file:`__init__.py` 文件中使用到了工厂函数，那么该函数应当被导入："
 
 #: ../../deploying/mod_wsgi.rst:67
 msgid ""
 "If you don't have a factory function for application creation but a "
 "singleton instance you can directly import that one as `application`."
 msgstr ""
+"如果你没有一个用来创建应用的工厂函数，而是一个单例，那么可以直接把它导入为 `application`。"
 
 #: ../../deploying/mod_wsgi.rst:70
 msgid ""
@@ -117,10 +132,14 @@ msgid ""
 "your application into the virtualenv as well.  Alternatively there is the"
 " option to just patch the path in the ``.wsgi`` file before the import::"
 msgstr ""
+"把文件放在以后能找得到的地方（比如：:file:`/var/www/yourapplication`），并确保 "
+"`yourapplication` 和所有使用到的库都位于 Python 加载路径中。如果你不想在系统环境中"
+"安装，你可以考虑使用 `虚拟 Python`_ 实例。请记住，这时你也需要将你的应用程序安装到虚拟"
+"环境中。另外一个选项是在 ``.wsgi`` 文件中的导入语句前加入路径："
 
 #: ../../deploying/mod_wsgi.rst:82
 msgid "Configuring Apache"
-msgstr ""
+msgstr "配置 Apache"
 
 #: ../../deploying/mod_wsgi.rst:84
 msgid ""
@@ -128,6 +147,8 @@ msgid ""
 "for your application.  In this example we are telling `mod_wsgi` to "
 "execute the application under a different user for security reasons:"
 msgstr ""
+"最后，你要为你的应用创建一个 Apache 配置文件。在下面的例子中，出于安全考虑，"
+"我们让 `mod_wsgi` 用另一个用户执行应用程序："
 
 #: ../../deploying/mod_wsgi.rst:104
 msgid ""
@@ -135,38 +156,42 @@ msgid ""
 "refuse to run with the above configuration. On a Windows system, "
 "eliminate those lines:"
 msgstr ""
+"注意：WSGIDaemonProcess 未在 Windows 中实现，并且 Apache 将拒绝以上述配置"
+"运行。在 Windows 中，请删除这些行："
 
 #: ../../deploying/mod_wsgi.rst:118
 msgid ""
 "Note: There have been some changes in access control configuration for "
 "`Apache 2.4`_."
 msgstr ""
+"注意：`Apache 2.4`_ 的访问控制配置发生了一些改变。"
 
 #: ../../deploying/mod_wsgi.rst:123
 msgid ""
 "Most notably, the syntax for directory permissions has changed from httpd"
 " 2.2"
 msgstr ""
+"最值得注意的是，目录权限的语法已经从 httpd 2.2"
 
 #: ../../deploying/mod_wsgi.rst:130
 msgid "to httpd 2.4 syntax"
-msgstr ""
+msgstr "变更为 httpd 2.4 的语法"
 
 #: ../../deploying/mod_wsgi.rst:137
 msgid "For more information consult the `mod_wsgi documentation`_."
-msgstr ""
+msgstr "想要了解更多信息，请参考 `mod_wsgi 文档`_。"
 
 #: ../../deploying/mod_wsgi.rst:145
 msgid "Troubleshooting"
-msgstr ""
+msgstr "故障排除"
 
 #: ../../deploying/mod_wsgi.rst:147
 msgid "If your application does not run, follow this guide to troubleshoot:"
-msgstr ""
+msgstr "如果你的应用没有启动，请按照以下指导排除故障："
 
 #: ../../deploying/mod_wsgi.rst:153
 msgid "**Problem:** application does not run, errorlog shows SystemExit ignored"
-msgstr ""
+msgstr " **问题：** 应用无法启动，错误日志显示 SystemExit ignored"
 
 #: ../../deploying/mod_wsgi.rst:150
 msgid ""
@@ -175,10 +200,13 @@ msgid ""
 "that :meth:`~flask.Flask.run` call from the file and move it into a "
 "separate :file:`run.py` file or put it into such an if block."
 msgstr ""
+"你的应用文件中有 ``app.run()`` 调用，但并未放入 ``if __name__ == '__main__':``。"
+"要么把 :meth:`~flask.Flask.run` 的调用从文件移除，放入一个单独的 :file:`run.py` 文件"
+"中，否则请将它让入 if 块中。"
 
 #: ../../deploying/mod_wsgi.rst:160
 msgid "**Problem:** application gives permission errors"
-msgstr ""
+msgstr " **问题：** 应用抛出权限错误"
 
 #: ../../deploying/mod_wsgi.rst:156
 msgid ""
@@ -187,10 +215,12 @@ msgid ""
 "set and the application runs as the correct user (``user`` and ``group`` "
 "parameter to the `WSGIDaemonProcess` directive)"
 msgstr ""
+"有可能是使用了错误的用户去启动应用。请检查你的用户及其所在的组（`WSGIDaemonProcess` "
+"的 ``user`` 和 ``group`` 参数）是否有权限访问应用所在的文件夹"
 
 #: ../../deploying/mod_wsgi.rst:176
 msgid "**Problem:** application dies with an error on print"
-msgstr ""
+msgstr "**问题：** 应用在打印时抛出错误并终止"
 
 #: ../../deploying/mod_wsgi.rst:163
 msgid ""
@@ -199,16 +229,19 @@ msgid ""
 "protection from the config by setting the `WSGIRestrictStdout` to "
 "``off``:"
 msgstr ""
+"请记住 mod_wsgi 不允许使用 :data:`sys.stdout` 以及 :data:`sys.stderr`。"
+"你可以把 `WSGIRestrictStdout` 设置为 ``off`` 来关闭这个保护机制："
 
 #: ../../deploying/mod_wsgi.rst:172
 msgid ""
 "Alternatively you can also replace the standard out in the .wsgi file "
 "with a different stream::"
 msgstr ""
+"或者你也可以在 .wsgi 文件中使用不同的流（stream）替代标准输出："
 
 #: ../../deploying/mod_wsgi.rst:186
 msgid "**Problem:** accessing resources gives IO errors"
-msgstr ""
+msgstr "**问题：** 访问资源时 IO 错误"
 
 #: ../../deploying/mod_wsgi.rst:179
 msgid ""
@@ -217,6 +250,8 @@ msgid ""
 "you either have to put the folder into the pythonpath the file is stored "
 "in, or convert your application into a package."
 msgstr ""
+"你的应用可能是一个单独的 .py 文件，并且你把它软连接到了 site-packages 文件夹中。"
+"这样是不起作用的，你必须把文件夹放入文件所在的 Python 路径中，或者把你的应用转换成包。"
 
 #: ../../deploying/mod_wsgi.rst:184
 msgid ""
@@ -224,10 +259,12 @@ msgid ""
 "filename is used to locate the resources and for symlinks the wrong "
 "filename is picked up."
 msgstr ""
+"产生这种错误的原因是对于非安装包来说，模块的文件名用于定位资源，如果使用软连接"
+"的话就会定位到错误的文件名。"
 
 #: ../../deploying/mod_wsgi.rst:189
 msgid "Support for Automatic Reloading"
-msgstr ""
+msgstr "支持自动重载"
 
 #: ../../deploying/mod_wsgi.rst:191
 msgid ""
@@ -235,14 +272,16 @@ msgid ""
 "reloading.  Whenever something changes the ``.wsgi`` file, `mod_wsgi` "
 "will reload all the daemon processes for us."
 msgstr ""
+"为了辅助部署工具，你可以激活自动重载。这样，一旦 ``.wsgi`` 文件有所变动，"
+"`mod_wsgi` 就会自动重新加载所有守护进程。"
 
 #: ../../deploying/mod_wsgi.rst:195
 msgid "For that, just add the following directive to your `Directory` section:"
-msgstr ""
+msgstr "在 `Directory` 这一节中加入以下指令即可实现自动重载："
 
 #: ../../deploying/mod_wsgi.rst:202
 msgid "Working with Virtual Environments"
-msgstr ""
+msgstr "在虚拟环境中工作"
 
 #: ../../deploying/mod_wsgi.rst:204
 msgid ""
@@ -251,13 +290,17 @@ msgid ""
 "is used where.  If you want to use a virtual environment with mod_wsgi "
 "you have to modify your ``.wsgi`` file slightly."
 msgstr ""
+"使用虚拟环境的优点是不必在系统范围安装应用所需的依赖，这样就可以更好地控制"
+"哪里需要什么。如果要在虚拟环境下使用 mod_wsgi，那么我们要对 ``.wsgi`` 文件"
+"略作改变。"
 
 #: ../../deploying/mod_wsgi.rst:209
 msgid "Add the following lines to the top of your ``.wsgi`` file::"
-msgstr ""
+msgstr "在你的 ``.wsgi`` 文件顶部加入下面这行："
 
 #: ../../deploying/mod_wsgi.rst:215
 msgid ""
 "This sets up the load paths according to the settings of the virtual "
 "environment.  Keep in mind that the path has to be absolute."
 msgstr ""
+"这样设置，就会根据虚拟环境的设置加载路径。请记住，必须是绝对路径。"
