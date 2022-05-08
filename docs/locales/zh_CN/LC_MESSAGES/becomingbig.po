@@ -64,10 +64,10 @@ msgid ""
 ":doc:`/extensions` in the community, and look for patterns to build your "
 "own extensions if you do not find the tools you need."
 msgstr ""
-":doc:`/api` 文档中随处可见重载，挂接点以及 :doc:`/signals`。你可以为诸如请求和响应"
+":doc:`/api` 文档中随处可见重载、挂接点以及 :doc:`/signals`。你可以为诸如请求和响应"
 "对象定制自定义类。请深入研究你所使用的 API，并查找 Flask 中有哪些开箱即用的自定义功能。"
 "请研究如何重构你的项目，使它能够成为一个实用程序和 Flask 扩展的集合。你还可以探索社区中"
-"的许多 :doc:`/extensions`，如果找不到满意的，那就查找一些模式并建立自己的扩展吧。"
+"的许多 :doc:`/extensions`，如果找不到满意的，那就搜索一些模式并构建自己的扩展吧。"
 
 #: ../../becomingbig.rst:31
 msgid "Subclass."
@@ -99,7 +99,7 @@ msgid ""
 " <https://werkzeug.palletsprojects.com/middleware/>`_."
 msgstr ""
 ":doc:`/patterns/appdispatch` 文档中详细阐述了如何应用中间件。你可以引入 WSGI 中间件来包装你"
-"的 Flask 实例，并在你的 Flask 应用程序和 HTTP 服务器之间引入一些改变。Werkzeug 库"
+"的 Flask 实例，并在你的 Flask 应用程序和 HTTP 服务器之间引入一些修复和变更。Werkzeug 库"
 "中包含一些 `中间件 <https://werkzeug.palletsprojects.com/middleware/>`_ 可供使用。"
 
 #: ../../becomingbig.rst:49
