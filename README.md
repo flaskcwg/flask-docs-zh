@@ -1,5 +1,7 @@
 # The Chinese Translation of Flask Documentation
 
+[![Translation progress](https://jalkhov.github.io/docspro/badge/zh_progress.svg)](https://github.com/Jalkhov/docspro)
+
 这里是 Flask 文档中文翻译项目，欢迎参与！
 
 参与前请完成以下任务：
@@ -19,9 +21,9 @@
 
 ## Reviewers
 
+- FesonX ([@FesonX](https://github.com/FesonX))
 - Grey Li ([@greyli](https://github.com/greyli))
 - Frost Ming ([@frostming](https://github.com/frostming))
-- FesonX ([@FesonX](https://github.com/FesonX))
 
 
 ## Translators (Translation To-do List)
@@ -29,15 +31,15 @@
 
 ### docs/
 
-- [ ] advanced_foreword (reserved)
-- [ ] appcontext [@rosekc](https://github.com/rosekc) rosekc
+- [x] advanced_foreword [@rosekc](https://github.com/rosekc) rosekc
+- [x] appcontext [@rosekc](https://github.com/rosekc) rosekc
 - [ ] async-await [@rosekc](https://github.com/your_username) rosekc
 - [ ] becomingbig [@yuxiaoy1](https://github.com/yuxiaoy1) Frank Yu
 - [x] blueprints [@frostming](https://github.com/frostming) Frost Ming
 - [ ] changes
 - [ ] cli [@andysim3d](https://github.com/andysim3d) Andrew
 - [ ] config [@guiqiqi](https://github.com/guiqiqi) Doge-GUI
-- [ ] contributing [@greyli](https://github.com/greyli) Grey Li
+- [x] contributing [@greyli](https://github.com/greyli) Grey Li
 - [ ] debugging
 - [ ] design [@shutaG](https://github.com/shutaG) shutaG
 - [ ] errorhandling [@qiufengyu](https://github.com/qiufengyu) Fengyu
@@ -47,9 +49,9 @@
 - [ ] htmlfaq
 - [x] index [@greyli](https://github.com/greyli) Grey Li
 - [x] installation [@greyli](https://github.com/greyli) Grey Li
-- [ ] logging [@FesonX](https://github.com/FesonX) FesonX
-- [ ] quickstart (reserved)
-- [ ] reqcontext [@rosekc](https://github.com/rosekc) rosekc
+- [x] logging [@FesonX](https://github.com/FesonX) FesonX
+- [ ] quickstart [@greyli](https://github.com/greyli) Grey Li
+- [x] reqcontext [@rosekc](https://github.com/rosekc) rosekc
 - [ ] security [@kylinbin](https://github.com/kylinbin) kylin
 - [ ] server [@LeeRnnGii](https://github.com/LeeRnnGii) LeeRnnGii
 - [x] shell [@LTakamori](https://github.com/LTakamori) LTakamori
@@ -59,26 +61,26 @@
 - [ ] views [@labike](https://github.com/labike) labike
 
 
-### docs/tutorial/ (reserved)
+### docs/tutorial/
 
-- [ ] blog
-- [ ] database
-- [ ] deploy
+- [x] blog [@greyli](https://github.com/greyli) Grey Li
+- [x] database [@greyli](https://github.com/greyli) Grey Li
+- [ ] deploy [@greyli](https://github.com/greyli) Grey Li
 - [x] factory [@greyli](https://github.com/greyli) Grey Li
 - [x] index [@greyli](https://github.com/greyli) Grey Li
-- [ ] install [@greyli](https://github.com/greyli) Grey Li
+- [x] install [@greyli](https://github.com/greyli) Grey Li
 - [x] layout [@greyli](https://github.com/greyli) Grey Li
-- [ ] next [@greyli](https://github.com/greyli) Grey Li
-- [ ] static [@greyli](https://github.com/greyli) Grey Li
-- [ ] templates
-- [ ] tests
-- [ ] views
+- [x] next [@greyli](https://github.com/greyli) Grey Li
+- [x] static [@greyli](https://github.com/greyli) Grey Li
+- [x] templates [@greyli](https://github.com/greyli) Grey Li
+- [x] tests [@greyli](https://github.com/greyli) Grey Li
+- [x] views [@greyli](https://github.com/greyli) Grey Li
 
 
 ### docs/deploying/
 
-- [ ] asgi
-- [ ] cgi
+- [x] asgi [@180909](https://github.com/180909) 180909
+- [ ] cgi [@StevenAZy](https://github.com/StevenAZy) StevenAZy
 - [ ] fastcgi
 - [x] index [@180909](https://github.com/180909) 180909
 - [ ] mod_wsgi [@180909](https://github.com/180909) 180909
@@ -95,7 +97,7 @@
 - [ ] deferredcallbacks
 - [ ] distribute
 - [ ] fabric
-- [ ] favicon
+- [x] favicon [@ImJuanan](https://github.com/ImJuanan) Juan An
 - [ ] fileuploads
 - [ ] flashing
 - [ ] index

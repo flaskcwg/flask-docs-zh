@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2010 Pallets
 # This file is distributed under the same license as the Flask package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# Grey Li <withlihui@gmail.com>, 2021.
 #
 #, fuzzy
 msgid ""
@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-25 19:31+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Grey Li <withlihui@gmail.com>\n"
 "Language-Team: zh_CN <withlihui@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../tutorial/static.rst:2
 msgid "Static Files"
-msgstr ""
+msgstr "静态文件"
 
 #: ../../tutorial/static.rst:4
 msgid ""
@@ -28,6 +28,8 @@ msgid ""
 "constructed. The style won't change, so it's a *static* file rather than "
 "a template."
 msgstr ""
+"认证视图和模板能够正常使用，但是现在看起来还非常简陋。使用一些 `CSS`_ 可以给你编写的 "
+"HTML 结构增加样式。因为样式代码不会变化，所以这是一个 *静态* 文件而不是模板。"
 
 #: ../../tutorial/static.rst:9
 msgid ""
@@ -35,6 +37,9 @@ msgid ""
 "the ``flaskr/static`` directory and serves it. The ``base.html`` template"
 " already has a link to the ``style.css`` file:"
 msgstr ""
+"Flask 会自动添加一个 ``static`` 视图，它接受一个相对于 ``flaskr/static`` 目录"
+"的文件路径并为其提供服务。``base.html`` 模块中已经有一个指向 ``style.css`` 文件"
+"的链接："
 
 #: ../../tutorial/static.rst:17
 msgid ""
@@ -43,31 +48,36 @@ msgid ""
 "``flaskr/static`` directory and referenced with ``url_for('static', "
 "filename='...')``."
 msgstr ""
+"除了 CSS，还有其他类型的静态文件比如 JavaScript 函数或是 logo 图片。它们都需要放在 "
+"``flaskr/static`` 目录下，并使用 ``url_for('static', filename='...')`` 引入。"
 
 #: ../../tutorial/static.rst:22
 msgid ""
 "This tutorial isn't focused on how to write CSS, so you can just copy the"
 " following into the ``flaskr/static/style.css`` file:"
 msgstr ""
+"在本教程中，你不需要关注如何编写 CSS 文件，因此你可以直接复制下面的代码到 ``flaskr/static/style.css`` 文件："
 
 #: ../../tutorial/static.rst:25
 msgid "``flaskr/static/style.css``"
-msgstr ""
+msgstr "``flaskr/static/style.css``"
 
 #: ../../tutorial/static.rst:55
 msgid ""
 "You can find a less compact version of ``style.css`` in the :gh:`example "
 "code <examples/tutorial/flaskr/static/style.css>`."
 msgstr ""
+"在 :gh:`示例程序 <examples/tutorial/flaskr/static/style.css>` 里，你可以找到"
+"一个更易读的 ``style.css`` 版本。"
 
 #: ../../tutorial/static.rst:58
 msgid ""
 "Go to http://127.0.0.1:5000/auth/login and the page should look like the "
 "screenshot below."
-msgstr ""
+msgstr "访问 http://127.0.0.1:5000/auth/login 看到的页面应该类似下面的截图。"
 
 msgid "screenshot of login page"
-msgstr ""
+msgstr "登录页面截图"
 
 #: ../../tutorial/static.rst:66
 msgid ""
@@ -75,7 +85,9 @@ msgid ""
 "you change a static file, refresh the browser page. If the change doesn't"
 " show up, try clearing your browser's cache."
 msgstr ""
+"你可以在 `Mozilla 文档 <CSS_>`_ 阅读更多关于 CSS 的内容。如果修改了某一静态文件"
+"，刷新页面即可。如果变更没有生效，尝试清空浏览器缓存。"
 
 #: ../../tutorial/static.rst:72
 msgid "Continue to :doc:`blog`."
-msgstr ""
+msgstr "继续阅读 :doc:`blog`。"
