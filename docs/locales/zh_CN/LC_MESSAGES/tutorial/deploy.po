@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2010 Pallets
 # This file is distributed under the same license as the Flask package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# Grey Li <withlihui@gmail.com>, 2021.
 #
 #, fuzzy
 msgid ""
@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-25 19:31+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Grey Li <withlihui@gmail.com>\n"
 "Language-Team: zh_CN <withlihui@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../tutorial/deploy.rst:2
 msgid "Deploy to Production"
-msgstr ""
+msgstr "部署到生产环境"
 
 #: ../../tutorial/deploy.rst:4
 msgid ""
@@ -32,10 +32,14 @@ msgid ""
 ":doc:`/deploying/index` for a list of many different ways to host your "
 "application."
 msgstr ""
+"这部分教程假设你有一台服务器，你想把程序部署上去。这一章会概括如何创建分发文件并安装它，"
+"但是不会涉及具体使用哪一种服务器或软件。你可以在你的开发电脑上设置一个新环境并尝试下面的"
+"操作说明，但可能不应该用它来托管一个真正的公开应用。参阅 :doc:`/deploying/index` "
+"了解托管你的应用的多种不同方式。"
 
 #: ../../tutorial/deploy.rst:15
 msgid "Build and Install"
-msgstr ""
+msgstr "构建和安装"
 
 #: ../../tutorial/deploy.rst:17
 msgid ""
@@ -44,6 +48,8 @@ msgid ""
 "*wheel* format, with the ``.whl`` extension. Make sure the wheel library "
 "is installed first:"
 msgstr ""
+"当你想要在其他地方部署你的应用时，你要创建一个分发文件。目前 Python 分发的标准是 *wheel* "
+"格式，它使用 ``.whl`` 后缀。首先确保 wheel 库已经被安装："
 
 #: ../../tutorial/deploy.rst:26
 msgid ""
@@ -51,6 +57,8 @@ msgid ""
 "build-related commands. The ``bdist_wheel`` command will build a wheel "
 "distribution file."
 msgstr ""
+"使用 Python 运行 ``setup.py`` 给你提供了一个包含构建相关命令的命令行工具。其中 "
+"``bdist_wheel`` 命令将会构建一个 wheel 分发文件。"
 
 #: ../../tutorial/deploy.rst:34
 msgid ""
@@ -58,34 +66,38 @@ msgid ""
 " name is in the format of {project name}-{version}-{python tag} -{abi "
 "tag}-{platform tag}."
 msgstr ""
+"你可以在 ``dist/flaskr-1.0.0-py3-none-any.whl`` 找到这个文件。文件名的格式为："
+"{项目名称}-{版本}-{python 标签} -{abi 标签}-{平台标签}。"
 
 #: ../../tutorial/deploy.rst:38
 msgid ""
 "Copy this file to another machine, :ref:`set up a new virtualenv "
 "<install-create-env>`, then install the file with ``pip``."
 msgstr ""
+"把这个文件复制到另一台机器，:ref:`设置一个新的虚拟环境 <install-create-env>`，然后使用 "
+"``pip`` 安装它。"
 
 #: ../../tutorial/deploy.rst:46
 msgid "Pip will install your project along with its dependencies."
-msgstr ""
+msgstr "pip 会安装你的项目及其依赖。"
 
 #: ../../tutorial/deploy.rst:48
 msgid ""
 "Since this is a different machine, you need to run ``init-db`` again to "
 "create the database in the instance folder."
-msgstr ""
+msgstr "由于这是一台不同的机器，你需要再次运行 ``init-db`` 命令在实例文件夹内创建数据库。"
 
 #: ../../tutorial/deploy.rst:53
 msgid "Bash"
-msgstr ""
+msgstr "Bash"
 
 #: ../../tutorial/deploy.rst:60
 msgid "CMD"
-msgstr ""
+msgstr "CMD"
 
 #: ../../tutorial/deploy.rst:67
 msgid "Powershell"
-msgstr ""
+msgstr "Powershell"
 
 #: ../../tutorial/deploy.rst:74
 msgid ""
@@ -93,10 +105,12 @@ msgid ""
 "different directory for the instance folder. You can find it at "
 "``venv/var/flaskr-instance`` instead."
 msgstr ""
+"当 Flask 检测到它已经被安装（不在可编辑模式下），它会使用一个不同的目录作为实例文件夹。你可以在 "
+"``venv/var/flaskr-instance`` 找到它。"
 
 #: ../../tutorial/deploy.rst:80
 msgid "Configure the Secret Key"
-msgstr ""
+msgstr "配置密钥"
 
 #: ../../tutorial/deploy.rst:82
 msgid ""
@@ -105,30 +119,37 @@ msgid ""
 "production. Otherwise, attackers could use the public ``'dev'`` key to "
 "modify the session cookie, or anything else that uses the secret key."
 msgstr ""
+"在这个教程的一开始，你为 :data:`SECRET_KEY` 设置了一个默认值。在生产环境中，它"
+"应该被更换为一个随机字节串。否则，攻击者可以使用常用的 ``'dev'`` 密钥去修改会话 "
+
+"cookie，或是其他任何使用密钥的数据。"
 
 #: ../../tutorial/deploy.rst:87
 msgid "You can use the following command to output a random secret key:"
-msgstr ""
+msgstr "你可以使用下面的命令生成一个随机密钥："
 
 #: ../../tutorial/deploy.rst:95
 msgid ""
 "Create the ``config.py`` file in the instance folder, which the factory "
 "will read from if it exists. Copy the generated value into it."
 msgstr ""
+"在实例文件夹中创建 ``config.py`` 文件，如果这个文件存在，程序工厂将会从它读取配置。"
+"把生成的值复制进去："
 
 #: ../../tutorial/deploy.rst:98
 msgid "``venv/var/flaskr-instance/config.py``"
-msgstr ""
+msgstr "``venv/var/flaskr-instance/config.py``"
 
 #: ../../tutorial/deploy.rst:103
 msgid ""
 "You can also set any other necessary configuration here, although "
 "``SECRET_KEY`` is the only one needed for Flaskr."
 msgstr ""
+"你也可以在这里设置任意其他必要的配置，尽管对于 Flaskr 来说 ``SECRET_KEY`` 是唯一需要的配置。"
 
 #: ../../tutorial/deploy.rst:108
 msgid "Run with a Production Server"
-msgstr ""
+msgstr "使用生产服务器运行应用"
 
 #: ../../tutorial/deploy.rst:110
 msgid ""
@@ -137,12 +158,15 @@ msgid ""
 "provided by Werkzeug for convenience, but is not designed to be "
 "particularly efficient, stable, or secure."
 msgstr ""
+"当在生产环境下运行时，你不应该使用内置的开发服务器（``flask run``）。开发服务器由 "
+"Werkzeug 提供，它被设计用来让你在开发时更加方便，因此并不是特别高效、稳定或安全。"
 
 #: ../../tutorial/deploy.rst:115
 msgid ""
 "Instead, use a production WSGI server. For example, to use `Waitress`_, "
 "first install it in the virtual environment:"
 msgstr ""
+"相反，请使用一个生产 WSGI 服务器。举例来说，要使用 `Waitress`_，首先在虚拟环境下安装它："
 
 #: ../../tutorial/deploy.rst:122
 msgid ""
@@ -150,6 +174,8 @@ msgid ""
 "``FLASK_APP`` like ``flask run`` does. You need to tell it to import and "
 "call the application factory to get an application object."
 msgstr ""
+"你需要告诉 Waitress 你的应用在哪里，但是它并不像 ``flask run`` 那样读取 ``FLASK_APP``。"
+"你需要告诉它去导入并调用应用工厂来获取一个应用对象。"
 
 #: ../../tutorial/deploy.rst:132
 msgid ""
@@ -158,7 +184,10 @@ msgid ""
 "because it supports both Windows and Linux. There are many more WSGI "
 "servers and deployment options that you may choose for your project."
 msgstr ""
+"阅读 :doc:`/deploying/index` 了解托管应用的多种不同方式。Waitress 只是一个"
+"示例，在这个教程里选择它是因为它同时支持 Windows 和 Linux。还有很多 WSGI 服务器"
+"和部署选项可以供你的项目选择。"
 
 #: ../../tutorial/deploy.rst:139
 msgid "Continue to :doc:`next`."
-msgstr ""
+msgstr "继续阅读 :doc:`next`。"
