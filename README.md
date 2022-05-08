@@ -49,7 +49,7 @@
 - [ ] htmlfaq
 - [x] index [@greyli](https://github.com/greyli) Grey Li
 - [x] installation [@greyli](https://github.com/greyli) Grey Li
-- [ ] logging [@FesonX](https://github.com/FesonX) FesonX
+- [x] logging [@FesonX](https://github.com/FesonX) FesonX
 - [ ] quickstart [@greyli](https://github.com/greyli) Grey Li
 - [x] reqcontext [@rosekc](https://github.com/rosekc) rosekc
 - [ ] security [@kylinbin](https://github.com/kylinbin) kylin
