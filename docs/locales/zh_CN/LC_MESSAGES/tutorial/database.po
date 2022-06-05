@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2010 Pallets
 # This file is distributed under the same license as the Flask package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# Grey Li <withlihui@gmail.com>, 2021.
 #
 #, fuzzy
 msgid ""
@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-25 19:31+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Grey Li <withlihui@gmail.com>\n"
 "Language-Team: zh_CN <withlihui@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../tutorial/database.rst:4
 msgid "Define and Access the Database"
-msgstr ""
+msgstr "定义并访问数据库"
 
 #: ../../tutorial/database.rst:6
 msgid ""
@@ -27,6 +27,8 @@ msgid ""
 "Python comes with built-in support for SQLite in the :mod:`sqlite3` "
 "module."
 msgstr ""
+"这个应用将会使用 `SQLite`_ 数据库来存储用户和帖子。Python 在自带的 "
+":mod:`sqlite3` 模块内置了对 SQLite 的支持。"
 
 #: ../../tutorial/database.rst:10
 msgid ""
@@ -37,16 +39,20 @@ msgid ""
 "this. Once you become big, you may want to switch to a different "
 "database."
 msgstr ""
+"SQLite 很方便，因为它不需要设置一个额外的数据库服务器，而且 Python 内置了对它的支持。"
+"然而，如果并发的请求试图同时写入数据库，它们会让应用变慢，因为每一个写入操作会依次进行。"
+"小的应用不会注意到这一点。当你的应用变大，你也许想要切换到不同的数据库。"
 
 #: ../../tutorial/database.rst:17
 msgid ""
 "The tutorial doesn't go into detail about SQL. If you are not familiar "
 "with it, the SQLite docs describe the `language`_."
 msgstr ""
+"这个教程没有详细介绍 SQL。如果你对它不熟悉，SQLite 文档描述了 `这个语言`_。"
 
 #: ../../tutorial/database.rst:25
 msgid "Connect to the Database"
-msgstr ""
+msgstr "连接数据库"
 
 #: ../../tutorial/database.rst:27
 msgid ""
@@ -55,6 +61,8 @@ msgid ""
 "and operations are performed using the connection, which is closed after "
 "the work is finished."
 msgstr ""
+"使用 SQLite 数据库（和其他大多数 Python 数据库包）时，要做的第一件事是和它建立一个连接。"
+"任何查询和操作都使用这个连接进行，当工作完成后它会被关闭。"
 
 #: ../../tutorial/database.rst:32
 msgid ""
@@ -62,11 +70,13 @@ msgid ""
 "is created at some point when handling a request, and closed before the "
 "response is sent."
 msgstr ""
+"在 web 应用中，这个连接通常会绑定到请求上。它会在处理一个请求时被创建，然后在响应"
+"发送之前被关闭。"
 
 #: ../../tutorial/database.rst:36 ../../tutorial/database.rst:120
 #: ../../tutorial/database.rst:157
 msgid "``flaskr/db.py``"
-msgstr ""
+msgstr "``flaskr/db.py``"
 
 #: ../../tutorial/database.rst:63
 msgid ""
@@ -75,6 +85,9 @@ msgid ""
 "request. The connection is stored and reused instead of creating a new "
 "connection if ``get_db`` is called a second time in the same request."
 msgstr ""
+":data:`g` 是一个特殊的对象，它对每一个请求都是唯一的。它被用来存储在处理请求时"
+"可能会被多个函数访问的数据。如果 ``get_db`` 在同一个请求中被二次调用，该连接会被存储"
+"和复用，而不是创建一个新的连接。"
 
 #: ../../tutorial/database.rst:69
 msgid ""
@@ -84,6 +97,9 @@ msgid ""
 "``get_db`` will be called when the application has been created and is "
 "handling a request, so :data:`current_app` can be used."
 msgstr ""
+":data:`current_app` 是另一个特殊的对象，它指向处理请求的 Flask 应用。因为你使用了"
+"一个应用工厂，所以当写其他部分代码时没有应用对象。当应用被创建并且正在处理一个请求时，"
+"``get_db`` 将会被调用，所以可以使用 :data:`current_app`。"
 
 #: ../../tutorial/database.rst:75
 msgid ""
@@ -91,12 +107,15 @@ msgid ""
 "by the ``DATABASE`` configuration key. This file doesn't have to exist "
 "yet, and won't until you initialize the database later."
 msgstr ""
+":func:`sqlite3.connect` 建立一个连接到配置键 ``DATABASE`` 指向的文件。这个文件"
+"还不存在，直到你之后初始化数据库才会被创建。"
 
 #: ../../tutorial/database.rst:79
 msgid ""
 ":class:`sqlite3.Row` tells the connection to return rows that behave like"
 " dicts. This allows accessing the columns by name."
 msgstr ""
+":class:`sqlite3.Row` 告诉这个连接返回行为和字典一样的行。这允许你通过名称访问列。"
 
 #: ../../tutorial/database.rst:82
 msgid ""
@@ -105,10 +124,13 @@ msgid ""
 "tell your application about the ``close_db`` function in the application "
 "factory so that it is called after each request."
 msgstr ""
+"``close_db`` 通过判断 ``g.db`` 是否被设置来检查一个连接是否被创建。如果连接存在，"
+"它将被关闭。接下来，你将会在应用工厂里把 ``close_db`` 函数引入你的应用，以便在"
+"每个请求之后调用它。"
 
 #: ../../tutorial/database.rst:89
 msgid "Create the Tables"
-msgstr ""
+msgstr "创建表"
 
 #: ../../tutorial/database.rst:91
 msgid ""
@@ -117,16 +139,19 @@ msgid ""
 "in the ``user`` table, and posts in the ``post`` table. Create a file "
 "with the SQL commands needed to create empty tables:"
 msgstr ""
+"在 SQLite 中，数据被存储在 *表* 和 *列* 中。在你可以存储和获取数据之前，需要先创建它们。"
+"Flaskr 将会存储用户到 ``user`` 表，存储帖子到 ``post`` 表。创建一个文件来存储创建空表"
+"所需的 SQL 命令："
 
 #: ../../tutorial/database.rst:96
 msgid "``flaskr/schema.sql``"
-msgstr ""
+msgstr "``flaskr/schema.sql``"
 
 #: ../../tutorial/database.rst:117
 msgid ""
 "Add the Python functions that will run these SQL commands to the "
 "``db.py`` file:"
-msgstr ""
+msgstr "把将会运行这些 SQL 命令的的 Python 函数添加到 ``db.py`` 文件："
 
 #: ../../tutorial/database.rst:137
 msgid ""
@@ -136,6 +161,9 @@ msgid ""
 "returns a database connection, which is used to execute the commands read"
 " from the file."
 msgstr ""
+":meth:`open_resource() <Flask.open_resource>` 打开一个相对于 ``flaskr`` 包的文件，"
+"这很有用，因为当后续部署应用的时候你不用知道文件的位置在哪里。``get_db`` 返回一个数据库连接，"
+"用来执行从文件中读取的命令。"
 
 #: ../../tutorial/database.rst:143
 msgid ""
@@ -143,10 +171,13 @@ msgid ""
 "that calls the ``init_db`` function and shows a success message to the "
 "user. You can read :doc:`/cli` to learn more about writing commands."
 msgstr ""
+":func:`click.command` 定义了一个名为 ``init-db`` 的命令行命令，这个命令会调用 "
+"``init_db`` 函数并向用户显示一个成功消息。你可以阅读 :doc:`/cli` 学习更多关于"
+"编写命令的内容。"
 
 #: ../../tutorial/database.rst:149
 msgid "Register with the Application"
-msgstr ""
+msgstr "注册到应用"
 
 #: ../../tutorial/database.rst:151
 msgid ""
@@ -156,32 +187,40 @@ msgid ""
 "instance isn't available when writing the functions. Instead, write a "
 "function that takes an application and does the registration."
 msgstr ""
+"``close_db`` 和 ``init_db_command`` 函数需要被注册到应用实例；否则的话，他们不会"
+"被应用使用。然而，因为你正在使用工厂函数，该实例没法在这些函数里使用。取而代之的是，写"
+"一个函数，接受一个应用作为参数并实现注册。"
 
 #: ../../tutorial/database.rst:164
 msgid ""
 ":meth:`app.teardown_appcontext() <Flask.teardown_appcontext>` tells Flask"
 " to call that function when cleaning up after returning the response."
 msgstr ""
+":meth:`app.teardown_appcontext() <Flask.teardown_appcontext>` 告诉 Flask"
+"在返回响应以后进行清理时调用该函数。"
 
 #: ../../tutorial/database.rst:168
 msgid ""
 ":meth:`app.cli.add_command() <click.Group.add_command>` adds a new "
 "command that can be called with the ``flask`` command."
 msgstr ""
+":meth:`app.cli.add_command() <click.Group.add_command>` 添加一个新的命令，"
+"可以使用 ``flask`` 命令调用。"
 
 #: ../../tutorial/database.rst:171
 msgid ""
 "Import and call this function from the factory. Place the new code at the"
 " end of the factory function before returning the app."
 msgstr ""
+"在工厂里导入并调用这个函数。把新的代码放到工厂函数的末尾，在返回应用之前。"
 
 #: ../../tutorial/database.rst:174
 msgid "``flaskr/__init__.py``"
-msgstr ""
+msgstr "``flaskr/__init__.py``"
 
 #: ../../tutorial/database.rst:188
 msgid "Initialize the Database File"
-msgstr ""
+msgstr "初始化数据库文件"
 
 #: ../../tutorial/database.rst:190
 msgid ""
@@ -189,6 +228,8 @@ msgid ""
 "using the ``flask`` command, similar to the ``run`` command from the "
 "previous page."
 msgstr ""
+"现在 ``init-db`` 已经注册到应用，你可以使用 ``flask`` 命令调用它，类似上一章"
+"的 ``run`` 命令。"
 
 #: ../../tutorial/database.rst:196
 msgid ""
@@ -198,17 +239,20 @@ msgid ""
 "env as described in :doc:`/installation`. You'll also need to set "
 "``FLASK_APP`` and ``FLASK_ENV`` as shown on the previous page."
 msgstr ""
+"如果你仍然运行着上一章介绍的服务器，你可以停止服务器，或是在新的终端运行这个命令。如果你"
+"使用一个新的终端，记得切换到项目目录，激活在 :doc:`/installation` 里描述的虚拟环境。你"
+"还将需要设置上一章介绍的 ``FLASK_APP`` 和 ``FLASK_ENV``。"
 
 #: ../../tutorial/database.rst:203
 msgid "Run the ``init-db`` command:"
-msgstr ""
+msgstr "运行 ``init-db`` 命令："
 
 #: ../../tutorial/database.rst:210
 msgid ""
 "There will now be a ``flaskr.sqlite`` file in the ``instance`` folder in "
 "your project."
-msgstr ""
+msgstr "现在在你项目的 ``instance`` 文件夹中会有一个 ``flaskr.sqlite`` 文件。"
 
 #: ../../tutorial/database.rst:213
 msgid "Continue to :doc:`views`."
-msgstr ""
+msgstr "继续阅读 :doc:`views`。"

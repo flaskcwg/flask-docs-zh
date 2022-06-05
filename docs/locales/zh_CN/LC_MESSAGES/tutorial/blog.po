@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2010 Pallets
 # This file is distributed under the same license as the Flask package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# Grey Li <withlihui@gmail.com>, 2021.
 #
 #, fuzzy
 msgid ""
@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-25 19:31+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Grey Li <withlihui@gmail.com>\n"
 "Language-Team: zh_CN <withlihui@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../tutorial/blog.rst:4
 msgid "Blog Blueprint"
-msgstr ""
+msgstr "博客蓝图"
 
 #: ../../tutorial/blog.rst:6
 msgid ""
@@ -28,6 +28,8 @@ msgid ""
 "list all posts, allow logged in users to create posts, and allow the "
 "author of a post to edit or delete it."
 msgstr ""
+"你将使用在编写认证蓝图时学习的相同技术来编写博客蓝图。博客应该列出所有帖子，允许已经"
+"登入的用户创建帖子，并且允许帖子的作者编辑或删除它。"
 
 #: ../../tutorial/blog.rst:11
 msgid ""
@@ -35,20 +37,22 @@ msgid ""
 "save your changes, try going to the URL in your browser and testing them "
 "out."
 msgstr ""
+"当你实现每个视图时，让开发服务器保持运行。当你保存你的变动，试着在浏览器访问 URL 并对"
+"它们进行测试。"
 
 #: ../../tutorial/blog.rst:16
 msgid "The Blueprint"
-msgstr ""
+msgstr "蓝图"
 
 #: ../../tutorial/blog.rst:18
 msgid "Define the blueprint and register it in the application factory."
-msgstr ""
+msgstr "定义蓝图并在应用工厂里注册它。"
 
 #: ../../tutorial/blog.rst:20 ../../tutorial/blog.rst:76
 #: ../../tutorial/blog.rst:142 ../../tutorial/blog.rst:198
 #: ../../tutorial/blog.rst:228 ../../tutorial/blog.rst:320
 msgid "``flaskr/blog.py``"
-msgstr ""
+msgstr "``flaskr/blog.py``"
 
 #: ../../tutorial/blog.rst:33
 msgid ""
@@ -56,10 +60,12 @@ msgid ""
 ":meth:`app.register_blueprint() <Flask.register_blueprint>`. Place the "
 "new code at the end of the factory function before returning the app."
 msgstr ""
+"导入并在工厂中使用 :meth:`app.register_blueprint() <Flask.register_blueprint>` "
+"注册蓝图。把新代码放到工厂函数的底部，在返回应用之前。"
 
 #: ../../tutorial/blog.rst:37
 msgid "``flaskr/__init__.py``"
-msgstr ""
+msgstr "``flaskr/__init__.py``"
 
 #: ../../tutorial/blog.rst:51
 msgid ""
@@ -68,6 +74,9 @@ msgid ""
 "view at ``/create``, and so on. The blog is the main feature of Flaskr, "
 "so it makes sense that the blog index will be the main index."
 msgstr ""
+"和认证蓝图不同，博客蓝图没有 ``url_prefix``。所以 ``index`` 视图将会在 ``/``，"
+"``create`` 视图将会在 ``/create``，以此类推。博客是 Flaskr 的主要功能，所以博客"
+"索引将会是主索引。"
 
 #: ../../tutorial/blog.rst:56
 msgid ""
@@ -78,6 +87,11 @@ msgid ""
 "``url_for('index')`` or ``url_for('blog.index')`` will both work, "
 "generating the same ``/`` URL either way."
 msgstr ""
+"然而，下面定义的 ``index`` 视图的端点将会是 ``blog.index``。一些认证视图引用了一个"
+"普通的 ``index`` 端点。:meth:`app.add_url_rule() <Flask.add_url_rule>` "
+"把端点名 ``index`` 和 ``/`` 关联到一起，这样 ``url_for('index')`` 或 "
+"``url_for('blog.index')`` 都可以工作，不管哪种方式都会生成相同的 URL，即 ``/``。"
+
 
 #: ../../tutorial/blog.rst:63
 msgid ""
@@ -86,10 +100,12 @@ msgid ""
 " to the ``hello`` view. Then the ``index`` and ``blog.index`` endpoints "
 "and URLs would be different."
 msgstr ""
+"在另一个应用中，你可以给博客蓝图一个 ``url_prefix``，并在应用工厂里定义一个单独的 ``index`` "
+"视图，类似 ``hello`` 视图。这样 ``index`` 和 ``blog.index`` 的端点和 URL 将会不一样。"
 
 #: ../../tutorial/blog.rst:70
 msgid "Index"
-msgstr ""
+msgstr "索引"
 
 #: ../../tutorial/blog.rst:72
 msgid ""
@@ -97,10 +113,12 @@ msgid ""
 "used so that the author information from the ``user`` table is available "
 "in the result."
 msgstr ""
+"索引页面将会显示所有的帖子，最新的排在前面。这里使用了一个 ``JOIN`` 查询，这样就可以在"
+"结果中获取到来自 ``user`` 表的作者信息。"
 
 #: ../../tutorial/blog.rst:89
 msgid "``flaskr/templates/blog/index.html``"
-msgstr ""
+msgstr "``flaskr/templates/blog/index.html``"
 
 #: ../../tutorial/blog.rst:121
 msgid ""
@@ -111,10 +129,14 @@ msgid ""
 "display a line after each post except the last one, to visually separate "
 "them."
 msgstr ""
+"当用户登入后，``header`` 块会添加一个指向 ``create`` 视图的链接。当用户是帖子的作者时，"
+"他们会看到一个“Edit”链接，指向对应那个帖子的 ``update`` 视图。``loop.last`` 是一个"
+"在 `Jinja for 循环`_ 中可用的特殊变量。它被用来在每一个帖子（除了最后一个）下面显示"
+"一条线，以便在视觉上分离它们。"
 
 #: ../../tutorial/blog.rst:132
 msgid "Create"
-msgstr ""
+msgstr "创建"
 
 #: ../../tutorial/blog.rst:134
 msgid ""
@@ -122,6 +144,8 @@ msgid ""
 "the form is displayed, or the posted data is validated and the post is "
 "added to the database or an error is shown."
 msgstr ""
+"``create`` 视图和认证的 ``register`` 视图的工作原理相同。要么表单被显示，要么提交的"
+"数据通过验证并将帖子添加到数据库，否则显示一个错误。"
 
 #: ../../tutorial/blog.rst:138
 msgid ""
@@ -129,14 +153,16 @@ msgid ""
 "views. A user must be logged in to visit these views, otherwise they will"
 " be redirected to the login page."
 msgstr ""
+"你之前写的 ``login_required`` 装饰器被用在博客相关的视图上。用户必须登入才能访问"
+"这些视图，否则他们将会被重定向到登录页面。"
 
 #: ../../tutorial/blog.rst:170
 msgid "``flaskr/templates/blog/create.html``"
-msgstr ""
+msgstr "``flaskr/templates/blog/create.html``"
 
 #: ../../tutorial/blog.rst:191
 msgid "Update"
-msgstr ""
+msgstr "更新"
 
 #: ../../tutorial/blog.rst:193
 msgid ""
@@ -145,6 +171,9 @@ msgid ""
 "duplicating code, you can write a function to get the ``post`` and call "
 "it from each view."
 msgstr ""
+"``update`` 和 ``delete`` 视图都将需要通过 ``id`` 获取一个 ``post``，并检查作者是否"
+"和登入的用户相匹配。为了避免代码重复，你可以写一个函数来获取 ``post``，然后在每一个视图"
+"里调用它。"
 
 #: ../../tutorial/blog.rst:217
 msgid ""
@@ -154,6 +183,10 @@ msgid ""
 "\"Forbidden\". (``401`` means \"Unauthorized\", but you redirect to the "
 "login page instead of returning that status.)"
 msgstr ""
+":func:`abort` 将会抛出一个特殊的异常，这个异常返回一个 HTTP 状态码。它接受一个可选"
+"的消息来和错误一起显示，否则会使用一个默认的消息。``404`` 表示“Not Found（未找到）”，"
+"``403`` 表示“Forbidden（禁止）”。（``401`` 表示“Unauthorized（未授权）”，"
+"但是你会重定向到登录页面，而不是返回那个状态码。）"
 
 #: ../../tutorial/blog.rst:223
 msgid ""
@@ -162,6 +195,9 @@ msgid ""
 "you wrote a view to show an individual post on a page, where the user "
 "doesn't matter because they're not modifying the post."
 msgstr ""
+"``check_author`` 参数的定义可以使该函数可以在不检查作者的情况下获取一个 ``post``。"
+"如果你写了一个视图来在页面上显示一个单独的帖子，这个参数将会很有用，在这个页面上用户"
+"无关紧要，因为他们并不是在编辑帖子。"
 
 #: ../../tutorial/blog.rst:258
 msgid ""
@@ -174,6 +210,12 @@ msgid ""
 " ``id`` so it knows what to fill in: ``url_for('blog.update', "
 "id=post['id'])``. This is also in the ``index.html`` file above."
 msgstr ""
+"和你目前已经编写的视图不同，``update`` 函数接受一个参数，``id``。它对应路由里的 "
+"``<int:id>``。一个真实的 URL 看起来会像 ``/1/update``。Flask 会捕捉到这个 ``1``，"
+"确保它是一个 :class:`int`，并把它作为 ``id`` 参数传递。如果你不指定 ``int:`` 而"
+"直接使用 ``<id>``，它将是一个字符串。为了生成一个指向更新页面的 URL，:func:`url_for` "
+"需要传递 ``id``，这样它才知道要填充什么到： ``url_for('blog.update', id=post['id'])``。"
+"这也在上面的 ``index.html`` 文件中。"
 
 #: ../../tutorial/blog.rst:268
 msgid ""
@@ -183,10 +225,13 @@ msgid ""
 "you could use one view and template for both actions, but for the "
 "tutorial it's clearer to keep them separate."
 msgstr ""
+"``create`` 和 ``update`` 视图看起来非常相似。主要的区别是，``update`` 视图使用一个 "
+"``post`` 对象和一个 ``UPDATE`` 查询，而不是 ``INSERT``。通过一些巧妙的重构，"
+"你可以使用一个视图和模板来实现这两个操作，但对于本教程来说，让它们保持分离会更清晰。"
 
 #: ../../tutorial/blog.rst:274
 msgid "``flaskr/templates/blog/update.html``"
-msgstr ""
+msgstr "``flaskr/templates/blog/update.html``"
 
 #: ../../tutorial/blog.rst:298
 msgid ""
@@ -196,6 +241,9 @@ msgid ""
 "instead. The button uses some JavaScript to show a confirmation dialog "
 "before submitting."
 msgstr ""
+"这个模板有两个表单。第一个表单将编辑后的数据发送到当前页面（``/<id>/update``）。另一个表单"
+"只包含一个按钮，并指定一个 ``action`` 属性来提交到删除视图。这个按钮使用了一些 JavaScript，"
+"用来在提交前展示一个确认对话框。"
 
 #: ../../tutorial/blog.rst:304
 msgid ""
@@ -206,10 +254,14 @@ msgid ""
 "``request.form`` is used instead. :data:`request` is another variable "
 "that's automatically available in templates."
 msgstr ""
+"模式 ``{{ request.form['title'] or post['title'] }}`` 被用来选择什么数据出现在"
+"表单里。当表单没有被提交时，原始的 ``post`` 数据会出现，但是如果无效的表单数据被提交，你"
+"想展示它们以便让用户可以修复错误，所以作为替代， ``request.form`` 会被使用。:data:`request` "
+"是另一个自动在模板中可用的变量。"
 
 #: ../../tutorial/blog.rst:313
 msgid "Delete"
-msgstr ""
+msgstr "删除"
 
 #: ../../tutorial/blog.rst:315
 msgid ""
@@ -218,6 +270,9 @@ msgid ""
 "no template, it will only handle the ``POST`` method and then redirect to"
 " the ``index`` view."
 msgstr ""
+"删除视图没有自己的模板，删除按钮是 ``update.html`` 的一部分，并用来发送请求到 "
+"``/<id>/delete`` 。因为没有模板，它将只处理 ``POST`` 方法，然后重定向到 ``index`` "
+"视图。"
 
 #: ../../tutorial/blog.rst:332
 msgid ""
@@ -225,7 +280,9 @@ msgid ""
 "time to try out everything in the browser. However, there's still more to"
 " do before the project is complete."
 msgstr ""
+"恭喜你，你现在已经完成了应用的编写！花一些时间在浏览器里尝试所有功能。然而，在项目完成之前，"
+"还有一些事情要做。"
 
 #: ../../tutorial/blog.rst:336
 msgid "Continue to :doc:`install`."
-msgstr ""
+msgstr "继续阅读 :doc:`install`。"
