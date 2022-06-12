@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 2.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-25 19:31+0800\n"
+"POT-Creation-Date: 2022-06-12 19:17+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Grey Li <withlihui@gmail.com>\n"
 "Language-Team: zh_CN <withlihui@gmail.com>\n"
@@ -36,12 +36,12 @@ msgid ""
 "following resources for questions about using Flask or issues with your "
 "own code:"
 msgstr ""
-"请不要使用 issue tracker 提问。issue tracker 是一个用来报告 Flask 本身的 bug 以及"
-"提出新特性请求的工具。对于使用 Flask 时遇到的问题，或是关于你自己代码的问题，请"
-"使用下面的资源获取帮助："
+"请不要使用 issue tracker 提问。issue tracker 是一个用来报告 Flask 本身的 bug "
+"以及提出新特性请求的工具。对于使用 Flask 时遇到的问题，或是关于你自己代码的问题，请使用下面的资源获取帮助："
 
 #: ../../../CONTRIBUTING.rst:15
-msgid "The ``#get-help`` channel on our Discord chat: https://discord.gg/pallets"
+#, fuzzy
+msgid "The ``#questions`` channel on our Discord chat: https://discord.gg/pallets"
 msgstr "我们的 Discord 聊天组的 ``#questions`` 频道：https://discord.gg/pallets"
 
 #: ../../../CONTRIBUTING.rst:17
@@ -55,51 +55,50 @@ msgid ""
 "Ask on `Stack Overflow`_. Search with Google first using: "
 "``site:stackoverflow.com flask {search term, exception message, etc.}``"
 msgstr ""
-"在 `Stack Overflow`_ 上提问。先使用 ``site:stackoverflow.com flask {搜索关"
-"键词，异常信息等}`` 在 Google 上搜索。"
+"在 `Stack Overflow`_ 上提问。先使用 ``site:stackoverflow.com flask "
+"{搜索关键词，异常信息等}`` 在 Google 上搜索。"
 
-#: ../../../CONTRIBUTING.rst:26
+#: ../../../CONTRIBUTING.rst:21
+msgid "Ask on our `GitHub Discussions`_."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:28
 msgid "Reporting issues"
 msgstr "报告 issue"
 
-#: ../../../CONTRIBUTING.rst:28
+#: ../../../CONTRIBUTING.rst:30
 msgid "Include the following information in your post:"
 msgstr "在帖子里包含下列信息："
 
-#: ../../../CONTRIBUTING.rst:30
+#: ../../../CONTRIBUTING.rst:32
 msgid "Describe what you expected to happen."
 msgstr "描述期待发生的情况。"
 
-#: ../../../CONTRIBUTING.rst:31
+#: ../../../CONTRIBUTING.rst:33
 msgid ""
 "If possible, include a `minimal reproducible example`_ to help us "
 "identify the issue. This also helps check that the issue is not with your"
 " own code."
-msgstr ""
-"如果可能的话，提供一个 `最小的可复现的示例`_ 来帮助我们识别 issue。这也会帮助"
-"我们确认问题是否出自你自己的代码。"
+msgstr "如果可能的话，提供一个 `最小的可复现的示例`_ 来帮助我们识别 issue。这也会帮助我们确认问题是否出自你自己的代码。"
 
-#: ../../../CONTRIBUTING.rst:34
+#: ../../../CONTRIBUTING.rst:36
 msgid ""
 "Describe what actually happened. Include the full traceback if there was "
 "an exception."
-msgstr ""
-"描述实际发生的情况。如果有异常发生，给出完整的错误堆栈信息。"
+msgstr "描述实际发生的情况。如果有异常发生，给出完整的错误堆栈信息。"
 
-#: ../../../CONTRIBUTING.rst:36
+#: ../../../CONTRIBUTING.rst:38
 msgid ""
 "List your Python and Flask versions. If possible, check if this issue is "
 "already fixed in the latest releases or the latest code in the "
 "repository."
-msgstr ""
-"列出 Python 和 Flask 的版本。如果可能的话，检查这个 issue 是不是已经在最新发布的"
-"版本中或最新的代码仓库中修复。"
+msgstr "列出 Python 和 Flask 的版本。如果可能的话，检查这个 issue 是不是已经在最新发布的版本中或最新的代码仓库中修复。"
 
-#: ../../../CONTRIBUTING.rst:44
+#: ../../../CONTRIBUTING.rst:46
 msgid "Submitting patches"
 msgstr "提交补丁"
 
-#: ../../../CONTRIBUTING.rst:46
+#: ../../../CONTRIBUTING.rst:48
 msgid ""
 "If there is not an open issue for what you want to submit, prefer opening"
 " one for discussion before working on a PR. You can work on any issue "
@@ -107,193 +106,179 @@ msgid ""
 " These show up in the sidebar. No need to ask if you can work on an issue"
 " that interests you."
 msgstr ""
-"如果你提交的补丁没有对应的开启的 issue，建议在开始工作前创建一个 issue 进行讨论。"
-"你可以着手处理任何没有链接某个开启的 PR 或分配维护者的 issue（这些信息可以在边栏看到）。"
-"不需要问是否能处理你感兴趣的 issue，尽管动手去做。"
+"如果你提交的补丁没有对应的开启的 issue，建议在开始工作前创建一个 issue 进行讨论。你可以着手处理任何没有链接某个开启的 PR "
+"或分配维护者的 issue（这些信息可以在边栏看到）。不需要问是否能处理你感兴趣的 issue，尽管动手去做。"
 
-#: ../../../CONTRIBUTING.rst:52
+#: ../../../CONTRIBUTING.rst:54
 msgid "Include the following in your patch:"
 msgstr "在补丁里包含下列内容："
 
-#: ../../../CONTRIBUTING.rst:54
+#: ../../../CONTRIBUTING.rst:56
 msgid ""
 "Use `Black`_ to format your code. This and other tools will run "
 "automatically if you install `pre-commit`_ using the instructions below."
-msgstr ""
-"使用 `Black`_ 格式化代码。如果安装了 `pre-commit`_ 并使用下面的操作步骤，"
-"那么它和其他工具会自动运行。"
-
-#: ../../../CONTRIBUTING.rst:57
-msgid ""
-"Include tests if your patch adds or changes code. Make sure the test "
-"fails without your patch."
-msgstr ""
-"如果你的补丁增加或改变了某些代码，记得添加对应的测试。确保在没有你的补丁时测试"
-"不会通过。"
+msgstr "使用 `Black`_ 格式化代码。如果安装了 `pre-commit`_ 并使用下面的操作步骤，那么它和其他工具会自动运行。"
 
 #: ../../../CONTRIBUTING.rst:59
 msgid ""
-"Update any relevant docs pages and docstrings. Docs pages and docstrings "
-"should be wrapped at 72 characters."
-msgstr ""
-"更新任何相关的文档页面和文档字符串。文档页面和文档字符串的行长度应该控制在 72 个"
-"字符以内。"
+"Include tests if your patch adds or changes code. Make sure the test "
+"fails without your patch."
+msgstr "如果你的补丁增加或改变了某些代码，记得添加对应的测试。确保在没有你的补丁时测试不会通过。"
 
 #: ../../../CONTRIBUTING.rst:61
+msgid ""
+"Update any relevant docs pages and docstrings. Docs pages and docstrings "
+"should be wrapped at 72 characters."
+msgstr "更新任何相关的文档页面和文档字符串。文档页面和文档字符串的行长度应该控制在 72 个字符以内。"
+
+#: ../../../CONTRIBUTING.rst:63
 msgid ""
 "Add an entry in ``CHANGES.rst``. Use the same style as other entries. "
 "Also include ``.. versionchanged::`` inline changelogs in relevant "
 "docstrings."
 msgstr ""
-"在 ``CHANGES.rst`` 中添加一个条目。使用和其他条目相同的行文风格。同时在相关"
-"的文档字符串使用 ``.. versionchanged::`` 标签添加行内变更日志。"
+"在 ``CHANGES.rst`` 中添加一个条目。使用和其他条目相同的行文风格。同时在相关的文档字符串使用 ``.. "
+"versionchanged::`` 标签添加行内变更日志。"
 
-#: ../../../CONTRIBUTING.rst:70
+#: ../../../CONTRIBUTING.rst:72
 msgid "First time setup"
 msgstr "首次设置"
 
-#: ../../../CONTRIBUTING.rst:72
+#: ../../../CONTRIBUTING.rst:74
 msgid "Download and install the `latest version of git`_."
 msgstr "下载并安装 `最新版本的 git`_。"
 
-#: ../../../CONTRIBUTING.rst:73
+#: ../../../CONTRIBUTING.rst:75
 msgid "Configure git with your `username`_ and `email`_."
 msgstr "使用你的 `用户名`_ 和 `Email`_ 配置 git。"
 
-#: ../../../CONTRIBUTING.rst:80
+#: ../../../CONTRIBUTING.rst:82
 msgid "Make sure you have a `GitHub account`_."
 msgstr "确保你有一个 `GitHub 账号`_。"
 
-#: ../../../CONTRIBUTING.rst:81
+#: ../../../CONTRIBUTING.rst:83
 msgid "Fork Flask to your GitHub account by clicking the `Fork`_ button."
 msgstr "点击 `Fork`_ 按钮把 Flask 复刻（Fork）到你的 GitHub 仓库。"
 
-#: ../../../CONTRIBUTING.rst:82
+#: ../../../CONTRIBUTING.rst:84
 msgid "`Clone`_ the main repository locally."
 msgstr "把仓库 `克隆`_ 到本地。"
 
-#: ../../../CONTRIBUTING.rst:89
+#: ../../../CONTRIBUTING.rst:91
 msgid ""
 "Add your fork as a remote to push your work to. Replace ``{username}`` "
 "with your username. This names the remote \"fork\", the default Pallets "
 "remote is \"origin\"."
 msgstr ""
-"把你的复刻仓库作为推送工作代码的远程仓库。使用你的用户名替代 ``{username}``。"
-"这会把远程仓库命名为“fork”，默认的 Pallets 远程仓库为“origin”。"
+"把你的复刻仓库作为推送工作代码的远程仓库。使用你的用户名替代 ``{username}``。这会把远程仓库命名为“fork”，默认的 "
+"Pallets 远程仓库为“origin”。"
 
-#: ../../../CONTRIBUTING.rst:97
+#: ../../../CONTRIBUTING.rst:99
 msgid "Create a virtualenv."
 msgstr "创建一个虚拟环境。"
 
-#: ../../../CONTRIBUTING.rst:101
+#: ../../../CONTRIBUTING.rst:103
 msgid "Linux/macOS"
 msgstr "Linux/macOS"
 
-#: ../../../CONTRIBUTING.rst:108
+#: ../../../CONTRIBUTING.rst:110
 msgid "Windows"
 msgstr "Windows"
 
-#: ../../../CONTRIBUTING.rst:115
+#: ../../../CONTRIBUTING.rst:117
 msgid "Upgrade pip and setuptools."
 msgstr "更新 pip 和 setuptools。"
 
-#: ../../../CONTRIBUTING.rst:121
+#: ../../../CONTRIBUTING.rst:123
 msgid "Install the development dependencies, then install Flask in editable mode."
 msgstr "安装开发依赖，然后以编辑模式安装 Flask。"
 
-#: ../../../CONTRIBUTING.rst:128
+#: ../../../CONTRIBUTING.rst:130
 msgid "Install the pre-commit hooks."
 msgstr "安装 pre-commit 钩子。"
 
-#: ../../../CONTRIBUTING.rst:143
+#: ../../../CONTRIBUTING.rst:145
 msgid "Start coding"
 msgstr "开始写代码"
 
-#: ../../../CONTRIBUTING.rst:145
+#: ../../../CONTRIBUTING.rst:147
 msgid ""
 "Create a branch to identify the issue you would like to work on. If "
 "you're submitting a bug or documentation fix, branch off of the latest "
 "\".x\" branch."
-msgstr ""
-"创建一个分支来标识你想要处理的 issue。如果你在修复一个 bug 或是文档错误，使用"
-"最新的“.x”分支作为基础分支。"
+msgstr "创建一个分支来标识你想要处理的 issue。如果你在修复一个 bug 或是文档错误，使用最新的“.x”分支作为基础分支。"
 
-#: ../../../CONTRIBUTING.rst:154
+#: ../../../CONTRIBUTING.rst:156
 msgid ""
 "If you're submitting a feature addition or change, branch off of the "
 "\"main\" branch."
 msgstr "如果你正在提交一个新特性或变动，使用“main”分支作为基础分支。"
 
-#: ../../../CONTRIBUTING.rst:162
+#: ../../../CONTRIBUTING.rst:164
 msgid "Using your favorite editor, make your changes, `committing as you go`_."
 msgstr "使用你最喜欢的编辑器做出改动，`大胆提交代码`_。"
 
-#: ../../../CONTRIBUTING.rst:164
+#: ../../../CONTRIBUTING.rst:166
 msgid ""
 "Include tests that cover any code changes you make. Make sure the test "
 "fails without your patch. Run the tests as described below."
-msgstr ""
-"包含覆盖所有变动代码的测试。确保测试在没有你的补丁时会失败。参考下面的说明运行测试。"
+msgstr "包含覆盖所有变动代码的测试。确保测试在没有你的补丁时会失败。参考下面的说明运行测试。"
 
-#: ../../../CONTRIBUTING.rst:166
+#: ../../../CONTRIBUTING.rst:168
 msgid ""
 "Push your commits to your fork on GitHub and `create a pull request`_. "
 "Link to the issue being addressed with ``fixes #123`` in the pull "
 "request."
 msgstr ""
-"把你的提交推送到在 GitHub 上的派生仓库并 `创建一个拉取请求（pull request）`_。"
-"在拉取请求中使用 ``fixes #123`` 链接到关联的 issue。"
+"把你的提交推送到在 GitHub 上的派生仓库并 `创建一个拉取请求（pull request）`_。在拉取请求中使用 ``fixes "
+"#123`` 链接到关联的 issue。"
 
-#: ../../../CONTRIBUTING.rst:179
+#: ../../../CONTRIBUTING.rst:181
 msgid "Running the tests"
 msgstr "运行测试"
 
-#: ../../../CONTRIBUTING.rst:181
+#: ../../../CONTRIBUTING.rst:183
 msgid "Run the basic test suite with pytest."
 msgstr "使用 pytest 运行基本测试套件。"
 
-#: ../../../CONTRIBUTING.rst:187
+#: ../../../CONTRIBUTING.rst:189
 msgid ""
 "This runs the tests for the current environment, which is usually "
 "sufficient. CI will run the full suite when you submit your pull request."
 " You can run the full test suite with tox if you don't want to wait."
-msgstr ""
-"这会为当前环境运行测试，这通常就足够了。在提交拉取请求时，CI 会运行完整的测试套件。"
-"如果你不想等待的话可以使用 tox 运行完整的测试套件。"
+msgstr "这会为当前环境运行测试，这通常就足够了。在提交拉取请求时，CI 会运行完整的测试套件。如果你不想等待的话可以使用 tox 运行完整的测试套件。"
 
-#: ../../../CONTRIBUTING.rst:198
+#: ../../../CONTRIBUTING.rst:200
 msgid "Running test coverage"
 msgstr "运行测试覆盖率检查"
 
-#: ../../../CONTRIBUTING.rst:200
+#: ../../../CONTRIBUTING.rst:202
 msgid ""
 "Generating a report of lines that do not have test coverage can indicate "
 "where to start contributing. Run ``pytest`` using ``coverage`` and "
 "generate a report."
-msgstr ""
-"生成一份包含测试未覆盖行数的报告，可以指明从哪里开始增加测试。通过 ``coverage`` 执"
-"行 ``pytest`` 来生成报告。"
+msgstr "生成一份包含测试未覆盖行数的报告，可以指明从哪里开始增加测试。通过 ``coverage`` 执行 ``pytest`` 来生成报告。"
 
-#: ../../../CONTRIBUTING.rst:210
+#: ../../../CONTRIBUTING.rst:212
 msgid "Open ``htmlcov/index.html`` in your browser to explore the report."
 msgstr "使用浏览器打开 ``htmlcov/index.html`` 浏览报告。"
 
-#: ../../../CONTRIBUTING.rst:212
+#: ../../../CONTRIBUTING.rst:214
 msgid "Read more about `coverage <https://coverage.readthedocs.io>`__."
 msgstr "更多内容请参阅 `coverage 文档 <https://coverage.readthedocs.io>`__。"
 
-#: ../../../CONTRIBUTING.rst:216
+#: ../../../CONTRIBUTING.rst:218
 msgid "Building the docs"
 msgstr "构建文档"
 
-#: ../../../CONTRIBUTING.rst:218
+#: ../../../CONTRIBUTING.rst:220
 msgid "Build the docs in the ``docs`` directory using Sphinx."
 msgstr "在 ``docs`` 目录使用 Sphinx 构建文档。"
 
-#: ../../../CONTRIBUTING.rst:225
+#: ../../../CONTRIBUTING.rst:227
 msgid "Open ``_build/html/index.html`` in your browser to view the docs."
 msgstr "使用浏览器打开 ``_build/html/index.html`` 预览文档。"
 
-#: ../../../CONTRIBUTING.rst:227
+#: ../../../CONTRIBUTING.rst:229
 msgid "Read more about `Sphinx <https://www.sphinx-doc.org/en/stable/>`__."
 msgstr "更多内容请参阅 `Sphinx 文档 <https://www.sphinx-doc.org/en/stable/>`__。"

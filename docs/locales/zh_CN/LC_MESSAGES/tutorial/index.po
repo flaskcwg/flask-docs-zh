@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 2.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-30 19:27+0000\n"
+"POT-Creation-Date: 2022-06-12 19:17+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Grey Li <withlihui@gmail.com>\n"
 "Language-Team: zh_CN <withlihui@gmail.com>\n"
@@ -35,8 +35,8 @@ msgstr ""
 "这个教程会一步步带你创建一个基础的博客程序，它叫做 "
 "Flaskr。在这个程序里，用户将可以注册、登录、创建文章、编辑或删除文章。你还将会学习打包程序，这样就可以在其他电脑上安装这个程序。"
 
-msgid "screenshot of index page"
-msgstr "首页截图"
+msgid "首页截图"
+msgstr ""
 
 #: ../../tutorial/index.rst:30
 msgid ""
@@ -57,8 +57,8 @@ msgstr ""
 "Flask 可以做什么建立一个全局认识，然后深入其他文档了解更多内容。这个教程只使用了 Flask 和 Python "
 "提供的功能。在你开发的另一个项目里，你也许会想要使用 :doc:`/extensions` 或其他库让某些功能实现起来更简单。"
 
-msgid "screenshot of login page"
-msgstr "登录页截图"
+msgid "登录页截图"
+msgstr ""
 
 #: ../../tutorial/index.rst:47
 msgid ""
@@ -90,3 +90,9 @@ msgstr ""
 #: ../../tutorial/index.rst:64
 msgid "Continue to :doc:`layout`."
 msgstr "下一节是 :doc:`layout`。"
+
+#~ msgid "screenshot of index page"
+#~ msgstr "首页截图"
+
+#~ msgid "screenshot of login page"
+#~ msgstr "登录页截图"

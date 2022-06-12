@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 2.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-25 19:31+0800\n"
+"POT-Creation-Date: 2022-06-12 19:17+0800\n"
 "PO-Revision-Date: 2021-06-12 13:42+0800\n"
+"Last-Translator: LTakamori <fluent_python@qq.com>\n"
+"Language: zh_CN\n"
 "Language-Team: zh_CN <withlihui@gmail.com>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
-"Last-Translator: LTakamori <fluent_python@qq.com>\n"
-"Language: zh_CN\n"
-"X-Generator: Poedit 3.0\n"
 
 #: ../../shell.rst:2
 msgid "Working with the Shell"
@@ -27,26 +27,23 @@ msgid ""
 "One of the reasons everybody loves Python is the interactive shell.  It "
 "basically allows you to execute Python commands in real time and "
 "immediately get results back.  Flask itself does not come with an "
-"interactive shell, because it does not require any specific setup upfront, "
-"just import your application and start playing around."
+"interactive shell, because it does not require any specific setup "
+"upfront, just import your application and start playing around."
 msgstr ""
-"人们喜爱 Python 的原因之一就是它交互式的 shell。它基本上允许你实时地执行 "
-"Python 指令并立即获得反馈结果。 Flask 本身并没有附带一个交互式的 shell，因为"
-"它并不需要任何具体的前置条件，你只需要导入你的程序就可以愉快地玩耍了。"
+"人们喜爱 Python 的原因之一就是它交互式的 shell。它基本上允许你实时地执行 Python 指令并立即获得反馈结果。 Flask "
+"本身并没有附带一个交互式的 shell，因为它并不需要任何具体的前置条件，你只需要导入你的程序就可以愉快地玩耍了。"
 
 #: ../../shell.rst:12
 msgid ""
-"There are however some handy helpers to make playing around in the shell a "
-"more pleasant experience.  The main issue with interactive console sessions "
-"is that you're not triggering a request like a browser does which means "
-"that :data:`~flask.g`, :data:`~flask.request` and others are not "
-"available.  But the code you want to test might depend on them, so what can "
-"you do?"
+"There are however some handy helpers to make playing around in the shell "
+"a more pleasant experience.  The main issue with interactive console "
+"sessions is that you're not triggering a request like a browser does "
+"which means that :data:`~flask.g`, :data:`~flask.request` and others are "
+"not available.  But the code you want to test might depend on them, so "
+"what can you do?"
 msgstr ""
-"不过依然存在一些便利的辅助工具，它们使得你使用 shell 的体验更加愉快。交互式"
-"的控制台中的主要问题是你不能像浏览器一样触发一个请求，即无法使用 :data:"
-"`~flask.g`，:data:`~flask.request` 等对象。但假如你写的代码依赖它们来进行调"
-"试，那么你应该怎么做呢？"
+"不过依然存在一些便利的辅助工具，它们使得你使用 shell 的体验更加愉快。交互式的控制台中的主要问题是你不能像浏览器一样触发一个请求，即无法使用"
+" :data:`~flask.g`，:data:`~flask.request` 等对象。但假如你写的代码依赖它们来进行调试，那么你应该怎么做呢？"
 
 #: ../../shell.rst:19
 msgid ""
@@ -54,132 +51,123 @@ msgid ""
 "that these functions are not only there for interactive shell usage, but "
 "also for unit testing and other situations that require a faked request "
 "context."
-msgstr ""
-"这就是一些辅助函数大展拳脚的场景了。不过请牢记，这些函数不仅适用于交互式 "
-"shell 的场景下，还能用于单元测试以及其他需要伪造请求的情况。"
+msgstr "这就是一些辅助函数大展拳脚的场景了。不过请牢记，这些函数不仅适用于交互式 shell 的场景下，还能用于单元测试以及其他需要伪造请求的情况。"
 
 #: ../../shell.rst:24
-msgid ""
-"Generally it's recommended that you read the :doc:`reqcontext` chapter of "
-"the documentation first."
+#, fuzzy
+msgid "Generally it's recommended that you read :doc:`reqcontext` first."
 msgstr "通常情况下建议先阅读 :doc:`reqcontext` 这一章节。"
 
-#: ../../shell.rst:28
+#: ../../shell.rst:27
 msgid "Command Line Interface"
 msgstr "命令行接口"
 
-#: ../../shell.rst:30
+#: ../../shell.rst:29
 msgid ""
-"Starting with Flask 0.11 the recommended way to work with the shell is the "
-"``flask shell`` command which does a lot of this automatically for you. For "
-"instance the shell is automatically initialized with a loaded application "
-"context."
+"Starting with Flask 0.11 the recommended way to work with the shell is "
+"the ``flask shell`` command which does a lot of this automatically for "
+"you. For instance the shell is automatically initialized with a loaded "
+"application context."
 msgstr ""
-"自 Flask 0.11 开始，推荐使用 ``flask shell`` 命令来使用 shell ，它能为你自动"
-"完成许多工作。比如自动地为你初始化一个 shell 并加载好应用上下文。"
+"自 Flask 0.11 开始，推荐使用 ``flask shell`` 命令来使用 shell "
+"，它能为你自动完成许多工作。比如自动地为你初始化一个 shell 并加载好应用上下文。"
 
-#: ../../shell.rst:35
+#: ../../shell.rst:34
 msgid "For more information see :doc:`/cli`."
 msgstr "更多信息可以查阅 :doc:`/cli`。"
 
-#: ../../shell.rst:38
+#: ../../shell.rst:37
 msgid "Creating a Request Context"
 msgstr "创建一个请求上下文"
 
-#: ../../shell.rst:40
+#: ../../shell.rst:39
 msgid ""
 "The easiest way to create a proper request context from the shell is by "
-"using the :attr:`~flask.Flask.test_request_context` method which creates us "
-"a :class:`~flask.ctx.RequestContext`:"
+"using the :attr:`~flask.Flask.test_request_context` method which creates "
+"us a :class:`~flask.ctx.RequestContext`:"
 msgstr ""
-"在 shell 中创建一个正确的请求上下文最简单的方法就是使用 :attr:`~flask.Flask."
-"test_request_context` 方法，它能为我们创建一个 :class:`~flask.ctx."
-"RequestContext`:"
+"在 shell 中创建一个正确的请求上下文最简单的方法就是使用 :attr:`~flask.Flask.test_request_context`"
+" 方法，它能为我们创建一个 :class:`~flask.ctx.RequestContext`:"
 
-#: ../../shell.rst:46
+#: ../../shell.rst:45
 msgid ""
-"Normally you would use the ``with`` statement to make this request object "
-"active, but in the shell it's easier to use the :meth:`~flask.ctx."
-"RequestContext.push` and :meth:`~flask.ctx.RequestContext.pop` methods by "
-"hand:"
+"Normally you would use the ``with`` statement to make this request object"
+" active, but in the shell it's easier to use the "
+":meth:`~flask.ctx.RequestContext.push` and "
+":meth:`~flask.ctx.RequestContext.pop` methods by hand:"
 msgstr ""
-"通常来说你会使用 ``with`` 语句来激活请求对象，不过在 shell 中更方便的做法是"
-"手动调用 :meth:`~flask.ctx.RequestContext.push` 和 :meth:`~flask.ctx."
-"RequestContext.pop` 方法："
+"通常来说你会使用 ``with`` 语句来激活请求对象，不过在 shell 中更方便的做法是手动调用 "
+":meth:`~flask.ctx.RequestContext.push` 和 "
+":meth:`~flask.ctx.RequestContext.pop` 方法："
 
-#: ../../shell.rst:53
+#: ../../shell.rst:52
 msgid ""
-"From that point onwards you can work with the request object until you call "
-"`pop`:"
+"From that point onwards you can work with the request object until you "
+"call `pop`:"
 msgstr "从这时开始，直到调用 `pop` 之前，你可以使用请求对象："
 
-#: ../../shell.rst:59
+#: ../../shell.rst:58
 msgid "Firing Before/After Request"
 msgstr "触发请求前/后的动作"
 
-#: ../../shell.rst:61
+#: ../../shell.rst:60
 msgid ""
-"By just creating a request context, you still don't have run the code that "
-"is normally run before a request.  This might result in your database being "
-"unavailable if you are connecting to the database in a before-request "
-"callback or the current user not being stored on the :data:`~flask.g` "
-"object etc."
+"By just creating a request context, you still don't have run the code "
+"that is normally run before a request.  This might result in your "
+"database being unavailable if you are connecting to the database in a "
+"before-request callback or the current user not being stored on the "
+":data:`~flask.g` object etc."
 msgstr ""
-"仅仅创建请求上下文还不够，你还没有执行请求前的一般会执行的动作。假如在请求前"
-"的钩子中包含了连接数据库的操作，这会导致你的数据库仍不可用，这么做还有可能导"
-"致当前用户没有被存储在 :data:`~flask.g` 中等一系列错误。"
+"仅仅创建请求上下文还不够，你还没有执行请求前的一般会执行的动作。假如在请求前的钩子中包含了连接数据库的操作，这会导致你的数据库仍不可用，这么做还有可能导致当前用户没有被存储在"
+" :data:`~flask.g` 中等一系列错误。"
 
-#: ../../shell.rst:67
+#: ../../shell.rst:66
 msgid ""
-"This however can easily be done yourself.  Just call :meth:`~flask.Flask."
-"preprocess_request`:"
-msgstr ""
-"我们可以很轻松地解决这个问题。只要调用 :meth:`~flask.Flask."
-"preprocess_request` 就可以了："
+"This however can easily be done yourself.  Just call "
+":meth:`~flask.Flask.preprocess_request`:"
+msgstr "我们可以很轻松地解决这个问题。只要调用 :meth:`~flask.Flask.preprocess_request` 就可以了："
 
-#: ../../shell.rst:74
+#: ../../shell.rst:73
 msgid ""
 "Keep in mind that the :meth:`~flask.Flask.preprocess_request` function "
 "might return a response object, in that case just ignore it."
 msgstr ""
-"请记住，:meth:`~flask.Flask.preprocess_request` 函数可能会返回一个响应对象，"
-"但在这种情况下，忽略这个返回值就好了。"
+"请记住，:meth:`~flask.Flask.preprocess_request` "
+"函数可能会返回一个响应对象，但在这种情况下，忽略这个返回值就好了。"
 
-#: ../../shell.rst:77
+#: ../../shell.rst:76
 msgid ""
 "To shutdown a request, you need to trick a bit before the after request "
-"functions (triggered by :meth:`~flask.Flask.process_response`) operate on a "
-"response object:"
+"functions (triggered by :meth:`~flask.Flask.process_response`) operate on"
+" a response object:"
 msgstr ""
-"如果要关闭一个请求，你需要在请求后钩子函数（由 :meth:`~flask.Flask."
-"process_response` 触发）作用于响应对象前将它关闭："
+"如果要关闭一个请求，你需要在请求后钩子函数（由 :meth:`~flask.Flask.process_response` "
+"触发）作用于响应对象前将它关闭："
 
-#: ../../shell.rst:85
+#: ../../shell.rst:84
 msgid ""
 "The functions registered as :meth:`~flask.Flask.teardown_request` are "
 "automatically called when the context is popped.  So this is the perfect "
-"place to automatically tear down resources that were needed by the request "
-"context (such as database connections)."
+"place to automatically tear down resources that were needed by the "
+"request context (such as database connections)."
 msgstr ""
-"注册为 :meth:`~flask.Flask.teardown_request` 的函数会在请求上下文弹出后自动"
-"执行。所以，在这里释放之前由请求上下文申请的资源（比如数据库连接）就相当合适"
-"了。"
+"注册为 :meth:`~flask.Flask.teardown_request` "
+"的函数会在请求上下文弹出后自动执行。所以，在这里释放之前由请求上下文申请的资源（比如数据库连接）就相当合适了。"
 
-#: ../../shell.rst:92
+#: ../../shell.rst:91
 msgid "Further Improving the Shell Experience"
 msgstr "提升 Shell 使用体验"
 
-#: ../../shell.rst:94
+#: ../../shell.rst:93
 msgid ""
-"If you like the idea of experimenting in a shell, create yourself a module "
-"with stuff you want to star import into your interactive session.  There "
-"you could also define some more helper methods for common things such as "
-"initializing the database, dropping tables etc."
+"If you like the idea of experimenting in a shell, create yourself a "
+"module with stuff you want to star import into your interactive session."
+"  There you could also define some more helper methods for common things "
+"such as initializing the database, dropping tables etc."
 msgstr ""
-"如果你喜欢使用 shell 的感觉，你还可以为你自己创建一个包含你想要全部导入内容"
-"的模块。你可以在那里定义一些操纵常见资源的辅助方法，比如初始化数据库，删除表"
-"等等。"
+"如果你喜欢使用 shell "
+"的感觉，你还可以为你自己创建一个包含你想要全部导入内容的模块。你可以在那里定义一些操纵常见资源的辅助方法，比如初始化数据库，删除表等等。"
 
-#: ../../shell.rst:99
+#: ../../shell.rst:98
 msgid "Just put them into a module (like `shelltools`) and import from there:"
 msgstr "你只需将它们放入一个模块（比如 `shelltools`）并将其导入即可："

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 2.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-30 19:27+0000\n"
+"POT-Creation-Date: 2022-06-12 19:17+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: zh_CN <withlihui@gmail.com>\n"
@@ -134,9 +134,9 @@ msgstr ""
 #: flask.app.Flask.handle_user_exception flask.app.Flask.inject_url_defaults
 #: flask.app.Flask.log_exception flask.app.Flask.make_config
 #: flask.app.Flask.make_response flask.app.Flask.open_instance_resource
-#: flask.app.Flask.process_response flask.app.Flask.raise_routing_exception
-#: flask.app.Flask.register_blueprint flask.app.Flask.request_context
-#: flask.app.Flask.run flask.app.Flask.select_jinja_autoescape
+#: flask.app.Flask.process_response flask.app.Flask.register_blueprint
+#: flask.app.Flask.request_context flask.app.Flask.run
+#: flask.app.Flask.select_jinja_autoescape
 #: flask.app.Flask.shell_context_processor flask.app.Flask.should_ignore_error
 #: flask.app.Flask.teardown_appcontext flask.app.Flask.template_filter
 #: flask.app.Flask.template_global flask.app.Flask.template_test
@@ -168,8 +168,8 @@ msgstr ""
 #: flask.cli.FlaskGroup flask.cli.FlaskGroup.main flask.cli.load_dotenv
 #: flask.cli.run_command flask.cli.shell_command flask.config.Config
 #: flask.config.Config.from_envvar flask.config.Config.from_file
-#: flask.config.Config.from_json flask.config.Config.from_mapping
-#: flask.config.Config.from_object flask.config.Config.from_pyfile
+#: flask.config.Config.from_mapping flask.config.Config.from_object
+#: flask.config.Config.from_prefixed_env flask.config.Config.from_pyfile
 #: flask.config.Config.get_namespace flask.ctx.AppContext
 #: flask.ctx.AppContext.pop flask.ctx.RequestContext
 #: flask.ctx.RequestContext.pop flask.ctx._AppCtxGlobals.get
@@ -177,13 +177,13 @@ msgstr ""
 #: flask.ctx.after_this_request flask.ctx.copy_current_request_context
 #: flask.helpers.flash flask.helpers.get_flashed_messages
 #: flask.helpers.get_template_attribute flask.helpers.make_response
-#: flask.helpers.safe_join flask.helpers.send_file
-#: flask.helpers.send_from_directory flask.helpers.stream_with_context
-#: flask.helpers.url_for flask.json.JSONEncoder.default flask.json.dump
-#: flask.json.dumps flask.json.jsonify flask.json.load flask.json.loads
-#: flask.json.tag.JSONTag flask.json.tag.JSONTag.check
-#: flask.json.tag.JSONTag.tag flask.json.tag.JSONTag.to_json
-#: flask.json.tag.JSONTag.to_python flask.json.tag.TaggedJSONSerializer.dumps
+#: flask.helpers.send_file flask.helpers.send_from_directory
+#: flask.helpers.stream_with_context flask.helpers.url_for
+#: flask.json.JSONEncoder.default flask.json.dump flask.json.dumps
+#: flask.json.jsonify flask.json.load flask.json.loads flask.json.tag.JSONTag
+#: flask.json.tag.JSONTag.check flask.json.tag.JSONTag.tag
+#: flask.json.tag.JSONTag.to_json flask.json.tag.JSONTag.to_python
+#: flask.json.tag.TaggedJSONSerializer.dumps
 #: flask.json.tag.TaggedJSONSerializer.loads
 #: flask.json.tag.TaggedJSONSerializer.register
 #: flask.json.tag.TaggedJSONSerializer.tag
@@ -199,7 +199,8 @@ msgstr ""
 #: flask.scaffold.Scaffold.teardown_request
 #: flask.scaffold.Scaffold.url_defaults
 #: flask.scaffold.Scaffold.url_value_preprocessor flask.sessions.NullSession
-#: flask.sessions.SecureCookieSession flask.sessions.SecureCookieSession.get
+#: flask.sessions.NullSession._fail flask.sessions.SecureCookieSession
+#: flask.sessions.SecureCookieSession.get
 #: flask.sessions.SecureCookieSession.setdefault
 #: flask.sessions.SecureCookieSessionInterface.open_session
 #: flask.sessions.SecureCookieSessionInterface.save_session
@@ -335,9 +336,8 @@ msgstr ""
 #: flask.app.Flask.make_default_options_response flask.app.Flask.make_response
 #: flask.app.Flask.make_shell_context flask.app.Flask.open_instance_resource
 #: flask.app.Flask.preprocess_request flask.app.Flask.process_response
-#: flask.app.Flask.raise_routing_exception flask.app.Flask.register_blueprint
-#: flask.app.Flask.request_context flask.app.Flask.run
-#: flask.app.Flask.select_jinja_autoescape
+#: flask.app.Flask.register_blueprint flask.app.Flask.request_context
+#: flask.app.Flask.run flask.app.Flask.select_jinja_autoescape
 #: flask.app.Flask.shell_context_processor flask.app.Flask.should_ignore_error
 #: flask.app.Flask.teardown_appcontext flask.app.Flask.template_filter
 #: flask.app.Flask.template_global flask.app.Flask.template_test
@@ -368,8 +368,8 @@ msgstr ""
 #: flask.blueprints.BlueprintSetupState.add_url_rule flask.cli.AppGroup
 #: flask.cli.run_command flask.cli.shell_command flask.config.Config
 #: flask.config.Config.from_envvar flask.config.Config.from_file
-#: flask.config.Config.from_json flask.config.Config.from_mapping
-#: flask.config.Config.from_object flask.config.Config.from_pyfile
+#: flask.config.Config.from_mapping flask.config.Config.from_object
+#: flask.config.Config.from_prefixed_env flask.config.Config.from_pyfile
 #: flask.config.Config.get_namespace flask.ctx.AppContext
 #: flask.ctx.AppContext.pop flask.ctx.AppContext.push flask.ctx.RequestContext
 #: flask.ctx.RequestContext.copy flask.ctx.RequestContext.match_request
@@ -379,13 +379,13 @@ msgstr ""
 #: flask.ctx.copy_current_request_context flask.ctx.has_app_context
 #: flask.ctx.has_request_context flask.helpers.flash
 #: flask.helpers.get_flashed_messages flask.helpers.get_template_attribute
-#: flask.helpers.make_response flask.helpers.safe_join
-#: flask.helpers.send_from_directory flask.helpers.stream_with_context
-#: flask.helpers.url_for flask.json.JSONEncoder.default flask.json.dump
-#: flask.json.dumps flask.json.jsonify flask.json.load flask.json.loads
-#: flask.json.tag.JSONTag flask.json.tag.JSONTag.check
-#: flask.json.tag.JSONTag.tag flask.json.tag.JSONTag.to_json
-#: flask.json.tag.JSONTag.to_python flask.json.tag.TaggedJSONSerializer
+#: flask.helpers.make_response flask.helpers.send_from_directory
+#: flask.helpers.stream_with_context flask.helpers.url_for
+#: flask.json.JSONEncoder.default flask.json.dump flask.json.dumps
+#: flask.json.jsonify flask.json.load flask.json.loads flask.json.tag.JSONTag
+#: flask.json.tag.JSONTag.check flask.json.tag.JSONTag.tag
+#: flask.json.tag.JSONTag.to_json flask.json.tag.JSONTag.to_python
+#: flask.json.tag.TaggedJSONSerializer
 #: flask.json.tag.TaggedJSONSerializer.dumps
 #: flask.json.tag.TaggedJSONSerializer.loads
 #: flask.json.tag.TaggedJSONSerializer.register
@@ -402,7 +402,8 @@ msgstr ""
 #: flask.scaffold.Scaffold.teardown_request
 #: flask.scaffold.Scaffold.url_defaults
 #: flask.scaffold.Scaffold.url_value_preprocessor flask.sessions.NullSession
-#: flask.sessions.SecureCookieSession flask.sessions.SecureCookieSession.get
+#: flask.sessions.NullSession._fail flask.sessions.SecureCookieSession
+#: flask.sessions.SecureCookieSession.get
 #: flask.sessions.SecureCookieSession.setdefault
 #: flask.sessions.SecureCookieSessionInterface.open_session
 #: flask.sessions.SecureCookieSessionInterface.save_session
@@ -956,7 +957,7 @@ msgid ""
 "will be logged and otherwise ignored."
 msgstr ""
 
-#: flask.app.Flask.finalize_request flask.app.Flask.raise_routing_exception
+#: flask.app.Flask.finalize_request
 #: flask.app.Flask.try_trigger_before_first_request_functions of
 msgid "internal"
 msgstr ""
@@ -1048,7 +1049,7 @@ msgstr ""
 
 #: flask.app.Flask.handle_http_exception:10 of
 msgid ""
-"Exceptions are looked up by code *and* by MRO, so ``HTTPExcpetion`` "
+"Exceptions are looked up by code *and* by MRO, so ``HTTPException`` "
 "subclasses can be handled with a catch-all handler for the base "
 "``HTTPException``."
 msgstr ""
@@ -1398,9 +1399,9 @@ msgid "a :attr:`response_class` object."
 msgstr ""
 
 #: ../../docstring flask.app.Flask.process_response flask.cli.load_dotenv
-#: flask.config.Config.from_envvar flask.helpers.safe_join
-#: flask.testing.FlaskCliRunner.invoke markupsafe._speedups.escape of
-#: werkzeug.wrappers.request.Request.application
+#: flask.config.Config.from_envvar flask.config.Config.from_file
+#: flask.config.Config.from_pyfile flask.testing.FlaskCliRunner.invoke
+#: markupsafe._speedups.escape of werkzeug.wrappers.request.Request.application
 #: werkzeug.wrappers.request.Request.from_values
 #: werkzeug.wrappers.response.Response.force_type
 #: werkzeug.wrappers.response.Response.from_app
@@ -1424,14 +1425,6 @@ msgstr ""
 
 #: flask.scaffold.Scaffold.put:1 of
 msgid "Shortcut for :meth:`route` with ``methods=[\"PUT\"]``."
-msgstr ""
-
-#: flask.app.Flask.raise_routing_exception:1 of
-msgid ""
-"Exceptions that are recording during routing are reraised with this "
-"method.  During debug we are not reraising redirect requests for non "
-"``GET``, ``HEAD``, or ``OPTIONS`` requests and we're raising a different "
-"error instead to help debug situations."
 msgstr ""
 
 #: flask.app.Flask.register_blueprint:1 of
@@ -1783,9 +1776,9 @@ msgstr ""
 
 #: flask.scaffold.Scaffold.teardown_request:18 of
 msgid ""
-"Teardown functions must avoid raising exceptions, since they . If they "
-"execute code that might fail they will have to surround the execution of "
-"these code by try/except statements and log occurring errors."
+"Teardown functions must avoid raising exceptions. If they execute code "
+"that might fail they will have to surround the execution of that code "
+"with try/except statements and log any errors."
 msgstr ""
 
 #: flask.scaffold.Scaffold.teardown_request:23 of
@@ -1951,7 +1944,9 @@ msgid "added support for ``with`` block usage for the client."
 msgstr ""
 
 #: ../../docstring flask.Flask.test_client_class:1 of
-msgid "the test client that is used with when `test_client` is used."
+msgid ""
+"The :meth:`test_client` method creates an instance of this test client "
+"class. Defaults to :class:`~flask.testing.FlaskClient`."
 msgstr ""
 
 #: flask.app.Flask.test_request_context:1 of
@@ -2821,7 +2816,7 @@ msgstr ""
 #: werkzeug.wrappers.response.Response.get_json:3
 msgid ""
 "If the mimetype does not indicate JSON (:mimetype:`application/json`, see"
-" :meth:`is_json`), this returns ``None``."
+" :attr:`is_json`), this returns ``None``."
 msgstr ""
 
 #: of werkzeug.wrappers.request.Request.get_json:7
@@ -2928,7 +2923,7 @@ msgstr ""
 #: flask.Request.json:1 flask.Response.json:1 of
 msgid ""
 "The parsed JSON data if :attr:`mimetype` indicates JSON "
-"(:mimetype:`application/json`, see :meth:`is_json`)."
+"(:mimetype:`application/json`, see :attr:`is_json`)."
 msgstr ""
 
 #: flask.Request.json:4 flask.Response.json:4 of
@@ -3339,13 +3334,27 @@ msgid ""
 "the header is not set."
 msgstr ""
 
-#: ../../docstring flask.Response.content_security_policy:1 of
+#: flask.Response.content_security_policy:1 of
+msgid ""
+"The ``Content-Security-Policy`` header as a "
+":class:`~werkzeug.datastructures.ContentSecurityPolicy` object. Available"
+" even if the header is not set."
+msgstr ""
+
+#: flask.Response.content_security_policy:5 of
 msgid ""
 "The Content-Security-Policy header adds an additional layer of security "
 "to help detect and mitigate certain types of attacks."
 msgstr ""
 
-#: ../../docstring flask.Response.content_security_policy_report_only:1 of
+#: flask.Response.content_security_policy_report_only:1 of
+msgid ""
+"The ``Content-Security-policy-report-only`` header as a "
+":class:`~werkzeug.datastructures.ContentSecurityPolicy` object. Available"
+" even if the header is not set."
+msgstr ""
+
+#: flask.Response.content_security_policy_report_only:5 of
 msgid ""
 "The Content-Security-Policy-Report-Only header adds a csp policy that is "
 "not enforced but is reported thereby helping detect certain types of "
@@ -3929,6 +3938,16 @@ msgid ""
 "to assign :attr:`flask.Flask.session_interface`::"
 msgstr ""
 
+#: flask.sessions.SessionInterface:27 of
+msgid ""
+"Multiple requests with the same session may be sent and handled "
+"concurrently. When implementing a new session interface, consider whether"
+" reads or writes to the backing store must be synchronized. There is no "
+"guarantee on the order in which the session for each request is opened or"
+" saved, it will occur in the order that requests begin and end "
+"processing."
+msgstr ""
+
 #: flask.sessions.SessionInterface.get_cookie_domain:1 of
 msgid "Returns the domain that should be set for the session cookie."
 msgstr ""
@@ -4024,10 +4043,23 @@ msgstr ""
 #: flask.sessions.SecureCookieSessionInterface.open_session:1
 #: flask.sessions.SessionInterface.open_session:1 of
 msgid ""
-"This method has to be implemented and must either return ``None`` in case"
-" the loading failed because of a configuration error or an instance of a "
-"session object which implements a dictionary like interface + the methods"
-" and attributes on :class:`SessionMixin`."
+"This is called at the beginning of each request, after pushing the "
+"request context, before matching the URL."
+msgstr ""
+
+#: flask.sessions.SecureCookieSessionInterface.open_session:4
+#: flask.sessions.SessionInterface.open_session:4 of
+msgid ""
+"This must return an object which implements a dictionary-like interface "
+"as well as the :class:`SessionMixin` interface."
+msgstr ""
+
+#: flask.sessions.SecureCookieSessionInterface.open_session:7
+#: flask.sessions.SessionInterface.open_session:7 of
+msgid ""
+"This will return ``None`` to indicate that loading failed in some way "
+"that is not immediately an error. The request context will fall back to "
+"using :meth:`make_null_session` in this case."
 msgstr ""
 
 #: ../../docstring flask.sessions.SessionInterface.pickle_based:1 of
@@ -4040,9 +4072,9 @@ msgstr ""
 #: flask.sessions.SecureCookieSessionInterface.save_session:1
 #: flask.sessions.SessionInterface.save_session:1 of
 msgid ""
-"This is called for actual sessions returned by :meth:`open_session` at "
-"the end of the request.  This is still called during a request context so"
-" if you absolutely need access to the request you can do that."
+"This is called at the end of each request, after generating a response, "
+"before removing the request context. It is skipped if "
+":meth:`is_null_session` returns ``True``."
 msgstr ""
 
 #: flask.sessions.SessionInterface.should_set_cookie:1 of
@@ -4105,7 +4137,7 @@ msgid ""
 "different users."
 msgstr ""
 
-#: flask.sessions.SecureCookieSession.get:1
+#: flask.sessions.NullSession._fail:3 flask.sessions.SecureCookieSession.get:1
 #: flask.sessions.SecureCookieSession.setdefault:3 of
 msgid "Return the value for key if key is in the dictionary, else default."
 msgstr ""
@@ -4119,6 +4151,7 @@ msgid ""
 "response if this is ``True``."
 msgstr ""
 
+#: flask.sessions.NullSession._fail:1
 #: flask.sessions.SecureCookieSession.setdefault:1 of
 msgid "Insert key with a value of default if key is not in the dictionary."
 msgstr ""
@@ -4128,6 +4161,27 @@ msgid ""
 "Class used to generate nicer error messages if sessions are not "
 "available.  Will still allow read-only access to the empty session but "
 "fail on setting."
+msgstr ""
+
+#: flask.sessions.NullSession._fail:1 of
+msgid "If key is not found, d is returned if given, otherwise KeyError is raised"
+msgstr ""
+
+#: flask.sessions.NullSession._fail:1 of
+msgid "Remove and return a (key, value) pair as a 2-tuple."
+msgstr ""
+
+#: flask.sessions.NullSession._fail:3 of
+msgid ""
+"Pairs are returned in LIFO (last-in, first-out) order. Raises KeyError if"
+" the dict is empty."
+msgstr ""
+
+#: flask.sessions.NullSession._fail:1 of
+msgid ""
+"If E is present and has a .keys() method, then does:  for k in E: D[k] = "
+"E[k] If E is present and lacks a .keys() method, then does:  for k, v in "
+"E: D[k] = v In either case, this is followed by: for k in F:  D[k] = F[k]"
 msgstr ""
 
 #: flask.sessions.SessionMixin:1 of
@@ -4314,9 +4368,9 @@ msgstr ""
 
 #: ../../api.rst:171
 msgid ""
-"This is a good place to store resources during a request. During testing,"
-" you can use the :ref:`faking-resources` pattern to pre-configure such "
-"resources."
+"This is a good place to store resources during a request. For example, a "
+"``before_request`` function could load a user object from a session id, "
+"then set ``g.user`` to be used in the view function."
 msgstr ""
 
 #: ../../api.rst:175 ../../api.rst:199
@@ -4828,24 +4882,6 @@ msgstr ""
 msgid "``path`` replaces the ``filename`` parameter."
 msgstr ""
 
-#: flask.helpers.safe_join:1 of
-msgid ""
-"Safely join zero or more untrusted path components to a base directory to"
-" avoid escaping the base directory."
-msgstr ""
-
-#: flask.helpers.safe_join:4 of
-msgid "The trusted base directory."
-msgstr ""
-
-#: flask.helpers.safe_join:5 of
-msgid "The untrusted path components relative to the base directory."
-msgstr ""
-
-#: flask.helpers.safe_join:7 of
-msgid "A safe path, otherwise ``None``."
-msgstr ""
-
 #: ../../docstring markupsafe._speedups.escape:1 of
 msgid ""
 "Replace the characters ``&``, ``<``, ``>``, ``'``, and ``\"`` in the "
@@ -5074,7 +5110,11 @@ msgid ""
 "will be formatted to be easier to read."
 msgstr ""
 
-#: flask.json.jsonify:43 of
+#: flask.json.dumps:11 flask.json.jsonify:43 of
+msgid ":class:`decimal.Decimal` is supported by converting to a string."
+msgstr ""
+
+#: flask.json.jsonify:46 of
 msgid ""
 "Added support for serializing top-level arrays. This introduces a "
 "security risk in ancient browsers. See :ref:`security-json`."
@@ -5102,11 +5142,11 @@ msgstr ""
 msgid "Extra arguments passed to :func:`json.dumps`."
 msgstr ""
 
-#: flask.json.dumps:11 of
+#: flask.json.dumps:14 of
 msgid "``encoding`` is deprecated and will be removed in Flask 2.1."
 msgstr ""
 
-#: flask.json.dumps:14 flask.json.loads:15 of
+#: flask.json.dumps:17 flask.json.loads:15 of
 msgid ""
 "``app`` can be passed directly, rather than requiring an app context for "
 "configuration."
@@ -5484,8 +5524,9 @@ msgstr ""
 msgid "set to ``True`` if you want silent failure for missing files."
 msgstr ""
 
-#: flask.config.Config.from_envvar:10 of
-msgid "bool. ``True`` if able to load config, ``False`` otherwise."
+#: flask.config.Config.from_envvar:10 flask.config.Config.from_file:20
+#: flask.config.Config.from_pyfile:10 of
+msgid "``True`` if the file was loaded successfully."
 msgstr ""
 
 #: flask.config.Config.from_file:1 of
@@ -5495,42 +5536,26 @@ msgid ""
 " method."
 msgstr ""
 
-#: flask.config.Config.from_file:10 of
+#: flask.config.Config.from_file:13 of
 msgid ""
 "The path to the data file. This can be an absolute path or relative to "
 "the config root path."
 msgstr ""
 
-#: flask.config.Config.from_file:12 of
+#: flask.config.Config.from_file:15 of
 msgid ""
 "A callable that takes a file handle and returns a mapping of loaded data "
 "from the file."
 msgstr ""
 
-#: flask.config.Config.from_file:16 flask.config.Config.from_json:6 of
+#: flask.config.Config.from_file:19 of
 msgid "Ignore the file if it doesn't exist."
 msgstr ""
 
-#: flask.config.Config.from_json:1 of
-msgid ""
-"Update the values in the config from a JSON file. The loaded data is "
-"passed to the :meth:`from_mapping` method."
-msgstr ""
-
-#: flask.config.Config.from_json:4 of
-msgid ""
-"The path to the JSON file. This can be an absolute path or relative to "
-"the config root path."
-msgstr ""
-
-#: flask.config.Config.from_json:8 of
-msgid ""
-"Will be removed in Flask 2.1. Use :meth:`from_file` instead. This was "
-"removed early in 2.0.0, was added back in 2.0.1."
-msgstr ""
-
 #: flask.config.Config.from_mapping:1 of
-msgid "Updates the config like :meth:`update` ignoring items with non-upper keys."
+msgid ""
+"Updates the config like :meth:`update` ignoring items with non-upper "
+"keys. :return: Always returns ``True``."
 msgstr ""
 
 #: flask.config.Config.from_object:1 of
@@ -5584,6 +5609,44 @@ msgstr ""
 msgid "an import name or object"
 msgstr ""
 
+#: flask.config.Config.from_prefixed_env:1 of
+msgid ""
+"Load any environment variables that start with ``FLASK_``, dropping the "
+"prefix from the env key for the config key. Values are passed through a "
+"loading function to attempt to convert them to more specific types than "
+"strings."
+msgstr ""
+
+#: flask.config.Config.from_prefixed_env:6 of
+msgid "Keys are loaded in :func:`sorted` order."
+msgstr ""
+
+#: flask.config.Config.from_prefixed_env:8 of
+msgid ""
+"The default loading function attempts to parse values as any valid JSON "
+"type, including dicts and lists."
+msgstr ""
+
+#: flask.config.Config.from_prefixed_env:11 of
+msgid ""
+"Specific items in nested dicts can be set by separating the keys with "
+"double underscores (``__``). If an intermediate key doesn't exist, it "
+"will be initialized to an empty dict."
+msgstr ""
+
+#: flask.config.Config.from_prefixed_env:15 of
+msgid ""
+"Load env vars that start with this prefix, separated with an underscore "
+"(``_``)."
+msgstr ""
+
+#: flask.config.Config.from_prefixed_env:17 of
+msgid ""
+"Pass each string value to this function and use the returned value as the"
+" config value. If any error is raised it is ignored and the value remains"
+" a string. The default is :func:`json.loads`."
+msgstr ""
+
 #: flask.config.Config.from_pyfile:1 of
 msgid ""
 "Updates the values in the config from a Python file.  This function "
@@ -5597,7 +5660,7 @@ msgid ""
 " filename relative to the root path."
 msgstr ""
 
-#: flask.config.Config.from_pyfile:11 of
+#: flask.config.Config.from_pyfile:12 of
 msgid "`silent` parameter."
 msgstr ""
 
@@ -6612,4 +6675,117 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Raises"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Exceptions are looked up by code "
+#~ "*and* by MRO, so ``HTTPExcpetion`` "
+#~ "subclasses can be handled with a "
+#~ "catch-all handler for the base "
+#~ "``HTTPException``."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Exceptions that are recording during "
+#~ "routing are reraised with this method."
+#~ "  During debug we are not reraising"
+#~ " redirect requests for non ``GET``, "
+#~ "``HEAD``, or ``OPTIONS`` requests and "
+#~ "we're raising a different error instead"
+#~ " to help debug situations."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Teardown functions must avoid raising "
+#~ "exceptions, since they . If they "
+#~ "execute code that might fail they "
+#~ "will have to surround the execution "
+#~ "of these code by try/except statements"
+#~ " and log occurring errors."
+#~ msgstr ""
+
+#~ msgid "the test client that is used with when `test_client` is used."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If the mimetype does not indicate "
+#~ "JSON (:mimetype:`application/json`, see "
+#~ ":meth:`is_json`), this returns ``None``."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The parsed JSON data if :attr:`mimetype`"
+#~ " indicates JSON (:mimetype:`application/json`, "
+#~ "see :meth:`is_json`)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This method has to be implemented "
+#~ "and must either return ``None`` in "
+#~ "case the loading failed because of "
+#~ "a configuration error or an instance "
+#~ "of a session object which implements "
+#~ "a dictionary like interface + the "
+#~ "methods and attributes on "
+#~ ":class:`SessionMixin`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This is called for actual sessions "
+#~ "returned by :meth:`open_session` at the "
+#~ "end of the request.  This is still"
+#~ " called during a request context so"
+#~ " if you absolutely need access to "
+#~ "the request you can do that."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This is a good place to store "
+#~ "resources during a request. During "
+#~ "testing, you can use the :ref"
+#~ ":`faking-resources` pattern to pre-"
+#~ "configure such resources."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Safely join zero or more untrusted "
+#~ "path components to a base directory "
+#~ "to avoid escaping the base directory."
+#~ msgstr ""
+
+#~ msgid "The trusted base directory."
+#~ msgstr ""
+
+#~ msgid "The untrusted path components relative to the base directory."
+#~ msgstr ""
+
+#~ msgid "A safe path, otherwise ``None``."
+#~ msgstr ""
+
+#~ msgid "bool. ``True`` if able to load config, ``False`` otherwise."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Update the values in the config "
+#~ "from a JSON file. The loaded data"
+#~ " is passed to the :meth:`from_mapping` "
+#~ "method."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The path to the JSON file. This"
+#~ " can be an absolute path or "
+#~ "relative to the config root path."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Will be removed in Flask 2.1. Use"
+#~ " :meth:`from_file` instead. This was "
+#~ "removed early in 2.0.0, was added "
+#~ "back in 2.0.1."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Updates the config like :meth:`update` "
+#~ "ignoring items with non-upper keys."
 #~ msgstr ""

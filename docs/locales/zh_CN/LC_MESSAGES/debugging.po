@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 2.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-25 19:31+0800\n"
+"POT-Creation-Date: 2022-06-12 19:17+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: zh_CN <withlihui@gmail.com>\n"
@@ -77,27 +77,31 @@ msgid ""
 "and reloader."
 msgstr ""
 
-#: ../../debugging.rst:49 ../../debugging.rst:102
+#: ../../debugging.rst:49 ../../debugging.rst:109
 msgid "Bash"
 msgstr ""
 
-#: ../../debugging.rst:56 ../../debugging.rst:109
+#: ../../debugging.rst:56 ../../debugging.rst:116
+msgid "Fish"
+msgstr ""
+
+#: ../../debugging.rst:63 ../../debugging.rst:123
 msgid "CMD"
 msgstr ""
 
-#: ../../debugging.rst:63 ../../debugging.rst:116
+#: ../../debugging.rst:70 ../../debugging.rst:130
 msgid "Powershell"
 msgstr ""
 
-#: ../../debugging.rst:70
+#: ../../debugging.rst:77
 msgid ""
 "``FLASK_ENV`` can only be set as an environment variable. When running "
 "from Python code, passing ``debug=True`` enables debug mode, which is "
-"mostly equivalent. Debug mode can be controled separately from "
+"mostly equivalent. Debug mode can be controlled separately from "
 "``FLASK_ENV`` with the ``FLASK_DEBUG`` environment variable as well."
 msgstr ""
 
-#: ../../debugging.rst:79
+#: ../../debugging.rst:86
 msgid ""
 ":doc:`/server` and :doc:`/cli` have more information about running the "
 "debugger, debug mode, and development mode. More information about the "
@@ -105,11 +109,11 @@ msgid ""
 "<https://werkzeug.palletsprojects.com/debug/>`__."
 msgstr ""
 
-#: ../../debugging.rst:86
+#: ../../debugging.rst:93
 msgid "External Debuggers"
 msgstr ""
 
-#: ../../debugging.rst:88
+#: ../../debugging.rst:95
 msgid ""
 "External debuggers, such as those provided by IDEs, can offer a more "
 "powerful debugging experience than the built-in debugger. They can also "
@@ -118,22 +122,22 @@ msgid ""
 "code running on another machine."
 msgstr ""
 
-#: ../../debugging.rst:94
+#: ../../debugging.rst:101
 msgid ""
 "When using an external debugger, the app should still be in debug mode, "
 "but it can be useful to disable the built-in debugger and reloader, which"
 " can interfere."
 msgstr ""
 
-#: ../../debugging.rst:98
+#: ../../debugging.rst:105
 msgid "When running from the command line:"
 msgstr ""
 
-#: ../../debugging.rst:123
+#: ../../debugging.rst:137
 msgid "When running from Python:"
 msgstr ""
 
-#: ../../debugging.rst:129
+#: ../../debugging.rst:143
 msgid ""
 "Disabling these isn't required, an external debugger will continue to "
 "work with the following caveats. If the built-in debugger is not "
@@ -141,3 +145,13 @@ msgid ""
 " can. If the reloader is not disabled, it could cause an unexpected "
 "reload if code changes during debugging."
 msgstr ""
+
+#~ msgid ""
+#~ "``FLASK_ENV`` can only be set as "
+#~ "an environment variable. When running "
+#~ "from Python code, passing ``debug=True`` "
+#~ "enables debug mode, which is mostly "
+#~ "equivalent. Debug mode can be controled"
+#~ " separately from ``FLASK_ENV`` with the "
+#~ "``FLASK_DEBUG`` environment variable as well."
+#~ msgstr ""

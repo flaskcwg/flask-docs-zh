@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 2.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-30 19:27+0000\n"
+"POT-Creation-Date: 2022-06-12 19:17+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: zh_CN <withlihui@gmail.com>\n"
@@ -31,21 +31,31 @@ msgid ""
 msgstr ""
 
 #: ../../async-await.rst:21
+msgid ""
+"Pluggable class-based views also support handlers that are implemented as"
+" coroutines. This applies to the "
+":meth:`~flask.views.View.dispatch_request` method in views that inherit "
+"from the :class:`flask.views.View` class, as well as all the HTTP method "
+"handlers in views that inherit from the :class:`flask.views.MethodView` "
+"class."
+msgstr ""
+
+#: ../../async-await.rst:27
 msgid "Using ``async`` on Windows on Python 3.8"
 msgstr ""
 
-#: ../../async-await.rst:23
+#: ../../async-await.rst:29
 msgid ""
 "Python 3.8 has a bug related to asyncio on Windows. If you encounter "
 "something like ``ValueError: set_wakeup_fd only works in main thread``, "
 "please upgrade to Python 3.9."
 msgstr ""
 
-#: ../../async-await.rst:29
+#: ../../async-await.rst:35
 msgid "Performance"
 msgstr ""
 
-#: ../../async-await.rst:31
+#: ../../async-await.rst:37
 msgid ""
 "Async functions require an event loop to run. Flask, as a WSGI "
 "application, uses one worker to handle one request/response cycle. When a"
@@ -53,7 +63,7 @@ msgid ""
 "thread, run the view function there, then return the result."
 msgstr ""
 
-#: ../../async-await.rst:36
+#: ../../async-await.rst:42
 msgid ""
 "Each request still ties up one worker, even for async views. The upside "
 "is that you can run async code within a view, for example to make "
@@ -62,7 +72,7 @@ msgid ""
 "time will remain the same."
 msgstr ""
 
-#: ../../async-await.rst:42
+#: ../../async-await.rst:48
 msgid ""
 "**Async is not inherently faster than sync code.** Async is beneficial "
 "when performing concurrent IO-bound tasks, but will probably not improve "
@@ -71,11 +81,11 @@ msgid ""
 "that wasn't possible natively before."
 msgstr ""
 
-#: ../../async-await.rst:50
+#: ../../async-await.rst:56
 msgid "Background tasks"
 msgstr ""
 
-#: ../../async-await.rst:52
+#: ../../async-await.rst:58
 msgid ""
 "Async functions will run in an event loop until they complete, at which "
 "stage the event loop will stop. This means any additional spawned tasks "
@@ -84,7 +94,7 @@ msgid ""
 "``asyncio.create_task``."
 msgstr ""
 
-#: ../../async-await.rst:58
+#: ../../async-await.rst:64
 msgid ""
 "If you wish to use background tasks it is best to use a task queue to "
 "trigger background work, rather than spawn tasks in a view function. With"
@@ -94,11 +104,11 @@ msgid ""
 "continually."
 msgstr ""
 
-#: ../../async-await.rst:67
+#: ../../async-await.rst:73
 msgid "When to use Quart instead"
 msgstr ""
 
-#: ../../async-await.rst:69
+#: ../../async-await.rst:75
 msgid ""
 "Flask's async support is less performant than async-first frameworks due "
 "to the way it is implemented. If you have a mainly async codebase it "
@@ -108,7 +118,7 @@ msgid ""
 "without requiring multiple worker processes or threads."
 msgstr ""
 
-#: ../../async-await.rst:76
+#: ../../async-await.rst:82
 msgid ""
 "It has also already been possible to run Flask with Gevent or Eventlet to"
 " get many of the benefits of async request handling. These libraries "
@@ -118,11 +128,11 @@ msgid ""
 "to understanding the specific needs of your project."
 msgstr ""
 
-#: ../../async-await.rst:88
+#: ../../async-await.rst:94
 msgid "Extensions"
 msgstr ""
 
-#: ../../async-await.rst:90
+#: ../../async-await.rst:96
 msgid ""
 "Flask extensions predating Flask's async support do not expect async "
 "views. If they provide decorators to add functionality to views, those "
@@ -132,7 +142,7 @@ msgid ""
 "view."
 msgstr ""
 
-#: ../../async-await.rst:96
+#: ../../async-await.rst:102
 msgid ""
 "Extension authors can support async functions by utilising the "
 ":meth:`flask.Flask.ensure_sync` method. For example, if the extension "
@@ -140,17 +150,17 @@ msgid ""
 " decorated function,"
 msgstr ""
 
-#: ../../async-await.rst:111
+#: ../../async-await.rst:117
 msgid ""
 "Check the changelog of the extension you want to use to see if they've "
 "implemented async support, or make a feature request or PR to them."
 msgstr ""
 
-#: ../../async-await.rst:116
+#: ../../async-await.rst:122
 msgid "Other event loops"
 msgstr ""
 
-#: ../../async-await.rst:118
+#: ../../async-await.rst:124
 msgid ""
 "At the moment Flask only supports :mod:`asyncio`. It's possible to "
 "override :meth:`flask.Flask.ensure_sync` to change how async functions "

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 2.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-25 19:31+0800\n"
+"POT-Creation-Date: 2022-06-12 19:17+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: zh_CN <withlihui@gmail.com>\n"
@@ -46,7 +46,7 @@ msgid ""
 "most likely break)"
 msgstr ""
 
-#: ../../patterns/packages.rst:29 ../../patterns/packages.rst:139
+#: ../../patterns/packages.rst:29 ../../patterns/packages.rst:151
 msgid "You should then end up with something like that::"
 msgstr ""
 
@@ -65,46 +65,50 @@ msgid ""
 "variable that tells Flask where to find the application instance:"
 msgstr ""
 
-#: ../../patterns/packages.rst:64 ../../patterns/packages.rst:88
+#: ../../patterns/packages.rst:64 ../../patterns/packages.rst:94
 msgid "Bash"
 msgstr ""
 
-#: ../../patterns/packages.rst:70 ../../patterns/packages.rst:94
+#: ../../patterns/packages.rst:70 ../../patterns/packages.rst:100
+msgid "Fish"
+msgstr ""
+
+#: ../../patterns/packages.rst:76 ../../patterns/packages.rst:106
 msgid "CMD"
 msgstr ""
 
-#: ../../patterns/packages.rst:76 ../../patterns/packages.rst:100
+#: ../../patterns/packages.rst:82 ../../patterns/packages.rst:112
 msgid "Powershell"
 msgstr ""
 
-#: ../../patterns/packages.rst:82
+#: ../../patterns/packages.rst:88
 msgid ""
 "If you are outside of the project directory make sure to provide the "
 "exact path to your application directory. Similarly you can turn on the "
 "development features like this:"
 msgstr ""
 
-#: ../../patterns/packages.rst:106
+#: ../../patterns/packages.rst:118
 msgid ""
 "In order to install and run the application you need to issue the "
 "following commands::"
 msgstr ""
 
-#: ../../patterns/packages.rst:112
+#: ../../patterns/packages.rst:124
 msgid ""
 "What did we gain from this?  Now we can restructure the application a bit"
 " into multiple modules.  The only thing you have to remember is the "
 "following quick checklist:"
 msgstr ""
 
-#: ../../patterns/packages.rst:116
+#: ../../patterns/packages.rst:128
 msgid ""
 "the `Flask` application object creation has to be in the "
 ":file:`__init__.py` file.  That way each module can import it safely and "
 "the `__name__` variable will resolve to the correct package."
 msgstr ""
 
-#: ../../patterns/packages.rst:119
+#: ../../patterns/packages.rst:131
 msgid ""
 "all the view functions (the ones with a :meth:`~flask.Flask.route` "
 "decorator on top) have to be imported in the :file:`__init__.py` file. "
@@ -112,19 +116,19 @@ msgid ""
 "**after the application object is created**."
 msgstr ""
 
-#: ../../patterns/packages.rst:124
+#: ../../patterns/packages.rst:136
 msgid "Here's an example :file:`__init__.py`::"
 msgstr ""
 
-#: ../../patterns/packages.rst:131
+#: ../../patterns/packages.rst:143
 msgid "And this is what :file:`views.py` would look like::"
 msgstr ""
 
-#: ../../patterns/packages.rst:154
+#: ../../patterns/packages.rst:166
 msgid "Circular Imports"
 msgstr ""
 
-#: ../../patterns/packages.rst:156
+#: ../../patterns/packages.rst:168
 msgid ""
 "Every Python programmer hates them, and yet we just added some: circular "
 "imports (That's when two modules depend on each other.  In this case "
@@ -135,18 +139,18 @@ msgid ""
 "bottom of the file."
 msgstr ""
 
-#: ../../patterns/packages.rst:164
+#: ../../patterns/packages.rst:176
 msgid ""
 "There are still some problems with that approach but if you want to use "
 "decorators there is no way around that.  Check out the "
 ":doc:`/becomingbig` section for some inspiration how to deal with that."
 msgstr ""
 
-#: ../../patterns/packages.rst:170
+#: ../../patterns/packages.rst:182
 msgid "Working with Blueprints"
 msgstr ""
 
-#: ../../patterns/packages.rst:172
+#: ../../patterns/packages.rst:184
 msgid ""
 "If you have larger applications it's recommended to divide them into "
 "smaller groups where each group is implemented with the help of a "
