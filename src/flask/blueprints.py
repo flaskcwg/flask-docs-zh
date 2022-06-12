@@ -1,3 +1,4 @@
+import os
 import typing as t
 from collections import defaultdict
 from functools import update_wrapper
@@ -8,7 +9,6 @@ from .scaffold import Scaffold
 from .typing import AfterRequestCallable
 from .typing import BeforeFirstRequestCallable
 from .typing import BeforeRequestCallable
-from .typing import ErrorHandlerCallable
 from .typing import TeardownCallable
 from .typing import TemplateContextProcessorCallable
 from .typing import TemplateFilterCallable
@@ -19,6 +19,7 @@ from .typing import URLValuePreprocessorCallable
 
 if t.TYPE_CHECKING:
     from .app import Flask
+    from .typing import ErrorHandlerCallable
 
 DeferredSetupFunction = t.Callable[["BlueprintSetupState"], t.Callable]
 
@@ -152,6 +153,8 @@ class Blueprint(Scaffold):
         this based on ``import_name``. In certain situations this
         automatic detection can fail, so the path can be specified
         manually instead.
+    :param cli_group: The name of the blueprint's CLI group. If not set,
+        the blueprint name will be used.
 
     .. versionchanged:: 1.1.0
         Blueprints have a ``cli`` group to register nested CLI commands.
@@ -175,7 +178,7 @@ class Blueprint(Scaffold):
         self,
         name: str,
         import_name: str,
-        static_folder: t.Optional[str] = None,
+        static_folder: t.Optional[t.Union[str, os.PathLike]] = None,
         static_url_path: t.Optional[str] = None,
         template_folder: t.Optional[str] = None,
         url_prefix: t.Optional[str] = None,
@@ -293,7 +296,6 @@ class Blueprint(Scaffold):
             Registering the same blueprint with the same name multiple
             times is deprecated and will become an error in Flask 2.1.
         """
-        first_registration = not any(bp is self for bp in app.blueprints.values())
         name_prefix = options.get("name_prefix", "")
         self_name = options.get("name", self.name)
         name = f"{name_prefix}.{self_name}".lstrip(".")
@@ -318,9 +320,12 @@ class Blueprint(Scaffold):
                     stacklevel=4,
                 )
 
+        first_bp_registration = not any(bp is self for bp in app.blueprints.values())
+        first_name_registration = name not in app.blueprints
+
         app.blueprints[name] = self
         self._got_registered_once = True
-        state = self.make_setup_state(app, options, first_registration)
+        state = self.make_setup_state(app, options, first_bp_registration)
 
         if self.has_static_folder:
             state.add_url_rule(
@@ -330,7 +335,7 @@ class Blueprint(Scaffold):
             )
 
         # Merge blueprint data into parent.
-        if first_registration:
+        if first_bp_registration or first_name_registration:
 
             def extend(bp_dict, parent_dict):
                 for key, values in bp_dict.items():
@@ -581,7 +586,9 @@ class Blueprint(Scaffold):
         handler is used for all requests, even if outside of the blueprint.
         """
 
-        def decorator(f: ErrorHandlerCallable) -> ErrorHandlerCallable:
+        def decorator(
+            f: "ErrorHandlerCallable[Exception]",
+        ) -> "ErrorHandlerCallable[Exception]":
             self.record_once(lambda s: s.app.errorhandler(code)(f))
             return f
 

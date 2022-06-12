@@ -38,7 +38,7 @@ method::
 
     app.config.update(
         TESTING=True,
-        SECRET_KEY=b'_5#y2L"F4Q8z\n\xec]/'
+        SECRET_KEY='192b9bdd22ab9ed4d12e236c78afcb9a393ec15f71bbf5dc987d54727823bcbf'
     )
 
 
@@ -74,6 +74,13 @@ set :envvar:`FLASK_ENV`:
       .. code-block:: text
 
          $ export FLASK_ENV=development
+         $ flask run
+
+   .. group-tab:: Fish
+
+      .. code-block:: text
+
+         $ set -x FLASK_ENV development
          $ flask run
 
    .. group-tab:: CMD
@@ -180,8 +187,8 @@ The following configuration values are used internally by Flask:
     application. It should be a long random ``bytes`` or ``str``. For
     example, copy the output of this to your config::
 
-        $ python -c 'import os; print(os.urandom(16))'
-        b'_5#y2L"F4Q8z\n\xec]/'
+        $ python -c 'import secrets; print(secrets.token_hex())'
+        '192b9bdd22ab9ed4d12e236c78afcb9a393ec15f71bbf5dc987d54727823bcbf'
 
     **Do not reveal the secret key when posting questions or committing code.**
 
@@ -445,6 +452,14 @@ in the shell before starting the server:
          $ flask run
           * Running on http://127.0.0.1:5000/
 
+   .. group-tab:: Fish
+
+      .. code-block:: text
+
+         $ set -x YOURAPPLICATION_SETTINGS /path/to/settings.cfg
+         $ flask run
+          * Running on http://127.0.0.1:5000/
+
    .. group-tab:: CMD
 
       .. code-block:: text
@@ -468,7 +483,7 @@ sure to use uppercase letters for your config keys.
 Here is an example of a configuration file::
 
     # Example configuration
-    SECRET_KEY = b'_5#y2L"F4Q8z\n\xec]/'
+    SECRET_KEY = '192b9bdd22ab9ed4d12e236c78afcb9a393ec15f71bbf5dc987d54727823bcbf'
 
 Make sure to load the configuration very early on, so that extensions have
 the ability to access the configuration when starting up.  There are other
@@ -514,6 +529,15 @@ Environment variables can be set in the shell before starting the server:
 
          $ export SECRET_KEY="5f352379324c22463451387a0aec5d2f"
          $ export MAIL_ENABLED=false
+         $ flask run
+          * Running on http://127.0.0.1:5000/
+
+   .. group-tab:: Fish
+
+      .. code-block:: text
+
+         $ set -x SECRET_KEY "5f352379324c22463451387a0aec5d2f"
+         $ set -x MAIL_ENABLED false
          $ flask run
           * Running on http://127.0.0.1:5000/
 

@@ -53,6 +53,13 @@ enables the debugger and reloader.
          $ export FLASK_ENV=development
          $ flask run
 
+   .. group-tab:: Fish
+
+      .. code-block:: text
+
+         $ set -x FLASK_ENV development
+         $ flask run
+
    .. group-tab:: CMD
 
       .. code-block:: text
@@ -69,7 +76,7 @@ enables the debugger and reloader.
 
 ``FLASK_ENV`` can only be set as an environment variable. When running
 from Python code, passing ``debug=True`` enables debug mode, which is
-mostly equivalent. Debug mode can be controled separately from
+mostly equivalent. Debug mode can be controlled separately from
 ``FLASK_ENV`` with the ``FLASK_DEBUG`` environment variable as well.
 
 .. code-block:: python
@@ -104,6 +111,13 @@ When running from the command line:
       .. code-block:: text
 
          $ export FLASK_ENV=development
+         $ flask run --no-debugger --no-reload
+
+   .. group-tab:: Fish
+
+      .. code-block:: text
+
+         $ set -x FLASK_ENV development
          $ flask run --no-debugger --no-reload
 
    .. group-tab:: CMD

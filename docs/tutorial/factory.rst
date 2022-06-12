@@ -145,6 +145,14 @@ follow the tutorial.
          $ export FLASK_ENV=development
          $ flask run
 
+   .. group-tab:: Fish
+
+      .. code-block:: text
+
+         $ set -x FLASK_APP flaskr
+         $ set -x FLASK_ENV development
+         $ flask run
+
    .. group-tab:: CMD
 
       .. code-block:: text
@@ -176,5 +184,10 @@ You'll see output similar to this:
 Visit http://127.0.0.1:5000/hello in a browser and you should see the
 "Hello, World!" message. Congratulations, you're now running your Flask
 web application!
+
+If another program is already using port 5000, you'll see
+``OSError: [Errno 98]`` or ``OSError: [WinError 10013]`` when the
+server tries to start. See :ref:`address-already-in-use` for how to
+handle that.
 
 Continue to :doc:`database`.
