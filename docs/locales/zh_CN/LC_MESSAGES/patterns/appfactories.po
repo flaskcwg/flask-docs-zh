@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 2.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-25 19:31+0800\n"
+"POT-Creation-Date: 2022-06-12 19:17+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: zh_CN <withlihui@gmail.com>\n"
@@ -115,55 +115,59 @@ msgstr ""
 msgid "To run such an application, you can use the :command:`flask` command:"
 msgstr ""
 
-#: ../../patterns/appfactories.rst:94 ../../patterns/appfactories.rst:120
+#: ../../patterns/appfactories.rst:94 ../../patterns/appfactories.rst:127
 msgid "Bash"
 msgstr ""
 
-#: ../../patterns/appfactories.rst:101 ../../patterns/appfactories.rst:127
+#: ../../patterns/appfactories.rst:101 ../../patterns/appfactories.rst:134
+msgid "Fish"
+msgstr ""
+
+#: ../../patterns/appfactories.rst:108 ../../patterns/appfactories.rst:141
 msgid "CMD"
 msgstr ""
 
-#: ../../patterns/appfactories.rst:108 ../../patterns/appfactories.rst:134
+#: ../../patterns/appfactories.rst:115 ../../patterns/appfactories.rst:148
 msgid "Powershell"
 msgstr ""
 
-#: ../../patterns/appfactories.rst:115
+#: ../../patterns/appfactories.rst:122
 msgid ""
 "Flask will automatically detect the factory (``create_app`` or "
 "``make_app``) in ``myapp``. You can also pass arguments to the factory "
 "like this:"
 msgstr ""
 
-#: ../../patterns/appfactories.rst:141
+#: ../../patterns/appfactories.rst:155
 msgid ""
 "Then the ``create_app`` factory in ``myapp`` is called with the string "
 "``'dev'`` as the argument. See :doc:`/cli` for more detail."
 msgstr ""
 
-#: ../../patterns/appfactories.rst:145
+#: ../../patterns/appfactories.rst:159
 msgid "Factory Improvements"
 msgstr ""
 
-#: ../../patterns/appfactories.rst:147
+#: ../../patterns/appfactories.rst:161
 msgid ""
 "The factory function above is not very clever, but you can improve it. "
 "The following changes are straightforward to implement:"
 msgstr ""
 
-#: ../../patterns/appfactories.rst:150
+#: ../../patterns/appfactories.rst:164
 msgid ""
 "Make it possible to pass in configuration values for unit tests so that "
 "you don't have to create config files on the filesystem."
 msgstr ""
 
-#: ../../patterns/appfactories.rst:152
+#: ../../patterns/appfactories.rst:166
 msgid ""
 "Call a function from a blueprint when the application is setting up so "
 "that you have a place to modify attributes of the application (like "
 "hooking in before/after request handlers etc.)"
 msgstr ""
 
-#: ../../patterns/appfactories.rst:155
+#: ../../patterns/appfactories.rst:169
 msgid ""
 "Add in WSGI middlewares when the application is being created if "
 "necessary."

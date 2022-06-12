@@ -27,6 +27,13 @@ environment variable is used to specify how to load the application.
          $ export FLASK_APP=hello
          $ flask run
 
+   .. group-tab:: Fish
+
+      .. code-block:: text
+
+         $ set -x FLASK_APP hello
+         $ flask run
+
    .. group-tab:: CMD
 
       .. code-block:: text
@@ -103,6 +110,11 @@ replaces the :meth:`Flask.run` method in most cases. ::
     is provided for convenience, but is not designed to be particularly secure,
     stable, or efficient. See :doc:`/deploying/index` for how to run in production.
 
+If another program is already using port 5000, you'll see
+``OSError: [Errno 98]`` or ``OSError: [WinError 10013]`` when the
+server tries to start. See :ref:`address-already-in-use` for how to
+handle that.
+
 
 Open a Shell
 ------------
@@ -143,6 +155,20 @@ reloader.
       .. code-block:: text
 
          $ export FLASK_ENV=development
+         $ flask run
+          * Serving Flask app "hello"
+          * Environment: development
+          * Debug mode: on
+          * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+          * Restarting with inotify reloader
+          * Debugger is active!
+          * Debugger PIN: 223-456-919
+
+   .. group-tab:: Fish
+
+      .. code-block:: text
+
+         $ set -x FLASK_ENV development
          $ flask run
           * Serving Flask app "hello"
           * Environment: development
@@ -199,6 +225,17 @@ separated with ``:``, or ``;`` on Windows.
           $ flask run --extra-files file1:dirA/file2:dirB/
           # or
           $ export FLASK_RUN_EXTRA_FILES=file1:dirA/file2:dirB/
+          $ flask run
+           * Running on http://127.0.0.1:8000/
+           * Detected change in '/path/to/file1', reloading
+
+   .. group-tab:: Fish
+
+      .. code-block:: text
+
+          $ flask run --extra-files file1:dirA/file2:dirB/
+          # or
+          $ set -x FLASK_RUN_EXTRA_FILES file1 dirA/file2 dirB/
           $ flask run
            * Running on http://127.0.0.1:8000/
            * Detected change in '/path/to/file1', reloading
@@ -283,6 +320,14 @@ command, instead of ``flask run --port 8000``:
          $ flask run
           * Running on http://127.0.0.1:8000/
 
+   .. group-tab:: Fish
+
+      .. code-block:: text
+
+         $ set -x FLASK_RUN_PORT 8000
+         $ flask run
+          * Running on http://127.0.0.1:8000/
+
    .. group-tab:: CMD
 
       .. code-block:: text
@@ -330,6 +375,13 @@ configure as expected.
          $ export FLASK_SKIP_DOTENV=1
          $ flask run
 
+   .. group-tab:: Fish
+
+      .. code-block:: text
+
+         $ set -x FLASK_SKIP_DOTENV 1
+         $ flask run
+
    .. group-tab:: CMD
 
       .. code-block:: text
@@ -359,6 +411,12 @@ script. Activating the virtualenv will set the variables.
       Unix Bash, :file:`venv/bin/activate`::
 
           $ export FLASK_APP=hello
+
+   .. group-tab:: Fish
+
+      Fish, :file:`venv/bin/activate.fish`::
+
+          $ set -x FLASK_APP hello
 
    .. group-tab:: CMD
 

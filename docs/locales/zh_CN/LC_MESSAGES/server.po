@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 2.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-25 19:31+0800\n"
+"POT-Creation-Date: 2022-06-12 19:17+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: zh_CN <withlihui@gmail.com>\n"
@@ -56,14 +56,18 @@ msgid "Bash"
 msgstr ""
 
 #: ../../server.rst:36
-msgid "CMD"
+msgid "Fish"
 msgstr ""
 
 #: ../../server.rst:44
-msgid "Powershell"
+msgid "CMD"
 msgstr ""
 
 #: ../../server.rst:52
+msgid "Powershell"
+msgstr ""
+
+#: ../../server.rst:60
 msgid ""
 "This enables the development environment, including the interactive "
 "debugger and reloader, and then starts the server on "
@@ -72,7 +76,7 @@ msgid ""
 " using the CLI."
 msgstr ""
 
-#: ../../server.rst:60
+#: ../../server.rst:68
 msgid ""
 "Prior to Flask 1.0 the ``FLASK_ENV`` environment variable was not "
 "supported and you needed to enable debug mode by exporting "
@@ -80,11 +84,64 @@ msgid ""
 "should prefer setting the development environment as shown above."
 msgstr ""
 
-#: ../../server.rst:68
+#: ../../server.rst:78
+msgid "Address already in use"
+msgstr ""
+
+#: ../../server.rst:80
+msgid ""
+"If another program is already using port 5000, you'll see an ``OSError`` "
+"when the server tries to start. It may have one of the following "
+"messages:"
+msgstr ""
+
+#: ../../server.rst:84
+msgid "``OSError: [Errno 98] Address already in use``"
+msgstr ""
+
+#: ../../server.rst:85
+msgid ""
+"``OSError: [WinError 10013] An attempt was made to access a socket in a "
+"way forbidden by its access permissions``"
+msgstr ""
+
+#: ../../server.rst:88
+msgid ""
+"Either identify and stop the other program, or use ``flask run --port "
+"5001`` to pick a different port."
+msgstr ""
+
+#: ../../server.rst:91
+msgid ""
+"You can use ``netstat`` or ``lsof`` to identify what process id is using "
+"a port, then use other operating system tools stop that process. The "
+"following example shows that process id 6847 is using port 5000."
+msgstr ""
+
+#: ../../server.rst:97
+msgid "``netstat`` (Linux)"
+msgstr ""
+
+#: ../../server.rst:104
+msgid "``lsof`` (macOS / Linux)"
+msgstr ""
+
+#: ../../server.rst:111
+msgid "``netstat`` (Windows)"
+msgstr ""
+
+#: ../../server.rst:118
+msgid ""
+"macOS Monterey and later automatically starts a service that uses port "
+"5000. To disable the service, go to System Preferences, Sharing, and "
+"disable \"AirPlay Receiver\"."
+msgstr ""
+
+#: ../../server.rst:124
 msgid "Lazy or Eager Loading"
 msgstr ""
 
-#: ../../server.rst:70
+#: ../../server.rst:126
 msgid ""
 "When using the ``flask run`` command with the reloader, the server will "
 "continue to run even if you introduce syntax errors or other "
@@ -93,7 +150,7 @@ msgid ""
 " feature is called \"lazy loading\"."
 msgstr ""
 
-#: ../../server.rst:76
+#: ../../server.rst:132
 msgid ""
 "If a syntax error is already present when calling ``flask run``, it will "
 "fail immediately and show the traceback rather than waiting until the "
@@ -101,18 +158,18 @@ msgid ""
 "while still allowing the server to handle errors on reload."
 msgstr ""
 
-#: ../../server.rst:81
+#: ../../server.rst:137
 msgid ""
 "To override this behavior and always fail immediately, even on reload, "
 "pass the ``--eager-loading`` option. To always keep the server running, "
 "even on the initial call, pass ``--lazy-loading``."
 msgstr ""
 
-#: ../../server.rst:87
+#: ../../server.rst:143
 msgid "In Code"
 msgstr ""
 
-#: ../../server.rst:89
+#: ../../server.rst:145
 msgid ""
 "As an alternative to the ``flask run`` command, the development server "
 "can also be started from Python with the :meth:`Flask.run` method. This "
@@ -121,14 +178,14 @@ msgid ""
 " there are errors when reloading."
 msgstr ""
 
-#: ../../server.rst:95
+#: ../../server.rst:151
 msgid ""
 "``debug=True`` can be passed to enable the debugger and reloader, but the"
 " ``FLASK_ENV=development`` environment variable is still required to "
 "fully enable development mode."
 msgstr ""
 
-#: ../../server.rst:99
+#: ../../server.rst:155
 msgid ""
 "Place the call in a main block, otherwise it will interfere when trying "
 "to import and run the application with a production server later."

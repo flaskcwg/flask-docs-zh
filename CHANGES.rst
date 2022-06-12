@@ -1,23 +1,48 @@
 .. currentmodule:: flask
 
-Version 2.1.0
+Version 2.0.3
 -------------
 
-Unreleased
+Released 2022-02-14
 
--   Update Click dependency to >= 8.0.
+-   The test client's ``as_tuple`` parameter is deprecated and will be
+    removed in Werkzeug 2.1. It is now also deprecated in Flask, to be
+    removed in Flask 2.1, while remaining compatible with both in
+    2.0.x. Use ``response.request.environ`` instead. :pr:`4341`
+-   Fix type annotation for ``errorhandler`` decorator. :issue:`4295`
+-   Revert a change to the CLI that caused it to hide ``ImportError``
+    tracebacks when importing the application. :issue:`4307`
+-   ``app.json_encoder`` and ``json_decoder`` are only passed to
+    ``dumps`` and ``loads`` if they have custom behavior. This improves
+    performance, mainly on PyPy. :issue:`4349`
+-   Clearer error message when ``after_this_request`` is used outside a
+    request context. :issue:`4333`
 
 
 Version 2.0.2
 -------------
 
-Unreleased
+Released 2021-10-04
 
--   Fix type annotation for ``teardown_request``. :issue:`4093`
+-   Fix type annotation for ``teardown_*`` methods. :issue:`4093`
 -   Fix type annotation for ``before_request`` and ``before_app_request``
     decorators. :issue:`4104`
 -   Fixed the issue where typing requires template global
     decorators to accept functions with no arguments. :issue:`4098`
+-   Support View and MethodView instances with async handlers. :issue:`4112`
+-   Enhance typing of ``app.errorhandler`` decorator. :issue:`4095`
+-   Fix registering a blueprint twice with differing names. :issue:`4124`
+-   Fix the type of ``static_folder`` to accept ``pathlib.Path``.
+    :issue:`4150`
+-   ``jsonify`` handles ``decimal.Decimal`` by encoding to ``str``.
+    :issue:`4157`
+-   Correctly handle raising deferred errors in CLI lazy loading.
+    :issue:`4096`
+-   The CLI loader handles ``**kwargs`` in a ``create_app`` function.
+    :issue:`4170`
+-   Fix the order of ``before_request`` and other callbacks that trigger
+    before the view returns. They are called from the app down to the
+    closest nested blueprint. :issue:`4229`
 
 
 Version 2.0.1

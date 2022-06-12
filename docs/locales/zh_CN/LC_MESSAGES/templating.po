@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 2.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-25 19:31+0800\n"
+"POT-Creation-Date: 2022-06-12 19:17+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: zh_CN <withlihui@gmail.com>\n"
@@ -81,7 +81,7 @@ msgid ""
 msgstr ""
 
 #: ../../templating.rst:40
-msgid "The current configuration object (:data:`flask.config`)"
+msgid "The current configuration object (:data:`flask.Flask.config`)"
 msgstr ""
 
 #: ../../templating.rst:44
@@ -271,3 +271,6 @@ msgid ""
 ":`registering-filters`), but this demonstrates how to pass functions in a"
 " context processor."
 msgstr ""
+
+#~ msgid "The current configuration object (:data:`flask.config`)"
+#~ msgstr ""

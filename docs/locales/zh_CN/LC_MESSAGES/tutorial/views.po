@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 2.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-25 19:31+0800\n"
+"POT-Creation-Date: 2022-06-12 19:17+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Grey Li <withlihui@gmail.com>\n"
 "Language-Team: zh_CN <withlihui@gmail.com>\n"
@@ -29,9 +29,8 @@ msgid ""
 "an outgoing response. Flask can also go the other direction and generate "
 "a URL to a view based on its name and arguments."
 msgstr ""
-"视图函数是你编写用来回应发送到应用的请求的代码。Flask 使用模式来匹配传入的请求 URL 到应该"
-"处理它的视图。视图返回的数据会被 Flask 转换为发出的响应。Flask 也可以重定向到其他视图并"
-"根据视图名称和参数生成到某一个视图的 URL。"
+"视图函数是你编写用来回应发送到应用的请求的代码。Flask 使用模式来匹配传入的请求 URL 到应该处理它的视图。视图返回的数据会被 Flask "
+"转换为发出的响应。Flask 也可以重定向到其他视图并根据视图名称和参数生成到某一个视图的 URL。"
 
 #: ../../tutorial/views.rst:14
 msgid "Create a Blueprint"
@@ -44,9 +43,7 @@ msgid ""
 " application, they are registered with a blueprint. Then the blueprint is"
 " registered with the application when it is available in the factory "
 "function."
-msgstr ""
-"蓝图（:class:`Blueprint`）是一种组织一组相关视图和其他代码的方式。视图和其他代码注册到"
-"蓝图，而不是直接注册到应用上。然后，在工厂函数中应用可用时，蓝图会被注册到应用。"
+msgstr "蓝图（:class:`Blueprint`）是一种组织一组相关视图和其他代码的方式。视图和其他代码注册到蓝图，而不是直接注册到应用上。然后，在工厂函数中应用可用时，蓝图会被注册到应用。"
 
 #: ../../tutorial/views.rst:22
 msgid ""
@@ -55,12 +52,12 @@ msgid ""
 "separate module. Since the blog needs to know about authentication, "
 "you'll write the authentication one first."
 msgstr ""
-"Flaskr 将会有两个蓝图，一个用于认证相关的函数，一个用于博客帖子相关的函数。每一个蓝图的代码"
-"将存放在单独的模块中。因为博客需要使用认证功能，所以你要先编写认证蓝图。"
+"Flaskr "
+"将会有两个蓝图，一个用于认证相关的函数，一个用于博客帖子相关的函数。每一个蓝图的代码将存放在单独的模块中。因为博客需要使用认证功能，所以你要先编写认证蓝图。"
 
 #: ../../tutorial/views.rst:27 ../../tutorial/views.rst:79
-#: ../../tutorial/views.rst:171 ../../tutorial/views.rst:218
-#: ../../tutorial/views.rst:247 ../../tutorial/views.rst:263
+#: ../../tutorial/views.rst:170 ../../tutorial/views.rst:222
+#: ../../tutorial/views.rst:251 ../../tutorial/views.rst:267
 msgid "``flaskr/auth.py``"
 msgstr "``flaskr/auth.py``"
 
@@ -71,9 +68,8 @@ msgid ""
 "is passed as the second argument. The ``url_prefix`` will be prepended to"
 " all the URLs associated with the blueprint."
 msgstr ""
-"这会创建一个名为 ``'auth'`` 的 :class:`Blueprint`。和应用对象类似，蓝图需要知道它在"
-"哪里被定义，所以 ``__name__`` 作为第二个参数传入。``url_prefix`` 将会被添加到所有和"
-"这个蓝图相关的 URL 前。"
+"这会创建一个名为 ``'auth'`` 的 :class:`Blueprint`。和应用对象类似，蓝图需要知道它在哪里被定义，所以 "
+"``__name__`` 作为第二个参数传入。``url_prefix`` 将会被添加到所有和这个蓝图相关的 URL 前。"
 
 #: ../../tutorial/views.rst:46
 msgid ""
@@ -105,9 +101,8 @@ msgid ""
 "the form, it will validate their input and either show the form again "
 "with an error message or create the new user and go to the login page."
 msgstr ""
-"当用户访问 URL ``/auth/register`` 时，``register`` 视图会返回 `HTML`_，其中包含"
-"一个让他们填写的表单。当他们提交表单时，它会验证他们的输入，并且要么再次显示表单和"
-"一个错误消息，要么创建新用户并跳转到登录页面。"
+"当用户访问 URL ``/auth/register`` 时，``register`` 视图会返回 "
+"`HTML`_，其中包含一个让他们填写的表单。当他们提交表单时，它会验证他们的输入，并且要么再次显示表单和一个错误消息，要么创建新用户并跳转到登录页面。"
 
 #: ../../tutorial/views.rst:76
 msgid ""
@@ -135,8 +130,8 @@ msgid ""
 "If the user submitted the form, :attr:`request.method <Request.method>` "
 "will be ``'POST'``. In this case, start validating the input."
 msgstr ""
-"如果用户提交了表单，:attr:`request.method <Request.method>` 会是 ``'POST'``。"
-"在这种情况下，视图开始验证输入的数据。"
+"如果用户提交了表单，:attr:`request.method <Request.method>` 会是 "
+"``'POST'``。在这种情况下，视图开始验证输入的数据。"
 
 #: ../../tutorial/views.rst:122
 msgid ""
@@ -144,52 +139,49 @@ msgid ""
 "mapping submitted form keys and values. The user will input their "
 "``username`` and ``password``."
 msgstr ""
-":attr:`request.form <Request.form>` 是一个特殊类型的 :class:`dict`，它映射提交的"
-"表单键到相应的值。用户将会输入他们的 ``username`` 和 ``password``。"
+":attr:`request.form <Request.form>` 是一个特殊类型的 "
+":class:`dict`，它映射提交的表单键到相应的值。用户将会输入他们的 ``username`` 和 ``password``。"
 
 #: ../../tutorial/views.rst:126
 msgid "Validate that ``username`` and ``password`` are not empty."
 msgstr "验证 ``username`` 和 ``password`` 不为空。"
 
 #: ../../tutorial/views.rst:128
-msgid ""
-"Validate that ``username`` is not already registered by querying the "
-"database and checking if a result is returned. :meth:`db.execute "
-"<sqlite3.Connection.execute>` takes a SQL query with ``?`` placeholders "
-"for any user input, and a tuple of values to replace the placeholders "
-"with. The database library will take care of escaping the values so you "
-"are not vulnerable to a *SQL injection attack*."
+msgid "If validation succeeds, insert the new user data into the database."
 msgstr ""
-"通过查询数据库并检查是否有结果返回，验证 ``username`` 是否已经被注册。"
-":meth:`db.execute <sqlite3.Connection.execute>` 接受一个 SQL 查询，其中包含"
-"代表任意用户输入的 ``?`` 占位符，以及一个用来替换占位符的数据元组。数据库相关的库"
-"将负责转义值，使得你不易受到 *SQL 注入攻击*。
+
+#: ../../tutorial/views.rst:130
+#, fuzzy
+msgid ""
+":meth:`db.execute <sqlite3.Connection.execute>` takes a SQL query with "
+"``?`` placeholders for any user input, and a tuple of values to replace "
+"the placeholders with. The database library will take care of escaping "
+"the values so you are not vulnerable to a *SQL injection attack*."
+msgstr ""
+"通过查询数据库并检查是否有结果返回，验证 ``username`` 是否已经被注册。:meth:`db.execute "
+"<sqlite3.Connection.execute>` 接受一个 SQL 查询，其中包含代表任意用户输入的 ``?`` "
+"占位符，以及一个用来替换占位符的数据元组。数据库相关的库将负责转义值，使得你不易受到 *SQL 注入攻击*"
 
 #: ../../tutorial/views.rst:136
+#, fuzzy
 msgid ""
-":meth:`~sqlite3.Cursor.fetchone` returns one row from the query. If the "
-"query returned no results, it returns ``None``. Later, "
-":meth:`~sqlite3.Cursor.fetchall` is used, which returns a list of all "
-"results."
-msgstr ""
-":meth:`~sqlite3.Cursor.fetchone` 从查询返回一行。如果查询没有返回结果，它返回 ``None``。"
-"接着，:meth:`~sqlite3.Cursor.fetchall` 被使用，它返回一个包含所有结果的列表。"
-
-#: ../../tutorial/views.rst:141
-msgid ""
-"If validation succeeds, insert the new user data into the database. For "
-"security, passwords should never be stored in the database directly. "
+"For security, passwords should never be stored in the database directly. "
 "Instead, :func:`~werkzeug.security.generate_password_hash` is used to "
 "securely hash the password, and that hash is stored. Since this query "
 "modifies data, :meth:`db.commit() <sqlite3.Connection.commit>` needs to "
 "be called afterwards to save the changes."
 msgstr ""
-"如果验证成功，插入新的用户数据到数据库。为了安全起见，密码绝对不应该直接存储到数据库中。"
-"相反，:func:`~werkzeug.security.generate_password_hash` 被用来安全地计算出密码散列值，"
-"并存储该散列值。因为这个查询修改了数据，为了保存变动，:meth:`db.commit() <sqlite3.Connection.commit>` "
-"需要在之后被调用。"
+"如果验证成功，插入新的用户数据到数据库。为了安全起见，密码绝对不应该直接存储到数据库中。相反，:func:`~werkzeug.security.generate_password_hash`"
+" 被用来安全地计算出密码散列值，并存储该散列值。因为这个查询修改了数据，为了保存变动，:meth:`db.commit() "
+"<sqlite3.Connection.commit>` 需要在之后被调用。"
 
-#: ../../tutorial/views.rst:149
+#: ../../tutorial/views.rst:144
+msgid ""
+"An :exc:`sqlite3.IntegrityError` will occur if the username already "
+"exists, which should be shown to the user as another validation error."
+msgstr ""
+
+#: ../../tutorial/views.rst:148
 msgid ""
 "After storing the user, they are redirected to the login page. "
 ":func:`url_for` generates the URL for the login view based on its name. "
@@ -197,55 +189,63 @@ msgid ""
 " the URL later without changing all code that links to it. "
 ":func:`redirect` generates a redirect response to the generated URL."
 msgstr ""
-"保存用户后，他们被重定向到登录页面。:func:`url_for` 根据其名称生成到 ``login`` 视图的 URL。"
-"和直接写出来 URL 相比，这是更推荐的做法，因为它允许你以后轻松更改 URL 而不用更新所有链接到它"
-"的代码。:func:`redirect` 生成一个重定向响应到生成的 URL。"
+"保存用户后，他们被重定向到登录页面。:func:`url_for` 根据其名称生成到 ``login`` 视图的 URL。和直接写出来 URL "
+"相比，这是更推荐的做法，因为它允许你以后轻松更改 URL 而不用更新所有链接到它的代码。:func:`redirect` "
+"生成一个重定向响应到生成的 URL。"
 
-#: ../../tutorial/views.rst:156
+#: ../../tutorial/views.rst:155
 msgid ""
 "If validation fails, the error is shown to the user. :func:`flash` stores"
 " messages that can be retrieved when rendering the template."
-msgstr ""
-"如果验证失败，错误会显示给用户。:func:`flash` 会存储消息，这些消息可以在渲染模板时被"
-"获取。"
+msgstr "如果验证失败，错误会显示给用户。:func:`flash` 会存储消息，这些消息可以在渲染模板时被获取。"
 
-#: ../../tutorial/views.rst:159
+#: ../../tutorial/views.rst:158
 msgid ""
 "When the user initially navigates to ``auth/register``, or there was a "
 "validation error, an HTML page with the registration form should be "
 "shown. :func:`render_template` will render a template containing the "
 "HTML, which you'll write in the next step of the tutorial."
 msgstr ""
-"当用户最初导航到 ``auth/register`` 时，或是有验证错误时，应该显示一个带有注册表单的 "
-"HTML 页面。:func:`render_template` 将渲染一个包含该 HTML 页面的模板，你将在教程"
-"的下一章编写相关代码。"
+"当用户最初导航到 ``auth/register`` 时，或是有验证错误时，应该显示一个带有注册表单的 HTML "
+"页面。:func:`render_template` 将渲染一个包含该 HTML 页面的模板，你将在教程的下一章编写相关代码。"
 
-#: ../../tutorial/views.rst:167
+#: ../../tutorial/views.rst:166
 msgid "Login"
 msgstr "登录"
 
-#: ../../tutorial/views.rst:169
+#: ../../tutorial/views.rst:168
 msgid "This view follows the same pattern as the ``register`` view above."
 msgstr "这个视图和上面的 ``register`` 视图遵循相同的模式。"
 
-#: ../../tutorial/views.rst:199
+#: ../../tutorial/views.rst:198
 msgid "There are a few differences from the ``register`` view:"
 msgstr "和 ``register`` 视图有一些区别："
 
-#: ../../tutorial/views.rst:201
+#: ../../tutorial/views.rst:200
 msgid "The user is queried first and stored in a variable for later use."
 msgstr "首先查询用户，并存储到一个变量供后面使用。"
 
-#: ../../tutorial/views.rst:203
+#: ../../tutorial/views.rst:202
+#, fuzzy
+msgid ""
+":meth:`~sqlite3.Cursor.fetchone` returns one row from the query. If the "
+"query returned no results, it returns ``None``. Later, "
+":meth:`~sqlite3.Cursor.fetchall` will be used, which returns a list of "
+"all results."
+msgstr ""
+":meth:`~sqlite3.Cursor.fetchone` 从查询返回一行。如果查询没有返回结果，它返回 "
+"``None``。接着，:meth:`~sqlite3.Cursor.fetchall` 被使用，它返回一个包含所有结果的列表。"
+
+#: ../../tutorial/views.rst:207
 msgid ""
 ":func:`~werkzeug.security.check_password_hash` hashes the submitted "
 "password in the same way as the stored hash and securely compares them. "
 "If they match, the password is valid."
 msgstr ""
-":func:`~werkzeug.security.check_password_hash` 以存储散列值时相同的方式为提交的"
-"密码计算散列值，并对它们进行安全对比。如果匹配，则密码是有效的。"
+":func:`~werkzeug.security.check_password_hash` "
+"以存储散列值时相同的方式为提交的密码计算散列值，并对它们进行安全对比。如果匹配，则密码是有效的。"
 
-#: ../../tutorial/views.rst:207
+#: ../../tutorial/views.rst:211
 msgid ""
 ":data:`session` is a :class:`dict` that stores data across requests. When"
 " validation succeeds, the user's ``id`` is stored in a new session. The "
@@ -253,21 +253,21 @@ msgid ""
 " then sends it back with subsequent requests. Flask securely *signs* the "
 "data so that it can't be tampered with."
 msgstr ""
-":data:`session` 是一个 :class:`dict`，用来存储跨请求的数据。当验证成功，用户的 ``id`` 被"
-"存储到一个新的 session。数据被存储到一个发送给浏览器的 *cookie* 中，然后浏览器会在后续的请求中"
-"把它发送回来。Flask 对数据进行安全 *签名*，使其无法被篡改。"
+":data:`session` 是一个 :class:`dict`，用来存储跨请求的数据。当验证成功，用户的 ``id`` 被存储到一个新的 "
+"session。数据被存储到一个发送给浏览器的 *cookie* 中，然后浏览器会在后续的请求中把它发送回来。Flask 对数据进行安全 "
+"*签名*，使其无法被篡改。"
 
-#: ../../tutorial/views.rst:213
+#: ../../tutorial/views.rst:217
 msgid ""
 "Now that the user's ``id`` is stored in the :data:`session`, it will be "
 "available on subsequent requests. At the beginning of each request, if a "
 "user is logged in their information should be loaded and made available "
 "to other views."
 msgstr ""
-"现在，用户的 ``id`` 被存储到 :data:`session` 中，它将会在后续的请求中可用。在每一个"
-"请求开始时，如果用户已经登录，他们的信息应该被加载并提供给其他视图。"
+"现在，用户的 ``id`` 被存储到 :data:`session` "
+"中，它将会在后续的请求中可用。在每一个请求开始时，如果用户已经登录，他们的信息应该被加载并提供给其他视图。"
 
-#: ../../tutorial/views.rst:232
+#: ../../tutorial/views.rst:236
 msgid ""
 ":meth:`bp.before_app_request() <Blueprint.before_app_request>` registers "
 "a function that runs before the view function, no matter what URL is "
@@ -277,54 +277,48 @@ msgid ""
 "there is no user id, or if the id doesn't exist, ``g.user`` will be "
 "``None``."
 msgstr ""
-":meth:`bp.before_app_request() <Blueprint.before_app_request>` 注册一个函数并"
-"让它在每一个视图函数之前运行，不管请求发到哪一个 URL。``load_logged_in_user`` 检查"
-"用户的 ID 是否存储在 :data:`session` 中，并从数据库中获取对应用户的数据，将其存储到 "
-":data:`g.user <g>` 上——它存在于单个请求的生命周期内。如果没有用户 ID，或是 ID 不存在，"
-"``g.user`` 将是 ``None``。"
+":meth:`bp.before_app_request() <Blueprint.before_app_request>` "
+"注册一个函数并让它在每一个视图函数之前运行，不管请求发到哪一个 URL。``load_logged_in_user`` 检查用户的 ID "
+"是否存储在 :data:`session` 中，并从数据库中获取对应用户的数据，将其存储到 :data:`g.user <g>` "
+"上——它存在于单个请求的生命周期内。如果没有用户 ID，或是 ID 不存在，``g.user`` 将是 ``None``。"
 
-#: ../../tutorial/views.rst:242
+#: ../../tutorial/views.rst:246
 msgid "Logout"
 msgstr "登出"
 
-#: ../../tutorial/views.rst:244
+#: ../../tutorial/views.rst:248
 msgid ""
 "To log out, you need to remove the user id from the :data:`session`. Then"
 " ``load_logged_in_user`` won't load a user on subsequent requests."
 msgstr ""
-"若要登出，你需要从 :data:`session` 中移除用户 ID。这样 ``load_logged_in_user`` 就不会"
-"在后续请求中加载用户。"
+"若要登出，你需要从 :data:`session` 中移除用户 ID。这样 ``load_logged_in_user`` "
+"就不会在后续请求中加载用户。"
 
-#: ../../tutorial/views.rst:257
+#: ../../tutorial/views.rst:261
 msgid "Require Authentication in Other Views"
 msgstr "在其他视图里要求认证"
 
-#: ../../tutorial/views.rst:259
+#: ../../tutorial/views.rst:263
 msgid ""
 "Creating, editing, and deleting blog posts will require a user to be "
 "logged in. A *decorator* can be used to check this for each view it's "
 "applied to."
-msgstr ""
-"创建、编辑和删除博客帖子将需要用户登录才能操作。可以使用一个 *装饰器* 来为每一个使用它的"
-"视图检查登录状态。"
+msgstr "创建、编辑和删除博客帖子将需要用户登录才能操作。可以使用一个 *装饰器* 来为每一个使用它的视图检查登录状态。"
 
-#: ../../tutorial/views.rst:276
+#: ../../tutorial/views.rst:280
 msgid ""
 "This decorator returns a new view function that wraps the original view "
 "it's applied to. The new function checks if a user is loaded and "
 "redirects to the login page otherwise. If a user is loaded the original "
 "view is called and continues normally. You'll use this decorator when "
 "writing the blog views."
-msgstr ""
-"这个装饰器返回一个新的视图函数，它包裹了被装饰的原始视图函数。新的函数会检查是否有用户被加载："
-"如果有用户被加载，则会调用原视图继续正常运行，否则会重定向到登录页面。你会在写博客视图时使用"
-"这个装饰器。"
+msgstr "这个装饰器返回一个新的视图函数，它包裹了被装饰的原始视图函数。新的函数会检查是否有用户被加载：如果有用户被加载，则会调用原视图继续正常运行，否则会重定向到登录页面。你会在写博客视图时使用这个装饰器。"
 
-#: ../../tutorial/views.rst:283
+#: ../../tutorial/views.rst:287
 msgid "Endpoints and URLs"
 msgstr "端点和 URL"
 
-#: ../../tutorial/views.rst:285
+#: ../../tutorial/views.rst:289
 msgid ""
 "The :func:`url_for` function generates the URL to a view based on a name "
 "and arguments. The name associated with a view is also called the "
@@ -334,27 +328,27 @@ msgstr ""
 ":func:`url_for` 函数根据视图名称和参数生成到一个视图的 URL。视图的名称也被叫做 "
 "*端点（endpoint）*，默认情况下，它和视图函数的名称相同。"
 
-#: ../../tutorial/views.rst:290
+#: ../../tutorial/views.rst:294
 msgid ""
 "For example, the ``hello()`` view that was added to the app factory "
 "earlier in the tutorial has the name ``'hello'`` and can be linked to "
 "with ``url_for('hello')``. If it took an argument, which you'll see "
 "later, it would be linked to using ``url_for('hello', who='World')``."
 msgstr ""
-"例如，在教程的前面部分，``hello()`` 视图被添加到应用工厂，这个视图的名称是 ``'hello'``，"
-"可以通过 ``url_for('hello')`` 生成指向它的 URL。如果它接受一个参数（后面你会看到），那"
-"么生成 URL 的方式则会是 ``url_for('hello', who='World')``。"
+"例如，在教程的前面部分，``hello()`` 视图被添加到应用工厂，这个视图的名称是 ``'hello'``，可以通过 "
+"``url_for('hello')`` 生成指向它的 URL。如果它接受一个参数（后面你会看到），那么生成 URL 的方式则会是 "
+"``url_for('hello', who='World')``。"
 
-#: ../../tutorial/views.rst:296
+#: ../../tutorial/views.rst:300
 msgid ""
 "When using a blueprint, the name of the blueprint is prepended to the "
 "name of the function, so the endpoint for the ``login`` function you "
 "wrote above is ``'auth.login'`` because you added it to the ``'auth'`` "
 "blueprint."
 msgstr ""
-"当使用蓝图时，蓝图的名称会被插入到视图函数的名称前，所以你上面写的 ``login`` 函数"
-"的端点是 ``'auth.login'``，因为你把它添加到了 ``'auth'`` 蓝图。"
+"当使用蓝图时，蓝图的名称会被插入到视图函数的名称前，所以你上面写的 ``login`` 函数的端点是 "
+"``'auth.login'``，因为你把它添加到了 ``'auth'`` 蓝图。"
 
-#: ../../tutorial/views.rst:301
+#: ../../tutorial/views.rst:305
 msgid "Continue to :doc:`templates`."
 msgstr "继续阅读 :doc:`templates`。"

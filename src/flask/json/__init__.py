@@ -1,3 +1,4 @@
+import decimal
 import io
 import json as _json
 import typing as t
@@ -47,7 +48,7 @@ class JSONEncoder(_json.JSONEncoder):
         """
         if isinstance(o, date):
             return http_date(o)
-        if isinstance(o, uuid.UUID):
+        if isinstance(o, (decimal.Decimal, uuid.UUID)):
             return str(o)
         if dataclasses and dataclasses.is_dataclass(o):
             return dataclasses.asdict(o)
@@ -80,6 +81,11 @@ def _dump_arg_defaults(
         if bp is not None and bp.json_encoder is not None:
             cls = bp.json_encoder
 
+        # Only set a custom encoder if it has custom behavior. This is
+        # faster on PyPy.
+        if cls is not _json.JSONEncoder:
+            kwargs.setdefault("cls", cls)
+
         kwargs.setdefault("cls", cls)
         kwargs.setdefault("ensure_ascii", app.config["JSON_AS_ASCII"])
         kwargs.setdefault("sort_keys", app.config["JSON_SORT_KEYS"])
@@ -101,9 +107,10 @@ def _load_arg_defaults(
         if bp is not None and bp.json_decoder is not None:
             cls = bp.json_decoder
 
-        kwargs.setdefault("cls", cls)
-    else:
-        kwargs.setdefault("cls", JSONDecoder)
+        # Only set a custom decoder if it has custom behavior. This is
+        # faster on PyPy.
+        if cls not in {JSONDecoder, _json.JSONDecoder}:
+            kwargs.setdefault("cls", cls)
 
 
 def dumps(obj: t.Any, app: t.Optional["Flask"] = None, **kwargs: t.Any) -> str:
@@ -116,6 +123,9 @@ def dumps(obj: t.Any, app: t.Optional["Flask"] = None, **kwargs: t.Any) -> str:
     :param app: Use this app's config instead of the active app context
         or defaults.
     :param kwargs: Extra arguments passed to :func:`json.dumps`.
+
+    .. versionchanged:: 2.0.2
+        :class:`decimal.Decimal` is supported by converting to a string.
 
     .. versionchanged:: 2.0
         ``encoding`` is deprecated and will be removed in Flask 2.1.
@@ -323,6 +333,9 @@ def jsonify(*args: t.Any, **kwargs: t.Any) -> "Response":
     The default output omits indents and spaces after separators. In
     debug mode or if :data:`JSONIFY_PRETTYPRINT_REGULAR` is ``True``,
     the output will be formatted to be easier to read.
+
+    .. versionchanged:: 2.0.2
+        :class:`decimal.Decimal` is supported by converting to a string.
 
     .. versionchanged:: 0.11
         Added support for serializing top-level arrays. This introduces

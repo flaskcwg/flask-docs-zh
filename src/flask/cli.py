@@ -69,15 +69,16 @@ def find_best_app(script_info, module):
 
                 if isinstance(app, Flask):
                     return app
-            except TypeError:
+            except TypeError as e:
                 if not _called_with_wrong_args(app_factory):
                     raise
+
                 raise NoAppException(
                     f"Detected factory {attr_name!r} in module {module.__name__!r},"
                     " but could not call it without arguments. Use"
                     f" \"FLASK_APP='{module.__name__}:{attr_name}(args)'\""
                     " to specify arguments."
-                )
+                ) from e
 
     raise NoAppException(
         "Failed to find Flask application or factory in module"
@@ -103,18 +104,21 @@ def call_factory(script_info, app_factory, args=None, kwargs=None):
         )
         kwargs["script_info"] = script_info
 
-    if (
-        not args
-        and len(sig.parameters) == 1
-        and next(iter(sig.parameters.values())).default is inspect.Parameter.empty
-    ):
-        warnings.warn(
-            "Script info is deprecated and will not be passed as the"
-            " single argument to the app factory function in Flask"
-            " 2.1.",
-            DeprecationWarning,
-        )
-        args.append(script_info)
+    if not args and len(sig.parameters) == 1:
+        first_parameter = next(iter(sig.parameters.values()))
+
+        if (
+            first_parameter.default is inspect.Parameter.empty
+            # **kwargs is reported as an empty default, ignore it
+            and first_parameter.kind is not inspect.Parameter.VAR_KEYWORD
+        ):
+            warnings.warn(
+                "Script info is deprecated and will not be passed as the"
+                " single argument to the app factory function in Flask"
+                " 2.1.",
+                DeprecationWarning,
+            )
+            args.append(script_info)
 
     return app_factory(*args, **kwargs)
 
@@ -158,7 +162,7 @@ def find_app_by_string(script_info, module, app_name):
     except SyntaxError:
         raise NoAppException(
             f"Failed to parse {app_name!r} as an attribute name or function call."
-        )
+        ) from None
 
     if isinstance(expr, ast.Name):
         name = expr.id
@@ -181,7 +185,7 @@ def find_app_by_string(script_info, module, app_name):
             # message with the full expression instead.
             raise NoAppException(
                 f"Failed to parse arguments as literal values: {app_name!r}."
-            )
+            ) from None
     else:
         raise NoAppException(
             f"Failed to parse {app_name!r} as an attribute name or function call."
@@ -189,17 +193,17 @@ def find_app_by_string(script_info, module, app_name):
 
     try:
         attr = getattr(module, name)
-    except AttributeError:
+    except AttributeError as e:
         raise NoAppException(
             f"Failed to find attribute {name!r} in {module.__name__!r}."
-        )
+        ) from e
 
     # If the attribute is a function, call it with any args and kwargs
     # to get the real application.
     if inspect.isfunction(attr):
         try:
             app = call_factory(script_info, attr, args, kwargs)
-        except TypeError:
+        except TypeError as e:
             if not _called_with_wrong_args(attr):
                 raise
 
@@ -207,7 +211,7 @@ def find_app_by_string(script_info, module, app_name):
                 f"The factory {app_name!r} in module"
                 f" {module.__name__!r} could not be called with the"
                 " specified arguments."
-            )
+            ) from e
     else:
         app = attr
 
@@ -261,9 +265,9 @@ def locate_app(script_info, module_name, app_name, raise_if_not_found=True):
             raise NoAppException(
                 f"While importing {module_name!r}, an ImportError was"
                 f" raised:\n\n{traceback.format_exc()}"
-            )
+            ) from None
         elif raise_if_not_found:
-            raise NoAppException(f"Could not import {module_name!r}.")
+            raise NoAppException(f"Could not import {module_name!r}.") from None
         else:
             return
 
@@ -312,7 +316,7 @@ class DispatchingApp:
         self.loader = loader
         self._app = None
         self._lock = Lock()
-        self._bg_loading_exc_info = None
+        self._bg_loading_exc = None
 
         if use_eager_loading is None:
             use_eager_loading = os.environ.get("WERKZEUG_RUN_MAIN") != "true"
@@ -328,23 +332,24 @@ class DispatchingApp:
             with self._lock:
                 try:
                     self._load_unlocked()
-                except Exception:
-                    self._bg_loading_exc_info = sys.exc_info()
+                except Exception as e:
+                    self._bg_loading_exc = e
 
         t = Thread(target=_load_app, args=())
         t.start()
 
     def _flush_bg_loading_exception(self):
         __traceback_hide__ = True  # noqa: F841
-        exc_info = self._bg_loading_exc_info
-        if exc_info is not None:
-            self._bg_loading_exc_info = None
-            raise exc_info
+        exc = self._bg_loading_exc
+
+        if exc is not None:
+            self._bg_loading_exc = None
+            raise exc
 
     def _load_unlocked(self):
         __traceback_hide__ = True  # noqa: F841
         self._app = rv = self.loader()
-        self._bg_loading_exc_info = None
+        self._bg_loading_exc = None
         return rv
 
     def __call__(self, environ, start_response):
@@ -721,7 +726,7 @@ class CertParamType(click.ParamType):
                         "Using ad-hoc certificates requires the cryptography library.",
                         ctx,
                         param,
-                    )
+                    ) from None
 
                 return value
 
