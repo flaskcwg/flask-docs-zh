@@ -52,7 +52,7 @@
 - [x] logging [@FesonX](https://github.com/FesonX) FesonX
 - [ ] quickstart [@greyli](https://github.com/greyli) Grey Li
 - [x] reqcontext [@rosekc](https://github.com/rosekc) rosekc
-- [ ] security [@kylinbin](https://github.com/kylinbin) kylin
+- [x] security [@kylinbin](https://github.com/kylinbin) kylin
 - [ ] server [@LeeRnnGii](https://github.com/LeeRnnGii) LeeRnnGii
 - [x] shell [@LTakamori](https://github.com/LTakamori) LTakamori
 - [ ] signals
