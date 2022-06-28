@@ -28,8 +28,8 @@ msgid ""
 "application and drop the models into a separate module (:doc:`packages`)."
 " While that is not necessary, it makes a lot of sense."
 msgstr ""
-"很多人通过 `SQLAlchemy`_ 来进行数据库的访问。在这种情况下，我们推荐在你的 flask 应用中"
-"使用包（ package ）而不是使用单独使用一整个模块（module）。 "
+"很多人通过 `SQLAlchemy`_ 来访问数据库。在这种情况下，我们推荐在你的 flask 应用中"
+"使用包（package）而不是使用单独使用一整个模块（module）。"
 "然后在你的包中将你的数据库模型分类成相对应的模块 (:doc:`packages`)。"
 "虽然这不是必须的，但是这会让你的代码更加有逻辑。"
 
@@ -38,12 +38,12 @@ msgid ""
 "There are four very common ways to use SQLAlchemy.  I will outline each "
 "of them here:"
 msgstr ""
-"接下来将会介绍四种常用的 SQLAlchemy 使用方式: "
+"接下来将会介绍四种常用的 SQLAlchemy 使用方式："
 
 #: ../../patterns/sqlalchemy.rst:13
 msgid "Flask-SQLAlchemy Extension"
 msgstr ""
-"Flask-SQLAlchemy 插件"
+"Flask-SQLAlchemy 扩展"
 
 #: ../../patterns/sqlalchemy.rst:15
 msgid ""
