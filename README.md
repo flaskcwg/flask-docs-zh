@@ -56,7 +56,7 @@
 - [ ] server [@LeeRnnGii](https://github.com/LeeRnnGii) LeeRnnGii
 - [x] shell [@LTakamori](https://github.com/LTakamori) LTakamori
 - [ ] signals
-- [ ] templating
+- [ ] templating [@lrsgzs](https://github.com/lrsgzs) lrsgzs
 - [ ] testing [@yuxiaoy1](https://github.com/yuxiaoy1) Frank Yu
 - [ ] views [@labike](https://github.com/labike) labike
 
