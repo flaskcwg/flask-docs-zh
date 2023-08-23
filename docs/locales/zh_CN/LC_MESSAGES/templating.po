@@ -49,7 +49,7 @@ msgstr "Jinja 设置"
 
 #: ../../templating.rst:18
 msgid "Unless customized, Jinja2 is configured by Flask as follows:"
-msgstr "除非配置，Jinja2 被 Flask 配置为以下内容"
+msgstr "除非被自定义，Jinja2 被 Flask 配置为以下内容"
 
 #: ../../templating.rst:20
 msgid ""
@@ -57,8 +57,8 @@ msgid ""
 "``.xml`` as well as ``.xhtml`` when using "
 ":func:`~flask.templating.render_template`."
 msgstr ""
-"当使用 :func:`~flask.templating.render_template` 时，所有以 ``.html``，"
-"``.htm``，``.xml`` 和 ``.xhtml`` 被配置了自动转义。"
+"当使用 :func:`~flask.templating.render_template` 时，所有文件名以 ``.html``，"
+"``.htm``，``.xml`` 和 ``.xhtml`` 结尾的模板被配置了自动转义。"
 
 #: ../../templating.rst:23
 msgid ""
@@ -66,7 +66,7 @@ msgid ""
 ":func:`~flask.templating.render_template_string`."
 msgstr ""
 "当使用 :func:`~flask.templating.render_template_string` 时，"
-"所有字符串都被配置了自动转义。"
+"所有字符串会被自动转义。"
 
 #: ../../templating.rst:25
 msgid ""
@@ -80,7 +80,7 @@ msgid ""
 "Flask inserts a couple of global functions and helpers into the Jinja2 "
 "context, additionally to the values that are present by default."
 msgstr ""
-"Flask 在 Jinja2 上下文中添加了几个全局函数和助手，此外还有默认值。"
+"除了默认值之外，Flask 还在 Jinja2 上下文中插入了一些全局函数和辅助函数。"
 
 #: ../../templating.rst:32
 msgid "Standard Context"
@@ -107,8 +107,8 @@ msgid ""
 "unavailable if the template was rendered without an active request "
 "context."
 msgstr ""
-"当前请求对象（:class:`flask.request`）。如果模板在没有激活请求上下文的情况下呈现，"
-"则此变量不可用。"
+"当前请求对象（:class:`flask.request`）。如果模板在没有激活请求上下文的情况下被渲"
+"染，则此变量不可用。"
 
 #: ../../templating.rst:57
 msgid ""
@@ -116,8 +116,8 @@ msgid ""
 "unavailable if the template was rendered without an active request "
 "context."
 msgstr ""
-"当前会话对象（:class:`flask.session`）。如果模板在没有激活请求上下文的情况下呈现，"
-"则此变量不可用。"
+"当前会话对象（:class:`flask.session`）。如果模板在没有激活请求上下文的情况下被渲"
+"染，则此变量不可用。"
 
 #: ../../templating.rst:64
 msgid ""
@@ -125,8 +125,8 @@ msgid ""
 "variable is unavailable if the template was rendered without an active "
 "request context."
 msgstr ""
-"请求绑定全局变量（:data:`flask.g`）。如果模板在没有激活请求上下文的情况下呈现，则"
-"此变量不可用。"
+"请求绑定全局变量（:data:`flask.g`）。如果模板在没有激活请求上下文的情况下被渲染，"
+"则此变量不可用。"
 
 #: ../../templating.rst:71
 msgid "The :func:`flask.url_for` function."
@@ -147,8 +147,8 @@ msgid ""
 "up in the context of imported templates.  This is partially caused by "
 "performance considerations, partially to keep things explicit."
 msgstr ""
-"这些变量被添加到变量的上下文中，它们不是全局变量。不同之处在于，默认情况下，这些不会显"
-"示在导入模板的上下文中。这部分是由于性能方面的考虑，部分是为了保持事情的明确性。"
+"这些变量被添加到变量的上下文中，它们不是全局变量。不同之处在于，默认情况下，这些不会"
+"出现在导入模板的上下文中。这样做一部分是由于性能方面的考虑，另一部分是为了保持显式。"
 
 #: ../../templating.rst:85
 msgid ""
@@ -166,15 +166,15 @@ msgstr ""
 
 #: ../../templating.rst:90
 msgid "you import the macro \"with context\"."
-msgstr "导入宏“带上下文”."
+msgstr "导入宏并“携带上下文”."
 
 #: ../../templating.rst:92
 msgid "Importing with context looks like this:"
-msgstr "使用上下文导入如下所示："
+msgstr "向下面这样导入上下文："
 
 #: ../../templating.rst:100
 msgid "Controlling Autoescaping"
-msgstr "控制自动转义"
+msgstr "自动转义控制"
 
 #: ../../templating.rst:102
 msgid ""
@@ -187,10 +187,10 @@ msgid ""
 "use these characters in text, but can also lead to security problems.  "
 "(see :ref:`security-xss`)"
 msgstr ""
-"自动转义是为您自动转义特殊字符的概念。HTML（或 XML，以及 XHTML）意义上的特殊字符是 ``&``，"
-"``>``，``<``，``\"`` 以及 ``'``。因为这些字符在文档中本身就有特定的含义，如果你想在文本中"
-"使用它们，你就必须用所谓的“实体”来代替它们。不这样做不仅会因为用户无法在文本中用这些字符而感"
-"到沮丧，还会导致安全问题。（请参阅 :ref:`security-xss`）"
+"自动转义是指为你自动转义特殊字符。HTML（或 XML，以及 XHTML）意义上的特殊字符是 ``&``，"
+"``>``，``<``，``\"`` 以及 ``'``。因为这些字符在文档中本身就有特定的含义，如果你想在文"
+"本中使用它们，你就必须用所谓的“实体”来代替它们。不这样做不仅会因为用户无法在文本中用这些"
+"字符而感到沮丧，还会导致安全问题。（请参阅 :ref:`security-xss`）"
 
 #: ../../templating.rst:111
 msgid ""
@@ -199,7 +199,7 @@ msgid ""
 "for example if they come from a system that generates secure HTML like a "
 "markdown to HTML converter."
 msgstr ""
-"但是，有时您需要在模板中禁用自动转义。如果您想将 HTML 显式地注入页面，例如，如果它们"
+"但是，有时你需要在模板中禁用自动转义。如果你想将 HTML 显式地注入页面，例如，如果它们"
 "来自生成安全 HTML 的系统（如 markdown 到 HTML 转换器），则可能会出现这种情况。"
 
 #: ../../templating.rst:116
@@ -251,7 +251,7 @@ msgid ""
 ":attr:`~flask.Flask.jinja_env` of the application or use the "
 ":meth:`~flask.Flask.template_filter` decorator."
 msgstr ""
-"如果你想在 Jinja2 中注册你自己的过滤器，你有两种方法。您可以手动将它们放入应用程序的 "
+"如果你想在 Jinja2 中注册你自己的过滤器，你有两种方法。你可以手动将它们放入应用程序的 "
 ":attr:`~flask.flask.jinja_env` 中，也可以使用 "
 ":meth:`~flask.flask.template_filter` 装饰器。"
 
@@ -266,8 +266,8 @@ msgid ""
 "filter in your templates in the same way as Jinja2's builtin filters, for"
 " example if you have a Python list in context called `mylist`::"
 msgstr ""
-"在使用装饰器的情况下，如果您想使用函数名作为过滤器的名称，那么参数是可选的。注册后，您"
-"可以在模板中使用与 Jinja2 内置过滤器相同的过滤器，例如，如果您在上下文中有一个名为 "
+"在使用装饰器的情况下，如果你想使用函数名作为过滤器的名称，那么参数是可选的。注册后，你"
+"可以在模板中使用与 Jinja2 内置过滤器相同的过滤器，例如，如果你在上下文中有一个名为 "
 "`mylist` 的 Python 列表："
 
 #: ../../templating.rst:168
@@ -283,9 +283,9 @@ msgid ""
 "dictionary.  The keys and values of this dictionary are then merged with "
 "the template context, for all templates in the app::"
 msgstr ""
-"为了将新变量自动注入到模板的上下文中，Flask 中存在上下文处理器。上下文处理器在呈现"
-"模板之前运行，并且能够将新值注入到模板上下文中。上下文处理器是一个返回字典的函数。然"
-"后，此字典的键和值将与应用程序中所有模板的模板上下文合并："
+"Flask 中的上下文处理器可以将新变量自动注入到模板的上下文中。上下文处理器在渲染"
+"模板之前运行，并且能够将新值注入到模板上下文中。上下文处理器是一个返回字典的函数。"
+"此字典的键和值将与应用程序中所有模板的模板上下文合并："
 
 #: ../../templating.rst:181
 msgid ""
@@ -318,7 +318,7 @@ msgid ""
 ":`registering-filters`), but this demonstrates how to pass functions in a"
 " context processor."
 msgstr ""
-"您也可以将 `format_price` 构建为模板过滤器（请参阅 :ref:`registering-filters`），但这演示了如何在上下文处理器中传递函数。"
+"你也可以将 `format_price` 构建为模板过滤器（请参阅 :ref:`registering-filters`），但这演示了如何在上下文处理器中传递函数。"
 
 #~ msgid "The current configuration object (:data:`flask.config`)"
 #~ msgstr "当前配置对象（:data:`flask.config`）"
