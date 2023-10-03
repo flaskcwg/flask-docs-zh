@@ -170,7 +170,7 @@ msgstr "导入宏并“携带上下文”."
 
 #: ../../templating.rst:92
 msgid "Importing with context looks like this:"
-msgstr "向下面这样导入上下文："
+msgstr "像下面这样导入上下文："
 
 #: ../../templating.rst:100
 msgid "Controlling Autoescaping"
@@ -189,8 +189,8 @@ msgid ""
 msgstr ""
 "自动转义是指为你自动转义特殊字符。HTML（或 XML，以及 XHTML）意义上的特殊字符是 ``&``，"
 "``>``，``<``，``\"`` 以及 ``'``。因为这些字符在文档中本身就有特定的含义，如果你想在文"
-"本中使用它们，你就必须用所谓的“实体”来代替它们。不这样做不仅会因为用户无法在文本中用这些"
-"字符而感到沮丧，还会导致安全问题。（请参阅 :ref:`security-xss`）"
+"本中使用它们，你就必须用所谓的“实体”来代替它们。不这样做不仅会让用户因为无法在文本中用这"
+"些字符而感到沮丧，还会导致安全问题。（请参阅 :ref:`security-xss`）"
 
 #: ../../templating.rst:111
 msgid ""
